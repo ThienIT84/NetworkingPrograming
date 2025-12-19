@@ -4,6 +4,7 @@
 baseURL: "https://ThienIT84.github.io/NetworkingPrograming/" 
 canonifyURLs: true
 languageCode: "vi"
+relativeURLs: true
 title: "Blog Lập Trình - Trần Thanh Thiện"
 theme: hugo-profile
 
