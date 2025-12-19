@@ -2,109 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>//:1313/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/</loc>
+    <loc>//:1313/blogs/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/career/</loc>
+    <loc>//:1313/tags/career/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>//:1313/categories/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/g%C3%B3c-nh%C3%ACn/</loc>
+    <loc>//:1313/categories/g%C3%B3c-nh%C3%ACn/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/java/</loc>
+    <loc>//:1313/tags/java/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/java-vs-python-ai/</loc>
+    <loc>//:1313/blogs/java-vs-python-ai/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/python/</loc>
+    <loc>//:1313/tags/python/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>//:1313/tags/</loc>
     <lastmod>2025-12-19T15:30:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ai/</loc>
+    <loc>//:1313/tags/ai/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/api/</loc>
+    <loc>//:1313/tags/api/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/chatbot/</loc>
+    <loc>//:1313/tags/chatbot/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/deep-learning/</loc>
+    <loc>//:1313/tags/deep-learning/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/javascript/</loc>
+    <loc>//:1313/tags/javascript/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/tensorflow/</loc>
+    <loc>//:1313/tags/tensorflow/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/tensorflow-js-deep-learning/</loc>
+    <loc>//:1313/blogs/tensorflow-js-deep-learning/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</loc>
+    <loc>//:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/tich-hop-api-ai-javascript/</loc>
+    <loc>//:1313/blogs/tich-hop-api-ai-javascript/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/web-development/</loc>
+    <loc>//:1313/categories/web-development/</loc>
     <lastmod>2025-12-19T15:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/events/</loc>
+    <loc>//:1313/tags/events/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/function-and-event/</loc>
+    <loc>//:1313/blogs/function-and-event/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</loc>
+    <loc>//:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/logic/</loc>
+    <loc>//:1313/tags/logic/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/network/</loc>
+    <loc>//:1313/tags/network/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/protocol/</loc>
+    <loc>//:1313/tags/protocol/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/socket/</loc>
+    <loc>//:1313/tags/socket/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/tcp-vs-udp/</loc>
+    <loc>//:1313/blogs/tcp-vs-udp/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/thread/</loc>
+    <loc>//:1313/tags/thread/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/java-multi-threading-socket/</loc>
+    <loc>//:1313/blogs/java-multi-threading-socket/</loc>
     <lastmod>2025-12-19T14:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/dom/</loc>
+    <loc>//:1313/tags/dom/</loc>
     <lastmod>2025-12-19T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/javascript-dom-manipulation/</loc>
+    <loc>//:1313/blogs/javascript-dom-manipulation/</loc>
     <lastmod>2025-12-19T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/frontend/</loc>
+    <loc>//:1313/tags/frontend/</loc>
     <lastmod>2025-12-19T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/java-socket-co-ban/</loc>
+    <loc>//:1313/blogs/java-socket-co-ban/</loc>
     <lastmod>2025-12-19T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/javascript-co-ban/</loc>
+    <loc>//:1313/blogs/javascript-co-ban/</loc>
     <lastmod>2025-12-19T09:00:00+07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/programming/</loc>
+    <loc>//:1313/tags/programming/</loc>
     <lastmod>2025-12-19T09:00:00+07:00</lastmod>
   </url>
 </urlset>

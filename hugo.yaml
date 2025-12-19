@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------
 # CẤU HÌNH CƠ BẢN
 # ---------------------------------------------------------------------
-baseURL: "/" 
+baseURL: "https://ThienIT84.github.io/NetworkingPrograming/" 
 languageCode: "vi"
 title: "Blog Lập Trình - Trần Thanh Thiện"
 theme: hugo-profile
@@ -36,7 +36,7 @@ Menus:
 
     - identifier: about
       name: Profile
-      url: "/#about"
+      url: "#about"
       weight: 3
 
 # ---------------------------------------------------------------------

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>//localhost:1313/categories/</link>
+    <link>//:1313/categories/</link>
     <description>Recent content in Categories on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Góc Nhìn</title>
-      <link>//localhost:1313/categories/g%C3%B3c-nh%C3%ACn/</link>
+      <link>//:1313/categories/g%C3%B3c-nh%C3%ACn/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>//localhost:1313/categories/g%C3%B3c-nh%C3%ACn/</guid>
+      <guid>//:1313/categories/g%C3%B3c-nh%C3%ACn/</guid>
       <description></description>
     </item>
     <item>
       <title>Trí Tuệ Nhân Tạo</title>
-      <link>//localhost:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
+      <link>//:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//localhost:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</guid>
+      <guid>//:1313/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Development</title>
-      <link>//localhost:1313/categories/web-development/</link>
+      <link>//:1313/categories/web-development/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//localhost:1313/categories/web-development/</guid>
+      <guid>//:1313/categories/web-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Lập Trình Mạng</title>
-      <link>//localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
+      <link>//:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</guid>
+      <guid>//:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</guid>
       <description></description>
     </item>
   </channel>

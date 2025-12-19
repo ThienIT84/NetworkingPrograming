@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socket on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>//localhost:1313/tags/socket/</link>
+    <link>//:1313/tags/socket/</link>
     <description>Recent content in Socket on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//:1313/tags/socket/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng</title>
-      <link>//localhost:1313/blogs/java-multi-threading-socket/</link>
+      <link>//:1313/blogs/java-multi-threading-socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//localhost:1313/blogs/java-multi-threading-socket/</guid>
+      <guid>//:1313/blogs/java-multi-threading-socket/</guid>
       <description>&lt;p&gt;Một Server cơ bản chỉ có thể tiếp một Client tại một thời điểm. Vậy làm sao để xây dựng một phòng Chat có 100 người? Câu trả lời chính là &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-vấn-đề-của-server-đơn-luồng&#34;&gt;1. Vấn đề của Server đơn luồng&lt;/h3&gt;&#xA;&lt;p&gt;Khi Server đang xử lý lệnh &lt;code&gt;accept()&lt;/code&gt; hoặc đang đợi dữ liệu từ Client A, nó sẽ bị &amp;ldquo;treo&amp;rdquo; (block) và không thể tiếp nhận Client B. Điều này khiến ứng dụng mạng trở nên vô dụng trong thực tế.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java Socket: Cánh cửa vào thế giới Lập trình mạng</title>
-      <link>//localhost:1313/blogs/java-socket-co-ban/</link>
+      <link>//:1313/blogs/java-socket-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>//localhost:1313/blogs/java-socket-co-ban/</guid>
+      <guid>//:1313/blogs/java-socket-co-ban/</guid>
       <description>&lt;p&gt;Chào mọi người, bài viết đầu tiên trên Blog này mình muốn dành để nói về &lt;strong&gt;Socket&lt;/strong&gt; – khái niệm nền tảng nhất khi học môn Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-socket-là-gì&#34;&gt;1. Socket là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Nếu coi mạng Internet là một hệ thống bưu điện khổng lồ, thì &lt;strong&gt;Socket&lt;/strong&gt; chính là &amp;ldquo;cửa sổ&amp;rdquo; hoặc &amp;ldquo;cổng&amp;rdquo; để các ứng dụng gửi và nhận thư. Trong Java, Socket cho phép hai máy tính giao tiếp với nhau qua giao thức TCP hoặc UDP.&lt;/p&gt;</description>
     </item>
   </channel>
