@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Blog Lập Trình - Trần Thanh Thiện</title>
+    <link>//localhost:1313/tags/ai/</link>
+    <description>Recent content in AI on Blog Lập Trình - Trần Thanh Thiện</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
+      <link>//localhost:1313/blogs/tensorflow-js-deep-learning/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/tensorflow-js-deep-learning/</guid>
+      <description>&lt;p&gt;Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, &lt;strong&gt;TensorFlow.js&lt;/strong&gt; là một lựa chọn tuyệt vời.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tensorflowjs-là-gì&#34;&gt;1. TensorFlow.js là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình Machine Learning ngay trên trình duyệt (Client-side).&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-tại-sao-lại-dùng-nó&#34;&gt;2. Tại sao lại dùng nó?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bảo mật:&lt;/strong&gt; Dữ liệu không cần gửi về server (ví dụ nhận diện khuôn mặt).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tương tác thời gian thực:&lt;/strong&gt; Độ trễ cực thấp vì chạy ngay trên máy người dùng.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-ví-dụ-tạo-một-tensor-đơn-giản&#34;&gt;3. Ví dụ: Tạo một Tensor đơn giản&lt;/h3&gt;&#xA;&lt;p&gt;Để sử dụng, chúng ta chỉ cần nhúng thẻ script CDN vào HTML, sau đó viết code JS như sau:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
