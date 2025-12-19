@@ -3,7 +3,7 @@ title: "Tự làm Chatbot AI tích hợp vào Website bằng Fetch API"
 date: 2025-12-19T15:00:00+07:00
 draft: false
 description: "Hướng dẫn sử dụng JavaScript Fetch API để kết nối với các mô hình ngôn ngữ lớn (LLM)."
-image: "/images/projects/chatbot-api.jpg"
+image: "/NetworkingPrograming/images/projects/chatbot-api.jpg"
 tags: ["JavaScript", "API", "Chatbot"]
 categories: ["Web Development"]
 ---

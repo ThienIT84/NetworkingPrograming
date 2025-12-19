@@ -3,7 +3,7 @@ title: "Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng"
 date: 2025-12-19T14:00:00+07:00
 draft: false
 description: "Cách sử dụng Thread trong Java để xây dựng Server có thể kết nối nhiều Client cùng lúc."
-image: "/images/projects/multithread.png"
+image: "/NetworkingPrograming/images/projects/multithread.png"
 tags: ["Java", "Thread", "Socket"]
 categories: ["Lập trình mạng"]
 ---
