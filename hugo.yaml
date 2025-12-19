@@ -1,0 +1,241 @@
+# ---------------------------------------------------------------------
+# CẤU HÌNH CƠ BẢN
+# ---------------------------------------------------------------------
+baseURL: "" # <--- THAY LINK GITHUB PAGES CỦA EM VÀO ĐÂY
+languageCode: "vi"
+title: "Blog Lập Trình - Trần Thanh Thiện"
+theme: hugo-profile
+
+# Các định dạng output (Giữ nguyên)
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML", "RSS"]
+
+enableRobotsTXT: true
+
+# Phân trang (3 bài viết mỗi trang)
+pagination:
+  pagerSize: 3
+
+# Cấu hình Markdown (Giữ nguyên)
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# ---------------------------------------------------------------------
+# MENU ĐIỀU HƯỚNG (ĐÚNG YÊU CẦU ĐỒ ÁN)
+# ---------------------------------------------------------------------
+Menus:
+  main:
+    - identifier: home
+      name: Trang chủ
+      url: /
+      weight: 1
+    - identifier: blog
+      name: Bài viết
+      url: /blogs
+      weight: 2
+    # Thầy đã ẩn Gallery vì không cần thiết cho đồ án kỹ thuật
+
+# ---------------------------------------------------------------------
+# THÔNG SỐ GIAO DIỆN (PARAMS)
+# ---------------------------------------------------------------------
+params:
+  title: "Thanh Thien's Blog"
+  description: "Chia sẻ kiến thức về Lập trình mạng, Java và JavaScript"
+  favicon: "/fav.png" # Nhớ thay file icon web bé xíu ở tab trình duyệt
+
+  # Tắt CDN Bootstrap để web tự chủ (Tránh lỗi mạng trường)
+  useBootstrapCDN: true
+  mathjax: false
+  animate: true
+
+  # Cấu hình Font chữ & Màu sắc (Giao diện sáng sủa, dễ đọc)
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.6
+  
+  # THANH ĐIỀU HƯỚNG (NAVBAR)
+  navbar:
+    align: ms-auto
+    brandName: "Thien.Dev" # Tên thương hiệu ngắn gọn
+    disableSearch: false
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    # Ẩn bớt các mục chưa có nội dung để web trông hoàn thiện hơn
+    menus:
+      disableAbout: false
+      disableExperience: false # Dùng cái này làm mục "Dự án đã làm"
+      disableEducation: false
+      disableProjects: false   # Dùng cái này làm "Sản phẩm Demo"
+      disableAchievements: true # Tạm ẩn thành tích nếu chưa có giải thưởng
+      disableContact: false
+
+  # -----------------------------------------------------------------
+  # PHẦN 1: HERO SECTION (MÀN HÌNH CHÀO)
+  # -----------------------------------------------------------------
+  hero:
+    enable: true
+    intro: "Xin chào, mình là"
+    title: "Trần Thanh Thiện"
+    subtitle: "Sinh viên CNTT | Đam mê Network & AI"
+    content: "Chào mừng đến với Blog cá nhân của mình. Đây là nơi mình chia sẻ kiến thức về Lập trình mạng (Network Programming), Java và hành trình phát triển các dự án phần mềm."
+    image: /images/me.png # <--- Thay ảnh chân dung em vào đây (quan trọng)
+    bottomImage:
+      enable: false # Tắt cái ảnh nền dưới chân cho đỡ rối mắt
+    button:
+      enable: true
+      name: "Xem bài viết mới nhất"
+      url: "/blogs"
+      download: false
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/ThienIT84 
+        - icon: fab fa-facebook
+          url: https://facebook.com/ 
+
+  # -----------------------------------------------------------------
+  # PHẦN 2: ABOUT (GIỚI THIỆU)
+  # -----------------------------------------------------------------
+  about:
+    enable: true
+    title: "Về bản thân"
+    image: "/images/me.png" # <--- Ảnh thứ 2 của em
+    content: |-
+      Mình là sinh viên chuyên ngành Công nghệ thông tin. Mình có niềm đam mê lớn với việc xây dựng các ứng dụng mạng và nghiên cứu về Trí tuệ nhân tạo (AI).
+      
+      Mục tiêu của Blog này là ghi lại quá trình học tập môn Lập trình mạng, đồng thời chia sẻ các đoạn code (snippet) hữu ích về Java Socket, TCP/UDP mà mình đã đúc kết được.
+    skills:
+      enable: true
+      title: "Công nghệ mình sử dụng:"
+      items:
+        - "Java Core"
+        - "Network Socket"
+        - "JavaScript"
+        - "Hugo (SSG)"
+        - "Git/Github"
+
+  # -----------------------------------------------------------------
+  # PHẦN 3: KINH NGHIỆM & DỰ ÁN HỌC TẬP (Thay cho Experience)
+  # -----------------------------------------------------------------
+  experience:
+    enable: true
+    title: "Hành trình học tập" # Đổi tên tiêu đề cho phù hợp sinh viên
+    items:
+      - company: "Đồ án Môn học"
+        companyUrl: "#"
+        jobs:
+          - name: "Xây dựng ứng dụng Chat LAN"
+            date: "Th12 2025"
+            content: "Phát triển ứng dụng chat nội bộ sử dụng Java Socket (TCP/IP). Xử lý đa luồng (Multi-threading) cho phép nhiều client kết nối cùng lúc."
+            featuredItems:
+              fontAwesomeIcons:
+                - icon: fab fa-java
+                  url: #
+          - name: "Website Blog Cá nhân"
+            date: "Th12 2025"
+            content: "Xây dựng và triển khai website tĩnh (Static Site) sử dụng Hugo Framework, deploy tự động lên Github Pages."
+
+  # -----------------------------------------------------------------
+  # PHẦN 4: GIÁO DỤC (EDUCATION)
+  # -----------------------------------------------------------------
+  education:
+    enable: true
+    title: "Học vấn"
+    index: false
+    items:
+      - title: "Kỹ sư Công nghệ Thông tin"
+        school:
+          name: "Đại học Công Nghệ thành phố Hồ Chí Minh" # <--- Điền tên trường
+          url: "#"
+        date: "2022 - Hiện tại"
+        content: |-
+          Các môn học tiêu biểu:
+          - Deep Learning & Machine Learning
+          - Computer vision (thị giác máy tính)
+          - Lập trình hướng đối tượng (OOP)
+          - Lập trình mạng (Network Programming)
+          - Cấu trúc dữ liệu & Giải thuật
+
+  # -----------------------------------------------------------------
+  # PHẦN 5: PROJECTS (SẢN PHẨM NỔI BẬT)
+  # -----------------------------------------------------------------
+  projects:
+    enable: true
+    title: "Dự án Nổi bật"
+    items:
+      - title: Java Network Chat
+        content: Ứng dụng Client-Server cho phép gửi tin nhắn, gửi file trong mạng LAN.
+        image: /images/projects/chat-app.jpg # <--- Kiếm cái ảnh chụp màn hình code bỏ vào
+        featured:
+          name: Xem Code
+          link: https://github.com/ # Link repo bài tập
+        badges:
+          - "Java"
+          - "Socket"
+          - "Swing"
+      
+      - title: Blog Lập trình mạng
+        content: Website tĩnh chia sẻ kiến thức, tối ưu SEO và tốc độ tải trang.
+        image: /images/projects/blog.jpg
+        featured:
+          name: Demo
+          link: /
+        badges:
+          - "Hugo"
+          - "Markdown"
+
+  # Tạm ẩn phần Achievements (Thành tích)
+  achievements:
+    enable: false
+
+  # -----------------------------------------------------------------
+  # PHẦN 6: LIÊN HỆ (CONTACT)
+  # -----------------------------------------------------------------
+  contact:
+    enable: true
+    content: "Đừng ngần ngại liên hệ với mình nếu bạn có câu hỏi về Lập trình mạng hoặc code Java!"
+    btnName: Gửi Email
+    btnLink: mailto:Thientran805954@gmail.com # <--- Thay email
+
+  # -----------------------------------------------------------------
+  # FOOTER & KHÁC
+  # -----------------------------------------------------------------
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Bài viết mới
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/
+      facebook: https://facebook.com/
+
+  # Các thiết lập phụ (Giữ nguyên)
+  listPages:
+    disableFeaturedImage: false
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "phút đọc" # Việt hóa
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+  terms:
+    read: "Đọc tiếp"
+    toc: "Mục lục"
+    copyright: "Bản quyền thuộc về"
+    pageNotFound: "Không tìm thấy trang"
+
+  datesFormat:
+    article: "02/01/2006" # Định dạng ngày kiểu Việt Nam
+    articleList: "02/01/2006"

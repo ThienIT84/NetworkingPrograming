@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Protocol on Blog Lập Trình - Trần Thanh Thiện</title>
+    <link>//localhost:1313/tags/protocol/</link>
+    <description>Recent content in Protocol on Blog Lập Trình - Trần Thanh Thiện</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/protocol/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</title>
+      <link>//localhost:1313/blogs/tcp-vs-udp/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/tcp-vs-udp/</guid>
+      <description>&lt;p&gt;Trong lập trình mạng, việc chọn lựa giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; cũng giống như việc bạn chọn gửi thư bảo đảm hay gửi tin nhắn nhanh vậy. Mỗi cái đều có ưu và nhược điểm riêng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tcp-transmission-control-protocol&#34;&gt;1. TCP (Transmission Control Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;TCP được gọi là giao thức &amp;ldquo;hướng kết nối&amp;rdquo;. Nó đảm bảo dữ liệu gửi đi sẽ đến nơi chính xác, đầy đủ và đúng thứ tự.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ưu điểm:&lt;/strong&gt; Tin cậy, không mất dữ liệu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ứng dụng:&lt;/strong&gt; Web (HTTP), Email (SMTP), Truyền file (FTP).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-udp-user-datagram-protocol&#34;&gt;2. UDP (User Datagram Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;Ngược lại, UDP là giao thức &amp;ldquo;không kết nối&amp;rdquo;. Nó cứ gửi đi mà không cần biết phía bên kia có nhận được hay không.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
