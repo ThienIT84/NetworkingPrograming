@@ -3,7 +3,7 @@ title: "TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt"
 date: 2025-12-19T15:00:00+07:00
 draft: false
 description: "Chạy mô hình AI trực tiếp trên trình duyệt web bằng JavaScript mà không cần Backend Python."
-image: "images/projects/tfjs.jpg"
+image: "/NetworkingPrograming/images/projects/tfjs.jpg"
 tags: ["JavaScript", "AI", "Deep Learning", "TensorFlow"]
 categories: ["Trí tuệ nhân tạo"]
 ---
