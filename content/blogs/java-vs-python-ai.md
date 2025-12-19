@@ -3,7 +3,7 @@ title: "Java vs Python: Lập trình viên AI có cần biết Java?"
 date: 2025-12-19T15:30:00+07:00
 draft: false
 description: "Góc nhìn cá nhân về vai trò của Java trong kỷ nguyên Trí tuệ nhân tạo."
-image: "/NetworkingPrograming/images/projects/java-vs-python.jpg"
+image: "/images/projects/java-vs-python.jpg"
 tags: ["Java", "Python", "Career"]
 categories: ["Góc nhìn"]
 ---

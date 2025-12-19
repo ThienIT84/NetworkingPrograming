@@ -3,7 +3,7 @@ title: "Java Socket: Cánh cửa vào thế giới Lập trình mạng"
 date: 2025-12-19T10:00:00+07:00
 draft: false
 description: "Tìm hiểu cơ bản về Socket trong Java và cách thức hoạt động của mô hình Client-Server."
-image: "/NetworkingPrograming/images/projects/chat-app.jpg"
+image: "/images/projects/chat-app.jpg"
 tags: ["Java", "Network", "Socket"]
 categories: ["Lập trình mạng"]
 ---
