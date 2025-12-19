@@ -33,7 +33,7 @@ Menus:
     
     - identifier: blog
       name: Bài viết
-      url: "/blogs"
+      url: "blogs"
       weight: 2
 
     - identifier: about
@@ -102,7 +102,7 @@ params:
     button:
       enable: true
       name: "📖 Đọc bài viết"
-      url: "/blogs"
+      url: "blogs"
       download: false
       newPage: false
     socialLinks:
