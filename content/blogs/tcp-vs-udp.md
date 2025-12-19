@@ -3,7 +3,7 @@ title: "TCP và UDP: Chọn 'ngựa' nào cho ứng dụng mạng?"
 date: 2025-12-19T14:00:00+07:00
 draft: false
 description: "So sánh hai giao thức truyền tải phổ biến nhất và các trường hợp sử dụng trong thực tế."
-image: "NetworkingPrograming/images/projects/tcp-udp.jpg"
+image: "/NetworkingPrograming/images/projects/tcp-udp.jpg"
 tags: ["Java", "Network", "Protocol"]
 categories: ["Lập trình mạng"]
 ---
