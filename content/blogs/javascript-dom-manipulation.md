@@ -3,7 +3,7 @@ title: "DOM Manipulation: Thay đổi trang web theo ý muốn"
 date: 2025-12-19T10:00:00+07:00
 draft: false
 description: "Hướng dẫn cách dùng JavaScript để thêm, xóa, sửa các phần tử HTML trên trang."
-image: "images/projects/js-dom.jpg"
+image: "/images/projects/js-dom.jpg"
 tags: ["JavaScript", "DOM", "Frontend"]
 categories: ["Web Development"]
 ---
