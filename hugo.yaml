@@ -101,7 +101,7 @@ params:
     button:
       enable: true
       name: "📖 Đọc bài viết"
-      url: "blogs"
+      url: "/blogs"
       download: false
       newPage: false
     socialLinks:
