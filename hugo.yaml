@@ -196,7 +196,7 @@ params:
           
           **Công nghệ:** Hugo Framework, Markdown, GitHub Pages
           **Deploy:** Tự động với GitHub Actions
-        image: /images/projects/blog.jpg
+        image: images/projects/blog.jpg
         featured:
           name: Xem Website
           link: /
