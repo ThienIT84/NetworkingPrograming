@@ -3,7 +3,7 @@ title: "Hàm và Sự kiện: Cách JavaScript tương tác với người dùng
 date: 2025-12-19T14:00:00+07:00
 draft: false
 description: "Cách viết hàm và lắng nghe các sự kiện như Click, Hover trên trang web."
-image: "/images/projects/js-events.jpg"
+image: "images/projects/js-events.jpg"
 tags: ["JavaScript", "Events", "Logic"]
 categories: ["Web Development"]
 ---

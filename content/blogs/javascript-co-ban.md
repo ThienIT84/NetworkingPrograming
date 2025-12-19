@@ -3,7 +3,7 @@ title: "JavaScript Căn Bản: Những bước chân đầu tiên"
 date: 2025-12-19T09:00:00+07:00
 draft: false
 description: "Tìm hiểu về biến (var, let, const) và các kiểu dữ liệu cơ bản trong JavaScript."
-image: "/images/projects/js-basic.jpg"
+image: "images/projects/js-basic.jpg"
 tags: ["JavaScript", "Frontend", "Programming"]
 categories: ["Web Development"]
 ---
