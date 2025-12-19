@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>//:1313/blogs/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/</link>
     <description>Recent content in Blogs on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
-    <atom:link href="//:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java vs Python: Lập trình viên AI có cần biết Java?</title>
-      <link>//:1313/blogs/java-vs-python-ai/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>//:1313/blogs/java-vs-python-ai/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
       <description>&lt;p&gt;Chúng ta đều biết Python là &amp;ldquo;vua&amp;rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-python-tốt-cho-nghiên-cứu-research&#34;&gt;1. Python: Tốt cho Nghiên cứu (Research)&lt;/h3&gt;&#xA;&lt;p&gt;Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình dùng Python cho các bài tập Deep Learning.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-java-tốt-cho-sản-phẩm-production&#34;&gt;2. Java: Tốt cho Sản phẩm (Production)&lt;/h3&gt;&#xA;&lt;p&gt;Tuy nhiên, khi đưa mô hình AI vào một hệ thống ngân hàng hay viễn thông lớn, Java lại chiếm ưu thế nhờ:&lt;/p&gt;</description>
     </item>
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
-      <link>//:1313/blogs/tensorflow-js-deep-learning/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/tensorflow-js-deep-learning/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
       <description>&lt;p&gt;Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, &lt;strong&gt;TensorFlow.js&lt;/strong&gt; là một lựa chọn tuyệt vời.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tensorflowjs-là-gì&#34;&gt;1. TensorFlow.js là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình Machine Learning ngay trên trình duyệt (Client-side).&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-tại-sao-lại-dùng-nó&#34;&gt;2. Tại sao lại dùng nó?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bảo mật:&lt;/strong&gt; Dữ liệu không cần gửi về server (ví dụ nhận diện khuôn mặt).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tương tác thời gian thực:&lt;/strong&gt; Độ trễ cực thấp vì chạy ngay trên máy người dùng.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-ví-dụ-tạo-một-tensor-đơn-giản&#34;&gt;3. Ví dụ: Tạo một Tensor đơn giản&lt;/h3&gt;&#xA;&lt;p&gt;Để sử dụng, chúng ta chỉ cần nhúng thẻ script CDN vào HTML, sau đó viết code JS như sau:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
-      <link>//:1313/blogs/tich-hop-api-ai-javascript/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/tich-hop-api-ai-javascript/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
       <description>&lt;p&gt;Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &amp;ldquo;nói chuyện&amp;rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-fetch-api-là-gì&#34;&gt;1. Fetch API là gì?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;fetch()&lt;/code&gt; là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta gửi gói tin trong Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-code-mẫu-gọi-api&#34;&gt;2. Code mẫu gọi API&lt;/h3&gt;&#xA;&lt;p&gt;Giả sử mình muốn gửi câu hỏi đến một API AI nào đó, code sẽ như sau:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hàm và Sự kiện: Cách JavaScript tương tác với người dùng</title>
-      <link>//:1313/blogs/function-and-event/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/function-and-event/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</guid>
       <description>&lt;p&gt;Làm sao để khi người dùng bấm nút, một thông báo hiện ra? Đó chính là nhờ &lt;strong&gt;Events&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-cách-định-nghĩa-hàm-function&#34;&gt;1. Cách định nghĩa hàm (Function)&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có hai cách phổ biến hiện nay:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cách truyền thống&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xinchao&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào bạn!&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Arrow function (Hiện đại)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xinchao&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; () =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào bạn!&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</title>
-      <link>//:1313/blogs/tcp-vs-udp/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/tcp-vs-udp/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
       <description>&lt;p&gt;Trong lập trình mạng, việc chọn lựa giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; cũng giống như việc bạn chọn gửi thư bảo đảm hay gửi tin nhắn nhanh vậy. Mỗi cái đều có ưu và nhược điểm riêng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tcp-transmission-control-protocol&#34;&gt;1. TCP (Transmission Control Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;TCP được gọi là giao thức &amp;ldquo;hướng kết nối&amp;rdquo;. Nó đảm bảo dữ liệu gửi đi sẽ đến nơi chính xác, đầy đủ và đúng thứ tự.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ưu điểm:&lt;/strong&gt; Tin cậy, không mất dữ liệu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ứng dụng:&lt;/strong&gt; Web (HTTP), Email (SMTP), Truyền file (FTP).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-udp-user-datagram-protocol&#34;&gt;2. UDP (User Datagram Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;Ngược lại, UDP là giao thức &amp;ldquo;không kết nối&amp;rdquo;. Nó cứ gửi đi mà không cần biết phía bên kia có nhận được hay không.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng</title>
-      <link>//:1313/blogs/java-multi-threading-socket/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/java-multi-threading-socket/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
       <description>&lt;p&gt;Một Server cơ bản chỉ có thể tiếp một Client tại một thời điểm. Vậy làm sao để xây dựng một phòng Chat có 100 người? Câu trả lời chính là &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-vấn-đề-của-server-đơn-luồng&#34;&gt;1. Vấn đề của Server đơn luồng&lt;/h3&gt;&#xA;&lt;p&gt;Khi Server đang xử lý lệnh &lt;code&gt;accept()&lt;/code&gt; hoặc đang đợi dữ liệu từ Client A, nó sẽ bị &amp;ldquo;treo&amp;rdquo; (block) và không thể tiếp nhận Client B. Điều này khiến ứng dụng mạng trở nên vô dụng trong thực tế.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
-      <link>//:1313/blogs/javascript-dom-manipulation/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/javascript-dom-manipulation/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;DOM&lt;/strong&gt; là cầu nối cho phép JavaScript &amp;ldquo;nhào nặn&amp;rdquo; cấu trúc của trang web sau khi nó đã tải xong.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-truy-xuất-phần-tử&#34;&gt;1. Truy xuất phần tử&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có thể lấy bất kỳ thẻ HTML nào thông qua ID hoặc Class:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main-title&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;items&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelectorAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.list-item&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Java Socket: Cánh cửa vào thế giới Lập trình mạng</title>
-      <link>//:1313/blogs/java-socket-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/java-socket-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
       <description>&lt;p&gt;Chào mọi người, bài viết đầu tiên trên Blog này mình muốn dành để nói về &lt;strong&gt;Socket&lt;/strong&gt; – khái niệm nền tảng nhất khi học môn Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-socket-là-gì&#34;&gt;1. Socket là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Nếu coi mạng Internet là một hệ thống bưu điện khổng lồ, thì &lt;strong&gt;Socket&lt;/strong&gt; chính là &amp;ldquo;cửa sổ&amp;rdquo; hoặc &amp;ldquo;cổng&amp;rdquo; để các ứng dụng gửi và nhận thư. Trong Java, Socket cho phép hai máy tính giao tiếp với nhau qua giao thức TCP hoặc UDP.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JavaScript Căn Bản: Những bước chân đầu tiên</title>
-      <link>//:1313/blogs/javascript-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/javascript-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</guid>
       <description>&lt;p&gt;Nếu Java là &amp;ldquo;xương sống&amp;rdquo; của hệ thống thì JavaScript chính là &amp;ldquo;cơ bắp&amp;rdquo; giúp trang web hoạt động linh hoạt.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-khai-báo-biến-var-let-hay-const&#34;&gt;1. Khai báo biến: var, let hay const?&lt;/h3&gt;&#xA;&lt;p&gt;Trong JS hiện đại, chúng ta ưu tiên dùng &lt;code&gt;let&lt;/code&gt; và &lt;code&gt;const&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;const:&lt;/strong&gt; Dùng cho các giá trị không đổi.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;let:&lt;/strong&gt; Dùng cho các biến có thể thay đổi giá trị.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;var:&lt;/strong&gt; Cách cũ, hiện nay ít dùng do vấn đề về scope (phạm vi).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-các-kiểu-dữ-liệu-quan-trọng&#34;&gt;2. Các kiểu dữ liệu quan trọng&lt;/h3&gt;&#xA;&lt;p&gt;JS là ngôn ngữ &amp;ldquo;loosely typed&amp;rdquo;, nghĩa là bạn không cần khai báo kiểu dữ liệu như Java:&lt;/p&gt;</description>
     </item>
   </channel>

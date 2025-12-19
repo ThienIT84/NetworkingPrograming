@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thread on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>//:1313/tags/thread/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/thread/</link>
     <description>Recent content in Thread on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
-    <atom:link href="//:1313/tags/thread/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/thread/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng</title>
-      <link>//:1313/blogs/java-multi-threading-socket/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/blogs/java-multi-threading-socket/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
       <description>&lt;p&gt;Một Server cơ bản chỉ có thể tiếp một Client tại một thời điểm. Vậy làm sao để xây dựng một phòng Chat có 100 người? Câu trả lời chính là &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-vấn-đề-của-server-đơn-luồng&#34;&gt;1. Vấn đề của Server đơn luồng&lt;/h3&gt;&#xA;&lt;p&gt;Khi Server đang xử lý lệnh &lt;code&gt;accept()&lt;/code&gt; hoặc đang đợi dữ liệu từ Client A, nó sẽ bị &amp;ldquo;treo&amp;rdquo; (block) và không thể tiếp nhận Client B. Điều này khiến ứng dụng mạng trở nên vô dụng trong thực tế.&lt;/p&gt;</description>
     </item>
   </channel>

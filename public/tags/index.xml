@@ -2,136 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>//:1313/tags/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/</link>
     <description>Recent content in Tags on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
-    <atom:link href="//:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Career</title>
-      <link>//:1313/tags/career/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/career/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>//:1313/tags/career/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/career/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>//:1313/tags/java/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/java/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>//:1313/tags/java/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>//:1313/tags/python/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/python/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>//:1313/tags/python/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>//:1313/tags/ai/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/ai/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/ai/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>API</title>
-      <link>//:1313/tags/api/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/api/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/api/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Chatbot</title>
-      <link>//:1313/tags/chatbot/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/chatbot/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/chatbot/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/chatbot/</guid>
       <description></description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>//:1313/tags/deep-learning/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/deep-learning/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/deep-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>//:1313/tags/javascript/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/javascript/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/javascript/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>TensorFlow</title>
-      <link>//:1313/tags/tensorflow/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/tensorflow/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>//:1313/tags/tensorflow/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/tensorflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Events</title>
-      <link>//:1313/tags/events/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/events/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/events/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/events/</guid>
       <description></description>
     </item>
     <item>
       <title>Logic</title>
-      <link>//:1313/tags/logic/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/logic/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/logic/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/logic/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>//:1313/tags/network/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/network/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/network/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Protocol</title>
-      <link>//:1313/tags/protocol/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/protocol/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/protocol/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/protocol/</guid>
       <description></description>
     </item>
     <item>
       <title>Socket</title>
-      <link>//:1313/tags/socket/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/socket/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/socket/</guid>
       <description></description>
     </item>
     <item>
       <title>Thread</title>
-      <link>//:1313/tags/thread/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/thread/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>//:1313/tags/thread/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/thread/</guid>
       <description></description>
     </item>
     <item>
       <title>DOM</title>
-      <link>//:1313/tags/dom/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/dom/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>//:1313/tags/dom/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/dom/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>//:1313/tags/frontend/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/frontend/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>//:1313/tags/frontend/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>//:1313/tags/programming/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/tags/programming/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>//:1313/tags/programming/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/tags/programming/</guid>
       <description></description>
     </item>
   </channel>
