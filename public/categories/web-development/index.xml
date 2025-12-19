@@ -6,8 +6,29 @@
     <description>Recent content in Web Development on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Fri, 19 Dec 2025 09:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
     <atom:link href="//localhost:1313/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
+      <link>//localhost:1313/blogs/tich-hop-api-ai-javascript/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/tich-hop-api-ai-javascript/</guid>
+      <description>&lt;p&gt;Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &amp;ldquo;nói chuyện&amp;rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-fetch-api-là-gì&#34;&gt;1. Fetch API là gì?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;fetch()&lt;/code&gt; là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta gửi gói tin trong Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-code-mẫu-gọi-api&#34;&gt;2. Code mẫu gọi API&lt;/h3&gt;&#xA;&lt;p&gt;Giả sử mình muốn gửi câu hỏi đến một API AI nào đó, code sẽ như sau:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hàm và Sự kiện: Cách JavaScript tương tác với người dùng</title>
+      <link>//localhost:1313/blogs/function-and-event/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/function-and-event/</guid>
+      <description>&lt;p&gt;Làm sao để khi người dùng bấm nút, một thông báo hiện ra? Đó chính là nhờ &lt;strong&gt;Events&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-cách-định-nghĩa-hàm-function&#34;&gt;1. Cách định nghĩa hàm (Function)&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có hai cách phổ biến hiện nay:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cách truyền thống&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xinchao&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào bạn!&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Arrow function (Hiện đại)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xinchao&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; () =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào bạn!&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
+      <link>//localhost:1313/blogs/javascript-dom-manipulation/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/javascript-dom-manipulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;DOM&lt;/strong&gt; là cầu nối cho phép JavaScript &amp;ldquo;nhào nặn&amp;rdquo; cấu trúc của trang web sau khi nó đã tải xong.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-truy-xuất-phần-tử&#34;&gt;1. Truy xuất phần tử&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có thể lấy bất kỳ thẻ HTML nào thông qua ID hoặc Class:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main-title&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;items&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelectorAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.list-item&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>JavaScript Căn Bản: Những bước chân đầu tiên</title>
       <link>//localhost:1313/blogs/javascript-co-ban/</link>

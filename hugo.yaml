@@ -1,30 +1,26 @@
 # ---------------------------------------------------------------------
 # CẤU HÌNH CƠ BẢN
 # ---------------------------------------------------------------------
-baseURL: "" # <--- THAY LINK GITHUB PAGES CỦA EM VÀO ĐÂY
+baseURL: "/" 
 languageCode: "vi"
 title: "Blog Lập Trình - Trần Thanh Thiện"
 theme: hugo-profile
 
-# Các định dạng output (Giữ nguyên)
 outputs:
   home: ["HTML", "RSS", "JSON"]
   page: ["HTML", "RSS"]
 
 enableRobotsTXT: true
-
-# Phân trang (3 bài viết mỗi trang)
 pagination:
   pagerSize: 3
 
-# Cấu hình Markdown (Giữ nguyên)
 markup:
   goldmark:
     renderer:
       unsafe: true
 
 # ---------------------------------------------------------------------
-# MENU ĐIỀU HƯỚNG (ĐÚNG YÊU CẦU ĐỒ ÁN)
+# MENU ĐIỀU HƯỚNG
 # ---------------------------------------------------------------------
 Menus:
   main:
@@ -32,118 +28,113 @@ Menus:
       name: Trang chủ
       url: /
       weight: 1
+    
     - identifier: blog
       name: Bài viết
-      url: /blogs
+      url: "/blogs"
       weight: 2
-    # Thầy đã ẩn Gallery vì không cần thiết cho đồ án kỹ thuật
+
+    - identifier: about
+      name: Profile
+      url: "/#about"
+      weight: 3
 
 # ---------------------------------------------------------------------
-# THÔNG SỐ GIAO DIỆN (PARAMS)
+# THÔNG SỐ GIAO DIỆN
 # ---------------------------------------------------------------------
 params:
   title: "Thanh Thien's Blog"
-  description: "Chia sẻ kiến thức về Lập trình mạng, Java và JavaScript"
-  favicon: "/fav.png" # Nhớ thay file icon web bé xíu ở tab trình duyệt
+  description: "Ghi chép quá trình học tập môn Lập trình mạng và chia sẻ về Machine Learning"
+  favicon: "/fav.png"
 
-  # Tắt CDN Bootstrap để web tự chủ (Tránh lỗi mạng trường)
   useBootstrapCDN: true
   mathjax: false
   animate: true
 
-  # Cấu hình Font chữ & Màu sắc (Giao diện sáng sủa, dễ đọc)
   font:
     fontSize: 1rem
     fontWeight: 400
     lineHeight: 1.6
   
-  # THANH ĐIỀU HƯỚNG (NAVBAR)
+  # NAVBAR
   navbar:
     align: ms-auto
-    brandName: "Thien.Dev" # Tên thương hiệu ngắn gọn
+    brandName: "Thien.Dev"
     disableSearch: false
     stickyNavBar:
-      enable : true
-      showOnScrollUp : true
+      enable: true
+      showOnScrollUp: true
     enableSeparator: false
-    # Ẩn bớt các mục chưa có nội dung để web trông hoàn thiện hơn
     menus:
       disableAbout: false
-      disableExperience: false # Dùng cái này làm mục "Dự án đã làm"
+      disableExperience: true      # TẮT phần experience (vì chưa đi làm)
       disableEducation: false
-      disableProjects: false   # Dùng cái này làm "Sản phẩm Demo"
-      disableAchievements: true # Tạm ẩn thành tích nếu chưa có giải thưởng
+      disableProjects: false       # Giữ lại để show đồ án
+      disableAchievements: true    # Tắt thành tích
       disableContact: false
+  
+  color:
+    primaryColor: "#2563eb"
+    secondaryColor: "#f8f9fa"
+    textLinkColor: "#1e40af"
+    darkmode:
+      backgroundColor: "#0f172a"
+      secondaryBackgroundColor: "#1e293b"
+      textColor: "#e2e8f0"
+      primaryColor: "#06b6d4"
+      textLinkColor: "#8b5cf6"
 
   # -----------------------------------------------------------------
-  # PHẦN 1: HERO SECTION (MÀN HÌNH CHÀO)
+  # HERO SECTION
   # -----------------------------------------------------------------
   hero:
     enable: true
     intro: "Xin chào, mình là"
     title: "Trần Thanh Thiện"
-    subtitle: "Sinh viên CNTT | Đam mê Network & AI"
-    content: "Chào mừng đến với Blog cá nhân của mình. Đây là nơi mình chia sẻ kiến thức về Lập trình mạng (Network Programming), Java và hành trình phát triển các dự án phần mềm."
-    image: /images/me.png # <--- Thay ảnh chân dung em vào đây (quan trọng)
+    subtitle: "Sinh viên CNTT | ML Enthusiast"
+    content: "Mình đang học chuyên sâu về Machine Learning và AI. Blog này ghi lại quá trình học môn Lập trình mạng - một môn bắt buộc trong chương trình đào tạo."
+    image: /images/me.png
+    roundImage: true
     bottomImage:
-      enable: false # Tắt cái ảnh nền dưới chân cho đỡ rối mắt
+      enable: false
     button:
       enable: true
-      name: "Xem bài viết mới nhất"
+      name: "📖 Đọc bài viết"
       url: "/blogs"
       download: false
       newPage: false
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://github.com/ThienIT84 
+          url: https://github.com/ThienIT84
         - icon: fab fa-facebook
-          url: https://facebook.com/ 
+          url: https://facebook.com/
 
   # -----------------------------------------------------------------
-  # PHẦN 2: ABOUT (GIỚI THIỆU)
+  # ABOUT
   # -----------------------------------------------------------------
   about:
     enable: true
     title: "Về bản thân"
-    image: "/images/me.png" # <--- Ảnh thứ 2 của em
+    image: "/images/me.png"
     content: |-
-      Mình là sinh viên chuyên ngành Công nghệ thông tin. Mình có niềm đam mê lớn với việc xây dựng các ứng dụng mạng và nghiên cứu về Trí tuệ nhân tạo (AI).
+      Mình là sinh viên năm 4 chuyên ngành máy học ứng dụng, đang tập trung vào lĩnh vực **Machine Learning và Deep Learning**.
       
-      Mục tiêu của Blog này là ghi lại quá trình học tập môn Lập trình mạng, đồng thời chia sẻ các đoạn code (snippet) hữu ích về Java Socket, TCP/UDP mà mình đã đúc kết được.
+      Blog này được tạo ra để hoàn thành yêu cầu đồ án môn **Lập trình mạng**. Mình sẽ ghi chép lại những kiến thức đã học về Java Socket, TCP/UDP và các khái niệm network cơ bản.
+      
+      Hy vọng những ghi chép này cũng hữu ích cho các bạn sinh viên khác đang học môn này!
     skills:
       enable: true
-      title: "Công nghệ mình sử dụng:"
+      title: "Công nghệ đang học:"
       items:
-        - "Java Core"
-        - "Network Socket"
-        - "JavaScript"
-        - "Hugo (SSG)"
-        - "Git/Github"
+        - "Python (TensorFlow, PyTorch)"
+        - "Machine Learning / Deep Learning"
+        - "Java (cho môn Network)"
+        - "Git & GitHub"
+        - "Hugo Framework"
 
   # -----------------------------------------------------------------
-  # PHẦN 3: KINH NGHIỆM & DỰ ÁN HỌC TẬP (Thay cho Experience)
-  # -----------------------------------------------------------------
-  experience:
-    enable: true
-    title: "Hành trình học tập" # Đổi tên tiêu đề cho phù hợp sinh viên
-    items:
-      - company: "Đồ án Môn học"
-        companyUrl: "#"
-        jobs:
-          - name: "Xây dựng ứng dụng Chat LAN"
-            date: "Th12 2025"
-            content: "Phát triển ứng dụng chat nội bộ sử dụng Java Socket (TCP/IP). Xử lý đa luồng (Multi-threading) cho phép nhiều client kết nối cùng lúc."
-            featuredItems:
-              fontAwesomeIcons:
-                - icon: fab fa-java
-                  url: #
-          - name: "Website Blog Cá nhân"
-            date: "Th12 2025"
-            content: "Xây dựng và triển khai website tĩnh (Static Site) sử dụng Hugo Framework, deploy tự động lên Github Pages."
-
-  # -----------------------------------------------------------------
-  # PHẦN 4: GIÁO DỤC (EDUCATION)
+  # EDUCATION
   # -----------------------------------------------------------------
   education:
     enable: true
@@ -152,90 +143,121 @@ params:
     items:
       - title: "Kỹ sư Công nghệ Thông tin"
         school:
-          name: "Đại học Công Nghệ thành phố Hồ Chí Minh" # <--- Điền tên trường
+          name: "Đại học Công Nghệ TP.HCM"
           url: "#"
-        date: "2022 - Hiện tại"
+        date: "2022 - 2026"
+        GPA: "3.65/4.0"
         content: |-
-          Các môn học tiêu biểu:
-          - Deep Learning & Machine Learning
-          - Computer vision (thị giác máy tính)
-          - Lập trình hướng đối tượng (OOP)
-          - Lập trình mạng (Network Programming)
+          **Chuyên ngành:** Machine Learning & AI
+          
+          Các môn học chính:
+          - Deep Learning & Neural Networks
+          - Computer Vision
+          - Natural Language Processing
+          - Machine Learning (Học máy cơ bản)
+          - Lập trình mạng (Đồ án hiện tại)
           - Cấu trúc dữ liệu & Giải thuật
+        featuredLink:
+          enable: false
 
   # -----------------------------------------------------------------
-  # PHẦN 5: PROJECTS (SẢN PHẨM NỔI BẬT)
+  # PROJECTS - CHỈ ĐỒ ÁN LẬP TRÌNH MẠNG
   # -----------------------------------------------------------------
   projects:
     enable: true
-    title: "Dự án Nổi bật"
+    title: "Đồ án Lập trình Mạng"
     items:
-      - title: Java Network Chat
-        content: Ứng dụng Client-Server cho phép gửi tin nhắn, gửi file trong mạng LAN.
-        image: /images/projects/chat-app.jpg # <--- Kiếm cái ảnh chụp màn hình code bỏ vào
+      - title: Ứng dụng Chat LAN (Java Socket)
+        content: |-
+          Đồ án môn Lập trình mạng: Xây dựng ứng dụng chat nội bộ sử dụng Java Socket với kiến trúc Client-Server.
+          
+          **Tính năng chính:**
+          - Gửi/nhận tin nhắn real-time (TCP)
+          - Hỗ trợ nhiều client kết nối đồng thời
+          - Giao diện đơn giản với Java Swing
+          
+          **Kỹ thuật:** Java Socket, Multi-threading, TCP/IP
+        image: /images/projects/chat-app.jpg
         featured:
-          name: Xem Code
-          link: https://github.com/ # Link repo bài tập
+          name: Code trên GitHub
+          link: https://github.com/ThienIT84/network-chat-app
         badges:
           - "Java"
-          - "Socket"
-          - "Swing"
+          - "Socket Programming"
+          - "TCP/IP"
+          - "Multi-threading"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ThienIT84/network-chat-app
       
-      - title: Blog Lập trình mạng
-        content: Website tĩnh chia sẻ kiến thức, tối ưu SEO và tốc độ tải trang.
+      - title: Blog tĩnh với Hugo
+        content: |-
+          Xây dựng website cá nhân để hoàn thành yêu cầu đồ án.
+          
+          **Công nghệ:** Hugo Framework, Markdown, GitHub Pages
+          **Deploy:** Tự động với GitHub Actions
         image: /images/projects/blog.jpg
         featured:
-          name: Demo
+          name: Xem Website
           link: /
         badges:
           - "Hugo"
           - "Markdown"
+          - "GitHub Pages"
 
-  # Tạm ẩn phần Achievements (Thành tích)
+  # TẮT PHẦN EXPERIENCE & ACHIEVEMENTS
+  experience:
+    enable: false
+  
   achievements:
     enable: false
 
   # -----------------------------------------------------------------
-  # PHẦN 6: LIÊN HỆ (CONTACT)
+  # CONTACT
   # -----------------------------------------------------------------
   contact:
     enable: true
-    content: "Đừng ngần ngại liên hệ với mình nếu bạn có câu hỏi về Lập trình mạng hoặc code Java!"
+    title: "Liên hệ"
+    content: "Nếu bạn có câu hỏi về đồ án hoặc muốn trao đổi về Machine Learning, đừng ngại liên hệ mình nhé!"
     btnName: Gửi Email
-    btnLink: mailto:Thientran805954@gmail.com # <--- Thay email
+    btnLink: mailto:Thientran805954@gmail.com
+    formspree:
+      enable: false
 
   # -----------------------------------------------------------------
-  # FOOTER & KHÁC
+  # FOOTER
   # -----------------------------------------------------------------
   footer:
     recentPosts:
       path: "blogs"
       count: 3
-      title: Bài viết mới
+      title: Bài viết gần đây
       enable: true
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com/
+      github: https://github.com/ThienIT84
       facebook: https://facebook.com/
 
-  # Các thiết lập phụ (Giữ nguyên)
+  # CẤU HÌNH TRANG BÀI VIẾT
   listPages:
     disableFeaturedImage: false
+  
   singlePages:
     socialShare: true
     readTime:
       enable: true
-      content: "phút đọc" # Việt hóa
+      content: "phút đọc"
     scrollprogress:
       enable: true
     tags:
       openInNewTab: true
+  
   terms:
     read: "Đọc tiếp"
     toc: "Mục lục"
-    copyright: "Bản quyền thuộc về"
+    copyright: "© 2025 Trần Thanh Thiện"
     pageNotFound: "Không tìm thấy trang"
 
   datesFormat:
-    article: "02/01/2006" # Định dạng ngày kiểu Việt Nam
+    article: "02/01/2006"
     articleList: "02/01/2006"

@@ -6,8 +6,15 @@
     <description>Recent content in Frontend on Blog Lập Trình - Trần Thanh Thiện</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Fri, 19 Dec 2025 09:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 10:00:00 +0700</lastBuildDate>
     <atom:link href="//localhost:1313/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
+      <link>//localhost:1313/blogs/javascript-dom-manipulation/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>//localhost:1313/blogs/javascript-dom-manipulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;DOM&lt;/strong&gt; là cầu nối cho phép JavaScript &amp;ldquo;nhào nặn&amp;rdquo; cấu trúc của trang web sau khi nó đã tải xong.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-truy-xuất-phần-tử&#34;&gt;1. Truy xuất phần tử&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có thể lấy bất kỳ thẻ HTML nào thông qua ID hoặc Class:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main-title&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;items&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelectorAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.list-item&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>JavaScript Căn Bản: Những bước chân đầu tiên</title>
       <link>//localhost:1313/blogs/javascript-co-ban/</link>
