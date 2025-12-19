@@ -2,6 +2,7 @@
 # CẤU HÌNH CƠ BẢN
 # ---------------------------------------------------------------------
 baseURL: "https://ThienIT84.github.io/NetworkingPrograming/" 
+canonifyURLs: true
 languageCode: "vi"
 title: "Blog Lập Trình - Trần Thanh Thiện"
 theme: hugo-profile
