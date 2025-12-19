@@ -45,7 +45,7 @@ Menus:
 params:
   title: "Thanh Thien's Blog"
   description: "Ghi chép quá trình học tập môn Lập trình mạng và chia sẻ về Machine Learning"
-  favicon: "/fav.png"
+  favicon: "fav.png"
 
   useBootstrapCDN: true
   mathjax: false
@@ -93,7 +93,7 @@ params:
     title: "Trần Thanh Thiện"
     subtitle: "Sinh viên CNTT | ML Enthusiast"
     content: "Mình đang học chuyên sâu về Machine Learning và AI. Blog này ghi lại quá trình học môn Lập trình mạng - một môn bắt buộc trong chương trình đào tạo."
-    image: /images/me.png
+    image: images/me.png
     roundImage: true
     bottomImage:
       enable: false
@@ -116,7 +116,7 @@ params:
   about:
     enable: true
     title: "Về bản thân"
-    image: "/images/me.png"
+    image: "images/me.png"
     content: |-
       Mình là sinh viên năm 4 chuyên ngành máy học ứng dụng, đang tập trung vào lĩnh vực **Machine Learning và Deep Learning**.
       
@@ -177,7 +177,7 @@ params:
           - Giao diện đơn giản với Java Swing
           
           **Kỹ thuật:** Java Socket, Multi-threading, TCP/IP
-        image: /images/projects/chat-app.jpg
+        image: images/projects/chat-app.jpg
         featured:
           name: Code trên GitHub
           link: https://github.com/ThienIT84/network-chat-app
