@@ -13,7 +13,7 @@ title: "Trần Thanh Thiện - AI Engineer Portfolio"
 theme: hugo-profile
 
 # URL Configuration for GitHub Pages subdirectory
-canonifyURLs: false
+canonifyURLs: true
 relativeURLs: false
 
 outputs:
