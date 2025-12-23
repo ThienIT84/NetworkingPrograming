@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=https://ThienIT84.github.io/NetworkingPrograming/fav.png type="image/gif">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/font.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/">
-  <meta property="og:site_name" content="Blog Lập Trình - Trần Thanh Thiện">
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
   <meta property="og:title" content="DOM Manipulation: Thay đổi trang web theo ý muốn">
-  <meta property="og:description" content="Hướng dẫn cách dùng JavaScript để thêm, xóa, sửa các phần tử HTML trên trang.">
-  <meta property="og:locale" content="vi">
+  <meta property="og:description" content="Hướng dẫn chi tiết về DOM (Document Object Model), cách sử dụng JavaScript để truy xuất, thao tác, và tạo các phần tử HTML động, cùng với event handling và best practices.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
     <meta property="article:published_time" content="2025-12-19T10:00:00+07:00">
@@ -40,18 +40,19 @@
     <meta property="article:tag" content="JavaScript">
     <meta property="article:tag" content="DOM">
     <meta property="article:tag" content="Frontend">
+    <meta property="article:tag" content="Web Development">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DOM Manipulation: Thay đổi trang web theo ý muốn">
-  <meta name="twitter:description" content="Hướng dẫn cách dùng JavaScript để thêm, xóa, sửa các phần tử HTML trên trang.">
+  <meta name="twitter:description" content="Hướng dẫn chi tiết về DOM (Document Object Model), cách sử dụng JavaScript để truy xuất, thao tác, và tạo các phần tử HTML động, cùng với event handling và best practices.">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/header.css" media="all">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/footer.css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/theme.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
 
 <style>
     :root {
@@ -108,18 +109,18 @@
 
 
 
-<meta name="description" content="Hướng dẫn cách dùng JavaScript để thêm, xóa, sửa các phần tử HTML trên trang.">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/single.css">
+<meta name="description" content="Hướng dẫn chi tiết về DOM (Document Object Model), cách sử dụng JavaScript để truy xuất, thao tác, và tạo các phần tử HTML động, cùng với event handling và best practices.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
 
 
-<script defer src="https://ThienIT84.github.io/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
 
 
   
   
 
   <title>
-DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Trần Thanh Thiện
+DOM Manipulation: Thay đổi trang web theo ý muốn | Trần Thanh Thiện - AI Engineer Portfolio
 
   </title>
 </head>
@@ -181,9 +182,9 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://ThienIT84.github.io/NetworkingPrograming/">
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
                 
-                <img src="https://ThienIT84.github.io/NetworkingPrograming/fav.png" width="30" height="30"
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Thien.Dev
                 
@@ -217,39 +218,53 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#about" aria-label="about">
-                            Về bản thân
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#education"
+                        <a class="nav-link" href="/NetworkingPrograming#education"
                             aria-label="education">
-                            Học vấn
+                            Education
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#projects"
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
                             aria-label="projects">
-                            Đồ án Lập trình Mạng
+                            Featured Projects
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#contact"
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
                             aria-label="contact">
-                            Liên hệ
+                            Get In Touch
                         </a>
                     </li>
                     
@@ -261,19 +276,9 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/" title="">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
                             
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="blogs" title="">
-                            
-                            Bài viết
+                            Home
                         </a>
                     </li>
                     
@@ -283,7 +288,27 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="#about" title="">
                             
-                            Profile
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
                         </a>
                     </li>
                     
@@ -329,27 +354,590 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <h1 class="text-center mb-4">DOM Manipulation: Thay đổi trang web theo ý muốn</h1>
             <div class="text-center">
               
-              19/12/2025
+              Dec 19, 2025
 
               
               <span id="readingTime">
-                phút đọc
+                min read
               </span>
               
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/js-dom.jpg" alt="DOM Manipulation: Thay đổi trang web theo ý muốn">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/js-dom.jpg" alt="DOM Manipulation: Thay đổi trang web theo ý muốn">
           </div>
           
           <article class="page-content  p-2">
-          <p><strong>DOM</strong> là cầu nối cho phép JavaScript &ldquo;nhào nặn&rdquo; cấu trúc của trang web sau khi nó đã tải xong.</p>
-<h3 id="1-truy-xuất-phần-tử">1. Truy xuất phần tử</h3>
-<p>Chúng ta có thể lấy bất kỳ thẻ HTML nào thông qua ID hoặc Class:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;main-title&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.list-item&#34;</span>);
-</span></span></code></pre></div>
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p><strong>DOM (Document Object Model)</strong> là cầu nối quan trọng nhất giữa JavaScript và HTML. Nó cho phép JavaScript &ldquo;nhìn thấy&rdquo; và &ldquo;thao tác&rdquo; với mọi phần tử trên trang web - từ việc thay đổi nội dung text, thêm/xóa elements, đến tạo hiệu ứng animation phức tạp. Nếu HTML là &ldquo;bộ xương&rdquo;, CSS là &ldquo;da thịt&rdquo;, thì JavaScript thông qua DOM chính là &ldquo;hệ thần kinh&rdquo; giúp trang web sống động và tương tác.</p>
+<h2 id="1-dom-là-gì">1. DOM là gì?</h2>
+<h3 id="11-định-nghĩa">1.1. Định nghĩa</h3>
+<p><strong>DOM (Document Object Model)</strong> là một giao diện lập trình (API) cho phép các ngôn ngữ như JavaScript truy cập và thao tác với cấu trúc, nội dung, và style của tài liệu HTML/XML.</p>
+<p>Khi trình duyệt load một trang HTML, nó sẽ tạo ra một <strong>DOM Tree</strong> - cấu trúc cây biểu diễn toàn bộ tài liệu.</p>
+<h3 id="12-dom-tree-structure">1.2. DOM Tree Structure</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;My Page&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;Welcome&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;This is a paragraph.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">li</span>&gt;Item 1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">li</span>&gt;Item 2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p><strong>DOM Tree tương ứng:</strong></p>
+<pre tabindex="0"><code>Document
+  └─ html
+      ├─ head
+      │   └─ title
+      │       └─ &#34;My Page&#34;
+      └─ body
+          ├─ h1 (id=&#34;title&#34;)
+          │   └─ &#34;Welcome&#34;
+          ├─ p (class=&#34;description&#34;)
+          │   └─ &#34;This is a paragraph.&#34;
+          └─ ul
+              ├─ li
+              │   └─ &#34;Item 1&#34;
+              └─ li
+                  └─ &#34;Item 2&#34;
+</code></pre><h3 id="13-node-types">1.3. Node Types</h3>
+<p>Trong DOM, mọi thứ đều là <strong>Node</strong>:</p>
+<ul>
+<li><strong>Element Node</strong>: Các thẻ HTML (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, etc.)</li>
+<li><strong>Text Node</strong>: Nội dung text bên trong element</li>
+<li><strong>Attribute Node</strong>: Các thuộc tính (<code>id</code>, <code>class</code>, <code>src</code>, etc.)</li>
+<li><strong>Comment Node</strong>: Các comment HTML (<code>&lt;!-- comment --&gt;</code>)</li>
+</ul>
+<h2 id="2-truy-xuất-elements-selecting-elements">2. Truy xuất Elements (Selecting Elements)</h2>
+<h3 id="21-các-phương-thức-cơ-bản">2.1. Các phương thức cơ bản</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. getElementById - Lấy element theo ID (trả về 1 element hoặc null)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;title&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">title</span>); <span style="color:#75715e">// &lt;h1 id=&#34;title&#34;&gt;Welcome&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. getElementsByClassName - Lấy elements theo class (trả về HTMLCollection)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">descriptions</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;description&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">descriptions</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// Element đầu tiên
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. getElementsByTagName - Lấy elements theo tag name
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paragraphs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">paragraphs</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// Số lượng thẻ &lt;p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. querySelector - Lấy element đầu tiên khớp với CSS selector (ES5)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstItem</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.list-item&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">titleById</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#title&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstParagraph</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 5. querySelectorAll - Lấy TẤT CẢ elements khớp (trả về NodeList)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allItems</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.list-item&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allParagraphs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lặp qua NodeList
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">allItems</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">textContent</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="22-so-sánh-các-phương-thức">2.2. So sánh các phương thức</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Return Type</th>
+          <th>Live/Static</th>
+          <th>Performance</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>getElementById</code></td>
+          <td>Element</td>
+          <td>N/A</td>
+          <td>Nhanh nhất</td>
+      </tr>
+      <tr>
+          <td><code>getElementsByClassName</code></td>
+          <td>HTMLCollection</td>
+          <td>Live</td>
+          <td>Nhanh</td>
+      </tr>
+      <tr>
+          <td><code>getElementsByTagName</code></td>
+          <td>HTMLCollection</td>
+          <td>Live</td>
+          <td>Nhanh</td>
+      </tr>
+      <tr>
+          <td><code>querySelector</code></td>
+          <td>Element</td>
+          <td>Static</td>
+          <td>Chậm hơn</td>
+      </tr>
+      <tr>
+          <td><code>querySelectorAll</code></td>
+          <td>NodeList</td>
+          <td>Static</td>
+          <td>Chậm nhất</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Live vs Static:</strong></p>
+<ul>
+<li><strong>Live</strong>: Tự động cập nhật khi DOM thay đổi</li>
+<li><strong>Static</strong>: Snapshot tại thời điểm query</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">liveList</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;item&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">staticList</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.item&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">liveList</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">staticList</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm element mới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newItem</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">newItem</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;item&#34;</span>;
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">newItem</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">liveList</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 4 (tự động cập nhật!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">staticList</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 3 (không thay đổi)
+</span></span></span></code></pre></div><h3 id="23-advanced-selectors">2.3. Advanced Selectors</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Kết hợp nhiều selectors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">activeButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;button.active&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstListItem</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;ul &gt; li:first-child&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">checkedInputs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;input[type=&#39;checkbox&#39;]:checked&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Attribute selectors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">externalLinks</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;a[href^=&#39;http&#39;]&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pdfLinks</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;a[href$=&#39;.pdf&#39;]&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataElements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[data-id]&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Pseudo-classes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">evenRows</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;tr:nth-child(even)&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lastParagraph</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;p:last-of-type&#34;</span>);
+</span></span></code></pre></div><h2 id="3-thao-tác-nội-dung-content-manipulation">3. Thao tác nội dung (Content Manipulation)</h2>
+<h3 id="31-textcontent-vs-innerhtml-vs-innertext">3.1. textContent vs innerHTML vs innerText</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1. textContent - Lấy/set text thuần túy (bao gồm cả text ẩn)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World&#34;</span>; <span style="color:#75715e">// An toàn, không parse HTML
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">textContent</span>); <span style="color:#75715e">// &#34;Hello World&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. innerHTML - Lấy/set HTML (có thể chứa tags)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;strong&gt;Bold Text&lt;/strong&gt;&#34;</span>; <span style="color:#75715e">// Parse HTML
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">innerHTML</span>); <span style="color:#75715e">// &#34;&lt;strong&gt;Bold Text&lt;/strong&gt;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ⚠️ XSS Risk với innerHTML
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userInput</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;img src=x onerror=&#39;alert(\&#34;XSS\&#34;)&#39;&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">userInput</span>; <span style="color:#75715e">// NGUY HIỂM!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. innerText - Giống textContent nhưng tôn trọng CSS styling
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Visible Text&#34;</span>; <span style="color:#75715e">// Không lấy text ẩn (display: none)
+</span></span></span></code></pre></div><p><strong>Best Practice:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Dùng textContent cho text thuần
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">userInput</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Dùng createElement cho HTML động
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">strong</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;strong&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">strong</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bold Text&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">strong</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: innerHTML với user input
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">userInput</span>; <span style="color:#75715e">// XSS vulnerability!
+</span></span></span></code></pre></div><h3 id="32-thay-đổi-attributes">3.2. Thay đổi Attributes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;img&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// getAttribute - Lấy giá trị attribute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;src&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">src</span>); <span style="color:#75715e">// &#34;image.jpg&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// setAttribute - Set giá trị attribute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;src&#34;</span>, <span style="color:#e6db74">&#34;new-image.jpg&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;alt&#34;</span>, <span style="color:#e6db74">&#34;New Image&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// removeAttribute - Xóa attribute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">removeAttribute</span>(<span style="color:#e6db74">&#34;title&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// hasAttribute - Kiểm tra có attribute không
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">hasAttribute</span>(<span style="color:#e6db74">&#34;data-id&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Has data-id&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Direct property access (khuyến khích cho common attributes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;another-image.jpg&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">alt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Another Image&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;thumbnail&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;main-image&#34;</span>;
+</span></span></code></pre></div><h3 id="33-data-attributes-html5">3.3. Data Attributes (HTML5)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span> <span style="color:#a6e22e">data-user-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;123&#34;</span> <span style="color:#a6e22e">data-role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;admin&#34;</span> <span style="color:#a6e22e">data-active</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    User Info
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;user&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 1: getAttribute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;data-user-id&#34;</span>); <span style="color:#75715e">// &#34;123&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 2: dataset (ES5) - Khuyến khích
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userId2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">userId</span>; <span style="color:#75715e">// &#34;123&#34; (camelCase!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">role</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">role</span>; <span style="color:#75715e">// &#34;admin&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isActive</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">active</span>; <span style="color:#75715e">// &#34;true&#34; (string)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Set data attribute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">lastLogin</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2025-12-22&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo: data-last-login=&#34;2025-12-22&#34;
+</span></span></span></code></pre></div><h2 id="4-thao-tác-styles">4. Thao tác Styles</h2>
+<h3 id="41-inline-styles">4.1. Inline Styles</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">box</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;box&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Set individual style
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;200px&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;200px&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">borderRadius</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10px&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lưu ý: CSS property names → camelCase
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// background-color → backgroundColor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// font-size → fontSize
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// border-radius → borderRadius
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Set multiple styles
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">box</span>.<span style="color:#a6e22e">style</span>, {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backgroundColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;300px&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;300px&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">transform</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;rotate(45deg)&#34;</span>
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Get computed style (bao gồm cả CSS từ stylesheet)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">computedStyle</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">getComputedStyle</span>(<span style="color:#a6e22e">box</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">computedStyle</span>.<span style="color:#a6e22e">backgroundColor</span>); <span style="color:#75715e">// &#34;rgb(255, 0, 0)&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">computedStyle</span>.<span style="color:#a6e22e">width</span>); <span style="color:#75715e">// &#34;300px&#34;
+</span></span></span></code></pre></div><h3 id="42-css-classes-khuyến-khích">4.2. CSS Classes (Khuyến khích)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.box&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// className - Thay thế toàn bộ classes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;box active&#34;</span>; <span style="color:#75715e">// Ghi đè tất cả classes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// classList - API hiện đại (ES5)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;highlight&#34;</span>); <span style="color:#75715e">// Thêm class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#34;active&#34;</span>); <span style="color:#75715e">// Xóa class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#34;visible&#34;</span>); <span style="color:#75715e">// Toggle (có → xóa, không → thêm)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;old-class&#34;</span>, <span style="color:#e6db74">&#34;new-class&#34;</span>); <span style="color:#75715e">// Thay thế
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra có class không
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">contains</span>(<span style="color:#e6db74">&#34;active&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Element is active&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm nhiều classes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;class1&#34;</span>, <span style="color:#e6db74">&#34;class2&#34;</span>, <span style="color:#e6db74">&#34;class3&#34;</span>);
+</span></span></code></pre></div><p><strong>Best Practice:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Inline styles (khó maintain)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;20px&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: CSS classes (separation of concerns)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;highlighted&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* CSS */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">highlighted</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span><span style="color:#f92672">-</span><span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">red</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">font</span><span style="color:#f92672">-</span><span style="color:#a6e22e">size</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span><span style="color:#a6e22e">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="5-tạo-và-xóa-elements">5. Tạo và Xóa Elements</h2>
+<h3 id="51-tạo-elements">5.1. Tạo Elements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. createElement - Tạo element mới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">newDiv</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I&#39;m a new div!&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">newDiv</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;box&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">newDiv</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;new-box&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. createTextNode - Tạo text node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">textNode</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#e6db74">&#34;Hello World&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. appendChild - Thêm vào cuối
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">newDiv</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. insertBefore - Thêm vào trước element khác
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">container</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;container&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstChild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">firstChild</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">newDiv</span>, <span style="color:#a6e22e">firstChild</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 5. append (ES6) - Thêm nhiều nodes/strings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">newDiv</span>, <span style="color:#e6db74">&#34;Some text&#34;</span>, <span style="color:#a6e22e">anotherElement</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 6. prepend (ES6) - Thêm vào đầu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">prepend</span>(<span style="color:#a6e22e">newDiv</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 7. insertAdjacentHTML - Thêm HTML string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#34;beforebegin&#34;</span>, <span style="color:#e6db74">&#34;&lt;p&gt;Before&lt;/p&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#34;afterbegin&#34;</span>, <span style="color:#e6db74">&#34;&lt;p&gt;First child&lt;/p&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#34;beforeend&#34;</span>, <span style="color:#e6db74">&#34;&lt;p&gt;Last child&lt;/p&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#34;afterend&#34;</span>, <span style="color:#e6db74">&#34;&lt;p&gt;After&lt;/p&gt;&#34;</span>);
+</span></span></code></pre></div><h3 id="52-ví-dụ-thực-tế-tạo-danh-sách-động">5.2. Ví dụ thực tế: Tạo danh sách động</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>, <span style="color:#e6db74">&#34;Mango&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ul</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;ul&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ul</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fruit-list&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">fruit</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruit</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fruit-item&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Thêm event listener
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`You clicked </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fruit</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ul</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">ul</span>);
+</span></span></code></pre></div><h3 id="53-xóa-elements">5.3. Xóa Elements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;to-remove&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 1: remove() - Modern (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">remove</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 2: removeChild() - Old way
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">parentNode</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">element</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Xóa tất cả children
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">container</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;container&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">firstChild</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">firstChild</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc đơn giản hơn:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>; <span style="color:#75715e">// Xóa tất cả (nhưng không remove event listeners!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách tốt nhất:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">replaceChildren</span>(); <span style="color:#75715e">// ES2021
+</span></span></span></code></pre></div><h2 id="6-traversing-dom-di-chuyển-trong-dom">6. Traversing DOM (Di chuyển trong DOM)</h2>
+<h3 id="61-parent-children-siblings">6.1. Parent, Children, Siblings</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;current&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Parent
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">parentNode</span>; <span style="color:#75715e">// Bất kỳ node nào
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parentElement</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">parentElement</span>; <span style="color:#75715e">// Chỉ element node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Children
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">children</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">children</span>; <span style="color:#75715e">// HTMLCollection (chỉ elements)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">childNodes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">childNodes</span>; <span style="color:#75715e">// NodeList (tất cả nodes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstChild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">firstElementChild</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lastChild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">lastElementChild</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Siblings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextSibling</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">nextElementSibling</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prevSibling</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">previousElementSibling</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Closest ancestor matching selector (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">closestForm</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;form&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">closestContainer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;.container&#34;</span>);
+</span></span></code></pre></div><h3 id="62-ví-dụ-navigation-trong-table">6.2. Ví dụ: Navigation trong table</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cell</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;td&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lên hàng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">row</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cell</span>.<span style="color:#a6e22e">parentElement</span>; <span style="color:#75715e">// &lt;tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lên table
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">row</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;table&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Sang cell bên cạnh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextCell</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cell</span>.<span style="color:#a6e22e">nextElementSibling</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Xuống hàng dưới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextRow</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">row</span>.<span style="color:#a6e22e">nextElementSibling</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cellBelow</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nextRow</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">children</span>[<span style="color:#a6e22e">cell</span>.<span style="color:#a6e22e">cellIndex</span>];
+</span></span></code></pre></div><h2 id="7-event-handling">7. Event Handling</h2>
+<h3 id="71-addeventlistener">7.1. addEventListener</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myButton&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 1: addEventListener (Khuyến khích)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Button clicked!&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Event:&#34;</span>, <span style="color:#a6e22e">event</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Target:&#34;</span>, <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Arrow function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Clicked with arrow function&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 2: Inline event handler (Không khuyến khích)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Old way&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 3: HTML attribute (Tránh!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// &lt;button onclick=&#34;handleClick()&#34;&gt;Click&lt;/button&gt;
+</span></span></span></code></pre></div><h3 id="72-event-types">7.2. Event Types</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;input&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;form&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Mouse events
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;dblclick&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;mouseenter&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;mouseleave&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;mousemove&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Keyboard events
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keydown&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keyup&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keypress&#34;</span>, <span style="color:#a6e22e">handler</span>); <span style="color:#75715e">// Deprecated
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Form events
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;submit&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;change&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;input&#34;</span>, <span style="color:#a6e22e">handler</span>); <span style="color:#75715e">// Real-time input
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;focus&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;blur&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Window events
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, <span style="color:#a6e22e">handler</span>); <span style="color:#75715e">// Page fully loaded
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#a6e22e">handler</span>); <span style="color:#75715e">// DOM ready
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;resize&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;scroll&#34;</span>, <span style="color:#a6e22e">handler</span>);
+</span></span></code></pre></div><h3 id="73-event-object">7.3. Event Object</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Prevent default behavior
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>(); <span style="color:#75715e">// Ngăn submit form, ngăn link navigate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Stop propagation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">stopPropagation</span>(); <span style="color:#75715e">// Ngăn event bubbling
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Event properties
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">type</span>); <span style="color:#75715e">// &#34;click&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>); <span style="color:#75715e">// Element được click
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">currentTarget</span>); <span style="color:#75715e">// Element có listener
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">clientX</span>, <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">clientY</span>); <span style="color:#75715e">// Mouse position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">key</span>); <span style="color:#75715e">// Key pressed (keyboard events)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><h3 id="74-event-delegation">7.4. Event Delegation</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Gắn listener cho từng item (tốn memory)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.item&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">handleClick</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Event delegation (1 listener cho parent)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;list&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">contains</span>(<span style="color:#e6db74">&#34;item&#34;</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">handleClick</span>(<span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc dùng closest
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;.item&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">item</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Clicked item:&#34;</span>, <span style="color:#a6e22e">item</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="8-performance-best-practices">8. Performance Best Practices</h2>
+<h3 id="81-minimize-reflows-và-repaints">8.1. Minimize Reflows và Repaints</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Nhiều reflows
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">div</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">div</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">div</span>); <span style="color:#75715e">// Reflow mỗi lần!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Batch DOM updates
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fragment</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createDocumentFragment</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">div</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">div</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fragment</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">div</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">fragment</span>); <span style="color:#75715e">// Chỉ 1 reflow!
+</span></span></span></code></pre></div><h3 id="82-cache-dom-references">8.2. Cache DOM References</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Query lại mỗi lần
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;counter&#34;</span>).<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Cache reference
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;counter&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">counter</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="83-debouncing-và-throttling">8.3. Debouncing và Throttling</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Debounce - Chỉ chạy sau khi user ngừng action
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">debounce</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">delay</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timeout</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timeout</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">timeout</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">func</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>), <span style="color:#a6e22e">delay</span>);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;search&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">searchInput</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;input&#34;</span>, <span style="color:#a6e22e">debounce</span>((<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Search:&#34;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">300</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Throttle - Giới hạn số lần chạy trong khoảng thời gian
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">throttle</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">limit</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">inThrottle</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">inThrottle</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">func</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">inThrottle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">inThrottle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">limit</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;scroll&#34;</span>, <span style="color:#a6e22e">throttle</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Scrolled&#34;</span>);
+</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">100</span>));
+</span></span></code></pre></div><h2 id="9-ví-dụ-thực-tế-todo-list">9. Ví dụ thực tế: Todo List</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">todoInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;todo-input&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;add-button&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">todoList</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;todo-list&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">addButton</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">addTodo</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">todoInput</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keypress&#34;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;Enter&#34;</span>) <span style="color:#a6e22e">addTodo</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addTodo</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">todoInput</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">trim</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">text</span>) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;todo-item&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">span</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;span&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">deleteBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;button&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">deleteBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Delete&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">deleteBtn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, () =&gt; <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">remove</span>());
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">span</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">deleteBtn</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">todoList</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">todoInput</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">todoInput</span>.<span style="color:#a6e22e">focus</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="kết-luận">Kết luận</h2>
+<p>DOM Manipulation là kỹ năng cốt lõi của mọi web developer. Hiểu rõ cách truy xuất, thao tác elements, xử lý events, và optimize performance sẽ giúp bạn xây dựng các ứng dụng web mượt mà và hiệu quả. Trong bài viết tiếp theo, chúng ta sẽ tìm hiểu về Functions và Events - cách tổ chức code JavaScript một cách chuyên nghiệp hơn.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN - DOM Introduction</a></li>
+<li><a href="https://javascript.info/document">JavaScript.info - DOM</a></li>
+<li>&ldquo;DOM Enlightenment&rdquo; - Cody Lindley</li>
+<li>W3C DOM Specifications</li>
+</ul>
+
           </article>
         </div>
       </div>
@@ -358,16 +946,70 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
           
           <aside class="toc">
               <h5>
-                Mục lục
+                Table of Contents
               </h5>
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-dom-là-gì">1. DOM là gì?</a>
       <ul>
-        <li><a href="#1-truy-xuất-phần-tử">1. Truy xuất phần tử</a></li>
+        <li><a href="#11-định-nghĩa">1.1. Định nghĩa</a></li>
+        <li><a href="#12-dom-tree-structure">1.2. DOM Tree Structure</a></li>
+        <li><a href="#13-node-types">1.3. Node Types</a></li>
       </ul>
     </li>
+    <li><a href="#2-truy-xuất-elements-selecting-elements">2. Truy xuất Elements (Selecting Elements)</a>
+      <ul>
+        <li><a href="#21-các-phương-thức-cơ-bản">2.1. Các phương thức cơ bản</a></li>
+        <li><a href="#22-so-sánh-các-phương-thức">2.2. So sánh các phương thức</a></li>
+        <li><a href="#23-advanced-selectors">2.3. Advanced Selectors</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-thao-tác-nội-dung-content-manipulation">3. Thao tác nội dung (Content Manipulation)</a>
+      <ul>
+        <li><a href="#31-textcontent-vs-innerhtml-vs-innertext">3.1. textContent vs innerHTML vs innerText</a></li>
+        <li><a href="#32-thay-đổi-attributes">3.2. Thay đổi Attributes</a></li>
+        <li><a href="#33-data-attributes-html5">3.3. Data Attributes (HTML5)</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-thao-tác-styles">4. Thao tác Styles</a>
+      <ul>
+        <li><a href="#41-inline-styles">4.1. Inline Styles</a></li>
+        <li><a href="#42-css-classes-khuyến-khích">4.2. CSS Classes (Khuyến khích)</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-tạo-và-xóa-elements">5. Tạo và Xóa Elements</a>
+      <ul>
+        <li><a href="#51-tạo-elements">5.1. Tạo Elements</a></li>
+        <li><a href="#52-ví-dụ-thực-tế-tạo-danh-sách-động">5.2. Ví dụ thực tế: Tạo danh sách động</a></li>
+        <li><a href="#53-xóa-elements">5.3. Xóa Elements</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-traversing-dom-di-chuyển-trong-dom">6. Traversing DOM (Di chuyển trong DOM)</a>
+      <ul>
+        <li><a href="#61-parent-children-siblings">6.1. Parent, Children, Siblings</a></li>
+        <li><a href="#62-ví-dụ-navigation-trong-table">6.2. Ví dụ: Navigation trong table</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-event-handling">7. Event Handling</a>
+      <ul>
+        <li><a href="#71-addeventlistener">7.1. addEventListener</a></li>
+        <li><a href="#72-event-types">7.2. Event Types</a></li>
+        <li><a href="#73-event-object">7.3. Event Object</a></li>
+        <li><a href="#74-event-delegation">7.4. Event Delegation</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-performance-best-practices">8. Performance Best Practices</a>
+      <ul>
+        <li><a href="#81-minimize-reflows-và-repaints">8.1. Minimize Reflows và Repaints</a></li>
+        <li><a href="#82-cache-dom-references">8.2. Cache DOM References</a></li>
+        <li><a href="#83-debouncing-và-throttling">8.3. Debouncing và Throttling</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-ví-dụ-thực-tế-todo-list">9. Ví dụ thực tế: Todo List</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
   </ul>
 </nav>
               </div>
@@ -379,17 +1021,21 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/javascript"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/javascript"
                 target="_blank"
               >JavaScript</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/dom"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/dom"
                 target="_blank"
               >DOM</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/frontend"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/frontend"
                 target="_blank"
               >Frontend</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/web-development"
+                target="_blank"
+              >Web Development</a></li>
               
             </ul>
           </aside>
@@ -401,22 +1047,22 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20c%c3%a1ch%20d%c3%b9ng%20JavaScript%20%c4%91%e1%bb%83%20th%c3%aam%2c%20x%c3%b3a%2c%20s%e1%bb%ada%20c%c3%a1c%20ph%e1%ba%a7n%20t%e1%bb%ad%20HTML%20tr%c3%aan%20trang. https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20chi%20ti%e1%ba%bft%20v%e1%bb%81%20DOM%20%28Document%20Object%20Model%29%2c%20c%c3%a1ch%20s%e1%bb%ad%20d%e1%bb%a5ng%20JavaScript%20%c4%91%e1%bb%83%20truy%20xu%e1%ba%a5t%2c%20thao%20t%c3%a1c%2c%20v%c3%a0%20t%e1%ba%a1o%20c%c3%a1c%20ph%e1%ba%a7n%20t%e1%bb%ad%20HTML%20%c4%91%e1%bb%99ng%2c%20c%c3%b9ng%20v%e1%bb%9bi%20event%20handling%20v%c3%a0%20best%20practices. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='https://twitter.com/share?text=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n&url=https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f&hashtags=JavaScript%2cDOM%2cFrontend'>
+                  <a target="_blank" href='https://twitter.com/share?text=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f&hashtags=JavaScript%2cDOM%2cFrontend%2cWeb%20Development'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n: https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n&amp;body=Check%20out%20this%20site https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f'>
+                  <a target="_blank" href='mailto:?subject=DOM%20Manipulation%3a%20Thay%20%c4%91%e1%bb%95i%20trang%20web%20theo%20%c3%bd%20mu%e1%bb%91n&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-dom-manipulation%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -442,7 +1088,7 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="https://ThienIT84.github.io/NetworkingPrograming/js/scrollProgressBar.js"></script>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -475,7 +1121,7 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
 </script>
 
 
-<script src="https://ThienIT84.github.io/NetworkingPrograming/js/readingTime.js"></script>
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
 
 
 
@@ -487,7 +1133,7 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
     
     
     <div class="h3 text-center text-secondary py-3">
-        Bài viết gần đây
+        Recent Blog Posts
     </div>
     <div class="row justify-content-center">
         
@@ -495,24 +1141,24 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/java-vs-python.jpg" class="card-img-top" alt="Java vs Python: Lập trình viên AI có cần biết Java?">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Java vs Python: Lập trình viên AI có cần biết Java?">Java vs Python: Lập trình …</h5>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Chúng ta đều biết Python là &ldquo;vua&rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?</p>
-<h3 id="1-python-tốt-cho-nghiên-cứu-research">1. Python: Tốt cho Nghiên cứu (Research)</h3>
-<p>Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình …</p></p>
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -521,24 +1167,24 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" class="card-img-top" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">TensorFlow.js: Mang sức …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình …</p></p>
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -547,24 +1193,23 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chatbot-api.jpg" class="card-img-top" alt="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">Tự làm Chatbot AI tích …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &ldquo;nói chuyện&rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).</p>
-<h3 id="1-fetch-api-là-gì">1. Fetch API là gì?</h3>
-<p><code>fetch()</code> là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta …</p></p>
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -601,6 +1246,18 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
     
 
     
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
 
     
 
@@ -621,13 +1278,13 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/" title="Blog Lập Trình - Trần Thanh Thiện">
-                        <img alt="Footer logo" src="https://ThienIT84.github.io/NetworkingPrograming/fav.png"
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
                             height="40px" width="40px">
                     </a>
                 </div>
             
-            &copy; 2025  © 2025 Trần Thanh Thiện
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -677,7 +1334,7 @@ DOM Manipulation: Thay đổi trang web theo ý muốn | Blog Lập Trình - Tr�
 </script>
 
 
-    <script src="https://ThienIT84.github.io/NetworkingPrograming/js/search.js"></script>
+    <script src="/NetworkingPrograming/js/search.js"></script>
 
 
 

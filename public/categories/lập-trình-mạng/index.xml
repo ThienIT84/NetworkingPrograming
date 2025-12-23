@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lập Trình Mạng on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
-    <description>Recent content in Lập Trình Mạng on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>Lập Trình Mạng on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
+    <description>Recent content in Lập Trình Mạng on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Dec 2025 09:30:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</guid>
+      <description>&lt;p&gt;Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &amp;ldquo;nghe lén&amp;rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần &lt;strong&gt;SSL/TLS&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-ssltls-là-gì&#34;&gt;1. SSL/TLS là gì?&lt;/h3&gt;&#xA;&lt;p&gt;SSL (Secure Sockets Layer) và phiên bản mới hơn là TLS (Transport Layer Security) là các giao thức giúp mã hóa đường truyền giữa Client và Server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>
+      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thế giới lập trình mạng, &lt;strong&gt;TCP&lt;/strong&gt; thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, &lt;strong&gt;tốc độ&lt;/strong&gt; quan trọng hơn &lt;strong&gt;độ chính xác&lt;/strong&gt;. Đó chính là lúc &lt;strong&gt;UDP (User Datagram Protocol)&lt;/strong&gt; tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế hoạt động của UDP và cách triển khai trong Java.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
-      <description>&lt;p&gt;Trong lập trình mạng, việc chọn lựa giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; cũng giống như việc bạn chọn gửi thư bảo đảm hay gửi tin nhắn nhanh vậy. Mỗi cái đều có ưu và nhược điểm riêng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tcp-transmission-control-protocol&#34;&gt;1. TCP (Transmission Control Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;TCP được gọi là giao thức &amp;ldquo;hướng kết nối&amp;rdquo;. Nó đảm bảo dữ liệu gửi đi sẽ đến nơi chính xác, đầy đủ và đúng thứ tự.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ưu điểm:&lt;/strong&gt; Tin cậy, không mất dữ liệu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ứng dụng:&lt;/strong&gt; Web (HTTP), Email (SMTP), Truyền file (FTP).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-udp-user-datagram-protocol&#34;&gt;2. UDP (User Datagram Protocol)&lt;/h3&gt;&#xA;&lt;p&gt;Ngược lại, UDP là giao thức &amp;ldquo;không kết nối&amp;rdquo;. Nó cứ gửi đi mà không cần biết phía bên kia có nhận được hay không.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong lập trình mạng, việc lựa chọn giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; là một quyết định kiến trúc quan trọng, ảnh hưởng trực tiếp đến hiệu năng, độ tin cậy và trải nghiệm người dùng của ứng dụng. Giống như việc chọn phương tiện vận chuyển - đôi khi bạn cần dịch vụ chuyển phát nhanh đảm bảo (TCP), đôi khi bạn chỉ cần gửi thư thường nhanh chóng (UDP). Bài viết này sẽ phân tích sâu sắc cả hai giao thức để giúp bạn đưa ra quyết định đúng đắn.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
-      <description>&lt;p&gt;Một Server cơ bản chỉ có thể tiếp một Client tại một thời điểm. Vậy làm sao để xây dựng một phòng Chat có 100 người? Câu trả lời chính là &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-vấn-đề-của-server-đơn-luồng&#34;&gt;1. Vấn đề của Server đơn luồng&lt;/h3&gt;&#xA;&lt;p&gt;Khi Server đang xử lý lệnh &lt;code&gt;accept()&lt;/code&gt; hoặc đang đợi dữ liệu từ Client A, nó sẽ bị &amp;ldquo;treo&amp;rdquo; (block) và không thể tiếp nhận Client B. Điều này khiến ứng dụng mạng trở nên vô dụng trong thực tế.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Một Server chỉ có thể phục vụ một Client tại một thời điểm là hoàn toàn không khả thi trong thực tế. Hãy tưởng tượng Facebook, Zalo hay bất kỳ ứng dụng chat nào chỉ cho phép một người dùng đăng nhập tại một thời điểm - điều đó sẽ là thảm họa! Bài viết này sẽ giải thích chi tiết về &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng) - giải pháp cho phép Server xử lý hàng nghìn kết nối đồng thời.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java Socket: Cánh cửa vào thế giới Lập trình mạng</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
-      <description>&lt;p&gt;Chào mọi người, bài viết đầu tiên trên Blog này mình muốn dành để nói về &lt;strong&gt;Socket&lt;/strong&gt; – khái niệm nền tảng nhất khi học môn Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-socket-là-gì&#34;&gt;1. Socket là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Nếu coi mạng Internet là một hệ thống bưu điện khổng lồ, thì &lt;strong&gt;Socket&lt;/strong&gt; chính là &amp;ldquo;cửa sổ&amp;rdquo; hoặc &amp;ldquo;cổng&amp;rdquo; để các ứng dụng gửi và nhận thư. Trong Java, Socket cho phép hai máy tính giao tiếp với nhau qua giao thức TCP hoặc UDP.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại số hóa hiện nay, hầu hết các ứng dụng đều cần khả năng giao tiếp qua mạng - từ các ứng dụng chat đơn giản đến các hệ thống phân tán phức tạp. &lt;strong&gt;Socket&lt;/strong&gt; chính là nền tảng cốt lõi cho phép các ứng dụng này hoạt động. Bài viết này sẽ đi sâu vào khái niệm Socket trong Java và cách thức triển khai mô hình Client-Server cơ bản.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

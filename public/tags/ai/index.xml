@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/ai/</link>
-    <description>Recent content in AI on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>AI on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/tags/ai/</link>
+    <description>Recent content in AI on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java vs Python: Lập trình viên AI có cần biết Java?</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</link>
+      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI bùng nổ, câu hỏi &amp;ldquo;Nên học Java hay Python?&amp;rdquo; trở nên phức tạp hơn bao giờ hết. Python đang thống trị trong nghiên cứu AI với TensorFlow, PyTorch, nhưng Java vẫn là trụ cột của các hệ thống enterprise lớn. Vậy một lập trình viên AI có thực sự cần biết Java? Bài viết này sẽ phân tích chi tiết để giúp bạn đưa ra quyết định đúng đắn cho sự nghiệp của mình.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
-      <description>&lt;p&gt;Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, &lt;strong&gt;TensorFlow.js&lt;/strong&gt; là một lựa chọn tuyệt vời.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-tensorflowjs-là-gì&#34;&gt;1. TensorFlow.js là gì?&lt;/h3&gt;&#xA;&lt;p&gt;Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình Machine Learning ngay trên trình duyệt (Client-side).&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-tại-sao-lại-dùng-nó&#34;&gt;2. Tại sao lại dùng nó?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bảo mật:&lt;/strong&gt; Dữ liệu không cần gửi về server (ví dụ nhận diện khuôn mặt).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tương tác thời gian thực:&lt;/strong&gt; Độ trễ cực thấp vì chạy ngay trên máy người dùng.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-ví-dụ-tạo-một-tensor-đơn-giản&#34;&gt;3. Ví dụ: Tạo một Tensor đơn giản&lt;/h3&gt;&#xA;&lt;p&gt;Để sử dụng, chúng ta chỉ cần nhúng thẻ script CDN vào HTML, sau đó viết code JS như sau:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại AI bùng nổ, việc chạy các mô hình Machine Learning không còn giới hạn ở Python và server nữa. &lt;strong&gt;TensorFlow.js&lt;/strong&gt; đã mở ra kỷ nguyên mới: &lt;strong&gt;AI chạy ngay trên trình duyệt web&lt;/strong&gt;, không cần backend, không cần cài đặt gì cả. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản đến việc xây dựng ứng dụng AI thực tế với TensorFlow.js.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI, việc tích hợp chatbot thông minh vào website không còn là điều xa vời. Với &lt;strong&gt;Fetch API&lt;/strong&gt; - một công cụ mạnh mẽ có sẵn trong JavaScript hiện đại, bạn có thể dễ dàng kết nối với các Large Language Models (LLM) như GPT, Gemini, Claude để tạo ra trải nghiệm tương tác ấn tượng. Bài viết này sẽ hướng dẫn bạn từ cơ bản đến nâng cao về cách xây dựng chatbot AI.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

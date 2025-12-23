@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=https://ThienIT84.github.io/NetworkingPrograming/fav.png type="image/gif">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/font.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/">
-  <meta property="og:site_name" content="Blog Lập Trình - Trần Thanh Thiện">
-  <meta property="og:title" content="JavaScript Căn Bản: Những bước chân đầu tiên">
-  <meta property="og:description" content="Tìm hiểu về biến (var, let, const) và các kiểu dữ liệu cơ bản trong JavaScript.">
-  <meta property="og:locale" content="vi">
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
+  <meta property="og:title" content="JavaScript Căn Bản: Nền tảng của Web Development hiện đại">
+  <meta property="og:description" content="Hướng dẫn chi tiết về JavaScript từ cơ bản đến nâng cao: biến, kiểu dữ liệu, functions, objects, ES6&#43; features, và best practices cho lập trình viên hiện đại.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
     <meta property="article:published_time" content="2025-12-19T09:00:00+07:00">
@@ -40,18 +40,20 @@
     <meta property="article:tag" content="JavaScript">
     <meta property="article:tag" content="Frontend">
     <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="ES6">
+    <meta property="article:tag" content="Web Development">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="JavaScript Căn Bản: Những bước chân đầu tiên">
-  <meta name="twitter:description" content="Tìm hiểu về biến (var, let, const) và các kiểu dữ liệu cơ bản trong JavaScript.">
+  <meta name="twitter:title" content="JavaScript Căn Bản: Nền tảng của Web Development hiện đại">
+  <meta name="twitter:description" content="Hướng dẫn chi tiết về JavaScript từ cơ bản đến nâng cao: biến, kiểu dữ liệu, functions, objects, ES6&#43; features, và best practices cho lập trình viên hiện đại.">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/header.css" media="all">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/footer.css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/theme.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
 
 <style>
     :root {
@@ -108,18 +110,18 @@
 
 
 
-<meta name="description" content="Tìm hiểu về biến (var, let, const) và các kiểu dữ liệu cơ bản trong JavaScript.">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/single.css">
+<meta name="description" content="Hướng dẫn chi tiết về JavaScript từ cơ bản đến nâng cao: biến, kiểu dữ liệu, functions, objects, ES6&#43; features, và best practices cho lập trình viên hiện đại.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
 
 
-<script defer src="https://ThienIT84.github.io/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
 
 
   
   
 
   <title>
-JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - Trần Thanh Thiện
+JavaScript Căn Bản: Nền tảng của Web Development hiện đại | Trần Thanh Thiện - AI Engineer Portfolio
 
   </title>
 </head>
@@ -181,9 +183,9 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://ThienIT84.github.io/NetworkingPrograming/">
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
                 
-                <img src="https://ThienIT84.github.io/NetworkingPrograming/fav.png" width="30" height="30"
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Thien.Dev
                 
@@ -217,39 +219,53 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#about" aria-label="about">
-                            Về bản thân
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#education"
+                        <a class="nav-link" href="/NetworkingPrograming#education"
                             aria-label="education">
-                            Học vấn
+                            Education
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#projects"
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
                             aria-label="projects">
-                            Đồ án Lập trình Mạng
+                            Featured Projects
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#contact"
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
                             aria-label="contact">
-                            Liên hệ
+                            Get In Touch
                         </a>
                     </li>
                     
@@ -261,19 +277,9 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/" title="">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
                             
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="blogs" title="">
-                            
-                            Bài viết
+                            Home
                         </a>
                     </li>
                     
@@ -283,7 +289,27 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="#about" title="">
                             
-                            Profile
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
                         </a>
                     </li>
                     
@@ -326,38 +352,545 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">JavaScript Căn Bản: Những bước chân đầu tiên</h1>
+            <h1 class="text-center mb-4">JavaScript Căn Bản: Nền tảng của Web Development hiện đại</h1>
             <div class="text-center">
               
-              19/12/2025
+              Dec 19, 2025
 
               
               <span id="readingTime">
-                phút đọc
+                min read
               </span>
               
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/js-basic.jpg" alt="JavaScript Căn Bản: Những bước chân đầu tiên">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/js-basic.jpg" alt="JavaScript Căn Bản: Nền tảng của Web Development hiện đại">
           </div>
           
           <article class="page-content  p-2">
-          <p>Nếu Java là &ldquo;xương sống&rdquo; của hệ thống thì JavaScript chính là &ldquo;cơ bắp&rdquo; giúp trang web hoạt động linh hoạt.</p>
-<h3 id="1-khai-báo-biến-var-let-hay-const">1. Khai báo biến: var, let hay const?</h3>
-<p>Trong JS hiện đại, chúng ta ưu tiên dùng <code>let</code> và <code>const</code>:</p>
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p><strong>JavaScript</strong> là ngôn ngữ lập trình phổ biến nhất thế giới (theo Stack Overflow Survey), và là ngôn ngữ duy nhất chạy native trên mọi trình duyệt web. Nếu Java là &ldquo;xương sống&rdquo; của hệ thống backend thì JavaScript chính là &ldquo;linh hồn&rdquo; giúp trang web sống động và tương tác. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản nhất đến các tính năng hiện đại của JavaScript.</p>
+<h2 id="1-javascript-là-gì">1. JavaScript là gì?</h2>
+<h3 id="11-lịch-sử-và-vai-trò">1.1. Lịch sử và vai trò</h3>
+<p><strong>JavaScript</strong> được tạo ra bởi Brendan Eich năm 1995 chỉ trong <strong>10 ngày</strong> tại Netscape. Ban đầu tên là Mocha, sau đổi thành LiveScript, cuối cùng là JavaScript (để &ldquo;nhờ vả&rdquo; sự nổi tiếng của Java).</p>
+<p><strong>Vai trò hiện tại:</strong></p>
 <ul>
-<li><strong>const:</strong> Dùng cho các giá trị không đổi.</li>
-<li><strong>let:</strong> Dùng cho các biến có thể thay đổi giá trị.</li>
-<li><strong>var:</strong> Cách cũ, hiện nay ít dùng do vấn đề về scope (phạm vi).</li>
+<li><strong>Frontend</strong>: Tương tác với người dùng trên browser</li>
+<li><strong>Backend</strong>: Node.js cho server-side programming</li>
+<li><strong>Mobile</strong>: React Native, Ionic</li>
+<li><strong>Desktop</strong>: Electron (VS Code, Discord, Slack)</li>
+<li><strong>IoT</strong>: Johnny-Five framework</li>
 </ul>
-<h3 id="2-các-kiểu-dữ-liệu-quan-trọng">2. Các kiểu dữ liệu quan trọng</h3>
-<p>JS là ngôn ngữ &ldquo;loosely typed&rdquo;, nghĩa là bạn không cần khai báo kiểu dữ liệu như Java:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thanh Thiện&#34;</span>; <span style="color:#75715e">// String
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;           <span style="color:#75715e">// Number
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isStudent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;    <span style="color:#75715e">// Boolean
-</span></span></span></code></pre></div>
+<h3 id="12-javascript-vs-java">1.2. JavaScript vs Java</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Đặc điểm</th>
+          <th>JavaScript</th>
+          <th>Java</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Typing</strong></td>
+          <td>Dynamically typed</td>
+          <td>Statically typed</td>
+      </tr>
+      <tr>
+          <td><strong>Compilation</strong></td>
+          <td>Interpreted</td>
+          <td>Compiled</td>
+      </tr>
+      <tr>
+          <td><strong>Running</strong></td>
+          <td>Browser, Node.js</td>
+          <td>JVM</td>
+      </tr>
+      <tr>
+          <td><strong>OOP</strong></td>
+          <td>Prototype-based</td>
+          <td>Class-based</td>
+      </tr>
+      <tr>
+          <td><strong>Syntax</strong></td>
+          <td>Linh hoạt</td>
+          <td>Nghiêm ngặt</td>
+      </tr>
+      <tr>
+          <td><strong>Use case</strong></td>
+          <td>Web, Full-stack</td>
+          <td>Enterprise, Android</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="2-biến-và-kiểu-dữ-liệu">2. Biến và Kiểu dữ liệu</h2>
+<h3 id="21-khai-báo-biến-var-let-const">2.1. Khai báo biến: var, let, const</h3>
+<p>JavaScript có 3 cách khai báo biến, mỗi cách có đặc điểm riêng:</p>
+<h4 id="a-var-cách-cũ---không-khuyến-khích">a) var (Cách cũ - Không khuyến khích)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thanh Thiện&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Vấn đề 1: Function scope (không phải block scope)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// 10 (vẫn truy cập được!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Vấn đề 2: Hoisting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">y</span>); <span style="color:#75715e">// undefined (không lỗi!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Vấn đề 3: Có thể khai báo lại
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>; <span style="color:#75715e">// OK (nhưng dễ gây bug)
+</span></span></span></code></pre></div><h4 id="b-let-es6---khuyến-khích-cho-biến-thay-đổi">b) let (ES6 - Khuyến khích cho biến thay đổi)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">21</span>; <span style="color:#75715e">// OK - có thể thay đổi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Ưu điểm 1: Block scope
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// ReferenceError: x is not defined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Ưu điểm 2: Không thể khai báo lại
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thanh&#34;</span>; <span style="color:#75715e">// SyntaxError!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Ưu điểm 3: Temporal Dead Zone
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">z</span>); <span style="color:#75715e">// ReferenceError (không phải undefined)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span></code></pre></div><h4 id="c-const-es6---khuyến-khích-cho-hằng-số">c) const (ES6 - Khuyến khích cho hằng số)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>; <span style="color:#75715e">// TypeError: Assignment to constant variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lưu ý: const chỉ ngăn reassignment, không ngăn mutation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">21</span>; <span style="color:#75715e">// OK - object vẫn có thể thay đổi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {}; <span style="color:#75715e">// TypeError - không thể gán lại
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Để object thực sự immutable:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">frozenUser</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>});
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">frozenUser</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thanh&#34;</span>; <span style="color:#75715e">// Không có tác dụng (strict mode sẽ lỗi)
+</span></span></span></code></pre></div><p><strong>Best Practice:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Ưu tiên const, dùng let khi cần thay đổi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">API_URL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.example.com&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Tránh dùng var
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oldStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;deprecated&#34;</span>;
+</span></span></code></pre></div><h3 id="22-kiểu-dữ-liệu-data-types">2.2. Kiểu dữ liệu (Data Types)</h3>
+<p>JavaScript có <strong>8 kiểu dữ liệu</strong>: 7 primitive + 1 object.</p>
+<h4 id="a-primitive-types">a) Primitive Types</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. String - Chuỗi ký tự
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thanh Thiện&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Xin chào&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">template</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>; <span style="color:#75715e">// Template literal (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Number - Số (cả integer và float)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bigNum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e6</span>; <span style="color:#75715e">// 1,000,000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">infinity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Infinity</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">notANumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">NaN</span>; <span style="color:#75715e">// Not a Number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. BigInt - Số nguyên lớn (ES2020)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">huge</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9007199254740991</span><span style="color:#a6e22e">n</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">alsoHuge</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">BigInt</span>(<span style="color:#e6db74">&#34;9007199254740991&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. Boolean - Giá trị logic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isStudent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hasGraduated</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 5. Undefined - Chưa được gán giá trị
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// undefined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 6. Null - Cố ý không có giá trị
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">emptyValue</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 7. Symbol - Giá trị duy nhất (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Symbol</span>(<span style="color:#e6db74">&#34;id&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Symbol</span>(<span style="color:#e6db74">&#34;id&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">id1</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id2</span>); <span style="color:#75715e">// false (mỗi Symbol là duy nhất)
+</span></span></span></code></pre></div><h4 id="b-object-type">b) Object Type</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Object - Tập hợp các key-value pairs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Thanh Thiện&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">major</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Computer Science&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpa</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3.8</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">skills</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Java&#34;</span>, <span style="color:#e6db74">&#34;JavaScript&#34;</span>, <span style="color:#e6db74">&#34;Python&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">address</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">city</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ho Chi Minh&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">district</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;District 1&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">introduce</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Tôi là </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> tuổi`</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Truy cập properties
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Dot notation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">student</span>[<span style="color:#e6db74">&#34;age&#34;</span>]); <span style="color:#75715e">// Bracket notation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm property mới
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;thien@example.com&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Xóa property
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">gpa</span>;
+</span></span></code></pre></div><h3 id="23-type-checking-và-conversion">2.3. Type Checking và Conversion</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra kiểu dữ liệu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#e6db74">&#34;hello&#34;</span>; <span style="color:#75715e">// &#34;string&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#ae81ff">42</span>; <span style="color:#75715e">// &#34;number&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">true</span>; <span style="color:#75715e">// &#34;boolean&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">undefined</span>; <span style="color:#75715e">// &#34;undefined&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">// &#34;object&#34; (bug lịch sử của JS!)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> {}; <span style="color:#75715e">// &#34;object&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> []; <span style="color:#75715e">// &#34;object&#34; (array cũng là object)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">function</span>(){}; <span style="color:#75715e">// &#34;function&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Array.<span style="color:#a6e22e">isArray</span>([]); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Array.<span style="color:#a6e22e">isArray</span>({}); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Type Conversion
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>String(<span style="color:#ae81ff">123</span>); <span style="color:#75715e">// &#34;123&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Number(<span style="color:#e6db74">&#34;456&#34;</span>); <span style="color:#75715e">// 456
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Number(<span style="color:#e6db74">&#34;abc&#34;</span>); <span style="color:#75715e">// NaN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Boolean(<span style="color:#ae81ff">0</span>); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Boolean(<span style="color:#e6db74">&#34;&#34;</span>); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Boolean(<span style="color:#e6db74">&#34;hello&#34;</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Implicit Conversion (Tự động chuyển đổi)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// &#34;53&#34; (number → string)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// 2 (string → number)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#f92672">*</span> <span style="color:#e6db74">&#34;2&#34;</span>; <span style="color:#75715e">// 10 (cả hai → number)
+</span></span></span></code></pre></div><h2 id="3-operators-toán-tử">3. Operators (Toán tử)</h2>
+<h3 id="31-arithmetic-operators">3.1. Arithmetic Operators</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 13 - Cộng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 7 - Trừ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 30 - Nhân
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 3.333... - Chia
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 1 - Chia lấy dư (modulo)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">**</span> <span style="color:#a6e22e">b</span>); <span style="color:#75715e">// 1000 - Lũy thừa (ES2016)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Increment/Decrement
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">++</span>); <span style="color:#75715e">// 5 (post-increment: trả về rồi mới tăng)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#f92672">++</span><span style="color:#a6e22e">y</span>); <span style="color:#75715e">// 6 (pre-increment: tăng rồi mới trả về)
+</span></span></span></code></pre></div><h3 id="32-comparison-operators">3.2. Comparison Operators</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Equality
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;5&#34;</span>; <span style="color:#75715e">// true (loose equality - chuyển đổi kiểu)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">5</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;5&#34;</span>; <span style="color:#75715e">// false (strict equality - không chuyển đổi)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Best Practice: Luôn dùng === và !==
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">0</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// true (loose)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">0</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// false (strict)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">null</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">undefined</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">null</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>; <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Comparison
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">10</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">10</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">5</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#34;b&#34;</span>; <span style="color:#75715e">// true (so sánh lexicographic)
+</span></span></span></code></pre></div><h3 id="33-logical-operators">3.3. Logical Operators</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// AND (&amp;&amp;) - Cả hai phải true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">true</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">true</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">true</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// OR (||) - Một trong hai true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">true</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">false</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// NOT (!) - Đảo ngược
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">!</span><span style="color:#66d9ef">true</span>; <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">!</span><span style="color:#66d9ef">false</span>; <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Short-circuit evaluation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;default&#34;</span>; <span style="color:#75715e">// &#34;default&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#e6db74">&#34;world&#34;</span>; <span style="color:#75715e">// &#34;world&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Nullish Coalescing Operator (ES2020)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">??</span> <span style="color:#e6db74">&#34;default&#34;</span>; <span style="color:#75715e">// &#34;default&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">??</span> <span style="color:#e6db74">&#34;default&#34;</span>; <span style="color:#75715e">// 0 (khác với ||)
+</span></span></span></code></pre></div><h3 id="34-ternary-operator">3.4. Ternary Operator</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Cú pháp: condition ? valueIfTrue : valueIfFalse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Adult&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Minor&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Nested ternary (tránh lạm dụng)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">grade</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;F&#34;</span>;
+</span></span></code></pre></div><h2 id="4-control-flow-luồng-điều-khiển">4. Control Flow (Luồng điều khiển)</h2>
+<h3 id="41-if-else-statement">4.1. If-Else Statement</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">85</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xuất sắc&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Giỏi&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Khá&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Trung bình&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Yếu&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Truthy và Falsy values
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Falsy: false, 0, &#34;&#34;, null, undefined, NaN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Truthy: Tất cả các giá trị khác
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Không chạy&#34;</span>); <span style="color:#75715e">// &#34;&#34; là falsy
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;hello&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Chạy&#34;</span>); <span style="color:#75715e">// &#34;hello&#34; là truthy
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="42-switch-statement">4.2. Switch Statement</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Monday&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">day</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Monday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Đầu tuần&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Friday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Cuối tuần&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Saturday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nghỉ&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ngày thường&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="43-loops">4.3. Loops</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// For loop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// 0, 1, 2, 3, 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// While loop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">count</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Do-While loop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">num</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">num</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// For...of (iterate over values) - ES6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 10, 20, 30
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// For...in (iterate over keys)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>]); <span style="color:#75715e">// a 1, b 2, c 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="5-functions">5. Functions</h2>
+<h3 id="51-function-declaration">5.1. Function Declaration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Traditional function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greet</span>(<span style="color:#e6db74">&#34;Thiện&#34;</span>)); <span style="color:#75715e">// &#34;Hello, Thiện!&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function với default parameters (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">multiply</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">multiply</span>(<span style="color:#ae81ff">5</span>)); <span style="color:#75715e">// 5 (b = 1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">multiply</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// 15
+</span></span></span></code></pre></div><h3 id="52-function-expression">5.2. Function Expression</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// 7
+</span></span></span></code></pre></div><h3 id="53-arrow-functions-es6">5.3. Arrow Functions (ES6)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Cú pháp ngắn gọn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">x</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với một tham số, có thể bỏ dấu ngoặc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với nhiều dòng, cần dấu {} và return
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">complexFunc</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">y</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Arrow function không có &#39;this&#39; riêng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hi, I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// &#39;this&#39; từ person
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="54-rest-parameters-và-spread-operator">5.4. Rest Parameters và Spread Operator</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Rest parameters - Thu thập tham số thành array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(...<span style="color:#a6e22e">numbers</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">num</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)); <span style="color:#75715e">// 15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Spread operator - Trải array thành các phần tử riêng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr2</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">combined</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr1</span>, ...<span style="color:#a6e22e">arr2</span>]; <span style="color:#75715e">// [1, 2, 3, 4, 5, 6]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">d</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">merged</span> <span style="color:#f92672">=</span> {...<span style="color:#a6e22e">obj1</span>, ...<span style="color:#a6e22e">obj2</span>}; <span style="color:#75715e">// {a: 1, b: 2, c: 3, d: 4}
+</span></span></span></code></pre></div><h2 id="6-arrays">6. Arrays</h2>
+<h3 id="61-array-methods">6.1. Array Methods</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// map - Biến đổi từng phần tử
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// [2, 4, 6, 8, 10]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// filter - Lọc phần tử
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">evens</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// [2, 4]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// reduce - Gộp thành một giá trị
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">curr</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">curr</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// 15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// find - Tìm phần tử đầu tiên thỏa điều kiện
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">found</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>); <span style="color:#75715e">// 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// some - Kiểm tra có ít nhất một phần tử thỏa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hasEven</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">some</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// every - Kiểm tra tất cả phần tử thỏa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allPositive</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">every</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// forEach - Lặp qua từng phần tử
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Index </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="62-destructuring-es6">6.2. Destructuring (ES6)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Array destructuring
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">first</span>, <span style="color:#a6e22e">second</span>, ...<span style="color:#a6e22e">rest</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">first</span>); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">second</span>); <span style="color:#75715e">// 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rest</span>); <span style="color:#75715e">// [3, 4, 5]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Object destructuring
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>, <span style="color:#a6e22e">city</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;HCM&#34;</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// &#34;Thiện&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với alias
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">userName</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">userAge</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">userName</span>); <span style="color:#75715e">// &#34;Thiện&#34;
+</span></span></span></code></pre></div><h2 id="7-modern-javascript-es6">7. Modern JavaScript (ES6+)</h2>
+<h3 id="71-template-literals">7.1. Template Literals</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thiện&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Old way
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;My name is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; and I&#39;m &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old.&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ES6 way
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`My name is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> years old.`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Multi-line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;h1&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;p&gt;Age: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>;
+</span></span></code></pre></div><h3 id="72-promises-và-asyncawait">7.2. Promises và Async/Await</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Promise
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fetchData</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;Data loaded&#34;</span>);
+</span></span><span style="display:flex;"><span>        }, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fetchData</span>()
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Async/Await (ES2017)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadData</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchData</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="8-best-practices">8. Best Practices</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ✅ 1. Sử dụng strict mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 2. Const/let thay vì var
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">API_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc123&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 3. === thay vì ==
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">10</span>) { }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 4. Arrow functions cho callbacks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 5. Destructuring
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 6. Template literals
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">msg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 7. Optional chaining (ES2020)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">city</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">address</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">city</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 8. Nullish coalescing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">??</span> <span style="color:#e6db74">&#34;default&#34;</span>;
+</span></span></code></pre></div><h2 id="kết-luận">Kết luận</h2>
+<p>JavaScript là ngôn ngữ mạnh mẽ và linh hoạt, không ngừng phát triển với các tính năng mới mỗi năm. Nắm vững các khái niệm cơ bản như biến, kiểu dữ liệu, functions, và arrays là nền tảng để bạn có thể tiến xa hơn với các framework hiện đại như React, Vue, hoặc Node.js.</p>
+<p>Trong bài viết tiếp theo, chúng ta sẽ tìm hiểu về DOM Manipulation - cách JavaScript tương tác với HTML để tạo ra các trang web động.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs - JavaScript</a></li>
+<li>&ldquo;You Don&rsquo;t Know JS&rdquo; - Kyle Simpson</li>
+<li>&ldquo;Eloquent JavaScript&rdquo; - Marijn Haverbeke</li>
+<li><a href="https://javascript.info/">JavaScript.info</a></li>
+<li>ECMAScript Specifications</li>
+</ul>
+
           </article>
         </div>
       </div>
@@ -366,17 +899,63 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
           
           <aside class="toc">
               <h5>
-                Mục lục
+                Table of Contents
               </h5>
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-javascript-là-gì">1. JavaScript là gì?</a>
       <ul>
-        <li><a href="#1-khai-báo-biến-var-let-hay-const">1. Khai báo biến: var, let hay const?</a></li>
-        <li><a href="#2-các-kiểu-dữ-liệu-quan-trọng">2. Các kiểu dữ liệu quan trọng</a></li>
+        <li><a href="#11-lịch-sử-và-vai-trò">1.1. Lịch sử và vai trò</a></li>
+        <li><a href="#12-javascript-vs-java">1.2. JavaScript vs Java</a></li>
       </ul>
     </li>
+    <li><a href="#2-biến-và-kiểu-dữ-liệu">2. Biến và Kiểu dữ liệu</a>
+      <ul>
+        <li><a href="#21-khai-báo-biến-var-let-const">2.1. Khai báo biến: var, let, const</a></li>
+        <li><a href="#22-kiểu-dữ-liệu-data-types">2.2. Kiểu dữ liệu (Data Types)</a></li>
+        <li><a href="#23-type-checking-và-conversion">2.3. Type Checking và Conversion</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-operators-toán-tử">3. Operators (Toán tử)</a>
+      <ul>
+        <li><a href="#31-arithmetic-operators">3.1. Arithmetic Operators</a></li>
+        <li><a href="#32-comparison-operators">3.2. Comparison Operators</a></li>
+        <li><a href="#33-logical-operators">3.3. Logical Operators</a></li>
+        <li><a href="#34-ternary-operator">3.4. Ternary Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-control-flow-luồng-điều-khiển">4. Control Flow (Luồng điều khiển)</a>
+      <ul>
+        <li><a href="#41-if-else-statement">4.1. If-Else Statement</a></li>
+        <li><a href="#42-switch-statement">4.2. Switch Statement</a></li>
+        <li><a href="#43-loops">4.3. Loops</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-functions">5. Functions</a>
+      <ul>
+        <li><a href="#51-function-declaration">5.1. Function Declaration</a></li>
+        <li><a href="#52-function-expression">5.2. Function Expression</a></li>
+        <li><a href="#53-arrow-functions-es6">5.3. Arrow Functions (ES6)</a></li>
+        <li><a href="#54-rest-parameters-và-spread-operator">5.4. Rest Parameters và Spread Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-arrays">6. Arrays</a>
+      <ul>
+        <li><a href="#61-array-methods">6.1. Array Methods</a></li>
+        <li><a href="#62-destructuring-es6">6.2. Destructuring (ES6)</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-modern-javascript-es6">7. Modern JavaScript (ES6+)</a>
+      <ul>
+        <li><a href="#71-template-literals">7.1. Template Literals</a></li>
+        <li><a href="#72-promises-và-asyncawait">7.2. Promises và Async/Await</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-best-practices">8. Best Practices</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
   </ul>
 </nav>
               </div>
@@ -388,17 +967,25 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/javascript"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/javascript"
                 target="_blank"
               >JavaScript</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/frontend"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/frontend"
                 target="_blank"
               >Frontend</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/programming"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/programming"
                 target="_blank"
               >Programming</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/es6"
+                target="_blank"
+              >ES6</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/web-development"
+                target="_blank"
+              >Web Development</a></li>
               
             </ul>
           </aside>
@@ -410,22 +997,22 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=T%c3%acm%20hi%e1%bb%83u%20v%e1%bb%81%20bi%e1%ba%bfn%20%28var%2c%20let%2c%20const%29%20v%c3%a0%20c%c3%a1c%20ki%e1%bb%83u%20d%e1%bb%af%20li%e1%bb%87u%20c%c6%a1%20b%e1%ba%a3n%20trong%20JavaScript. https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20chi%20ti%e1%ba%bft%20v%e1%bb%81%20JavaScript%20t%e1%bb%ab%20c%c6%a1%20b%e1%ba%a3n%20%c4%91%e1%ba%bfn%20n%c3%a2ng%20cao%3a%20bi%e1%ba%bfn%2c%20ki%e1%bb%83u%20d%e1%bb%af%20li%e1%bb%87u%2c%20functions%2c%20objects%2c%20ES6%2b%20features%2c%20v%c3%a0%20best%20practices%20cho%20l%e1%ba%adp%20tr%c3%acnh%20vi%c3%aan%20hi%e1%bb%87n%20%c4%91%e1%ba%a1i. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='https://twitter.com/share?text=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20Nh%e1%bb%afng%20b%c6%b0%e1%bb%9bc%20ch%c3%a2n%20%c4%91%e1%ba%a7u%20ti%c3%aan&url=https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f&hashtags=JavaScript%2cFrontend%2cProgramming'>
+                  <a target="_blank" href='https://twitter.com/share?text=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20N%e1%bb%81n%20t%e1%ba%a3ng%20c%e1%bb%a7a%20Web%20Development%20hi%e1%bb%87n%20%c4%91%e1%ba%a1i&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f&hashtags=JavaScript%2cFrontend%2cProgramming%2cES6%2cWeb%20Development'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20Nh%e1%bb%afng%20b%c6%b0%e1%bb%9bc%20ch%c3%a2n%20%c4%91%e1%ba%a7u%20ti%c3%aan: https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20N%e1%bb%81n%20t%e1%ba%a3ng%20c%e1%bb%a7a%20Web%20Development%20hi%e1%bb%87n%20%c4%91%e1%ba%a1i: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20Nh%e1%bb%afng%20b%c6%b0%e1%bb%9bc%20ch%c3%a2n%20%c4%91%e1%ba%a7u%20ti%c3%aan&amp;body=Check%20out%20this%20site https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f'>
+                  <a target="_blank" href='mailto:?subject=JavaScript%20C%c4%83n%20B%e1%ba%a3n%3a%20N%e1%bb%81n%20t%e1%ba%a3ng%20c%e1%bb%a7a%20Web%20Development%20hi%e1%bb%87n%20%c4%91%e1%ba%a1i&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjavascript-co-ban%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -451,7 +1038,7 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="https://ThienIT84.github.io/NetworkingPrograming/js/scrollProgressBar.js"></script>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -484,7 +1071,7 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
 </script>
 
 
-<script src="https://ThienIT84.github.io/NetworkingPrograming/js/readingTime.js"></script>
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
 
 
 
@@ -496,7 +1083,7 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
     
     
     <div class="h3 text-center text-secondary py-3">
-        Bài viết gần đây
+        Recent Blog Posts
     </div>
     <div class="row justify-content-center">
         
@@ -504,24 +1091,24 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/java-vs-python.jpg" class="card-img-top" alt="Java vs Python: Lập trình viên AI có cần biết Java?">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Java vs Python: Lập trình viên AI có cần biết Java?">Java vs Python: Lập trình …</h5>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Chúng ta đều biết Python là &ldquo;vua&rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?</p>
-<h3 id="1-python-tốt-cho-nghiên-cứu-research">1. Python: Tốt cho Nghiên cứu (Research)</h3>
-<p>Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình …</p></p>
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -530,24 +1117,24 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" class="card-img-top" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">TensorFlow.js: Mang sức …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình …</p></p>
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -556,24 +1143,23 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chatbot-api.jpg" class="card-img-top" alt="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">Tự làm Chatbot AI tích …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &ldquo;nói chuyện&rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).</p>
-<h3 id="1-fetch-api-là-gì">1. Fetch API là gì?</h3>
-<p><code>fetch()</code> là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta …</p></p>
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -610,6 +1196,18 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
     
 
     
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
 
     
 
@@ -630,13 +1228,13 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/" title="Blog Lập Trình - Trần Thanh Thiện">
-                        <img alt="Footer logo" src="https://ThienIT84.github.io/NetworkingPrograming/fav.png"
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
                             height="40px" width="40px">
                     </a>
                 </div>
             
-            &copy; 2025  © 2025 Trần Thanh Thiện
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -686,7 +1284,7 @@ JavaScript Căn Bản: Những bước chân đầu tiên | Blog Lập Trình - 
 </script>
 
 
-    <script src="https://ThienIT84.github.io/NetworkingPrograming/js/search.js"></script>
+    <script src="/NetworkingPrograming/js/search.js"></script>
 
 
 

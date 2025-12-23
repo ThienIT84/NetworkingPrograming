@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=https://ThienIT84.github.io/NetworkingPrograming/fav.png type="image/gif">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/font.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/">
-  <meta property="og:site_name" content="Blog Lập Trình - Trần Thanh Thiện">
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
   <meta property="og:title" content="Java Socket: Cánh cửa vào thế giới Lập trình mạng">
-  <meta property="og:description" content="Tìm hiểu cơ bản về Socket trong Java và cách thức hoạt động của mô hình Client-Server.">
-  <meta property="og:locale" content="vi">
+  <meta property="og:description" content="Tìm hiểu chi tiết về Socket trong Java, kiến trúc Client-Server, và cách thức hoạt động của giao thức TCP/IP trong lập trình mạng.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
     <meta property="article:published_time" content="2025-12-19T10:00:00+07:00">
@@ -40,18 +40,19 @@
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Network">
     <meta property="article:tag" content="Socket">
+    <meta property="article:tag" content="TCP/IP">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Java Socket: Cánh cửa vào thế giới Lập trình mạng">
-  <meta name="twitter:description" content="Tìm hiểu cơ bản về Socket trong Java và cách thức hoạt động của mô hình Client-Server.">
+  <meta name="twitter:description" content="Tìm hiểu chi tiết về Socket trong Java, kiến trúc Client-Server, và cách thức hoạt động của giao thức TCP/IP trong lập trình mạng.">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/header.css" media="all">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/footer.css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/theme.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
 
 <style>
     :root {
@@ -108,18 +109,18 @@
 
 
 
-<meta name="description" content="Tìm hiểu cơ bản về Socket trong Java và cách thức hoạt động của mô hình Client-Server.">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/single.css">
+<meta name="description" content="Tìm hiểu chi tiết về Socket trong Java, kiến trúc Client-Server, và cách thức hoạt động của giao thức TCP/IP trong lập trình mạng.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
 
 
-<script defer src="https://ThienIT84.github.io/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
 
 
   
   
 
   <title>
-Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trình - Trần Thanh Thiện
+Java Socket: Cánh cửa vào thế giới Lập trình mạng | Trần Thanh Thiện - AI Engineer Portfolio
 
   </title>
 </head>
@@ -181,9 +182,9 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://ThienIT84.github.io/NetworkingPrograming/">
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
                 
-                <img src="https://ThienIT84.github.io/NetworkingPrograming/fav.png" width="30" height="30"
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Thien.Dev
                 
@@ -217,39 +218,53 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#about" aria-label="about">
-                            Về bản thân
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#education"
+                        <a class="nav-link" href="/NetworkingPrograming#education"
                             aria-label="education">
-                            Học vấn
+                            Education
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#projects"
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
                             aria-label="projects">
-                            Đồ án Lập trình Mạng
+                            Featured Projects
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#contact"
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
                             aria-label="contact">
-                            Liên hệ
+                            Get In Touch
                         </a>
                     </li>
                     
@@ -261,19 +276,9 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/" title="">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
                             
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="blogs" title="">
-                            
-                            Bài viết
+                            Home
                         </a>
                     </li>
                     
@@ -283,7 +288,27 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="#about" title="">
                             
-                            Profile
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
                         </a>
                     </li>
                     
@@ -329,41 +354,226 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <h1 class="text-center mb-4">Java Socket: Cánh cửa vào thế giới Lập trình mạng</h1>
             <div class="text-center">
               
-              19/12/2025
+              Dec 19, 2025
 
               
               <span id="readingTime">
-                phút đọc
+                min read
               </span>
               
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chat-app.jpg" alt="Java Socket: Cánh cửa vào thế giới Lập trình mạng">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/chat-app.jpg" alt="Java Socket: Cánh cửa vào thế giới Lập trình mạng">
           </div>
           
           <article class="page-content  p-2">
-          <p>Chào mọi người, bài viết đầu tiên trên Blog này mình muốn dành để nói về <strong>Socket</strong> – khái niệm nền tảng nhất khi học môn Lập trình mạng.</p>
-<h3 id="1-socket-là-gì">1. Socket là gì?</h3>
-<p>Nếu coi mạng Internet là một hệ thống bưu điện khổng lồ, thì <strong>Socket</strong> chính là &ldquo;cửa sổ&rdquo; hoặc &ldquo;cổng&rdquo; để các ứng dụng gửi và nhận thư. Trong Java, Socket cho phép hai máy tính giao tiếp với nhau qua giao thức TCP hoặc UDP.</p>
-<h3 id="2-mô-hình-hoạt-động-client---server">2. Mô hình hoạt động Client - Server</h3>
-<p>Để giao tiếp diễn ra, chúng ta cần hai phía:</p>
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thời đại số hóa hiện nay, hầu hết các ứng dụng đều cần khả năng giao tiếp qua mạng - từ các ứng dụng chat đơn giản đến các hệ thống phân tán phức tạp. <strong>Socket</strong> chính là nền tảng cốt lõi cho phép các ứng dụng này hoạt động. Bài viết này sẽ đi sâu vào khái niệm Socket trong Java và cách thức triển khai mô hình Client-Server cơ bản.</p>
+<h2 id="1-socket-là-gì">1. Socket là gì?</h2>
+<h3 id="11-định-nghĩa">1.1. Định nghĩa</h3>
+<p><strong>Socket</strong> (ổ cắm mạng) là một điểm cuối (endpoint) trong kênh giao tiếp hai chiều giữa hai chương trình chạy trên mạng. Nói cách khác, Socket là một giao diện lập trình ứng dụng (API) cho phép các tiến trình giao tiếp với nhau qua mạng máy tính.</p>
+<p>Nếu coi mạng Internet là một hệ thống bưu điện khổng lồ, thì <strong>Socket</strong> chính là &ldquo;hòm thư&rdquo; hoặc &ldquo;cổng&rdquo; để các ứng dụng gửi và nhận dữ liệu. Mỗi Socket được xác định duy nhất bởi sự kết hợp của:</p>
 <ul>
-<li><strong>Server (Máy chủ):</strong> Luôn ở trạng thái &ldquo;lắng nghe&rdquo; (listen) các kết nối từ bên ngoài.</li>
-<li><strong>Client (Máy khách):</strong> Chủ động gửi yêu cầu kết nối đến Server.</li>
+<li><strong>Địa chỉ IP</strong> (IP Address): Xác định máy tính trong mạng</li>
+<li><strong>Số cổng</strong> (Port Number): Xác định ứng dụng cụ thể trên máy tính đó</li>
 </ul>
-<h3 id="3-ví-dụ-code-đơn-giản-trong-java">3. Ví dụ Code đơn giản trong Java</h3>
-<p>Dưới đây là đoạn code khởi tạo một Server cơ bản lắng nghe tại cổng <strong>1234</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Phía Server</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> (ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(1234)) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server đang chờ kết nối...&#34;</span>);
-</span></span><span style="display:flex;"><span>    Socket socket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>(); <span style="color:#75715e">// Chấp nhận kết nối</span>
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đã có máy khách kết nối!&#34;</span>);
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>    e.<span style="color:#a6e22e">printStackTrace</span>();
+<h3 id="12-phân-loại-socket">1.2. Phân loại Socket</h3>
+<p>Trong Java, có hai loại Socket chính:</p>
+<ol>
+<li>
+<p><strong>Stream Socket (TCP Socket)</strong>:</p>
+<ul>
+<li>Sử dụng giao thức TCP (Transmission Control Protocol)</li>
+<li>Đảm bảo dữ liệu được truyền đầy đủ, đúng thứ tự</li>
+<li>Hướng kết nối (connection-oriented)</li>
+<li>Phù hợp cho: Web browsing, Email, File transfer</li>
+</ul>
+</li>
+<li>
+<p><strong>Datagram Socket (UDP Socket)</strong>:</p>
+<ul>
+<li>Sử dụng giao thức UDP (User Datagram Protocol)</li>
+<li>Không đảm bảo dữ liệu đến đích</li>
+<li>Không kết nối (connectionless)</li>
+<li>Phù hợp cho: Streaming video, Gaming, VoIP</li>
+</ul>
+</li>
+</ol>
+<p>Bài viết này tập trung vào <strong>Stream Socket</strong> sử dụng TCP.</p>
+<h2 id="2-mô-hình-client-server">2. Mô hình Client-Server</h2>
+<h3 id="21-kiến-trúc-tổng-quan">2.1. Kiến trúc tổng quan</h3>
+<p>Mô hình Client-Server là kiến trúc mạng phổ biến nhất, trong đó:</p>
+<ul>
+<li>
+<p><strong>Server (Máy chủ)</strong>:</p>
+<ul>
+<li>Luôn ở trạng thái &ldquo;lắng nghe&rdquo; (listening) trên một cổng cụ thể</li>
+<li>Chờ đợi các yêu cầu kết nối từ Client</li>
+<li>Xử lý yêu cầu và gửi phản hồi</li>
+<li>Có thể phục vụ nhiều Client đồng thời (với multi-threading)</li>
+</ul>
+</li>
+<li>
+<p><strong>Client (Máy khách)</strong>:</p>
+<ul>
+<li>Chủ động khởi tạo kết nối đến Server</li>
+<li>Gửi yêu cầu (request) và nhận phản hồi (response)</li>
+<li>Thường có vòng đời ngắn hơn Server</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-quy-trình-giao-tiếp-tcp">2.2. Quy trình giao tiếp TCP</h3>
+<p>Quá trình thiết lập kết nối TCP tuân theo cơ chế <strong>Three-Way Handshake</strong>:</p>
+<ol>
+<li><strong>SYN</strong>: Client gửi gói tin SYN (Synchronize) đến Server</li>
+<li><strong>SYN-ACK</strong>: Server phản hồi bằng gói tin SYN-ACK (Synchronize-Acknowledge)</li>
+<li><strong>ACK</strong>: Client gửi gói tin ACK (Acknowledge) xác nhận</li>
+</ol>
+<p>Sau khi kết nối được thiết lập, dữ liệu có thể truyền đi hai chiều. Khi kết thúc, cần có quá trình <strong>Four-Way Handshake</strong> để đóng kết nối một cách an toàn.</p>
+<h2 id="3-triển-khai-socket-trong-java">3. Triển khai Socket trong Java</h2>
+<h3 id="31-các-lớp-quan-trọng">3.1. Các lớp quan trọng</h3>
+<p>Java cung cấp các lớp trong package <code>java.net</code> để làm việc với Socket:</p>
+<ul>
+<li><strong>ServerSocket</strong>: Dùng cho Server, lắng nghe kết nối từ Client</li>
+<li><strong>Socket</strong>: Đại diện cho một kết nối Socket (dùng cho cả Client và Server)</li>
+<li><strong>InetAddress</strong>: Đại diện cho địa chỉ IP</li>
+<li><strong>InputStream/OutputStream</strong>: Để đọc/ghi dữ liệu qua Socket</li>
+</ul>
+<h3 id="32-code-mẫu-server">3.2. Code mẫu Server</h3>
+<p>Dưới đây là ví dụ về một Server TCP đơn giản lắng nghe tại cổng <strong>1234</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleServer</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> PORT <span style="color:#f92672">=</span> 1234;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(PORT)) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;=== Server đã khởi động ===&#34;</span>);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đang lắng nghe tại cổng: &#34;</span> <span style="color:#f92672">+</span> PORT);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Chờ kết nối từ Client (blocking call)</span>
+</span></span><span style="display:flex;"><span>            Socket clientSocket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Client đã kết nối từ: &#34;</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                             clientSocket.<span style="color:#a6e22e">getInetAddress</span>().<span style="color:#a6e22e">getHostAddress</span>());
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Tạo luồng đọc dữ liệu từ Client</span>
+</span></span><span style="display:flex;"><span>            BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> InputStreamReader(clientSocket.<span style="color:#a6e22e">getInputStream</span>())
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Tạo luồng ghi dữ liệu đến Client</span>
+</span></span><span style="display:flex;"><span>            PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(
+</span></span><span style="display:flex;"><span>                clientSocket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Đọc tin nhắn từ Client</span>
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhận được: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Gửi phản hồi</span>
+</span></span><span style="display:flex;"><span>            out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server đã nhận: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Đóng kết nối</span>
+</span></span><span style="display:flex;"><span>            clientSocket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đã đóng kết nối với Client&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi Server: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+</span></span></code></pre></div><h3 id="33-code-mẫu-client">3.3. Code mẫu Client</h3>
+<p>Client tương ứng để kết nối đến Server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleClient</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> String SERVER_ADDRESS <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> SERVER_PORT <span style="color:#f92672">=</span> 1234;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(SERVER_ADDRESS, SERVER_PORT)) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Đã kết nối đến Server: &#34;</span> <span style="color:#f92672">+</span> SERVER_ADDRESS);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Tạo luồng ghi dữ liệu đến Server</span>
+</span></span><span style="display:flex;"><span>            PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Tạo luồng đọc dữ liệu từ Server</span>
+</span></span><span style="display:flex;"><span>            BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> InputStreamReader(socket.<span style="color:#a6e22e">getInputStream</span>())
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Gửi tin nhắn đến Server</span>
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xin chào Server!&#34;</span>;
+</span></span><span style="display:flex;"><span>            out.<span style="color:#a6e22e">println</span>(message);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đã gửi: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Nhận phản hồi từ Server</span>
+</span></span><span style="display:flex;"><span>            String response <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server phản hồi: &#34;</span> <span style="color:#f92672">+</span> response);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (UnknownHostException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không tìm thấy host: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi I/O: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-phân-tích-chi-tiết">4. Phân tích chi tiết</h2>
+<h3 id="41-serversocketaccept">4.1. ServerSocket.accept()</h3>
+<p>Phương thức <code>accept()</code> là một <strong>blocking call</strong> - nghĩa là chương trình sẽ dừng lại và chờ đợi cho đến khi có Client kết nối. Đây là điểm quan trọng cần lưu ý khi thiết kế Server.</p>
+<h3 id="42-try-with-resources">4.2. Try-with-resources</h3>
+<p>Cú pháp <code>try (...)</code> được gọi là <strong>try-with-resources</strong>, được giới thiệu từ Java 7. Nó tự động đóng các tài nguyên (như Socket, Stream) khi kết thúc block try, giúp tránh memory leak.</p>
+<h3 id="43-bufferedreader-và-printwriter">4.3. BufferedReader và PrintWriter</h3>
+<ul>
+<li><strong>BufferedReader</strong>: Đọc dữ liệu theo dòng, hiệu quả hơn việc đọc từng byte</li>
+<li><strong>PrintWriter</strong>: Ghi dữ liệu với các phương thức tiện lợi như <code>println()</code>, tự động flush khi khởi tạo với tham số <code>true</code></li>
+</ul>
+<h2 id="5-hạn-chế-và-cải-tiến">5. Hạn chế và cải tiến</h2>
+<h3 id="51-hạn-chế-của-code-mẫu">5.1. Hạn chế của code mẫu</h3>
+<p>Code trên chỉ mang tính minh họa và có nhiều hạn chế:</p>
+<ol>
+<li><strong>Chỉ phục vụ một Client</strong>: Sau khi xử lý xong một Client, Server sẽ tắt</li>
+<li><strong>Không xử lý ngoại lệ chi tiết</strong>: Cần có cơ chế xử lý lỗi tốt hơn</li>
+<li><strong>Không có timeout</strong>: Nếu Client không gửi dữ liệu, Server sẽ chờ mãi</li>
+<li><strong>Thiếu bảo mật</strong>: Không có mã hóa, xác thực</li>
+</ol>
+<h3 id="52-hướng-phát-triển">5.2. Hướng phát triển</h3>
+<p>Để xây dựng ứng dụng thực tế, cần:</p>
+<ol>
+<li><strong>Multi-threading</strong>: Sử dụng Thread hoặc ExecutorService để xử lý nhiều Client</li>
+<li><strong>Protocol design</strong>: Thiết kế giao thức truyền thông rõ ràng</li>
+<li><strong>Error handling</strong>: Xử lý các trường hợp lỗi mạng, timeout</li>
+<li><strong>Security</strong>: Sử dụng SSL/TLS cho kết nối an toàn</li>
+<li><strong>Scalability</strong>: Cân nhắc sử dụng NIO (Non-blocking I/O) cho hiệu năng cao</li>
+</ol>
+<h2 id="6-ứng-dụng-thực-tế">6. Ứng dụng thực tế</h2>
+<p>Socket được sử dụng rộng rãi trong:</p>
+<ul>
+<li><strong>Ứng dụng Chat</strong>: Messenger, Zalo, Telegram</li>
+<li><strong>Game Online</strong>: Multiplayer games</li>
+<li><strong>Web Server</strong>: Apache Tomcat, Nginx</li>
+<li><strong>Database</strong>: MySQL, PostgreSQL client-server communication</li>
+<li><strong>IoT</strong>: Giao tiếp giữa các thiết bị thông minh</li>
+<li><strong>Microservices</strong>: Giao tiếp giữa các service</li>
+</ul>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Socket là nền tảng không thể thiếu trong lập trình mạng. Hiểu rõ cách thức hoạt động của Socket và mô hình Client-Server sẽ giúp bạn xây dựng được các ứng dụng mạng mạnh mẽ và hiệu quả. Trong các bài viết tiếp theo, chúng ta sẽ tìm hiểu về cách xử lý đa luồng để Server có thể phục vụ nhiều Client đồng thời.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li>Oracle Java Documentation: <a href="https://docs.oracle.com/javase/tutorial/networking/">Java Networking</a></li>
+<li>RFC 793: Transmission Control Protocol</li>
+<li>&ldquo;Java Network Programming&rdquo; - Elliotte Rusty Harold</li>
+<li>&ldquo;Computer Networking: A Top-Down Approach&rdquo; - Kurose &amp; Ross</li>
+</ul>
+
           </article>
         </div>
       </div>
@@ -372,18 +582,47 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
           
           <aside class="toc">
               <h5>
-                Mục lục
+                Table of Contents
               </h5>
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-socket-là-gì">1. Socket là gì?</a>
       <ul>
-        <li><a href="#1-socket-là-gì">1. Socket là gì?</a></li>
-        <li><a href="#2-mô-hình-hoạt-động-client---server">2. Mô hình hoạt động Client - Server</a></li>
-        <li><a href="#3-ví-dụ-code-đơn-giản-trong-java">3. Ví dụ Code đơn giản trong Java</a></li>
+        <li><a href="#11-định-nghĩa">1.1. Định nghĩa</a></li>
+        <li><a href="#12-phân-loại-socket">1.2. Phân loại Socket</a></li>
       </ul>
     </li>
+    <li><a href="#2-mô-hình-client-server">2. Mô hình Client-Server</a>
+      <ul>
+        <li><a href="#21-kiến-trúc-tổng-quan">2.1. Kiến trúc tổng quan</a></li>
+        <li><a href="#22-quy-trình-giao-tiếp-tcp">2.2. Quy trình giao tiếp TCP</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-triển-khai-socket-trong-java">3. Triển khai Socket trong Java</a>
+      <ul>
+        <li><a href="#31-các-lớp-quan-trọng">3.1. Các lớp quan trọng</a></li>
+        <li><a href="#32-code-mẫu-server">3.2. Code mẫu Server</a></li>
+        <li><a href="#33-code-mẫu-client">3.3. Code mẫu Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-phân-tích-chi-tiết">4. Phân tích chi tiết</a>
+      <ul>
+        <li><a href="#41-serversocketaccept">4.1. ServerSocket.accept()</a></li>
+        <li><a href="#42-try-with-resources">4.2. Try-with-resources</a></li>
+        <li><a href="#43-bufferedreader-và-printwriter">4.3. BufferedReader và PrintWriter</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-hạn-chế-và-cải-tiến">5. Hạn chế và cải tiến</a>
+      <ul>
+        <li><a href="#51-hạn-chế-của-code-mẫu">5.1. Hạn chế của code mẫu</a></li>
+        <li><a href="#52-hướng-phát-triển">5.2. Hướng phát triển</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-ứng-dụng-thực-tế">6. Ứng dụng thực tế</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
   </ul>
 </nav>
               </div>
@@ -395,17 +634,21 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/java"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/java"
                 target="_blank"
               >Java</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/network"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/network"
                 target="_blank"
               >Network</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/socket"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/socket"
                 target="_blank"
               >Socket</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/tcp/ip"
+                target="_blank"
+              >TCP/IP</a></li>
               
             </ul>
           </aside>
@@ -417,22 +660,22 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=T%c3%acm%20hi%e1%bb%83u%20c%c6%a1%20b%e1%ba%a3n%20v%e1%bb%81%20Socket%20trong%20Java%20v%c3%a0%20c%c3%a1ch%20th%e1%bb%a9c%20ho%e1%ba%a1t%20%c4%91%e1%bb%99ng%20c%e1%bb%a7a%20m%c3%b4%20h%c3%acnh%20Client-Server. https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=T%c3%acm%20hi%e1%bb%83u%20chi%20ti%e1%ba%bft%20v%e1%bb%81%20Socket%20trong%20Java%2c%20ki%e1%ba%bfn%20tr%c3%bac%20Client-Server%2c%20v%c3%a0%20c%c3%a1ch%20th%e1%bb%a9c%20ho%e1%ba%a1t%20%c4%91%e1%bb%99ng%20c%e1%bb%a7a%20giao%20th%e1%bb%a9c%20TCP%2fIP%20trong%20l%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='https://twitter.com/share?text=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng&url=https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f&hashtags=Java%2cNetwork%2cSocket'>
+                  <a target="_blank" href='https://twitter.com/share?text=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f&hashtags=Java%2cNetwork%2cSocket%2cTCP%2fIP'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng: https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng&amp;body=Check%20out%20this%20site https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f'>
+                  <a target="_blank" href='mailto:?subject=Java%20Socket%3a%20C%c3%a1nh%20c%e1%bb%ada%20v%c3%a0o%20th%e1%ba%bf%20gi%e1%bb%9bi%20L%e1%ba%adp%20tr%c3%acnh%20m%e1%ba%a1ng&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-socket-co-ban%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -458,7 +701,7 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="https://ThienIT84.github.io/NetworkingPrograming/js/scrollProgressBar.js"></script>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -491,7 +734,7 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
 </script>
 
 
-<script src="https://ThienIT84.github.io/NetworkingPrograming/js/readingTime.js"></script>
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
 
 
 
@@ -503,7 +746,7 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
     
     
     <div class="h3 text-center text-secondary py-3">
-        Bài viết gần đây
+        Recent Blog Posts
     </div>
     <div class="row justify-content-center">
         
@@ -511,24 +754,24 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/java-vs-python.jpg" class="card-img-top" alt="Java vs Python: Lập trình viên AI có cần biết Java?">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Java vs Python: Lập trình viên AI có cần biết Java?">Java vs Python: Lập trình …</h5>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Chúng ta đều biết Python là &ldquo;vua&rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?</p>
-<h3 id="1-python-tốt-cho-nghiên-cứu-research">1. Python: Tốt cho Nghiên cứu (Research)</h3>
-<p>Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình …</p></p>
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -537,24 +780,24 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" class="card-img-top" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">TensorFlow.js: Mang sức …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình …</p></p>
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -563,24 +806,23 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chatbot-api.jpg" class="card-img-top" alt="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">Tự làm Chatbot AI tích …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &ldquo;nói chuyện&rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).</p>
-<h3 id="1-fetch-api-là-gì">1. Fetch API là gì?</h3>
-<p><code>fetch()</code> là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta …</p></p>
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -617,6 +859,18 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
     
 
     
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
 
     
 
@@ -637,13 +891,13 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/" title="Blog Lập Trình - Trần Thanh Thiện">
-                        <img alt="Footer logo" src="https://ThienIT84.github.io/NetworkingPrograming/fav.png"
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
                             height="40px" width="40px">
                     </a>
                 </div>
             
-            &copy; 2025  © 2025 Trần Thanh Thiện
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -693,7 +947,7 @@ Java Socket: Cánh cửa vào thế giới Lập trình mạng | Blog Lập Trì
 </script>
 
 
-    <script src="https://ThienIT84.github.io/NetworkingPrograming/js/search.js"></script>
+    <script src="/NetworkingPrograming/js/search.js"></script>
 
 
 

@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
+  <meta property="og:title" content="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
+  <meta property="og:description" content="Phân tích sâu về giao thức UDP, so sánh với TCP, và hướng dẫn chi tiết cách xây dựng ứng dụng truyền nhận Datagram trong Java với các ví dụ thực tế.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-12-20T10:00:00+07:00">
+    <meta property="article:modified_time" content="2025-12-20T10:00:00+07:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="UDP">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Socket">
+    <meta property="article:tag" content="Protocol">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
+  <meta name="twitter:description" content="Phân tích sâu về giao thức UDP, so sánh với TCP, và hướng dẫn chi tiết cách xây dựng ứng dụng truyền nhận Datagram trong Java với các ví dụ thực tế.">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #1e40af;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #2563eb;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e2e8f0;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #8b5cf6;
+        --background-color-dark: #0f172a;
+        --secondary-background-color-dark: #1e293b;
+        --primary-color-dark: #06b6d4;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Phân tích sâu về giao thức UDP, so sánh với TCP, và hướng dẫn chi tiết cách xây dựng ứng dụng truyền nhận Datagram trong Java với các ví dụ thực tế.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
+
+
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Lập trình UDP với Java: Nhanh nhưng không tin cậy? | Trần Thanh Thiện - AI Engineer Portfolio
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
+                
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Thien.Dev
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
+                            aria-label="projects">
+                            Featured Projects
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
+                            aria-label="contact">
+                            Get In Touch
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
+                            
+                            Home
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#about" title="">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Lập trình UDP với Java: Nhanh nhưng không tin cậy?</h1>
+            <div class="text-center">
+              
+              Dec 20, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/udp-protocol.jpg" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế hoạt động của UDP và cách triển khai trong Java.</p>
+<h2 id="1-udp-là-gì">1. UDP là gì?</h2>
+<h3 id="11-định-nghĩa-và-đặc-điểm">1.1. Định nghĩa và đặc điểm</h3>
+<p><strong>UDP (User Datagram Protocol)</strong> là một giao thức truyền tải thuộc tầng Transport (Layer 4) trong mô hình OSI, được định nghĩa trong RFC 768.</p>
+<p><strong>Đặc điểm chính:</strong></p>
+<ul>
+<li><strong>Connectionless (Không kết nối)</strong>: Không cần thiết lập kết nối trước khi gửi dữ liệu</li>
+<li><strong>Unreliable (Không tin cậy)</strong>: Không đảm bảo gói tin đến đích</li>
+<li><strong>No ordering (Không đảm bảo thứ tự)</strong>: Gói tin có thể đến không đúng thứ tự gửi</li>
+<li><strong>No flow control</strong>: Không có cơ chế kiểm soát luồng dữ liệu</li>
+<li><strong>Lightweight</strong>: Header chỉ 8 bytes (so với TCP là 20 bytes)</li>
+<li><strong>Fast</strong>: Tốc độ truyền cực nhanh do không có overhead của TCP</li>
+</ul>
+<h3 id="12-cấu-trúc-gói-tin-udp">1.2. Cấu trúc gói tin UDP</h3>
+<pre tabindex="0"><code> 0      7 8     15 16    23 24    31
++--------+--------+--------+--------+
+|   Source Port   | Destination Port|
++--------+--------+--------+--------+
+|     Length      |    Checksum     |
++--------+--------+--------+--------+
+|                                   |
+|          Data (Payload)           |
+|                                   |
++-----------------------------------+
+</code></pre><p><strong>Các trường:</strong></p>
+<ul>
+<li><strong>Source Port</strong> (16 bits): Cổng nguồn</li>
+<li><strong>Destination Port</strong> (16 bits): Cổng đích</li>
+<li><strong>Length</strong> (16 bits): Độ dài toàn bộ datagram (header + data)</li>
+<li><strong>Checksum</strong> (16 bits): Kiểm tra lỗi (optional trong IPv4)</li>
+</ul>
+<h2 id="2-tcp-vs-udp-so-sánh-chi-tiết">2. TCP vs UDP: So sánh chi tiết</h2>
+<h3 id="21-bảng-so-sánh">2.1. Bảng so sánh</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Tiêu chí</th>
+          <th>TCP</th>
+          <th>UDP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Kết nối</strong></td>
+          <td>Hướng kết nối (3-way handshake)</td>
+          <td>Không kết nối</td>
+      </tr>
+      <tr>
+          <td><strong>Độ tin cậy</strong></td>
+          <td>Đảm bảo 100%</td>
+          <td>Không đảm bảo</td>
+      </tr>
+      <tr>
+          <td><strong>Thứ tự</strong></td>
+          <td>Đảm bảo đúng thứ tự</td>
+          <td>Không đảm bảo</td>
+      </tr>
+      <tr>
+          <td><strong>Tốc độ</strong></td>
+          <td>Chậm hơn</td>
+          <td>Nhanh hơn</td>
+      </tr>
+      <tr>
+          <td><strong>Header size</strong></td>
+          <td>20-60 bytes</td>
+          <td>8 bytes</td>
+      </tr>
+      <tr>
+          <td><strong>Retransmission</strong></td>
+          <td>Có (gửi lại khi mất)</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Flow control</strong></td>
+          <td>Có (sliding window)</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Congestion control</strong></td>
+          <td>Có</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Use case</strong></td>
+          <td>Web, Email, File transfer</td>
+          <td>Streaming, Gaming, VoIP</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="22-khi-nào-dùng-udp">2.2. Khi nào dùng UDP?</h3>
+<p>UDP phù hợp cho các ứng dụng:</p>
+<ol>
+<li>
+<p><strong>Real-time applications</strong>:</p>
+<ul>
+<li>Video conferencing (Zoom, Google Meet)</li>
+<li>Voice over IP (Skype, Discord)</li>
+<li>Live streaming (Twitch, YouTube Live)</li>
+</ul>
+</li>
+<li>
+<p><strong>Gaming</strong>:</p>
+<ul>
+<li>Multiplayer online games (PUBG, Liên Minh Huyền Thoại)</li>
+<li>Cần độ trễ thấp (low latency)</li>
+<li>Mất vài gói tin không ảnh hưởng nhiều</li>
+</ul>
+</li>
+<li>
+<p><strong>IoT và Sensor Networks</strong>:</p>
+<ul>
+<li>Dữ liệu sensor (nhiệt độ, độ ẩm)</li>
+<li>Mất vài điểm dữ liệu không quan trọng</li>
+</ul>
+</li>
+<li>
+<p><strong>DNS (Domain Name System)</strong>:</p>
+<ul>
+<li>Query nhỏ, cần phản hồi nhanh</li>
+<li>Nếu không nhận được, client sẽ gửi lại</li>
+</ul>
+</li>
+<li>
+<p><strong>Broadcasting/Multicasting</strong>:</p>
+<ul>
+<li>Gửi dữ liệu đến nhiều đích cùng lúc</li>
+</ul>
+</li>
+</ol>
+<h3 id="23-khi-nào-không-nên-dùng-udp">2.3. Khi nào KHÔNG nên dùng UDP?</h3>
+<p>Tránh UDP trong các trường hợp:</p>
+<ul>
+<li>Truyền file (cần đảm bảo toàn vẹn dữ liệu)</li>
+<li>Email, messaging (cần đảm bảo tin nhắn đến)</li>
+<li>Banking, financial transactions (cần độ tin cậy tuyệt đối)</li>
+<li>HTTP/HTTPS (trừ HTTP/3 sử dụng QUIC over UDP)</li>
+</ul>
+<h2 id="3-lập-trình-udp-trong-java">3. Lập trình UDP trong Java</h2>
+<h3 id="31-các-lớp-quan-trọng">3.1. Các lớp quan trọng</h3>
+<p>Java cung cấp hai lớp chính trong package <code>java.net</code>:</p>
+<ol>
+<li>
+<p><strong>DatagramSocket</strong>:</p>
+<ul>
+<li>Đại diện cho socket UDP</li>
+<li>Dùng để gửi và nhận datagram</li>
+<li>Không phân biệt client/server rõ ràng như TCP</li>
+</ul>
+</li>
+<li>
+<p><strong>DatagramPacket</strong>:</p>
+<ul>
+<li>Đại diện cho một gói tin UDP</li>
+<li>Chứa dữ liệu và thông tin địa chỉ đích</li>
+</ul>
+</li>
+</ol>
+<h3 id="32-udp-sender-client">3.2. UDP Sender (Client)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UDPSender</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> String SERVER_ADDRESS <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> SERVER_PORT <span style="color:#f92672">=</span> 9876;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 1. Tạo DatagramSocket (không cần chỉ định port cho client)</span>
+</span></span><span style="display:flex;"><span>            socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;UDP Client đã khởi động&#34;</span>);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Gửi đến: &#34;</span> <span style="color:#f92672">+</span> SERVER_ADDRESS <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> SERVER_PORT);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 2. Chuẩn bị dữ liệu</span>
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello UDP Server! Đây là tin nhắn từ Client.&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> sendData <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getBytes</span>(<span style="color:#e6db74">&#34;UTF-8&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 3. Lấy địa chỉ IP của server</span>
+</span></span><span style="display:flex;"><span>            InetAddress serverIP <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(SERVER_ADDRESS);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 4. Tạo DatagramPacket</span>
+</span></span><span style="display:flex;"><span>            DatagramPacket sendPacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                sendData,           <span style="color:#75715e">// Dữ liệu</span>
+</span></span><span style="display:flex;"><span>                sendData.<span style="color:#a6e22e">length</span>,    <span style="color:#75715e">// Độ dài</span>
+</span></span><span style="display:flex;"><span>                serverIP,           <span style="color:#75715e">// Địa chỉ đích</span>
+</span></span><span style="display:flex;"><span>                SERVER_PORT         <span style="color:#75715e">// Cổng đích</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 5. Gửi packet</span>
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">send</span>(sendPacket);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Đã gửi: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;  Kích thước: &#34;</span> <span style="color:#f92672">+</span> sendData.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; bytes&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 6. Chờ nhận phản hồi từ server</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> receiveData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            DatagramPacket receivePacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                receiveData, 
+</span></span><span style="display:flex;"><span>                receiveData.<span style="color:#a6e22e">length</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Set timeout để tránh chờ mãi</span>
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">setSoTimeout</span>(5000); <span style="color:#75715e">// 5 giây</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\nChờ phản hồi từ Server...&#34;</span>);
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">receive</span>(receivePacket); <span style="color:#75715e">// Blocking call</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 7. Xử lý phản hồi</span>
+</span></span><span style="display:flex;"><span>            String response <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(
+</span></span><span style="display:flex;"><span>                receivePacket.<span style="color:#a6e22e">getData</span>(), 
+</span></span><span style="display:flex;"><span>                0, 
+</span></span><span style="display:flex;"><span>                receivePacket.<span style="color:#a6e22e">getLength</span>(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Server phản hồi: &#34;</span> <span style="color:#f92672">+</span> response);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;  Từ: &#34;</span> <span style="color:#f92672">+</span> receivePacket.<span style="color:#a6e22e">getAddress</span>().<span style="color:#a6e22e">getHostAddress</span>() <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                             <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> receivePacket.<span style="color:#a6e22e">getPort</span>());
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SocketTimeoutException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Timeout: Không nhận được phản hồi từ Server&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (UnknownHostException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Không tìm thấy host: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Lỗi I/O: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (socket <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>socket.<span style="color:#a6e22e">isClosed</span>()) {
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\nĐã đóng socket&#34;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="33-udp-receiver-server">3.3. UDP Receiver (Server)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.time.LocalDateTime;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.time.format.DateTimeFormatter;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UDPReceiver</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> PORT <span style="color:#f92672">=</span> 9876;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> BUFFER_SIZE <span style="color:#f92672">=</span> 1024;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 1. Tạo DatagramSocket lắng nghe tại port cụ thể</span>
+</span></span><span style="display:flex;"><span>            socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket(PORT);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;=== UDP Server đã khởi động ===&#34;</span>);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đang lắng nghe tại port: &#34;</span> <span style="color:#f92672">+</span> PORT);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Buffer size: &#34;</span> <span style="color:#f92672">+</span> BUFFER_SIZE <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; bytes\n&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> packetCount <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 2. Vòng lặp vô hạn để nhận packets</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 3. Chuẩn bị buffer để nhận dữ liệu</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> receiveData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>BUFFER_SIZE<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                DatagramPacket receivePacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                    receiveData, 
+</span></span><span style="display:flex;"><span>                    receiveData.<span style="color:#a6e22e">length</span>
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 4. Chờ nhận packet (blocking call)</span>
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Chờ nhận packet...&#34;</span>);
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">receive</span>(receivePacket);
+</span></span><span style="display:flex;"><span>                packetCount<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 5. Lấy thông tin từ packet</span>
+</span></span><span style="display:flex;"><span>                String message <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(
+</span></span><span style="display:flex;"><span>                    receivePacket.<span style="color:#a6e22e">getData</span>(), 
+</span></span><span style="display:flex;"><span>                    0, 
+</span></span><span style="display:flex;"><span>                    receivePacket.<span style="color:#a6e22e">getLength</span>(),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                InetAddress clientAddress <span style="color:#f92672">=</span> receivePacket.<span style="color:#a6e22e">getAddress</span>();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> clientPort <span style="color:#f92672">=</span> receivePacket.<span style="color:#a6e22e">getPort</span>();
+</span></span><span style="display:flex;"><span>                String timestamp <span style="color:#f92672">=</span> LocalDateTime.<span style="color:#a6e22e">now</span>()
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">format</span>(DateTimeFormatter.<span style="color:#a6e22e">ofPattern</span>(<span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>));
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 6. Hiển thị thông tin</span>
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;=&#34;</span>.<span style="color:#a6e22e">repeat</span>(50));
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Packet #&#34;</span> <span style="color:#f92672">+</span> packetCount);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Thời gian: &#34;</span> <span style="color:#f92672">+</span> timestamp);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Từ: &#34;</span> <span style="color:#f92672">+</span> clientAddress.<span style="color:#a6e22e">getHostAddress</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> clientPort);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kích thước: &#34;</span> <span style="color:#f92672">+</span> receivePacket.<span style="color:#a6e22e">getLength</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; bytes&#34;</span>);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nội dung: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;=&#34;</span>.<span style="color:#a6e22e">repeat</span>(50));
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 7. Gửi phản hồi lại cho client</span>
+</span></span><span style="display:flex;"><span>                String response <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Server đã nhận packet #&#34;</span> <span style="color:#f92672">+</span> packetCount <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                                <span style="color:#e6db74">&#34; lúc &#34;</span> <span style="color:#f92672">+</span> timestamp;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> sendData <span style="color:#f92672">=</span> response.<span style="color:#a6e22e">getBytes</span>(<span style="color:#e6db74">&#34;UTF-8&#34;</span>);
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                DatagramPacket sendPacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                    sendData,
+</span></span><span style="display:flex;"><span>                    sendData.<span style="color:#a6e22e">length</span>,
+</span></span><span style="display:flex;"><span>                    clientAddress,
+</span></span><span style="display:flex;"><span>                    clientPort
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">send</span>(sendPacket);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Đã gửi phản hồi\n&#34;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SocketException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Lỗi Socket: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Lỗi I/O: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (socket <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>socket.<span style="color:#a6e22e">isClosed</span>()) {
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\nServer đã tắt&#34;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-phân-tích-chi-tiết">4. Phân tích chi tiết</h2>
+<h3 id="41-datagramsocket-vs-socket">4.1. DatagramSocket vs Socket</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Đặc điểm</th>
+          <th>DatagramSocket (UDP)</th>
+          <th>Socket (TCP)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Tạo kết nối</td>
+          <td>Không cần</td>
+          <td>Cần (connect)</td>
+      </tr>
+      <tr>
+          <td>Gửi dữ liệu</td>
+          <td>send(packet)</td>
+          <td>OutputStream</td>
+      </tr>
+      <tr>
+          <td>Nhận dữ liệu</td>
+          <td>receive(packet)</td>
+          <td>InputStream</td>
+      </tr>
+      <tr>
+          <td>Server class</td>
+          <td>Cũng dùng DatagramSocket</td>
+          <td>ServerSocket</td>
+      </tr>
+      <tr>
+          <td>Đóng kết nối</td>
+          <td>close()</td>
+          <td>close()</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="42-kích-thước-tối-đa-của-udp-datagram">4.2. Kích thước tối đa của UDP Datagram</h3>
+<ul>
+<li><strong>Lý thuyết</strong>: 65,535 bytes (16-bit length field)</li>
+<li><strong>Thực tế</strong>:
+<ul>
+<li>Ethernet MTU: 1500 bytes</li>
+<li>IPv4 header: 20 bytes</li>
+<li>UDP header: 8 bytes</li>
+<li><strong>Payload an toàn</strong>: ~1472 bytes</li>
+</ul>
+</li>
+</ul>
+<p>Nếu gửi packet lớn hơn MTU, sẽ xảy ra <strong>IP fragmentation</strong> → giảm hiệu năng, tăng nguy cơ mất dữ liệu.</p>
+<h3 id="43-xử-lý-mất-gói-tin">4.3. Xử lý mất gói tin</h3>
+<p>Vì UDP không đảm bảo, ứng dụng cần tự xử lý:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReliableUDPSender</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> MAX_RETRIES <span style="color:#f92672">=</span> 3;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> TIMEOUT <span style="color:#f92672">=</span> 2000; <span style="color:#75715e">// 2 giây</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendWithRetry</span>(DatagramSocket socket, 
+</span></span><span style="display:flex;"><span>                                     DatagramPacket packet) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> MAX_RETRIES; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">send</span>(packet);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lần gửi thứ &#34;</span> <span style="color:#f92672">+</span> (i <span style="color:#f92672">+</span> 1));
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">setSoTimeout</span>(TIMEOUT);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> ackData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>256<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                DatagramPacket ackPacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(ackData, ackData.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">receive</span>(ackPacket);
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✓ Nhận được ACK&#34;</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span>; <span style="color:#75715e">// Thành công</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (SocketTimeoutException e) {
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;✗ Timeout, thử lại...&#34;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IOException(<span style="color:#e6db74">&#34;Gửi thất bại sau &#34;</span> <span style="color:#f92672">+</span> MAX_RETRIES <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; lần thử&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="5-ứng-dụng-thực-tế-simple-chat-udp">5. Ứng dụng thực tế: Simple Chat UDP</h2>
+<h3 id="51-udp-chat-client">5.1. UDP Chat Client</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UDPChatClient</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span>        InetAddress serverAddress <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> serverPort <span style="color:#f92672">=</span> 9999;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        Scanner scanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Thread để nhận tin nhắn</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">new</span> Thread(() <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                    DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(buffer, buffer.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>                    socket.<span style="color:#a6e22e">receive</span>(packet);
+</span></span><span style="display:flex;"><span>                    String message <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(packet.<span style="color:#a6e22e">getData</span>(), 0, packet.<span style="color:#a6e22e">getLength</span>());
+</span></span><span style="display:flex;"><span>                    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\n[Nhận]: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>                    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Bạn: &#34;</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>                e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }).<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Gửi tin nhắn</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;=== UDP Chat Client ===&#34;</span>);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhập tin nhắn (gõ &#39;exit&#39; để thoát):\n&#34;</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Bạn: &#34;</span>);
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> scanner.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (message.<span style="color:#a6e22e">equalsIgnoreCase</span>(<span style="color:#e6db74">&#34;exit&#34;</span>)) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getBytes</span>();
+</span></span><span style="display:flex;"><span>            DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                data, data.<span style="color:#a6e22e">length</span>, serverAddress, serverPort
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">send</span>(packet);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        scanner.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="6-broadcasting-và-multicasting">6. Broadcasting và Multicasting</h2>
+<h3 id="61-broadcasting">6.1. Broadcasting</h3>
+<p>Gửi dữ liệu đến tất cả thiết bị trong mạng:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setBroadcast</span>(<span style="color:#66d9ef">true</span>); <span style="color:#75715e">// Bật chế độ broadcast</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>InetAddress broadcastAddress <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;255.255.255.255&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Broadcast message&#34;</span>.<span style="color:#a6e22e">getBytes</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>    data, data.<span style="color:#a6e22e">length</span>, broadcastAddress, 9999
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">send</span>(packet);
+</span></span></code></pre></div><h3 id="62-multicasting">6.2. Multicasting</h3>
+<p>Gửi đến một nhóm thiết bị đã đăng ký:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>MulticastSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MulticastSocket(9999);
+</span></span><span style="display:flex;"><span>InetAddress group <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;230.0.0.1&#34;</span>);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">joinGroup</span>(group); <span style="color:#75715e">// Tham gia nhóm multicast</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(buffer, buffer.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">receive</span>(packet);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">leaveGroup</span>(group);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">close</span>();
+</span></span></code></pre></div><h2 id="7-best-practices">7. Best Practices</h2>
+<h3 id="71-xử-lý-lỗi-và-timeout">7.1. Xử lý lỗi và Timeout</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSoTimeout</span>(5000); <span style="color:#75715e">// Timeout 5 giây</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    socket.<span style="color:#a6e22e">receive</span>(packet);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (SocketTimeoutException e) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Xử lý timeout</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="72-buffer-size-phù-hợp">7.2. Buffer Size phù hợp</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Tránh buffer quá nhỏ (mất dữ liệu) hoặc quá lớn (lãng phí memory)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1472<span style="color:#f92672">]</span>; <span style="color:#75715e">// MTU-safe size</span>
+</span></span></code></pre></div><h3 id="73-encodingdecoding">7.3. Encoding/Decoding</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Luôn chỉ định charset</span>
+</span></span><span style="display:flex;"><span>String message <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(packet.<span style="color:#a6e22e">getData</span>(), 0, packet.<span style="color:#a6e22e">getLength</span>(), <span style="color:#e6db74">&#34;UTF-8&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getBytes</span>(<span style="color:#e6db74">&#34;UTF-8&#34;</span>);
+</span></span></code></pre></div><h2 id="8-udp-trong-thực-tế">8. UDP trong thực tế</h2>
+<h3 id="81-quic-protocol">8.1. QUIC Protocol</h3>
+<p><strong>QUIC</strong> (Quick UDP Internet Connections) là giao thức do Google phát triển, sử dụng UDP làm nền tảng nhưng thêm:</p>
+<ul>
+<li>Reliability (độ tin cậy)</li>
+<li>Congestion control</li>
+<li>Encryption (mã hóa)</li>
+</ul>
+<p>HTTP/3 sử dụng QUIC thay vì TCP!</p>
+<h3 id="82-webrtc">8.2. WebRTC</h3>
+<p><strong>WebRTC</strong> (Web Real-Time Communication) sử dụng UDP cho:</p>
+<ul>
+<li>Video conferencing</li>
+<li>Peer-to-peer communication</li>
+<li>Screen sharing</li>
+</ul>
+<h2 id="kết-luận">Kết luận</h2>
+<p>UDP là một công cụ mạnh mẽ khi được sử dụng đúng mục đích. Mặc dù không đảm bảo độ tin cậy như TCP, nhưng tốc độ và tính đơn giản của UDP làm cho nó trở thành lựa chọn lý tưởng cho các ứng dụng real-time. Hiểu rõ sự khác biệt giữa TCP và UDP, cũng như biết khi nào nên sử dụng giao thức nào, là kỹ năng quan trọng của một lập trình viên mạng.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li>RFC 768: User Datagram Protocol</li>
+<li>&ldquo;Computer Networks&rdquo; - Andrew S. Tanenbaum</li>
+<li>Oracle Java Documentation: DatagramSocket</li>
+<li>&ldquo;TCP/IP Illustrated, Volume 1&rdquo; - W. Richard Stevens</li>
+<li>QUIC Protocol Specification (RFC 9000)</li>
+</ul>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-udp-là-gì">1. UDP là gì?</a>
+      <ul>
+        <li><a href="#11-định-nghĩa-và-đặc-điểm">1.1. Định nghĩa và đặc điểm</a></li>
+        <li><a href="#12-cấu-trúc-gói-tin-udp">1.2. Cấu trúc gói tin UDP</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-tcp-vs-udp-so-sánh-chi-tiết">2. TCP vs UDP: So sánh chi tiết</a>
+      <ul>
+        <li><a href="#21-bảng-so-sánh">2.1. Bảng so sánh</a></li>
+        <li><a href="#22-khi-nào-dùng-udp">2.2. Khi nào dùng UDP?</a></li>
+        <li><a href="#23-khi-nào-không-nên-dùng-udp">2.3. Khi nào KHÔNG nên dùng UDP?</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-lập-trình-udp-trong-java">3. Lập trình UDP trong Java</a>
+      <ul>
+        <li><a href="#31-các-lớp-quan-trọng">3.1. Các lớp quan trọng</a></li>
+        <li><a href="#32-udp-sender-client">3.2. UDP Sender (Client)</a></li>
+        <li><a href="#33-udp-receiver-server">3.3. UDP Receiver (Server)</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-phân-tích-chi-tiết">4. Phân tích chi tiết</a>
+      <ul>
+        <li><a href="#41-datagramsocket-vs-socket">4.1. DatagramSocket vs Socket</a></li>
+        <li><a href="#42-kích-thước-tối-đa-của-udp-datagram">4.2. Kích thước tối đa của UDP Datagram</a></li>
+        <li><a href="#43-xử-lý-mất-gói-tin">4.3. Xử lý mất gói tin</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-ứng-dụng-thực-tế-simple-chat-udp">5. Ứng dụng thực tế: Simple Chat UDP</a>
+      <ul>
+        <li><a href="#51-udp-chat-client">5.1. UDP Chat Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-broadcasting-và-multicasting">6. Broadcasting và Multicasting</a>
+      <ul>
+        <li><a href="#61-broadcasting">6.1. Broadcasting</a></li>
+        <li><a href="#62-multicasting">6.2. Multicasting</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-best-practices">7. Best Practices</a>
+      <ul>
+        <li><a href="#71-xử-lý-lỗi-và-timeout">7.1. Xử lý lỗi và Timeout</a></li>
+        <li><a href="#72-buffer-size-phù-hợp">7.2. Buffer Size phù hợp</a></li>
+        <li><a href="#73-encodingdecoding">7.3. Encoding/Decoding</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-udp-trong-thực-tế">8. UDP trong thực tế</a>
+      <ul>
+        <li><a href="#81-quic-protocol">8.1. QUIC Protocol</a></li>
+        <li><a href="#82-webrtc">8.2. WebRTC</a></li>
+      </ul>
+    </li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/java"
+                target="_blank"
+              >Java</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/udp"
+                target="_blank"
+              >UDP</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/networking"
+                target="_blank"
+              >Networking</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/socket"
+                target="_blank"
+              >Socket</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/protocol"
+                target="_blank"
+              >Protocol</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=Ph%c3%a2n%20t%c3%adch%20s%c3%a2u%20v%e1%bb%81%20giao%20th%e1%bb%a9c%20UDP%2c%20so%20s%c3%a1nh%20v%e1%bb%9bi%20TCP%2c%20v%c3%a0%20h%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20chi%20ti%e1%ba%bft%20c%c3%a1ch%20x%c3%a2y%20d%e1%bb%b1ng%20%e1%bb%a9ng%20d%e1%bb%a5ng%20truy%e1%bb%81n%20nh%e1%ba%adn%20Datagram%20trong%20Java%20v%e1%bb%9bi%20c%c3%a1c%20v%c3%ad%20d%e1%bb%a5%20th%e1%bb%b1c%20t%e1%ba%bf. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-udp-protocol%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='https://twitter.com/share?text=L%e1%ba%adp%20tr%c3%acnh%20UDP%20v%e1%bb%9bi%20Java%3a%20Nhanh%20nh%c6%b0ng%20kh%c3%b4ng%20tin%20c%e1%ba%ady%3f&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-udp-protocol%2f&hashtags=Java%2cUDP%2cNetworking%2cSocket%2cProtocol'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=L%e1%ba%adp%20tr%c3%acnh%20UDP%20v%e1%bb%9bi%20Java%3a%20Nhanh%20nh%c6%b0ng%20kh%c3%b4ng%20tin%20c%e1%ba%ady%3f: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-udp-protocol%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=L%e1%ba%adp%20tr%c3%acnh%20UDP%20v%e1%bb%9bi%20Java%3a%20Nhanh%20nh%c6%b0ng%20kh%c3%b4ng%20tin%20c%e1%ba%ady%3f&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fjava-udp-protocol%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Blog Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/ThienIT84" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+    <a href="https://facebook.com/" target="_blank" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/NetworkingPrograming/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chatbot on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/chatbot/</link>
-    <description>Recent content in Chatbot on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>Chatbot on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/tags/chatbot/</link>
+    <description>Recent content in Chatbot on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
+    <language>en</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
-      <description>&lt;p&gt;Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &amp;ldquo;nói chuyện&amp;rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-fetch-api-là-gì&#34;&gt;1. Fetch API là gì?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;fetch()&lt;/code&gt; là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta gửi gói tin trong Lập trình mạng.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-code-mẫu-gọi-api&#34;&gt;2. Code mẫu gọi API&lt;/h3&gt;&#xA;&lt;p&gt;Giả sử mình muốn gửi câu hỏi đến một API AI nào đó, code sẽ như sau:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI, việc tích hợp chatbot thông minh vào website không còn là điều xa vời. Với &lt;strong&gt;Fetch API&lt;/strong&gt; - một công cụ mạnh mẽ có sẵn trong JavaScript hiện đại, bạn có thể dễ dàng kết nối với các Large Language Models (LLM) như GPT, Gemini, Claude để tạo ra trải nghiệm tương tác ấn tượng. Bài viết này sẽ hướng dẫn bạn từ cơ bản đến nâng cao về cách xây dựng chatbot AI.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

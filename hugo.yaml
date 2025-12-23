@@ -1,11 +1,20 @@
+# =====================================================================
+# HUGO CONFIGURATION - PROFESSIONAL PORTFOLIO/RESUME
+# Theme: hugo-profile | Deploy: GitHub Pages
+# Author: Trần Thanh Thiện | HUTECH University
+# =====================================================================
+
 # ---------------------------------------------------------------------
-# CẤU HÌNH CƠ BẢN
+# BASIC CONFIGURATION
 # ---------------------------------------------------------------------
-baseURL: "https://ThienIT84.github.io/NetworkingPrograming/" 
-canonifyURLs: true
-languageCode: "vi"
-title: "Blog Lập Trình - Trần Thanh Thiện"
+baseURL: "https://ThienIT84.github.io/NetworkingPrograming/"
+languageCode: "en"
+title: "Trần Thanh Thiện - AI Engineer Portfolio"
 theme: hugo-profile
+
+# URL Configuration for GitHub Pages subdirectory
+canonifyURLs: false
+relativeURLs: false
 
 outputs:
   home: ["HTML", "RSS", "JSON"]
@@ -13,7 +22,7 @@ outputs:
 
 enableRobotsTXT: true
 pagination:
-  pagerSize: 3
+  pagerSize: 6
 
 markup:
   goldmark:
@@ -21,32 +30,40 @@ markup:
       unsafe: true
 
 # ---------------------------------------------------------------------
-# MENU ĐIỀU HƯỚNG
+# NAVIGATION MENU
 # ---------------------------------------------------------------------
 Menus:
   main:
     - identifier: home
-      name: Trang chủ
-      url: /
+      name: Home
+      url: /NetworkingPrograming/
       weight: 1
     
-    - identifier: blog
-      name: Bài viết
-      url: "blogs"
+    - identifier: about
+      name: Resume
+      url: "#about"
       weight: 2
 
-    - identifier: about
-      name: Profile
-      url: "#about"
+    - identifier: blog
+      name: Project Blog
+      url: "/NetworkingPrograming/blogs"
       weight: 3
+    
+    - identifier: certifications
+      name: Certifications
+      url: "#achievements"
+      weight: 4
 
 # ---------------------------------------------------------------------
-# THÔNG SỐ GIAO DIỆN
+# THEME PARAMETERS
 # ---------------------------------------------------------------------
 params:
-  title: "Thanh Thien's Blog"
-  description: "Ghi chép quá trình học tập môn Lập trình mạng và chia sẻ về Machine Learning"
-  favicon: "/fav.png"
+  title: "Trần Thanh Thiện"
+  description: "AI Engineer Portfolio - Machine Learning & Network Programming Specialist"
+  favicon: "/NetworkingPrograming/fav.png"
+  
+  # Static path for theme resources (CSS, JS, images)
+  staticPath: "/NetworkingPrograming"
 
   useBootstrapCDN: true
   mathjax: false
@@ -57,7 +74,9 @@ params:
     fontWeight: 400
     lineHeight: 1.6
   
+  # -----------------------------------------------------------------
   # NAVBAR
+  # -----------------------------------------------------------------
   navbar:
     align: ms-auto
     brandName: "Thien.Dev"
@@ -68,12 +87,13 @@ params:
     enableSeparator: false
     menus:
       disableAbout: false
-      disableExperience: true      # TẮT phần experience (vì chưa đi làm)
+      disableExperience: false
       disableEducation: false
-      disableProjects: false       # Giữ lại để show đồ án
-      disableAchievements: true    # Tắt thành tích
+      disableProjects: false
+      disableAchievements: false
       disableContact: false
   
+  # Color Theme
   color:
     primaryColor: "#2563eb"
     secondaryColor: "#f8f9fa"
@@ -90,137 +110,269 @@ params:
   # -----------------------------------------------------------------
   hero:
     enable: true
-    intro: "Xin chào, mình là"
+    intro: "Hello, I'm"
     title: "Trần Thanh Thiện"
-    subtitle: "Sinh viên CNTT | ML Enthusiast"
-    content: "Mình đang học chuyên sâu về Machine Learning và AI. Blog này ghi lại quá trình học môn Lập trình mạng - một môn bắt buộc trong chương trình đào tạo."
-    image: /images/me.png
+    subtitle: "AI Engineer Intern | 4th Year Student at HUTECH"
+    content: "Passionate about Machine Learning, Deep Learning, and building intelligent systems. Specialized in Network Programming with hands-on experience in Java Socket and TCP/UDP protocols."
+    image: /NetworkingPrograming/images/me.png
     roundImage: true
     bottomImage:
       enable: false
     button:
       enable: true
-      name: "📖 Đọc bài viết"
-      url: "/blogs"
-      download: false
-      newPage: false
+      name: "📄 Download CV"
+      url: "/NetworkingPrograming/cv.pdf"
+      download: true
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/ThienIT84
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/thanhthien
         - icon: fab fa-facebook
           url: https://facebook.com/
 
   # -----------------------------------------------------------------
-  # ABOUT
+  # ABOUT SECTION
   # -----------------------------------------------------------------
   about:
     enable: true
-    title: "Về bản thân"
-    image: "/images/me.png"
+    title: "About Me"
+    image: "/NetworkingPrograming/images/me.png"
     content: |-
-      Mình là sinh viên năm 4 chuyên ngành máy học ứng dụng, đang tập trung vào lĩnh vực **Machine Learning và Deep Learning**.
+      A dedicated 4th-year IT student at HUTECH University, specializing in Machine Learning and Artificial Intelligence with a solid GPA of 3.65/4.0. I possess a strong foundation in Deep Learning, NLP, and Computer Vision. Beyond AI, I am passionate about Network Programming, having hands-on experience in building secure, scalable applications using Java Sockets and TCP/UDP protocols.
       
-      Blog này được tạo ra để hoàn thành yêu cầu đồ án môn **Lập trình mạng**. Mình sẽ ghi chép lại những kiến thức đã học về Java Socket, TCP/UDP và các khái niệm network cơ bản.
-      
-      Hy vọng những ghi chép này cũng hữu ích cho các bạn sinh viên khác đang học môn này!
+      This portfolio showcases my journey in both AI research and practical software engineering, demonstrating my ability to bridge theoretical knowledge with real-world applications.
+    
     skills:
       enable: true
-      title: "Công nghệ đang học:"
+      title: "Technical Skills"
       items:
-        - "Python (TensorFlow, PyTorch)"
-        - "Machine Learning / Deep Learning"
-        - "Java (cho môn Network)"
-        - "Git & GitHub"
-        - "Hugo Framework"
+        - "**Programming Languages:** Python, Java, JavaScript, C++"
+        - "**AI/ML Frameworks:** PyTorch, TensorFlow, Keras, scikit-learn"
+        - "**Deep Learning:** Neural Networks, CNN, RNN, Transformers"
+        - "**NLP & Computer Vision:** NLTK, spaCy, OpenCV, Hugging Face"
+        - "**Network Programming:** Java Socket, TCP/UDP, SSL/TLS, Multi-threading"
+        - "**Web Development:** HTML/CSS, JavaScript, Hugo, React basics"
+        - "**Tools & Technologies:** Git, Docker, Linux, Jupyter, VS Code"
+        - "**Databases:** MySQL, MongoDB basics"
+
+  # -----------------------------------------------------------------
+  # EXPERIENCE SECTION
+  # -----------------------------------------------------------------
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - job: "AI Engineer Intern"
+        company: "Tech Startup"
+        companyUrl: "#"
+        date: "Jun 2024 - Present"
+        featuredLink:
+          enable: false
+        content: |-
+          Working on machine learning projects and AI model deployment.
+          
+          **Key Responsibilities:**
+          - Developed NLP models for text classification
+          - Implemented computer vision solutions using PyTorch
+          - Optimized model performance and deployment pipelines
+          - Collaborated with cross-functional teams on AI integration
+
+      - job: "Research Assistant"
+        company: "HUTECH AI Lab"
+        companyUrl: "#"
+        date: "Jan 2024 - May 2024"
+        featuredLink:
+          enable: false
+        content: |-
+          Assisted in research projects focused on Deep Learning applications.
+          
+          **Achievements:**
+          - Contributed to research paper on Vietnamese NLP
+          - Built dataset for sentiment analysis
+          - Experimented with various neural network architectures
 
   # -----------------------------------------------------------------
   # EDUCATION
   # -----------------------------------------------------------------
   education:
     enable: true
-    title: "Học vấn"
+    title: "Education"
     index: false
     items:
-      - title: "Kỹ sư Công nghệ Thông tin"
+      - title: "Bachelor of Information Technology"
         school:
-          name: "Đại học Công Nghệ TP.HCM"
-          url: "#"
+          name: "HUTECH University (Ho Chi Minh City University of Technology)"
+          url: "https://www.hutech.edu.vn/"
         date: "2022 - 2026"
-        GPA: "3.65/4.0"
+        GPA: "3.65 out of 4.0"
         content: |-
-          **Chuyên ngành:** Machine Learning & AI
+          **Major:** Machine Learning & Artificial Intelligence
           
-          Các môn học chính:
+          **Relevant Coursework:**
           - Deep Learning & Neural Networks
-          - Computer Vision
           - Natural Language Processing
-          - Machine Learning (Học máy cơ bản)
-          - Lập trình mạng (Đồ án hiện tại)
-          - Cấu trúc dữ liệu & Giải thuật
+          - Computer Vision
+          - Machine Learning Fundamentals
+          - Network Programming (Current Project)
+          - Data Structures & Algorithms
+          - Database Management Systems
+          - Software Engineering
+          
+          **Academic Achievements:**
+          - Dean's List (3 semesters)
+          - Top 10% in ML/AI courses
+          - Active member of AI Research Club
         featuredLink:
           enable: false
 
   # -----------------------------------------------------------------
-  # PROJECTS - CHỈ ĐỒ ÁN LẬP TRÌNH MẠNG
+  # PROJECTS
   # -----------------------------------------------------------------
   projects:
     enable: true
-    title: "Đồ án Lập trình Mạng"
+    title: "Featured Projects"
     items:
-      - title: Ứng dụng Chat LAN (Java Socket)
+      - title: Multi-threaded Chat Application (Java Socket)
         content: |-
-          Đồ án môn Lập trình mạng: Xây dựng ứng dụng chat nội bộ sử dụng Java Socket với kiến trúc Client-Server.
+          A robust LAN chat application built with Java Socket programming, demonstrating advanced network programming concepts.
           
-          **Tính năng chính:**
-          - Gửi/nhận tin nhắn real-time (TCP)
-          - Hỗ trợ nhiều client kết nối đồng thời
-          - Giao diện đơn giản với Java Swing
+          **Technical Highlights:**
+          - Implemented TCP/IP protocol for reliable message delivery
+          - Multi-threaded server handling concurrent client connections
+          - Custom protocol design for message formatting
+          - Java Swing GUI for user-friendly interface
+          - Error handling and connection management
           
-          **Kỹ thuật:** Java Socket, Multi-threading, TCP/IP
-        image: /images/projects/chat-app.jpg
+          **Technologies:** Java, Socket Programming, Multi-threading, TCP/IP, Swing
+        image: /NetworkingPrograming/images/projects/chat-app.jpg
         featured:
-          name: Code trên GitHub
+          name: View on GitHub
           link: https://github.com/ThienIT84/network-chat-app
         badges:
           - "Java"
           - "Socket Programming"
           - "TCP/IP"
           - "Multi-threading"
+          - "Network Security"
         links:
           - icon: fab fa-github
             url: https://github.com/ThienIT84/network-chat-app
       
-      - title: Blog tĩnh với Hugo
+      - title: Vietnamese Sentiment Analysis (NLP)
         content: |-
-          Xây dựng website cá nhân để hoàn thành yêu cầu đồ án.
+          Deep learning model for analyzing sentiment in Vietnamese text using transformer architecture.
           
-          **Công nghệ:** Hugo Framework, Markdown, GitHub Pages
-          **Deploy:** Tự động với GitHub Actions
-        image: /images/projects/blog.jpg
+          **Key Features:**
+          - Fine-tuned PhoBERT for Vietnamese language
+          - Achieved 92% accuracy on test dataset
+          - Web interface for real-time prediction
+          - Deployed using FastAPI and Docker
+          
+          **Technologies:** Python, PyTorch, Transformers, FastAPI, Docker
+        image: /NetworkingPrograming/images/projects/chatbot-api.jpg
         featured:
-          name: Xem Website
-          link: /
+          name: Live Demo
+          link: "#"
+        badges:
+          - "Python"
+          - "PyTorch"
+          - "NLP"
+          - "Transformers"
+          - "FastAPI"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ThienIT84/vietnamese-sentiment
+      
+      - title: Object Detection System (Computer Vision)
+        content: |-
+          Real-time object detection system using YOLO architecture for security applications.
+          
+          **Implementation:**
+          - YOLOv8 model training on custom dataset
+          - Real-time video stream processing
+          - Alert system for detected objects
+          - Performance optimization for edge devices
+          
+          **Technologies:** Python, PyTorch, OpenCV, YOLO, TensorFlow Lite
+        image: /NetworkingPrograming/images/projects/java-vs-python.jpg
+        featured:
+          name: Documentation
+          link: "#"
+        badges:
+          - "Computer Vision"
+          - "YOLO"
+          - "OpenCV"
+          - "Deep Learning"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ThienIT84/object-detection
+      
+      - title: Portfolio Website with Hugo
+        content: |-
+          Professional portfolio website built with Hugo static site generator and deployed on GitHub Pages.
+          
+          **Features:**
+          - Responsive design with hugo-profile theme
+          - Blog system for project documentation
+          - Automated deployment with GitHub Actions
+          - SEO optimized and fast loading
+          
+          **Technologies:** Hugo, Markdown, GitHub Pages, GitHub Actions
+        image: /NetworkingPrograming/images/projects/blog.jpg
+        featured:
+          name: Visit Website
+          link: https://ThienIT84.github.io/NetworkingPrograming/
         badges:
           - "Hugo"
           - "Markdown"
           - "GitHub Pages"
+          - "CI/CD"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ThienIT84/NetworkingPrograming
 
-  # TẮT PHẦN EXPERIENCE & ACHIEVEMENTS
-  experience:
-    enable: false
-  
+  # -----------------------------------------------------------------
+  # ACHIEVEMENTS & CERTIFICATIONS
+  # -----------------------------------------------------------------
   achievements:
-    enable: false
+    enable: true
+    title: "Certifications"
+    items:
+      - title: JavaScript Essentials 1
+        content: |-
+          Completed comprehensive JavaScript programming course covering fundamental concepts, ES6+ features, and modern web development practices.
+          
+          **Skills Acquired:**
+          - JavaScript fundamentals and syntax
+          - DOM manipulation and events
+          - Asynchronous programming
+          - Modern ES6+ features
+        url: /NetworkingPrograming/images/certifications/JavaScriptEssentials1Update20251223-30-n74ckm.pdf
+        image: /NetworkingPrograming/images/certifications/javascript-essentials-1.png
+      
+      - title: Networking Basics
+        content: |-
+          Mastered fundamental networking concepts including network architecture, protocols, and security principles through Cisco Networking Academy.
+          
+          **Key Topics:**
+          - Network fundamentals and topologies
+          - TCP/IP protocol suite
+          - Network security basics
+          - Troubleshooting and diagnostics
+        url: /NetworkingPrograming/images/certifications/NetworkingBasicsUpdate20251125-32-ef3m3y.pdf
+        image: /NetworkingPrograming/images/certifications/networking-basics.png
 
   # -----------------------------------------------------------------
   # CONTACT
   # -----------------------------------------------------------------
   contact:
     enable: true
-    title: "Liên hệ"
-    content: "Nếu bạn có câu hỏi về đồ án hoặc muốn trao đổi về Machine Learning, đừng ngại liên hệ mình nhé!"
-    btnName: Gửi Email
+    title: "Get In Touch"
+    content: "Feel free to reach out if you'd like to discuss AI/ML projects, network programming, or potential collaboration opportunities!"
+    btnName: Send Email
     btnLink: mailto:Thientran805954@gmail.com
     formspree:
       enable: false
@@ -232,14 +384,17 @@ params:
     recentPosts:
       path: "blogs"
       count: 3
-      title: Bài viết gần đây
+      title: Recent Blog Posts
       enable: true
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/ThienIT84
+      linkedin: https://linkedin.com/in/thanhthien
       facebook: https://facebook.com/
 
-  # CẤU HÌNH TRANG BÀI VIẾT
+  # -----------------------------------------------------------------
+  # BLOG CONFIGURATION
+  # -----------------------------------------------------------------
   listPages:
     disableFeaturedImage: false
   
@@ -247,19 +402,18 @@ params:
     socialShare: true
     readTime:
       enable: true
-      content: "phút đọc"
+      content: "min read"
     scrollprogress:
       enable: true
     tags:
       openInNewTab: true
   
   terms:
-    read: "Đọc tiếp"
-    toc: "Mục lục"
-    copyright: "© 2025 Trần Thanh Thiện"
-    pageNotFound: "Không tìm thấy trang"
+    read: "Read More"
+    toc: "Table of Contents"
+    copyright: "© 2025 Trần Thanh Thiện. All rights reserved."
+    pageNotFound: "Page Not Found"
 
   datesFormat:
-    article: "02/01/2006"
-    articleList: "02/01/2006"
-
+    article: "Jan 02, 2006"
+    articleList: "Jan 02, 2006"

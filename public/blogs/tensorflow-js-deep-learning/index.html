@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=https://ThienIT84.github.io/NetworkingPrograming/fav.png type="image/gif">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/font.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-  <meta property="og:site_name" content="Blog Lập Trình - Trần Thanh Thiện">
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
   <meta property="og:title" content="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
-  <meta property="og:description" content="Chạy mô hình AI trực tiếp trên trình duyệt web bằng JavaScript mà không cần Backend Python.">
-  <meta property="og:locale" content="vi">
+  <meta property="og:description" content="Hướng dẫn chi tiết về TensorFlow.js - thư viện Machine Learning mạnh mẽ cho JavaScript, cách training models, sử dụng pre-trained models, và deploy AI trực tiếp trên browser.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
     <meta property="article:published_time" content="2025-12-19T15:00:00+07:00">
@@ -41,18 +41,19 @@
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="Deep Learning">
     <meta property="article:tag" content="TensorFlow">
+    <meta property="article:tag" content="Machine Learning">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
-  <meta name="twitter:description" content="Chạy mô hình AI trực tiếp trên trình duyệt web bằng JavaScript mà không cần Backend Python.">
+  <meta name="twitter:description" content="Hướng dẫn chi tiết về TensorFlow.js - thư viện Machine Learning mạnh mẽ cho JavaScript, cách training models, sử dụng pre-trained models, và deploy AI trực tiếp trên browser.">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/header.css" media="all">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/footer.css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/theme.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
 
 <style>
     :root {
@@ -109,18 +110,18 @@
 
 
 
-<meta name="description" content="Chạy mô hình AI trực tiếp trên trình duyệt web bằng JavaScript mà không cần Backend Python.">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/single.css">
+<meta name="description" content="Hướng dẫn chi tiết về TensorFlow.js - thư viện Machine Learning mạnh mẽ cho JavaScript, cách training models, sử dụng pre-trained models, và deploy AI trực tiếp trên browser.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
 
 
-<script defer src="https://ThienIT84.github.io/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
 
 
   
   
 
   <title>
-TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập Trình - Trần Thanh Thiện
+TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Trần Thanh Thiện - AI Engineer Portfolio
 
   </title>
 </head>
@@ -182,9 +183,9 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://ThienIT84.github.io/NetworkingPrograming/">
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
                 
-                <img src="https://ThienIT84.github.io/NetworkingPrograming/fav.png" width="30" height="30"
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Thien.Dev
                 
@@ -218,39 +219,53 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#about" aria-label="about">
-                            Về bản thân
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#education"
+                        <a class="nav-link" href="/NetworkingPrograming#education"
                             aria-label="education">
-                            Học vấn
+                            Education
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#projects"
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
                             aria-label="projects">
-                            Đồ án Lập trình Mạng
+                            Featured Projects
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#contact"
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
                             aria-label="contact">
-                            Liên hệ
+                            Get In Touch
                         </a>
                     </li>
                     
@@ -262,19 +277,9 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/" title="">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
                             
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="blogs" title="">
-                            
-                            Bài viết
+                            Home
                         </a>
                     </li>
                     
@@ -284,7 +289,27 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="#about" title="">
                             
-                            Profile
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
                         </a>
                     </li>
                     
@@ -330,47 +355,593 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <h1 class="text-center mb-4">TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</h1>
             <div class="text-center">
               
-              19/12/2025
+              Dec 19, 2025
 
               
               <span id="readingTime">
-                phút đọc
+                min read
               </span>
               
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/tfjs.jpg" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
           </div>
           
           <article class="page-content  p-2">
-          <p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình Machine Learning ngay trên trình duyệt (Client-side).</p>
-<h3 id="2-tại-sao-lại-dùng-nó">2. Tại sao lại dùng nó?</h3>
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thời đại AI bùng nổ, việc chạy các mô hình Machine Learning không còn giới hạn ở Python và server nữa. <strong>TensorFlow.js</strong> đã mở ra kỷ nguyên mới: <strong>AI chạy ngay trên trình duyệt web</strong>, không cần backend, không cần cài đặt gì cả. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản đến việc xây dựng ứng dụng AI thực tế với TensorFlow.js.</p>
+<h2 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h2>
+<h3 id="11-định-nghĩa-và-lịch-sử">1.1. Định nghĩa và lịch sử</h3>
+<p><strong>TensorFlow.js</strong> là một thư viện JavaScript mã nguồn mở do Google phát triển, cho phép:</p>
 <ul>
-<li><strong>Bảo mật:</strong> Dữ liệu không cần gửi về server (ví dụ nhận diện khuôn mặt).</li>
-<li><strong>Tương tác thời gian thực:</strong> Độ trễ cực thấp vì chạy ngay trên máy người dùng.</li>
+<li><strong>Định nghĩa</strong> (define) models</li>
+<li><strong>Huấn luyện</strong> (train) models</li>
+<li><strong>Chạy</strong> (run) models</li>
 </ul>
-<h3 id="3-ví-dụ-tạo-một-tensor-đơn-giản">3. Ví dụ: Tạo một Tensor đơn giản</h3>
-<p>Để sử dụng, chúng ta chỉ cần nhúng thẻ script CDN vào HTML, sau đó viết code JS như sau:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Định nghĩa model đơn giản: y = 2x - 1
+<p>Tất cả ngay trên trình duyệt web hoặc Node.js, sử dụng WebGL để tăng tốc tính toán.</p>
+<p><strong>Timeline:</strong></p>
+<ul>
+<li><strong>2017</strong>: TensorFlow.js ra đời (ban đầu tên deeplearn.js)</li>
+<li><strong>2018</strong>: Chính thức merge vào TensorFlow ecosystem</li>
+<li><strong>2019-2025</strong>: Liên tục cập nhật, hỗ trợ nhiều models và platforms</li>
+</ul>
+<h3 id="12-tại-sao-dùng-tensorflowjs">1.2. Tại sao dùng TensorFlow.js?</h3>
+<h4 id="ưu-điểm">Ưu điểm:</h4>
+<p>✅ <strong>Privacy (Bảo mật)</strong>:</p>
+<ul>
+<li>Dữ liệu không cần gửi lên server</li>
+<li>Xử lý local → bảo vệ privacy người dùng</li>
+<li>Ví dụ: Nhận diện khuôn mặt, phân tích ảnh y tế</li>
+</ul>
+<p>✅ <strong>Low Latency (Độ trễ thấp)</strong>:</p>
+<ul>
+<li>Không cần round-trip đến server</li>
+<li>Phản hồi tức thì</li>
+<li>Ví dụ: Real-time pose detection, gesture recognition</li>
+</ul>
+<p>✅ <strong>Accessibility (Dễ tiếp cận)</strong>:</p>
+<ul>
+<li>Chạy trên mọi thiết bị có browser</li>
+<li>Không cần cài đặt Python, CUDA, etc.</li>
+<li>Cross-platform: Windows, Mac, Linux, Mobile</li>
+</ul>
+<p>✅ <strong>Cost-effective (Tiết kiệm chi phí)</strong>:</p>
+<ul>
+<li>Giảm tải cho server</li>
+<li>Tận dụng GPU của client</li>
+<li>Scalable: Càng nhiều users, càng nhiều computing power</li>
+</ul>
+<h4 id="nhược-điểm">Nhược điểm:</h4>
+<p>❌ <strong>Performance</strong>: Chậm hơn Python + GPU server (nhưng đủ cho nhiều use cases)
+❌ <strong>Model size</strong>: Cần tối ưu để tải nhanh qua mạng
+❌ <strong>Training</strong>: Training models lớn vẫn nên dùng Python</p>
+<h3 id="13-kiến-trúc-tensorflowjs">1.3. Kiến trúc TensorFlow.js</h3>
+<pre tabindex="0"><code>┌─────────────────────────────────────┐
+│     TensorFlow.js Application       │
+├─────────────────────────────────────┤
+│   Layers API (Keras-like, high-level)│
+├─────────────────────────────────────┤
+│   Core API (Low-level operations)   │
+├─────────────────────────────────────┤
+│         Backend (WebGL/CPU)         │
+└─────────────────────────────────────┘
+</code></pre><h2 id="2-cài-đặt-và-setup">2. Cài đặt và Setup</h2>
+<h3 id="21-cài-đặt-qua-cdn-nhanh-nhất">2.1. Cài đặt qua CDN (Nhanh nhất)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;TensorFlow.js Demo&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- TensorFlow.js --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;TensorFlow.js Demo&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Kiểm tra TensorFlow.js đã load
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;TensorFlow.js version:&#39;</span>, <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">version</span>.<span style="color:#a6e22e">tfjs</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Tạo tensor đơn giản
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tensor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">tensor</span>.<span style="color:#a6e22e">print</span>();
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="22-cài-đặt-qua-npm-cho-projects-lớn">2.2. Cài đặt qua NPM (Cho projects lớn)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install @tensorflow/tfjs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hoặc chỉ cần backend cụ thể</span>
+</span></span><span style="display:flex;"><span>npm install @tensorflow/tfjs-node  <span style="color:#75715e"># Node.js backend</span>
+</span></span><span style="display:flex;"><span>npm install @tensorflow/tfjs-node-gpu  <span style="color:#75715e"># Node.js với GPU</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Import trong JavaScript
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">tf</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@tensorflow/tfjs&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc Node.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tf</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;@tensorflow/tfjs-node&#39;</span>);
+</span></span></code></pre></div><h2 id="3-tensors---khái-niệm-cơ-bản">3. Tensors - Khái niệm cơ bản</h2>
+<h3 id="31-tensor-là-gì">3.1. Tensor là gì?</h3>
+<p><strong>Tensor</strong> là cấu trúc dữ liệu cơ bản trong TensorFlow - một mảng đa chiều:</p>
+<ul>
+<li><strong>Scalar</strong> (0D tensor): Một số duy nhất</li>
+<li><strong>Vector</strong> (1D tensor): Mảng 1 chiều</li>
+<li><strong>Matrix</strong> (2D tensor): Mảng 2 chiều</li>
+<li><strong>3D+ tensor</strong>: Mảng nhiều chiều</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Scalar (0D)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">scalar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">scalar</span>(<span style="color:#ae81ff">42</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">scalar</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// Tensor: 42
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Vector (1D)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vector</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">vector</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// Tensor: [1, 2, 3, 4, 5]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Matrix (2D)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">matrix</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">matrix</span>.<span style="color:#a6e22e">print</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tensor:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   [[1, 2],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//    [3, 4],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//    [5, 6]]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3D Tensor (ví dụ: RGB image)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor3d</span>([
+</span></span><span style="display:flex;"><span>    [[<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>]],
+</span></span><span style="display:flex;"><span>    [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>], [<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>]]
+</span></span><span style="display:flex;"><span>], [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]); <span style="color:#75715e">// [height, width, channels]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo tensor từ array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tensor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor</span>(<span style="color:#a6e22e">arr</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Với shape cụ thể
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shaped</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>], [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">shaped</span>.<span style="color:#a6e22e">print</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tensor:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   [[1, 2, 3],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//    [4, 5, 6]]
+</span></span></span></code></pre></div><h3 id="32-tensor-operations">3.2. Tensor Operations</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Arithmetic operations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cộng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">b</span>); <span style="color:#75715e">// hoặc tf.add(a, b)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sum</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [11, 22, 33, 44]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Trừ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">sub</span>(<span style="color:#a6e22e">b</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">diff</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [-9, -18, -27, -36]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Nhân
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">mul</span>(<span style="color:#a6e22e">b</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [10, 40, 90, 160]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Chia
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">quotient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">div</span>(<span style="color:#a6e22e">a</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">quotient</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [10, 10, 10, 10]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Matrix multiplication
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">m1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]]);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">m2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([[<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>], [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>]]);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">matmul</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">m1</span>.<span style="color:#a6e22e">matMul</span>(<span style="color:#a6e22e">m2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">matmul</span>.<span style="color:#a6e22e">print</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [[19, 22],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//  [43, 50]]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Element-wise operations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">squared</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">square</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">squared</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [1, 4, 9, 16]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sqrt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">16</span>]));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sqrt</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// [1, 2, 3, 4]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Aggregations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tensor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tensor</span>.<span style="color:#a6e22e">sum</span>().<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// 15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">tensor</span>.<span style="color:#a6e22e">mean</span>().<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">tensor</span>.<span style="color:#a6e22e">max</span>().<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">tensor</span>.<span style="color:#a6e22e">min</span>().<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// 1
+</span></span></span></code></pre></div><h3 id="33-memory-management">3.3. Memory Management</h3>
+<p><strong>Quan trọng</strong>: TensorFlow.js không tự động garbage collect tensors!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD: Memory leak
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createTensors</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">b</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>; <span style="color:#75715e">// a và b không được dispose!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD: Manual dispose
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createTensorsCorrect</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">b</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dispose</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">dispose</span>();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ BETTER: tf.tidy() - Tự động cleanup
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createTensorsTidy</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tidy</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor1d</span>([<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">b</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span>; <span style="color:#75715e">// Chỉ c được giữ lại, a và b tự động dispose
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Tensors in memory:&#39;</span>, <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">memory</span>().<span style="color:#a6e22e">numTensors</span>);
+</span></span></code></pre></div><h2 id="4-building-models">4. Building Models</h2>
+<h3 id="41-sequential-model-đơn-giản-nhất">4.1. Sequential Model (Đơn giản nhất)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Tạo model tuần tự (sequential)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">sequential</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm layers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,           <span style="color:#75715e">// 10 neurons
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>,  <span style="color:#75715e">// ReLU activation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">inputShape</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">5</span>]      <span style="color:#75715e">// Input: 5 features
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,            <span style="color:#75715e">// Output: 1 value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sigmoid&#39;</span> <span style="color:#75715e">// Sigmoid cho binary classification
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Compile model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">compile</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">optimizer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;adam&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;binaryCrossentropy&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">metrics</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;accuracy&#39;</span>]
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Xem summary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">summary</span>();
+</span></span></code></pre></div><h3 id="42-ví-dụ-linear-regression-y--2x---1">4.2. Ví dụ: Linear Regression (y = 2x - 1)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. Tạo model
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">sequential</span>();
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">inputShape</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">1</span>]}));
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">compile</span>({<span style="color:#a6e22e">loss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;meanSquaredError&#39;</span>, <span style="color:#a6e22e">optimizer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sgd&#39;</span>});
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Compile
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">compile</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">optimizer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sgd&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;meanSquaredError&#39;</span>
+</span></span><span style="display:flex;"><span>});
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo dữ liệu train
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. Chuẩn bị dữ liệu training
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>]);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ys</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>], [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>]);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Train model
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">fit</span>(<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">ys</span>, {<span style="color:#a6e22e">epochs</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>});
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. Train model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">trainModel</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">fit</span>(<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">ys</span>, {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">epochs</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">callbacks</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">onEpochEnd</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">epoch</span>, <span style="color:#a6e22e">logs</span>) =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">epoch</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Epoch </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">epoch</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: loss = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">logs</span>.<span style="color:#a6e22e">loss</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Training complete!&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 5. Dự đoán
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prediction</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">predict</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">prediction</span>.<span style="color:#a6e22e">print</span>(); <span style="color:#75715e">// Khoảng 19 (2*10 - 1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Dự đoán giá trị mới (x = 10)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">predict</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">tensor2d</span>([<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>])).<span style="color:#a6e22e">print</span>();
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">trainModel</span>();
+</span></span></code></pre></div><h3 id="43-ví-dụ-image-classification-mnist-like">4.3. Ví dụ: Image Classification (MNIST-like)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Model cho phân loại ảnh 28x28
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">sequential</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Convolutional layer 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">conv2d</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">inputShape</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">32</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">kernelSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Max pooling
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">maxPooling2d</span>({<span style="color:#a6e22e">poolSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Convolutional layer 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">conv2d</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">64</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">kernelSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">maxPooling2d</span>({<span style="color:#a6e22e">poolSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Flatten
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">flatten</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Dense layers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">128</span>, <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>}));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dropout</span>({<span style="color:#a6e22e">rate</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>})); <span style="color:#75715e">// Dropout để tránh overfitting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output layer (10 classes: 0-9)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;softmax&#39;</span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Compile
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">compile</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">optimizer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;adam&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;categoricalCrossentropy&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">metrics</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;accuracy&#39;</span>]
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">summary</span>();
+</span></span></code></pre></div><h2 id="5-pre-trained-models">5. Pre-trained Models</h2>
+<h3 id="51-mobilenet---image-classification">5.1. MobileNet - Image Classification</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Image Classification&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;imageUpload&#34;</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/*&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preview&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;max-width: 400px;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;predictions&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">model</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Load model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadModel</span>() {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">mobilenet</span>.<span style="color:#a6e22e">load</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;MobileNet loaded!&#39;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Classify image
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classifyImage</span>(<span style="color:#a6e22e">img</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">predictions</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">classify</span>(<span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resultsDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;predictions&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resultsDiv</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;h3&gt;Predictions:&lt;/h3&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">predictions</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">pred</span> =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">resultsDiv</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;p&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">pred</span>.<span style="color:#a6e22e">className</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span>(<span style="color:#a6e22e">pred</span>.<span style="color:#a6e22e">probability</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">2</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">%&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                `</span>;
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle file upload
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;imageUpload&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FileReader</span>();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;preview&#39;</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">result</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">classifyImage</span>(<span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>            };
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">readAsDataURL</span>(<span style="color:#a6e22e">file</span>);
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">loadModel</span>();
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="52-posenet---pose-detection">5.2. PoseNet - Pose Detection</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Load PoseNet
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">posenet</span>.<span style="color:#a6e22e">load</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Detect pose từ video/image
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pose</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">estimateSinglePose</span>(<span style="color:#a6e22e">videoElement</span>, {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">flipHorizontal</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">pose</span>.<span style="color:#a6e22e">keypoints</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   {part: &#39;nose&#39;, position: {x: 125, y: 100}, score: 0.99},
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   {part: &#39;leftEye&#39;, position: {x: 115, y: 95}, score: 0.98},
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//   ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Vẽ skeleton
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">pose</span>.<span style="color:#a6e22e">keypoints</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">keypoint</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">keypoint</span>.<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.5</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">drawPoint</span>(<span style="color:#a6e22e">keypoint</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">keypoint</span>.<span style="color:#a6e22e">position</span>.<span style="color:#a6e22e">y</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="53-toxicity---text-classification">5.3. Toxicity - Text Classification</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Load toxicity model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">threshold</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">toxicity</span>.<span style="color:#a6e22e">load</span>(<span style="color:#a6e22e">threshold</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Classify text
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sentences</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;You are awesome!&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;I hate you!&#39;</span>
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">predictions</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">classify</span>(<span style="color:#a6e22e">sentences</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">predictions</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">prediction</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">prediction</span>.<span style="color:#a6e22e">label</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">prediction</span>.<span style="color:#a6e22e">results</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">i</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`  &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sentences</span>[<span style="color:#a6e22e">i</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">match</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;TOXIC&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;OK&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="6-transfer-learning">6. Transfer Learning</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. Load pre-trained MobileNet
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mobilenet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">loadLayersModel</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json&#39;</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Freeze base layers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">mobilenet</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">layer</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">layer</span>.<span style="color:#a6e22e">trainable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. Thêm custom layers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">sequential</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm tất cả layers của MobileNet trừ layer cuối
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">mobilenet</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">mobilenet</span>.<span style="color:#a6e22e">layers</span>[<span style="color:#a6e22e">i</span>]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm custom classification head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">128</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;relu&#39;</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dropout</span>({<span style="color:#a6e22e">rate</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">dense</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#75715e">// 3 classes riêng của bạn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">activation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;softmax&#39;</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. Compile và train
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">compile</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">optimizer</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">train</span>.<span style="color:#a6e22e">adam</span>(<span style="color:#ae81ff">0.0001</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loss</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;categoricalCrossentropy&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">metrics</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;accuracy&#39;</span>]
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Train chỉ với custom layers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">fit</span>(<span style="color:#a6e22e">trainData</span>, <span style="color:#a6e22e">trainLabels</span>, {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">epochs</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validationData</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">valData</span>, <span style="color:#a6e22e">valLabels</span>]
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="7-saving-và-loading-models">7. Saving và Loading Models</h2>
+<h3 id="71-save-to-browser-storage">7.1. Save to Browser Storage</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Save model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">save</span>(<span style="color:#e6db74">&#39;localstorage://my-model&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Load model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">loadedModel</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">loadLayersModel</span>(<span style="color:#e6db74">&#39;localstorage://my-model&#39;</span>);
+</span></span></code></pre></div><h3 id="72-save-to-downloads">7.2. Save to Downloads</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Save model để download
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">save</span>(<span style="color:#e6db74">&#39;downloads://my-model&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tải 2 files: model.json và weights.bin
+</span></span></span></code></pre></div><h3 id="73-convert-từ-python">7.3. Convert từ Python</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Cài đặt tensorflowjs converter</span>
+</span></span><span style="display:flex;"><span>pip install tensorflowjs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Convert Keras model</span>
+</span></span><span style="display:flex;"><span>tensorflowjs_converter <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --input_format keras <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    model.h5 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    tfjs_model/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Convert SavedModel</span>
+</span></span><span style="display:flex;"><span>tensorflowjs_converter <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --input_format tf_saved_model <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    saved_model/ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    tfjs_model/
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Load converted model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">loadLayersModel</span>(<span style="color:#e6db74">&#39;tfjs_model/model.json&#39;</span>);
+</span></span></code></pre></div><h2 id="8-real-world-application-webcam-classifier">8. Real-World Application: Webcam Classifier</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@tensorflow/tfjs&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Real-time Webcam Classification&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;webcam&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">autoplay</span>&gt;&lt;/<span style="color:#f92672">video</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;predictions&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">model</span>, <span style="color:#a6e22e">webcam</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init</span>() {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Load model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">model</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">mobilenet</span>.<span style="color:#a6e22e">load</span>();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Setup webcam
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">webcam</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;webcam&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stream</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">mediaDevices</span>.<span style="color:#a6e22e">getUserMedia</span>({
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">video</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">webcam</span>.<span style="color:#a6e22e">srcObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Start prediction loop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">predictLoop</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">predictLoop</span>() {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">predictions</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">classify</span>(<span style="color:#a6e22e">webcam</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">div</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;predictions&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">div</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;h3&gt;I see:&lt;/h3&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">predictions</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">pred</span> =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">div</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;p&gt;&lt;strong&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">pred</span>.<span style="color:#a6e22e">className</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/strong&gt;: 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    </span><span style="color:#e6db74">${</span>(<span style="color:#a6e22e">pred</span>.<span style="color:#a6e22e">probability</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">1</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">%&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                `</span>;
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">predictLoop</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">init</span>();
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h2 id="9-performance-optimization">9. Performance Optimization</h2>
+<h3 id="91-webgl-backend">9.1. WebGL Backend</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra backend hiện tại
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Backend:&#39;</span>, <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">getBackend</span>()); <span style="color:#75715e">// &#39;webgl&#39; hoặc &#39;cpu&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Set backend (WebGL nhanh hơn CPU rất nhiều)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">setBackend</span>(<span style="color:#e6db74">&#39;webgl&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kiểm tra WebGL support
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webglSupported</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">ENV</span>.<span style="color:#a6e22e">getBool</span>(<span style="color:#e6db74">&#39;WEBGL_VERSION&#39;</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>;
+</span></span></code></pre></div><h3 id="92-model-optimization">9.2. Model Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Quantization - Giảm kích thước model
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Khi convert từ Python:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">tensorflowjs_converter</span> <span style="color:#f92672">\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span><span style="color:#a6e22e">input_format</span> <span style="color:#a6e22e">keras</span> <span style="color:#f92672">\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span><span style="color:#a6e22e">quantization_bytes</span> <span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">\</span>  <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">byte</span> (<span style="color:#a6e22e">uint8</span>) <span style="color:#a6e22e">thay</span> <span style="color:#a6e22e">vì</span> <span style="color:#ae81ff">4</span> <span style="color:#a6e22e">bytes</span> (<span style="color:#a6e22e">float32</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">h5</span> <span style="color:#f92672">\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tfjs_model</span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="93-batch-prediction">9.3. Batch Prediction</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ Slow: Predict từng ảnh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">image</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">images</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prediction</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">predict</span>(<span style="color:#a6e22e">image</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Fast: Batch prediction
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">batch</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tf</span>.<span style="color:#a6e22e">stack</span>(<span style="color:#a6e22e">images</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">predictions</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">predict</span>(<span style="color:#a6e22e">batch</span>);
+</span></span></code></pre></div><h2 id="kết-luận">Kết luận</h2>
+<p>TensorFlow.js đã mở ra một thế giới mới cho Machine Learning - không còn giới hạn ở Python và server, mà có thể chạy ngay trên trình duyệt với hàng tỷ thiết bị. Từ image classification, pose detection, đến text analysis - tất cả đều có thể thực hiện client-side với privacy tốt hơn và latency thấp hơn.</p>
+<p>Đây là công nghệ đang phát triển mạnh mẽ và sẽ ngày càng quan trọng trong tương lai của Web Development và AI.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li><a href="https://www.tensorflow.org/js">TensorFlow.js Official Documentation</a></li>
+<li><a href="https://github.com/tensorflow/tfjs-examples">TensorFlow.js Examples</a></li>
+<li><a href="https://github.com/tensorflow/tfjs-models">Pre-trained Models</a></li>
+<li>&ldquo;Deep Learning with JavaScript&rdquo; - Shanqing Cai, Stanley Bileschi, Eric D. Nielsen</li>
+<li><a href="https://www.tensorflow.org/js/demos">TensorFlow.js Gallery</a></li>
+</ul>
+
           </article>
         </div>
       </div>
@@ -379,18 +950,64 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
           
           <aside class="toc">
               <h5>
-                Mục lục
+                Table of Contents
               </h5>
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</a>
       <ul>
-        <li><a href="#1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</a></li>
-        <li><a href="#2-tại-sao-lại-dùng-nó">2. Tại sao lại dùng nó?</a></li>
-        <li><a href="#3-ví-dụ-tạo-một-tensor-đơn-giản">3. Ví dụ: Tạo một Tensor đơn giản</a></li>
+        <li><a href="#11-định-nghĩa-và-lịch-sử">1.1. Định nghĩa và lịch sử</a></li>
+        <li><a href="#12-tại-sao-dùng-tensorflowjs">1.2. Tại sao dùng TensorFlow.js?</a></li>
+        <li><a href="#13-kiến-trúc-tensorflowjs">1.3. Kiến trúc TensorFlow.js</a></li>
       </ul>
     </li>
+    <li><a href="#2-cài-đặt-và-setup">2. Cài đặt và Setup</a>
+      <ul>
+        <li><a href="#21-cài-đặt-qua-cdn-nhanh-nhất">2.1. Cài đặt qua CDN (Nhanh nhất)</a></li>
+        <li><a href="#22-cài-đặt-qua-npm-cho-projects-lớn">2.2. Cài đặt qua NPM (Cho projects lớn)</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-tensors---khái-niệm-cơ-bản">3. Tensors - Khái niệm cơ bản</a>
+      <ul>
+        <li><a href="#31-tensor-là-gì">3.1. Tensor là gì?</a></li>
+        <li><a href="#32-tensor-operations">3.2. Tensor Operations</a></li>
+        <li><a href="#33-memory-management">3.3. Memory Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-building-models">4. Building Models</a>
+      <ul>
+        <li><a href="#41-sequential-model-đơn-giản-nhất">4.1. Sequential Model (Đơn giản nhất)</a></li>
+        <li><a href="#42-ví-dụ-linear-regression-y--2x---1">4.2. Ví dụ: Linear Regression (y = 2x - 1)</a></li>
+        <li><a href="#43-ví-dụ-image-classification-mnist-like">4.3. Ví dụ: Image Classification (MNIST-like)</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-pre-trained-models">5. Pre-trained Models</a>
+      <ul>
+        <li><a href="#51-mobilenet---image-classification">5.1. MobileNet - Image Classification</a></li>
+        <li><a href="#52-posenet---pose-detection">5.2. PoseNet - Pose Detection</a></li>
+        <li><a href="#53-toxicity---text-classification">5.3. Toxicity - Text Classification</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-transfer-learning">6. Transfer Learning</a></li>
+    <li><a href="#7-saving-và-loading-models">7. Saving và Loading Models</a>
+      <ul>
+        <li><a href="#71-save-to-browser-storage">7.1. Save to Browser Storage</a></li>
+        <li><a href="#72-save-to-downloads">7.2. Save to Downloads</a></li>
+        <li><a href="#73-convert-từ-python">7.3. Convert từ Python</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-real-world-application-webcam-classifier">8. Real-World Application: Webcam Classifier</a></li>
+    <li><a href="#9-performance-optimization">9. Performance Optimization</a>
+      <ul>
+        <li><a href="#91-webgl-backend">9.1. WebGL Backend</a></li>
+        <li><a href="#92-model-optimization">9.2. Model Optimization</a></li>
+        <li><a href="#93-batch-prediction">9.3. Batch Prediction</a></li>
+      </ul>
+    </li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
   </ul>
 </nav>
               </div>
@@ -402,21 +1019,25 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/javascript"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/javascript"
                 target="_blank"
               >JavaScript</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/ai"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/ai"
                 target="_blank"
               >AI</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/deep-learning"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/deep-learning"
                 target="_blank"
               >Deep Learning</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/tensorflow"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/tensorflow"
                 target="_blank"
               >TensorFlow</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/machine-learning"
+                target="_blank"
+              >Machine Learning</a></li>
               
             </ul>
           </aside>
@@ -428,22 +1049,22 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=Ch%e1%ba%a1y%20m%c3%b4%20h%c3%acnh%20AI%20tr%e1%bb%b1c%20ti%e1%ba%bfp%20tr%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t%20web%20b%e1%ba%b1ng%20JavaScript%20m%c3%a0%20kh%c3%b4ng%20c%e1%ba%a7n%20Backend%20Python. https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20chi%20ti%e1%ba%bft%20v%e1%bb%81%20TensorFlow.js%20-%20th%c6%b0%20vi%e1%bb%87n%20Machine%20Learning%20m%e1%ba%a1nh%20m%e1%ba%bd%20cho%20JavaScript%2c%20c%c3%a1ch%20training%20models%2c%20s%e1%bb%ad%20d%e1%bb%a5ng%20pre-trained%20models%2c%20v%c3%a0%20deploy%20AI%20tr%e1%bb%b1c%20ti%e1%ba%bfp%20tr%c3%aan%20browser. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='https://twitter.com/share?text=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t&url=https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f&hashtags=JavaScript%2cAI%2cDeep%20Learning%2cTensorFlow'>
+                  <a target="_blank" href='https://twitter.com/share?text=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f&hashtags=JavaScript%2cAI%2cDeep%20Learning%2cTensorFlow%2cMachine%20Learning'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t: https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t&amp;body=Check%20out%20this%20site https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f'>
+                  <a target="_blank" href='mailto:?subject=TensorFlow.js%3a%20Mang%20s%e1%bb%a9c%20m%e1%ba%a1nh%20Deep%20Learning%20l%c3%aan%20tr%c3%acnh%20duy%e1%bb%87t&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftensorflow-js-deep-learning%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -469,7 +1090,7 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="https://ThienIT84.github.io/NetworkingPrograming/js/scrollProgressBar.js"></script>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -502,7 +1123,7 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
 </script>
 
 
-<script src="https://ThienIT84.github.io/NetworkingPrograming/js/readingTime.js"></script>
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
 
 
 
@@ -514,7 +1135,7 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
     
     
     <div class="h3 text-center text-secondary py-3">
-        Bài viết gần đây
+        Recent Blog Posts
     </div>
     <div class="row justify-content-center">
         
@@ -522,24 +1143,24 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/java-vs-python.jpg" class="card-img-top" alt="Java vs Python: Lập trình viên AI có cần biết Java?">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Java vs Python: Lập trình viên AI có cần biết Java?">Java vs Python: Lập trình …</h5>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Chúng ta đều biết Python là &ldquo;vua&rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?</p>
-<h3 id="1-python-tốt-cho-nghiên-cứu-research">1. Python: Tốt cho Nghiên cứu (Research)</h3>
-<p>Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình …</p></p>
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -548,24 +1169,24 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" class="card-img-top" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">TensorFlow.js: Mang sức …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình …</p></p>
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -574,24 +1195,23 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chatbot-api.jpg" class="card-img-top" alt="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">Tự làm Chatbot AI tích …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &ldquo;nói chuyện&rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).</p>
-<h3 id="1-fetch-api-là-gì">1. Fetch API là gì?</h3>
-<p><code>fetch()</code> là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta …</p></p>
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -628,6 +1248,18 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
     
 
     
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
 
     
 
@@ -648,13 +1280,13 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/" title="Blog Lập Trình - Trần Thanh Thiện">
-                        <img alt="Footer logo" src="https://ThienIT84.github.io/NetworkingPrograming/fav.png"
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
                             height="40px" width="40px">
                     </a>
                 </div>
             
-            &copy; 2025  © 2025 Trần Thanh Thiện
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -704,7 +1336,7 @@ TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt | Blog Lập 
 </script>
 
 
-    <script src="https://ThienIT84.github.io/NetworkingPrograming/js/search.js"></script>
+    <script src="/NetworkingPrograming/js/search.js"></script>
 
 
 

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frontend on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/frontend/</link>
-    <description>Recent content in Frontend on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>Frontend on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/tags/frontend/</link>
+    <description>Recent content in Frontend on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
+    <language>en</language>
     <lastBuildDate>Fri, 19 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;DOM&lt;/strong&gt; là cầu nối cho phép JavaScript &amp;ldquo;nhào nặn&amp;rdquo; cấu trúc của trang web sau khi nó đã tải xong.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-truy-xuất-phần-tử&#34;&gt;1. Truy xuất phần tử&lt;/h3&gt;&#xA;&lt;p&gt;Chúng ta có thể lấy bất kỳ thẻ HTML nào thông qua ID hoặc Class:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main-title&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;items&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelectorAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.list-item&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; là cầu nối quan trọng nhất giữa JavaScript và HTML. Nó cho phép JavaScript &amp;ldquo;nhìn thấy&amp;rdquo; và &amp;ldquo;thao tác&amp;rdquo; với mọi phần tử trên trang web - từ việc thay đổi nội dung text, thêm/xóa elements, đến tạo hiệu ứng animation phức tạp. Nếu HTML là &amp;ldquo;bộ xương&amp;rdquo;, CSS là &amp;ldquo;da thịt&amp;rdquo;, thì JavaScript thông qua DOM chính là &amp;ldquo;hệ thần kinh&amp;rdquo; giúp trang web sống động và tương tác.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>JavaScript Căn Bản: Những bước chân đầu tiên</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</link>
+      <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</guid>
-      <description>&lt;p&gt;Nếu Java là &amp;ldquo;xương sống&amp;rdquo; của hệ thống thì JavaScript chính là &amp;ldquo;cơ bắp&amp;rdquo; giúp trang web hoạt động linh hoạt.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-khai-báo-biến-var-let-hay-const&#34;&gt;1. Khai báo biến: var, let hay const?&lt;/h3&gt;&#xA;&lt;p&gt;Trong JS hiện đại, chúng ta ưu tiên dùng &lt;code&gt;let&lt;/code&gt; và &lt;code&gt;const&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;const:&lt;/strong&gt; Dùng cho các giá trị không đổi.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;let:&lt;/strong&gt; Dùng cho các biến có thể thay đổi giá trị.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;var:&lt;/strong&gt; Cách cũ, hiện nay ít dùng do vấn đề về scope (phạm vi).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-các-kiểu-dữ-liệu-quan-trọng&#34;&gt;2. Các kiểu dữ liệu quan trọng&lt;/h3&gt;&#xA;&lt;p&gt;JS là ngôn ngữ &amp;ldquo;loosely typed&amp;rdquo;, nghĩa là bạn không cần khai báo kiểu dữ liệu như Java:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; là ngôn ngữ lập trình phổ biến nhất thế giới (theo Stack Overflow Survey), và là ngôn ngữ duy nhất chạy native trên mọi trình duyệt web. Nếu Java là &amp;ldquo;xương sống&amp;rdquo; của hệ thống backend thì JavaScript chính là &amp;ldquo;linh hồn&amp;rdquo; giúp trang web sống động và tương tác. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản nhất đến các tính năng hiện đại của JavaScript.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

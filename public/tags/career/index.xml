@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Career on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/career/</link>
-    <description>Recent content in Career on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>Career on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/tags/career/</link>
+    <description>Recent content in Career on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
+    <language>en</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java vs Python: Lập trình viên AI có cần biết Java?</title>
-      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</link>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
-      <description>&lt;p&gt;Chúng ta đều biết Python là &amp;ldquo;vua&amp;rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-python-tốt-cho-nghiên-cứu-research&#34;&gt;1. Python: Tốt cho Nghiên cứu (Research)&lt;/h3&gt;&#xA;&lt;p&gt;Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình dùng Python cho các bài tập Deep Learning.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-java-tốt-cho-sản-phẩm-production&#34;&gt;2. Java: Tốt cho Sản phẩm (Production)&lt;/h3&gt;&#xA;&lt;p&gt;Tuy nhiên, khi đưa mô hình AI vào một hệ thống ngân hàng hay viễn thông lớn, Java lại chiếm ưu thế nhờ:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI bùng nổ, câu hỏi &amp;ldquo;Nên học Java hay Python?&amp;rdquo; trở nên phức tạp hơn bao giờ hết. Python đang thống trị trong nghiên cứu AI với TensorFlow, PyTorch, nhưng Java vẫn là trụ cột của các hệ thống enterprise lớn. Vậy một lập trình viên AI có thực sự cần biết Java? Bài viết này sẽ phân tích chi tiết để giúp bạn đưa ra quyết định đúng đắn cho sự nghiệp của mình.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Trần Thanh Thiện</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 50px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #2563eb;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Education & Experience */
+        .item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e40af;
+        }
+
+        .item-subtitle {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .item-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .item-content ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .item-content li {
+            margin-bottom: 5px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .skill-category h4 {
+            color: #2563eb;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .skill-category p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+
+        .project-tech {
+            font-size: 13px;
+            color: #06b6d4;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #06b6d4;
+        }
+
+        .cert-item h4 {
+            color: #1e40af;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .cert-item p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="/NetworkingPrograming/images/me.png" alt="Trần Thanh Thiện" class="profile-photo">
+            <h1>TRẦN THANH THIỆN</h1>
+            <div class="title">AI Engineer Intern | Network Programming Specialist</div>
+            <div class="contact-info">
+                <span>📧 Thientran805954@gmail.com</span>
+                <span>📱 0819094054</span>
+                <span>🔗 <a href="https://github.com/ThienIT84">github.com/ThienIT84</a></span>
+                <span>🌐 <a href="https://thienit84.github.io/NetworkingPrograming/">Portfolio</a></span>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Summary -->
+            <div class="section">
+                <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+                <p class="summary">
+                    Dedicated 4th-year IT student at HUTECH University with a strong foundation in Artificial
+                    Intelligence,
+                    Machine Learning, and Network Programming. Proven expertise in developing intelligent systems using
+                    Python, Java, and modern ML frameworks. Passionate about building scalable applications with
+                    hands-on
+                    experience in Java Socket programming, TCP/UDP protocols, and deep learning architectures. Currently
+                    seeking opportunities to apply AI/ML knowledge and network programming skills in challenging
+                    projects.
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor of Information Technology</div>
+                            <div class="item-subtitle">HUTECH University (Ho Chi Minh City University of Technology)
+                            </div>
+                        </div>
+                        <div class="item-date">2022 - 2026</div>
+                    </div>
+                    <div class="item-content">
+                        <strong>Major:</strong> Machine Learning & Artificial Intelligence<br>
+                        <strong>GPA:</strong> 3.65/4.0<br>
+                        <strong>Achievements:</strong>
+                        <ul>
+                            <li>Dean's List (3 semesters)</li>
+                            <li>Top 10% in ML/AI courses</li>
+                            <li>Active member of AI Research Club</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">EXPERIENCE</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">AI Engineer Intern</div>
+                            <div class="item-subtitle">Tech Startup</div>
+                        </div>
+                        <div class="item-date">Jun 2024 - Present</div>
+                    </div>
+                    <div class="item-content">
+                        <ul>
+                            <li>Developed NLP models for text classification using transformers and BERT architecture
+                            </li>
+                            <li>Implemented computer vision solutions using PyTorch for real-time object detection</li>
+                            <li>Optimized model performance achieving 15% improvement in inference speed</li>
+                            <li>Collaborated with cross-functional teams on AI integration and deployment pipelines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Research Assistant</div>
+                            <div class="item-subtitle">HUTECH AI Lab</div>
+                        </div>
+                        <div class="item-date">Jan 2024 - May 2024</div>
+                    </div>
+                    <div class="item-content">
+                        <ul>
+                            <li>Contributed to research paper on Vietnamese Natural Language Processing</li>
+                            <li>Built and annotated dataset for Vietnamese sentiment analysis (10,000+ samples)</li>
+                            <li>Experimented with various neural network architectures (CNN, RNN, Transformers)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <p>Python, Java, JavaScript, C++, SQL, Supabase, MongoDB</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI/ML Frameworks</h4>
+                        <p>PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Deep Learning</h4>
+                        <p>Neural Networks, CNN, RNN, Transformers, YOLO</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Network Programming</h4>
+                        <p>Java Socket, TCP/UDP, SSL/TLS, Multi-threading</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Development</h4>
+                        <p>HTML/CSS, JavaScript, Hugo, React basics, FastAPI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <p>Git, Docker, Linux, Jupyter, VS Code, MySQL, MongoDB</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="section">
+                <h2 class="section-title">KEY PROJECTS</h2>
+
+                <div class="project">
+                    <div class="project-title">Multi-threaded Chat Application</div>
+                    <div class="project-tech">Java | Socket Programming | TCP/IP | Multi-threading</div>
+                    <div class="project-desc">
+                        Developed a robust LAN chat application using Java Socket programming with multi-threaded
+                        server architecture supporting concurrent client connections. Implemented custom protocol
+                        for message formatting and Java Swing GUI for user interface.
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">Vietnamese Sentiment Analysis System</div>
+                    <div class="project-tech">Python | PyTorch | Transformers | FastAPI | Docker</div>
+                    <div class="project-desc">
+                        Built a deep learning model for Vietnamese text sentiment analysis using PhoBERT transformer
+                        architecture. Achieved 92% accuracy on test dataset. Deployed web interface using FastAPI
+                        and containerized with Docker for production deployment.
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">Real-time Object Detection System</div>
+                    <div class="project-tech">Python | PyTorch | YOLO | OpenCV | TensorFlow Lite</div>
+                    <div class="project-desc">
+                        Implemented YOLOv8-based object detection system for security applications with real-time
+                        video stream processing. Optimized for edge devices achieving 30+ FPS on embedded hardware.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+                <h2 class="section-title">CERTIFICATIONS</h2>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <h4>JavaScript Essentials 1</h4>
+                        <p>Cisco Networking Academy | Dec 2023</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Networking Basics</h4>
+                        <p>Cisco Networking Academy | Nov 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <h2 class="section-title">LANGUAGES</h2>
+                <div class="item-content">
+                    <strong>Vietnamese:</strong> Native<br>
+                    <strong>English:</strong> Professional working proficiency (TOEIC: 670)
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

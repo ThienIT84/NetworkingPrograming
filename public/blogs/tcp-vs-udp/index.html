@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=https://ThienIT84.github.io/NetworkingPrograming/fav.png type="image/gif">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/font.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/">
-  <meta property="og:site_name" content="Blog Lập Trình - Trần Thanh Thiện">
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
   <meta property="og:title" content="TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?">
-  <meta property="og:description" content="So sánh hai giao thức truyền tải phổ biến nhất và các trường hợp sử dụng trong thực tế.">
-  <meta property="og:locale" content="vi">
+  <meta property="og:description" content="So sánh chuyên sâu giữa hai giao thức truyền tải phổ biến nhất - TCP và UDP, phân tích ưu nhược điểm, use cases, và hướng dẫn lựa chọn giao thức phù hợp cho từng loại ứng dụng.">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
     <meta property="article:published_time" content="2025-12-19T14:00:00+07:00">
@@ -40,18 +40,20 @@
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Network">
     <meta property="article:tag" content="Protocol">
+    <meta property="article:tag" content="TCP">
+    <meta property="article:tag" content="UDP">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?">
-  <meta name="twitter:description" content="So sánh hai giao thức truyền tải phổ biến nhất và các trường hợp sử dụng trong thực tế.">
+  <meta name="twitter:description" content="So sánh chuyên sâu giữa hai giao thức truyền tải phổ biến nhất - TCP và UDP, phân tích ưu nhược điểm, use cases, và hướng dẫn lựa chọn giao thức phù hợp cho từng loại ứng dụng.">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/header.css" media="all">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/footer.css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/theme.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
 
 <style>
     :root {
@@ -108,18 +110,18 @@
 
 
 
-<meta name="description" content="So sánh hai giao thức truyền tải phổ biến nhất và các trường hợp sử dụng trong thực tế.">
-<link rel="stylesheet" href="https://ThienIT84.github.io/NetworkingPrograming/css/single.css">
+<meta name="description" content="So sánh chuyên sâu giữa hai giao thức truyền tải phổ biến nhất - TCP và UDP, phân tích ưu nhược điểm, use cases, và hướng dẫn lựa chọn giao thức phù hợp cho từng loại ứng dụng.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
 
 
-<script defer src="https://ThienIT84.github.io/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
 
 
   
   
 
   <title>
-TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập Trình - Trần Thanh Thiện
+TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Trần Thanh Thiện - AI Engineer Portfolio
 
   </title>
 </head>
@@ -181,9 +183,9 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://ThienIT84.github.io/NetworkingPrograming/">
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
                 
-                <img src="https://ThienIT84.github.io/NetworkingPrograming/fav.png" width="30" height="30"
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Thien.Dev
                 
@@ -217,39 +219,53 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#about" aria-label="about">
-                            Về bản thân
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            About Me
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#education"
+                        <a class="nav-link" href="/NetworkingPrograming#education"
                             aria-label="education">
-                            Học vấn
+                            Education
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#projects"
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
                             aria-label="projects">
-                            Đồ án Lập trình Mạng
+                            Featured Projects
                         </a>
                     </li>
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Certifications
+                        </a>
+                    </li>
+                    
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/#contact"
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
                             aria-label="contact">
-                            Liên hệ
+                            Get In Touch
                         </a>
                     </li>
                     
@@ -261,19 +277,9 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://ThienIT84.github.io/NetworkingPrograming/" title="">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/" title="">
                             
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="blogs" title="">
-                            
-                            Bài viết
+                            Home
                         </a>
                     </li>
                     
@@ -283,7 +289,27 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="#about" title="">
                             
-                            Profile
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/networkingprograming/blogs" title="">
+                            
+                            Project Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Certifications
                         </a>
                     </li>
                     
@@ -329,45 +355,636 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <h1 class="text-center mb-4">TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</h1>
             <div class="text-center">
               
-              19/12/2025
+              Dec 19, 2025
 
               
               <span id="readingTime">
-                phút đọc
+                min read
               </span>
               
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tcp-udp.jpg" alt="TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?">
+            <img class="img-fluid mx-auto d-block" src="/images/projects/tcp-udp.jpg" alt="TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?">
           </div>
           
           <article class="page-content  p-2">
-          <p>Trong lập trình mạng, việc chọn lựa giữa <strong>TCP</strong> và <strong>UDP</strong> cũng giống như việc bạn chọn gửi thư bảo đảm hay gửi tin nhắn nhanh vậy. Mỗi cái đều có ưu và nhược điểm riêng.</p>
-<h3 id="1-tcp-transmission-control-protocol">1. TCP (Transmission Control Protocol)</h3>
-<p>TCP được gọi là giao thức &ldquo;hướng kết nối&rdquo;. Nó đảm bảo dữ liệu gửi đi sẽ đến nơi chính xác, đầy đủ và đúng thứ tự.</p>
+          <h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong lập trình mạng, việc lựa chọn giữa <strong>TCP</strong> và <strong>UDP</strong> là một quyết định kiến trúc quan trọng, ảnh hưởng trực tiếp đến hiệu năng, độ tin cậy và trải nghiệm người dùng của ứng dụng. Giống như việc chọn phương tiện vận chuyển - đôi khi bạn cần dịch vụ chuyển phát nhanh đảm bảo (TCP), đôi khi bạn chỉ cần gửi thư thường nhanh chóng (UDP). Bài viết này sẽ phân tích sâu sắc cả hai giao thức để giúp bạn đưa ra quyết định đúng đắn.</p>
+<h2 id="1-tổng-quan-về-transport-layer">1. Tổng quan về Transport Layer</h2>
+<h3 id="11-vị-trí-trong-mô-hình-ositcp-ip">1.1. Vị trí trong mô hình OSI/TCP-IP</h3>
+<p>Cả TCP và UDP đều thuộc <strong>Transport Layer (Tầng Giao vận)</strong> - tầng thứ 4 trong mô hình OSI:</p>
+<pre tabindex="0"><code>┌─────────────────────────────────┐
+│   Application Layer (HTTP, FTP) │ Layer 7
+├─────────────────────────────────┤
+│   Presentation Layer            │ Layer 6
+├─────────────────────────────────┤
+│   Session Layer                 │ Layer 5
+├─────────────────────────────────┤
+│ ► Transport Layer (TCP/UDP) ◄   │ Layer 4  ← Chúng ta đang ở đây
+├─────────────────────────────────┤
+│   Network Layer (IP)            │ Layer 3
+├─────────────────────────────────┤
+│   Data Link Layer               │ Layer 2
+├─────────────────────────────────┤
+│   Physical Layer                │ Layer 1
+└─────────────────────────────────┘
+</code></pre><p><strong>Nhiệm vụ của Transport Layer:</strong></p>
 <ul>
-<li><strong>Ưu điểm:</strong> Tin cậy, không mất dữ liệu.</li>
-<li><strong>Ứng dụng:</strong> Web (HTTP), Email (SMTP), Truyền file (FTP).</li>
+<li>Cung cấp giao tiếp end-to-end giữa các ứng dụng</li>
+<li>Phân đoạn (segmentation) và tái lắp ráp (reassembly) dữ liệu</li>
+<li>Kiểm soát lỗi (error control)</li>
+<li>Kiểm soát luồng (flow control)</li>
+<li>Multiplexing/Demultiplexing qua port numbers</li>
 </ul>
-<h3 id="2-udp-user-datagram-protocol">2. UDP (User Datagram Protocol)</h3>
-<p>Ngược lại, UDP là giao thức &ldquo;không kết nối&rdquo;. Nó cứ gửi đi mà không cần biết phía bên kia có nhận được hay không.</p>
+<h2 id="2-tcp-transmission-control-protocol">2. TCP (Transmission Control Protocol)</h2>
+<h3 id="21-đặc-điểm-cốt-lõi">2.1. Đặc điểm cốt lõi</h3>
+<p><strong>TCP</strong> là giao thức <strong>hướng kết nối</strong> (connection-oriented), được định nghĩa trong RFC 793.</p>
+<p><strong>Đặc điểm chính:</strong></p>
+<ol>
+<li><strong>Connection-oriented</strong>: Phải thiết lập kết nối trước khi truyền dữ liệu</li>
+<li><strong>Reliable</strong>: Đảm bảo dữ liệu đến đích đầy đủ, không lỗi</li>
+<li><strong>Ordered</strong>: Dữ liệu đến đúng thứ tự gửi</li>
+<li><strong>Flow Control</strong>: Điều chỉnh tốc độ gửi dựa trên khả năng nhận</li>
+<li><strong>Congestion Control</strong>: Tránh làm quá tải mạng</li>
+<li><strong>Full-duplex</strong>: Truyền hai chiều đồng thời</li>
+</ol>
+<h3 id="22-three-way-handshake">2.2. Three-Way Handshake</h3>
+<p>Quá trình thiết lập kết nối TCP:</p>
+<pre tabindex="0"><code>Client                                Server
+  │                                      │
+  │─────── SYN (seq=100) ──────────────&gt;│  1. Client gửi SYN
+  │                                      │
+  │&lt;──── SYN-ACK (seq=300, ack=101) ────│  2. Server phản hồi SYN-ACK
+  │                                      │
+  │─────── ACK (ack=301) ──────────────&gt;│  3. Client gửi ACK
+  │                                      │
+  │         Kết nối đã được thiết lập    │
+  │&lt;═══════ Truyền dữ liệu ═══════════&gt;│
+</code></pre><p><strong>Giải thích:</strong></p>
 <ul>
-<li><strong>Ưu điểm:</strong> Cực nhanh, độ trễ thấp.</li>
-<li><strong>Ứng dụng:</strong> Livestream, Game online, Gọi video (VoIP).</li>
+<li><strong>SYN</strong> (Synchronize): Yêu cầu đồng bộ sequence number</li>
+<li><strong>ACK</strong> (Acknowledge): Xác nhận đã nhận</li>
+<li><strong>seq</strong>: Sequence number - số thứ tự gói tin</li>
+<li><strong>ack</strong>: Acknowledgment number - xác nhận đã nhận đến byte nào</li>
 </ul>
-<h3 id="3-triển-khai-trong-java">3. Triển khai trong Java</h3>
-<p>Trong Java, chúng ta dùng <code>Socket</code> cho TCP và <code>DatagramSocket</code> cho UDP.</p>
-<p><strong>Ví dụ gửi tin nhắn UDP:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DatagramSocket ds <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
-</span></span><span style="display:flex;"><span>String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chào UDP!&#34;</span>;
-</span></span><span style="display:flex;"><span>InetAddress ip <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>);
+<h3 id="23-cấu-trúc-tcp-header">2.3. Cấu trúc TCP Header</h3>
+<pre tabindex="0"><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|          Source Port          |       Destination Port        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                        Sequence Number                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Acknowledgment Number                      |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|  Data |       |C|E|U|A|P|R|S|F|                               |
+| Offset| Rsrvd |W|C|R|C|S|S|Y|I|            Window             |
+|       |       |R|E|G|K|H|T|N|N|                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|           Checksum            |         Urgent Pointer        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Options                    |    Padding    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre><p><strong>Kích thước:</strong> 20-60 bytes (20 bytes cơ bản + tối đa 40 bytes options)</p>
+<h3 id="24-cơ-chế-đảm-bảo-tin-cậy">2.4. Cơ chế đảm bảo tin cậy</h3>
+<h4 id="a-acknowledgment-ack">a) Acknowledgment (ACK)</h4>
+<p>Mỗi segment được gửi phải nhận được ACK từ bên nhận:</p>
+<pre tabindex="0"><code>Sender                          Receiver
+  │─── Segment 1 (seq=1000) ───&gt;│
+  │                              │
+  │&lt;──── ACK (ack=1500) ─────────│  Xác nhận đã nhận 500 bytes
+  │                              │
+  │─── Segment 2 (seq=1500) ───&gt;│
+</code></pre><h4 id="b-retransmission-gửi-lại">b) Retransmission (Gửi lại)</h4>
+<p>Nếu không nhận được ACK trong thời gian timeout, TCP sẽ gửi lại:</p>
+<pre tabindex="0"><code>Sender                          Receiver
+  │─── Segment 1 ──────────────&gt;│
+  │                              │
+  │     (Packet bị mất)          │
+  │                              │
+  │  ⏰ Timeout!                 │
+  │                              │
+  │─── Segment 1 (Resend) ─────&gt;│  Gửi lại
+  │                              │
+  │&lt;──── ACK ────────────────────│  OK!
+</code></pre><h4 id="c-flow-control---sliding-window">c) Flow Control - Sliding Window</h4>
+<p>TCP sử dụng <strong>sliding window</strong> để kiểm soát lượng dữ liệu gửi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Receiver thông báo window size trong ACK</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Sender chỉ gửi tối đa window size bytes mà chưa nhận ACK</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>DatagramPacket dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(str.<span style="color:#a6e22e">getBytes</span>(), str.<span style="color:#a6e22e">length</span>(), ip, 3000);
-</span></span><span style="display:flex;"><span>ds.<span style="color:#a6e22e">send</span>(dp);
-</span></span><span style="display:flex;"><span>ds.<span style="color:#a6e22e">close</span>();
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span>Window Size <span style="color:#f92672">=</span> 4000 bytes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Sender có thể gửi:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Seq 1000<span style="color:#f92672">-</span>5000<span style="color:#f92672">]</span> mà không cần chờ ACK
+</span></span></code></pre></div><h3 id="25-triển-khai-tcp-trong-java">2.5. Triển khai TCP trong Java</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TCPExample</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TCP Server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Server</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>            ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(8080);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;TCP Server lắng nghe tại port 8080&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>                Socket clientSocket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Client kết nối: &#34;</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                    clientSocket.<span style="color:#a6e22e">getInetAddress</span>());
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Xử lý trong thread riêng</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> Thread(() <span style="color:#f92672">-&gt;</span> handleClient(clientSocket)).<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleClient</span>(Socket socket) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> (
+</span></span><span style="display:flex;"><span>                BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">new</span> InputStreamReader(socket.<span style="color:#a6e22e">getInputStream</span>())
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(
+</span></span><span style="display:flex;"><span>                    socket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>            ) {
+</span></span><span style="display:flex;"><span>                String message;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span> ((message <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>                    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhận: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>                    out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Echo: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>                e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TCP Client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Client</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>            Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(<span style="color:#e6db74">&#34;localhost&#34;</span>, 8080);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">new</span> InputStreamReader(socket.<span style="color:#a6e22e">getInputStream</span>())
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Gửi tin nhắn</span>
+</span></span><span style="display:flex;"><span>            out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello TCP Server!&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Nhận phản hồi</span>
+</span></span><span style="display:flex;"><span>            String response <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readLine</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server: &#34;</span> <span style="color:#f92672">+</span> response);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="3-udp-user-datagram-protocol">3. UDP (User Datagram Protocol)</h2>
+<h3 id="31-đặc-điểm-cốt-lõi">3.1. Đặc điểm cốt lõi</h3>
+<p><strong>UDP</strong> là giao thức <strong>không kết nối</strong> (connectionless), được định nghĩa trong RFC 768.</p>
+<p><strong>Đặc điểm chính:</strong></p>
+<ol>
+<li><strong>Connectionless</strong>: Không cần thiết lập kết nối</li>
+<li><strong>Unreliable</strong>: Không đảm bảo dữ liệu đến đích</li>
+<li><strong>Unordered</strong>: Không đảm bảo thứ tự</li>
+<li><strong>No Flow Control</strong>: Không điều chỉnh tốc độ gửi</li>
+<li><strong>No Congestion Control</strong>: Không quan tâm tình trạng mạng</li>
+<li><strong>Lightweight</strong>: Header nhỏ gọn (8 bytes)</li>
+<li><strong>Fast</strong>: Tốc độ cao, độ trễ thấp</li>
+</ol>
+<h3 id="32-cấu-trúc-udp-header">3.2. Cấu trúc UDP Header</h3>
+<pre tabindex="0"><code> 0      7 8     15 16    23 24    31
++--------+--------+--------+--------+
+|   Source Port   | Destination Port|
++--------+--------+--------+--------+
+|     Length      |    Checksum     |
++--------+--------+--------+--------+
+|                                   |
+|          Data (Payload)           |
+|                                   |
++-----------------------------------+
+</code></pre><p><strong>Kích thước:</strong> Chỉ 8 bytes (so với TCP 20-60 bytes)</p>
+<h3 id="33-triển-khai-udp-trong-java">3.3. Triển khai UDP trong Java</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UDPExample</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// UDP Server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Server</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>            DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket(9999);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;UDP Server lắng nghe tại port 9999&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>                DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                    buffer, buffer.<span style="color:#a6e22e">length</span>
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Nhận packet</span>
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">receive</span>(packet);
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                String message <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(
+</span></span><span style="display:flex;"><span>                    packet.<span style="color:#a6e22e">getData</span>(), 0, packet.<span style="color:#a6e22e">getLength</span>()
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhận: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Gửi phản hồi</span>
+</span></span><span style="display:flex;"><span>                String response <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Echo: &#34;</span> <span style="color:#f92672">+</span> message;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> sendData <span style="color:#f92672">=</span> response.<span style="color:#a6e22e">getBytes</span>();
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                DatagramPacket sendPacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                    sendData, sendData.<span style="color:#a6e22e">length</span>,
+</span></span><span style="display:flex;"><span>                    packet.<span style="color:#a6e22e">getAddress</span>(), packet.<span style="color:#a6e22e">getPort</span>()
+</span></span><span style="display:flex;"><span>                );
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                socket.<span style="color:#a6e22e">send</span>(sendPacket);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// UDP Client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Client</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>            DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello UDP Server!&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> sendData <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getBytes</span>();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            InetAddress serverAddress <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>);
+</span></span><span style="display:flex;"><span>            DatagramPacket sendPacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                sendData, sendData.<span style="color:#a6e22e">length</span>, serverAddress, 9999
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Gửi packet</span>
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">send</span>(sendPacket);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Nhận phản hồi</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> receiveData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            DatagramPacket receivePacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>                receiveData, receiveData.<span style="color:#a6e22e">length</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">setSoTimeout</span>(5000); <span style="color:#75715e">// Timeout 5s</span>
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">receive</span>(receivePacket);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            String response <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(
+</span></span><span style="display:flex;"><span>                receivePacket.<span style="color:#a6e22e">getData</span>(), 0, receivePacket.<span style="color:#a6e22e">getLength</span>()
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server: &#34;</span> <span style="color:#f92672">+</span> response);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-so-sánh-chi-tiết-tcp-vs-udp">4. So sánh chi tiết TCP vs UDP</h2>
+<h3 id="41-bảng-so-sánh-toàn-diện">4.1. Bảng so sánh toàn diện</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Tiêu chí</th>
+          <th>TCP</th>
+          <th>UDP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Loại kết nối</strong></td>
+          <td>Connection-oriented</td>
+          <td>Connectionless</td>
+      </tr>
+      <tr>
+          <td><strong>Độ tin cậy</strong></td>
+          <td>Đảm bảo 100%</td>
+          <td>Không đảm bảo</td>
+      </tr>
+      <tr>
+          <td><strong>Thứ tự dữ liệu</strong></td>
+          <td>Đảm bảo đúng thứ tự</td>
+          <td>Có thể không đúng thứ tự</td>
+      </tr>
+      <tr>
+          <td><strong>Tốc độ</strong></td>
+          <td>Chậm hơn (do overhead)</td>
+          <td>Nhanh hơn</td>
+      </tr>
+      <tr>
+          <td><strong>Header size</strong></td>
+          <td>20-60 bytes</td>
+          <td>8 bytes</td>
+      </tr>
+      <tr>
+          <td><strong>Overhead</strong></td>
+          <td>Cao</td>
+          <td>Thấp</td>
+      </tr>
+      <tr>
+          <td><strong>Retransmission</strong></td>
+          <td>Có (tự động gửi lại)</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Flow control</strong></td>
+          <td>Có (sliding window)</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Congestion control</strong></td>
+          <td>Có (slow start, congestion avoidance)</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td><strong>Error checking</strong></td>
+          <td>Có (checksum + ACK)</td>
+          <td>Có (chỉ checksum)</td>
+      </tr>
+      <tr>
+          <td><strong>Broadcasting</strong></td>
+          <td>Không hỗ trợ</td>
+          <td>Hỗ trợ</td>
+      </tr>
+      <tr>
+          <td><strong>Multicasting</strong></td>
+          <td>Không hỗ trợ</td>
+          <td>Hỗ trợ</td>
+      </tr>
+      <tr>
+          <td><strong>Bandwidth</strong></td>
+          <td>Sử dụng nhiều hơn</td>
+          <td>Sử dụng ít hơn</td>
+      </tr>
+      <tr>
+          <td><strong>Latency</strong></td>
+          <td>Cao hơn</td>
+          <td>Thấp hơn</td>
+      </tr>
+      <tr>
+          <td><strong>Use case</strong></td>
+          <td>Web, Email, File transfer</td>
+          <td>Streaming, Gaming, VoIP</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="42-so-sánh-hiệu-năng">4.2. So sánh hiệu năng</h3>
+<pre tabindex="0"><code>Scenario: Gửi 1MB dữ liệu
+
+TCP:
+├─ Thiết lập kết nối: 1.5 RTT (Round Trip Time)
+├─ Truyền dữ liệu: ~1000 packets
+├─ ACK cho mỗi packet/window
+├─ Retransmission nếu mất packet
+└─ Tổng thời gian: ~500ms (mạng tốt)
+
+UDP:
+├─ Không cần thiết lập kết nối: 0 RTT
+├─ Truyền dữ liệu: ~700 packets (ít overhead hơn)
+├─ Không ACK
+├─ Không retransmission
+└─ Tổng thời gian: ~200ms (nhưng có thể mất dữ liệu)
+</code></pre><h3 id="43-packet-loss-impact">4.3. Packet Loss Impact</h3>
+<pre tabindex="0"><code>TCP với 1% packet loss:
+- Throughput giảm ~50% (do retransmission)
+- Latency tăng đáng kể
+- Vẫn đảm bảo dữ liệu đầy đủ
+
+UDP với 1% packet loss:
+- Throughput không đổi
+- Latency không đổi
+- Mất 1% dữ liệu (có thể chấp nhận được cho video/audio)
+</code></pre><h2 id="5-use-cases---khi-nào-dùng-gì">5. Use Cases - Khi nào dùng gì?</h2>
+<h3 id="51-dùng-tcp-khi">5.1. Dùng TCP khi:</h3>
+<p>✅ <strong>Cần độ tin cậy tuyệt đối:</strong></p>
+<ul>
+<li><strong>Web browsing</strong> (HTTP/HTTPS): Trang web phải load đầy đủ</li>
+<li><strong>Email</strong> (SMTP, IMAP, POP3): Không thể mất email</li>
+<li><strong>File transfer</strong> (FTP, SFTP): File phải nguyên vẹn</li>
+<li><strong>Database connections</strong>: Dữ liệu phải chính xác</li>
+</ul>
+<p>✅ <strong>Cần đảm bảo thứ tự:</strong></p>
+<ul>
+<li><strong>Chat applications</strong>: Tin nhắn phải đúng thứ tự</li>
+<li><strong>Remote shell</strong> (SSH): Lệnh phải thực thi đúng thứ tự</li>
+</ul>
+<p>✅ <strong>Ứng dụng enterprise:</strong></p>
+<ul>
+<li>Banking, financial systems</li>
+<li>E-commerce transactions</li>
+<li>Healthcare systems</li>
+</ul>
+<p><strong>Ví dụ code: HTTP Request qua TCP</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(<span style="color:#e6db74">&#34;www.google.com&#34;</span>, 80);
+</span></span><span style="display:flex;"><span>PrintWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(socket.<span style="color:#a6e22e">getOutputStream</span>(), <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;GET / HTTP/1.1&#34;</span>);
+</span></span><span style="display:flex;"><span>out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Host: www.google.com&#34;</span>);
+</span></span><span style="display:flex;"><span>out.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Connection: close&#34;</span>);
+</span></span><span style="display:flex;"><span>out.<span style="color:#a6e22e">println</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>BufferedReader in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> InputStreamReader(socket.<span style="color:#a6e22e">getInputStream</span>())
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>String line;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(line);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="52-dùng-udp-khi">5.2. Dùng UDP khi:</h3>
+<p>✅ <strong>Cần tốc độ và độ trễ thấp:</strong></p>
+<ul>
+<li><strong>Online gaming</strong>: Vị trí nhân vật cần cập nhật real-time</li>
+<li><strong>Live streaming</strong>: Video/audio streaming (YouTube Live, Twitch)</li>
+<li><strong>VoIP</strong>: Gọi thoại/video (Skype, Zoom, Discord)</li>
+</ul>
+<p>✅ <strong>Có thể chấp nhận mất dữ liệu:</strong></p>
+<ul>
+<li><strong>IoT sensors</strong>: Mất vài điểm dữ liệu nhiệt độ không quan trọng</li>
+<li><strong>Multiplayer games</strong>: Mất vài frame không ảnh hưởng nhiều</li>
+</ul>
+<p>✅ <strong>Cần broadcasting/multicasting:</strong></p>
+<ul>
+<li><strong>Network discovery</strong>: Tìm kiếm thiết bị trong mạng</li>
+<li><strong>IPTV</strong>: Phát sóng TV qua IP</li>
+<li><strong>Stock market tickers</strong>: Cập nhật giá chứng khoán</li>
+</ul>
+<p>✅ <strong>Ứng dụng đơn giản, request-response ngắn:</strong></p>
+<ul>
+<li><strong>DNS queries</strong>: Tra cứu tên miền</li>
+<li><strong>DHCP</strong>: Cấp phát IP</li>
+<li><strong>NTP</strong>: Đồng bộ thời gian</li>
+</ul>
+<p><strong>Ví dụ code: DNS Query qua UDP</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> query <span style="color:#f92672">=</span> buildDNSQuery(<span style="color:#e6db74">&#34;google.com&#34;</span>); <span style="color:#75715e">// Simplified</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>InetAddress dnsServer <span style="color:#f92672">=</span> InetAddress.<span style="color:#a6e22e">getByName</span>(<span style="color:#e6db74">&#34;8.8.8.8&#34;</span>);
+</span></span><span style="display:flex;"><span>DatagramPacket packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(
+</span></span><span style="display:flex;"><span>    query, query.<span style="color:#a6e22e">length</span>, dnsServer, 53
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">send</span>(packet);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> response <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>512<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>DatagramPacket responsePacket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramPacket(response, response.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">receive</span>(responsePacket);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Parse DNS response...</span>
+</span></span></code></pre></div><h2 id="6-hybrid-approaches---kết-hợp-cả-hai">6. Hybrid Approaches - Kết hợp cả hai</h2>
+<h3 id="61-quic-protocol">6.1. QUIC Protocol</h3>
+<p><strong>QUIC</strong> (Quick UDP Internet Connections) do Google phát triển:</p>
+<ul>
+<li>Sử dụng UDP làm nền tảng</li>
+<li>Thêm reliability, flow control, congestion control</li>
+<li>Nhanh hơn TCP (giảm latency)</li>
+<li>HTTP/3 sử dụng QUIC</li>
+</ul>
+<pre tabindex="0"><code>Traditional HTTP/2 (TCP):
+TCP Handshake (1.5 RTT) + TLS Handshake (1-2 RTT) = 2.5-3.5 RTT
+
+HTTP/3 (QUIC over UDP):
+Combined Handshake = 0-1 RTT (nhanh hơn 2-3 lần!)
+</code></pre><h3 id="62-webrtc">6.2. WebRTC</h3>
+<p><strong>WebRTC</strong> sử dụng cả TCP và UDP:</p>
+<ul>
+<li><strong>UDP</strong> cho media streams (audio/video)</li>
+<li><strong>TCP</strong> cho data channels (chat, file transfer)</li>
+<li>Tự động chọn protocol phù hợp</li>
+</ul>
+<h3 id="63-custom-reliability-over-udp">6.3. Custom Reliability over UDP</h3>
+<p>Nhiều game engines tự xây dựng reliability layer trên UDP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReliableUDP</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>Integer, Packet<span style="color:#f92672">&gt;</span> unackedPackets <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> sequenceNumber <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendReliable</span>(<span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data) {
+</span></span><span style="display:flex;"><span>        Packet packet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Packet(sequenceNumber<span style="color:#f92672">++</span>, data);
+</span></span><span style="display:flex;"><span>        unackedPackets.<span style="color:#a6e22e">put</span>(packet.<span style="color:#a6e22e">seq</span>, packet);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        sendUDP(packet);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Schedule retransmission if no ACK</span>
+</span></span><span style="display:flex;"><span>        scheduleRetry(packet, 100); <span style="color:#75715e">// 100ms timeout</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onReceiveAck</span>(<span style="color:#66d9ef">int</span> seq) {
+</span></span><span style="display:flex;"><span>        unackedPackets.<span style="color:#a6e22e">remove</span>(seq); <span style="color:#75715e">// ACK received, no need to retry</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="7-decision-tree---chọn-protocol">7. Decision Tree - Chọn Protocol</h2>
+<pre tabindex="0"><code>Bắt đầu
+   │
+   ├─ Cần đảm bảo 100% dữ liệu đến đích?
+   │   ├─ Có → TCP
+   │   └─ Không
+   │       │
+   │       ├─ Cần real-time, low latency?
+   │       │   ├─ Có → UDP
+   │       │   └─ Không → TCP (an toàn hơn)
+   │       │
+   │       ├─ Cần broadcasting/multicasting?
+   │       │   └─ Có → UDP
+   │       │
+   │       └─ Bandwidth bị giới hạn?
+   │           └─ Có → UDP (ít overhead hơn)
+</code></pre><h2 id="8-performance-tuning">8. Performance Tuning</h2>
+<h3 id="81-tcp-optimization">8.1. TCP Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tăng buffer size</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setReceiveBufferSize</span>(65536); <span style="color:#75715e">// 64KB</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSendBufferSize</span>(65536);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Disable Nagle&#39;s algorithm cho low-latency</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setTcpNoDelay</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Keep-alive để phát hiện connection chết</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setKeepAlive</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Timeout</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSoTimeout</span>(30000); <span style="color:#75715e">// 30s</span>
+</span></span></code></pre></div><h3 id="82-udp-optimization">8.2. UDP Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DatagramSocket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DatagramSocket();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tăng buffer size</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setReceiveBufferSize</span>(65536);
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSendBufferSize</span>(65536);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Timeout cho receive</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSoTimeout</span>(5000);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Reuse address (cho multicasting)</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setReuseAddress</span>(<span style="color:#66d9ef">true</span>);
+</span></span></code></pre></div><h2 id="9-common-pitfalls-lỗi-thường-gặp">9. Common Pitfalls (Lỗi thường gặp)</h2>
+<h3 id="91-tcp">9.1. TCP</h3>
+<p>❌ <strong>Blocking I/O không xử lý timeout:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// BAD: Có thể bị treo mãi mãi</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">getInputStream</span>().<span style="color:#a6e22e">read</span>(); 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// GOOD: Set timeout</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSoTimeout</span>(5000);
+</span></span></code></pre></div><p>❌ <strong>Không đóng socket đúng cách:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// BAD</span>
+</span></span><span style="display:flex;"><span>Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(...);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ... use socket ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Quên close() → memory leak</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// GOOD</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> (Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(...)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... use socket ...</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#75715e">// Tự động close</span>
+</span></span></code></pre></div><h3 id="92-udp">9.2. UDP</h3>
+<p>❌ <strong>Giả định packet luôn đến:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// BAD: Không xử lý timeout</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">receive</span>(packet); <span style="color:#75715e">// Có thể chờ mãi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// GOOD: Set timeout</span>
+</span></span><span style="display:flex;"><span>socket.<span style="color:#a6e22e">setSoTimeout</span>(5000);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    socket.<span style="color:#a6e22e">receive</span>(packet);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (SocketTimeoutException e) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Handle timeout</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>❌ <strong>Gửi packet quá lớn:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// BAD: Packet 10KB → fragmentation → mất dữ liệu</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>10000<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// GOOD: Giữ dưới MTU (1472 bytes)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1400<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><h2 id="10-real-world-examples">10. Real-World Examples</h2>
+<h3 id="101-netflix-streaming">10.1. Netflix Streaming</h3>
+<ul>
+<li><strong>TCP</strong> cho: Control messages, metadata, DRM</li>
+<li><strong>UDP</strong> (QUIC) cho: Video streaming (adaptive bitrate)</li>
+</ul>
+<h3 id="102-online-gaming-pubg-fortnite">10.2. Online Gaming (PUBG, Fortnite)</h3>
+<ul>
+<li><strong>UDP</strong> cho: Player positions, movements (60+ updates/second)</li>
+<li><strong>TCP</strong> cho: Chat messages, inventory updates</li>
+</ul>
+<h3 id="103-zoom-video-call">10.3. Zoom Video Call</h3>
+<ul>
+<li><strong>UDP</strong> cho: Audio/video streams</li>
+<li><strong>TCP</strong> fallback khi UDP bị firewall chặn</li>
+</ul>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Lựa chọn giữa TCP và UDP không phải là câu hỏi &ldquo;cái nào tốt hơn&rdquo; mà là &ldquo;cái nào phù hợp hơn&rdquo;. TCP mang lại độ tin cậy và đơn giản trong lập trình, trong khi UDP cung cấp tốc độ và hiệu quả. Hiểu rõ đặc điểm của từng giao thức và yêu cầu của ứng dụng sẽ giúp bạn đưa ra quyết định kiến trúc đúng đắn.</p>
+<p>Trong thực tế, nhiều hệ thống hiện đại sử dụng <strong>hybrid approach</strong> - kết hợp cả hai giao thức để tận dụng ưu điểm của từng loại. Xu hướng tương lai là các giao thức như QUIC - xây dựng reliability trên nền tảng UDP để có được cả tốc độ lẫn độ tin cậy.</p>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<ul>
+<li>RFC 793: Transmission Control Protocol (TCP)</li>
+<li>RFC 768: User Datagram Protocol (UDP)</li>
+<li>RFC 9000: QUIC - A UDP-Based Multiplayer and Secure Transport</li>
+<li>&ldquo;Computer Networking: A Top-Down Approach&rdquo; - Kurose &amp; Ross</li>
+<li>&ldquo;TCP/IP Illustrated, Volume 1&rdquo; - W. Richard Stevens</li>
+<li>&ldquo;High Performance Browser Networking&rdquo; - Ilya Grigorik</li>
+<li>Google QUIC Documentation</li>
+</ul>
+
           </article>
         </div>
       </div>
@@ -376,18 +993,75 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
           
           <aside class="toc">
               <h5>
-                Mục lục
+                Table of Contents
               </h5>
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#1-tổng-quan-về-transport-layer">1. Tổng quan về Transport Layer</a>
       <ul>
-        <li><a href="#1-tcp-transmission-control-protocol">1. TCP (Transmission Control Protocol)</a></li>
-        <li><a href="#2-udp-user-datagram-protocol">2. UDP (User Datagram Protocol)</a></li>
-        <li><a href="#3-triển-khai-trong-java">3. Triển khai trong Java</a></li>
+        <li><a href="#11-vị-trí-trong-mô-hình-ositcp-ip">1.1. Vị trí trong mô hình OSI/TCP-IP</a></li>
       </ul>
     </li>
+    <li><a href="#2-tcp-transmission-control-protocol">2. TCP (Transmission Control Protocol)</a>
+      <ul>
+        <li><a href="#21-đặc-điểm-cốt-lõi">2.1. Đặc điểm cốt lõi</a></li>
+        <li><a href="#22-three-way-handshake">2.2. Three-Way Handshake</a></li>
+        <li><a href="#23-cấu-trúc-tcp-header">2.3. Cấu trúc TCP Header</a></li>
+        <li><a href="#24-cơ-chế-đảm-bảo-tin-cậy">2.4. Cơ chế đảm bảo tin cậy</a></li>
+        <li><a href="#25-triển-khai-tcp-trong-java">2.5. Triển khai TCP trong Java</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-udp-user-datagram-protocol">3. UDP (User Datagram Protocol)</a>
+      <ul>
+        <li><a href="#31-đặc-điểm-cốt-lõi">3.1. Đặc điểm cốt lõi</a></li>
+        <li><a href="#32-cấu-trúc-udp-header">3.2. Cấu trúc UDP Header</a></li>
+        <li><a href="#33-triển-khai-udp-trong-java">3.3. Triển khai UDP trong Java</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-so-sánh-chi-tiết-tcp-vs-udp">4. So sánh chi tiết TCP vs UDP</a>
+      <ul>
+        <li><a href="#41-bảng-so-sánh-toàn-diện">4.1. Bảng so sánh toàn diện</a></li>
+        <li><a href="#42-so-sánh-hiệu-năng">4.2. So sánh hiệu năng</a></li>
+        <li><a href="#43-packet-loss-impact">4.3. Packet Loss Impact</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-use-cases---khi-nào-dùng-gì">5. Use Cases - Khi nào dùng gì?</a>
+      <ul>
+        <li><a href="#51-dùng-tcp-khi">5.1. Dùng TCP khi:</a></li>
+        <li><a href="#52-dùng-udp-khi">5.2. Dùng UDP khi:</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-hybrid-approaches---kết-hợp-cả-hai">6. Hybrid Approaches - Kết hợp cả hai</a>
+      <ul>
+        <li><a href="#61-quic-protocol">6.1. QUIC Protocol</a></li>
+        <li><a href="#62-webrtc">6.2. WebRTC</a></li>
+        <li><a href="#63-custom-reliability-over-udp">6.3. Custom Reliability over UDP</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-decision-tree---chọn-protocol">7. Decision Tree - Chọn Protocol</a></li>
+    <li><a href="#8-performance-tuning">8. Performance Tuning</a>
+      <ul>
+        <li><a href="#81-tcp-optimization">8.1. TCP Optimization</a></li>
+        <li><a href="#82-udp-optimization">8.2. UDP Optimization</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-common-pitfalls-lỗi-thường-gặp">9. Common Pitfalls (Lỗi thường gặp)</a>
+      <ul>
+        <li><a href="#91-tcp">9.1. TCP</a></li>
+        <li><a href="#92-udp">9.2. UDP</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-real-world-examples">10. Real-World Examples</a>
+      <ul>
+        <li><a href="#101-netflix-streaming">10.1. Netflix Streaming</a></li>
+        <li><a href="#102-online-gaming-pubg-fortnite">10.2. Online Gaming (PUBG, Fortnite)</a></li>
+        <li><a href="#103-zoom-video-call">10.3. Zoom Video Call</a></li>
+      </ul>
+    </li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
   </ul>
 </nav>
               </div>
@@ -399,17 +1073,25 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/java"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/java"
                 target="_blank"
               >Java</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/network"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/network"
                 target="_blank"
               >Network</a></li>
               
-              <li class="list-inline-item"><a href="https://ThienIT84.github.io/NetworkingPrograming/tags/protocol"
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/protocol"
                 target="_blank"
               >Protocol</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/tcp"
+                target="_blank"
+              >TCP</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/udp"
+                target="_blank"
+              >UDP</a></li>
               
             </ul>
           </aside>
@@ -421,22 +1103,22 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=So%20s%c3%a1nh%20hai%20giao%20th%e1%bb%a9c%20truy%e1%bb%81n%20t%e1%ba%a3i%20ph%e1%bb%95%20bi%e1%ba%bfn%20nh%e1%ba%a5t%20v%c3%a0%20c%c3%a1c%20tr%c6%b0%e1%bb%9dng%20h%e1%bb%a3p%20s%e1%bb%ad%20d%e1%bb%a5ng%20trong%20th%e1%bb%b1c%20t%e1%ba%bf. https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=So%20s%c3%a1nh%20chuy%c3%aan%20s%c3%a2u%20gi%e1%bb%afa%20hai%20giao%20th%e1%bb%a9c%20truy%e1%bb%81n%20t%e1%ba%a3i%20ph%e1%bb%95%20bi%e1%ba%bfn%20nh%e1%ba%a5t%20-%20TCP%20v%c3%a0%20UDP%2c%20ph%c3%a2n%20t%c3%adch%20%c6%b0u%20nh%c6%b0%e1%bb%a3c%20%c4%91i%e1%bb%83m%2c%20use%20cases%2c%20v%c3%a0%20h%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20l%e1%bb%b1a%20ch%e1%bb%8dn%20giao%20th%e1%bb%a9c%20ph%c3%b9%20h%e1%bb%a3p%20cho%20t%e1%bb%abng%20lo%e1%ba%a1i%20%e1%bb%a9ng%20d%e1%bb%a5ng. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='https://twitter.com/share?text=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f&url=https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f&hashtags=Java%2cNetwork%2cProtocol'>
+                  <a target="_blank" href='https://twitter.com/share?text=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f&hashtags=Java%2cNetwork%2cProtocol%2cTCP%2cUDP'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f: https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f&amp;body=Check%20out%20this%20site https%3a%2f%2fThienIT84.github.io%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f'>
+                  <a target="_blank" href='mailto:?subject=TCP%20v%c3%a0%20UDP%3a%20Ch%e1%bb%8dn%20%27ng%e1%bb%b1a%27%20n%c3%a0o%20cho%20%e1%bb%a9ng%20d%e1%bb%a5ng%20m%e1%ba%a1ng%3f&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2ftcp-vs-udp%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -462,7 +1144,7 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="https://ThienIT84.github.io/NetworkingPrograming/js/scrollProgressBar.js"></script>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -495,7 +1177,7 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
 </script>
 
 
-<script src="https://ThienIT84.github.io/NetworkingPrograming/js/readingTime.js"></script>
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
 
 
 
@@ -507,7 +1189,7 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
     
     
     <div class="h3 text-center text-secondary py-3">
-        Bài viết gần đây
+        Recent Blog Posts
     </div>
     <div class="row justify-content-center">
         
@@ -515,24 +1197,24 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/java-vs-python.jpg" class="card-img-top" alt="Java vs Python: Lập trình viên AI có cần biết Java?">
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/">
+                        <img src="/images/projects/http-fetch.jpg" class="card-img-top" alt="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Java vs Python: Lập trình viên AI có cần biết Java?">Java vs Python: Lập trình …</h5>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server">HTTP &amp; Fetch API: Cầu nối …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Chúng ta đều biết Python là &ldquo;vua&rdquo; trong mảng Deep Learning với các thư viện như TensorFlow, PyTorch. Vậy học Java Lập trình mạng để làm gì?</p>
-<h3 id="1-python-tốt-cho-nghiên-cứu-research">1. Python: Tốt cho Nghiên cứu (Research)</h3>
-<p>Cú pháp ngắn gọn, thư viện phong phú giúp việc thử nghiệm các thuật toán mới cực nhanh. Đó là lý do mình …</p></p>
+                        <p><p>Nếu Socket là nền tảng để truyền dữ liệu thô, thì <strong>HTTP (Hypertext Transfer Protocol)</strong> là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.</p>
+<h3 id="1-http-hoạt-động-như-thế-nào">1. HTTP hoạt động như thế nào?</h3>
+<p>HTTP hoạt động theo mô hình <strong>Request - Response</strong> (Yêu cầu - Phản hồi). Khi bạn nhập một …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 22, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/http-fetch-api/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -541,24 +1223,24 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/tfjs.jpg" class="card-img-top" alt="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/">
+                        <img src="/images/projects/ssl-tls.jpg" class="card-img-top" alt="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt">TensorFlow.js: Mang sức …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?">Bảo mật Socket: Tại sao …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Là một người yêu thích Deep Learning, mình thường dùng Python để train model. Nhưng để đưa model đó đến tay người dùng web, <strong>TensorFlow.js</strong> là một lựa chọn tuyệt vời.</p>
-<h3 id="1-tensorflowjs-là-gì">1. TensorFlow.js là gì?</h3>
-<p>Đây là một thư viện JavaScript do Google phát triển, cho phép bạn định nghĩa, huấn luyện và chạy các mô hình …</p></p>
+                        <p><p>Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &ldquo;nghe lén&rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần <strong>SSL/TLS</strong>.</p>
+<h3 id="1-ssltls-là-gì">1. SSL/TLS là gì?</h3>
+<p>SSL (Secure Sockets Layer) và phiên …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 21, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-ssl-tls/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -567,24 +1249,23 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/">
-                        <img src="https://ThienIT84.github.io/NetworkingPrograming/images/projects/chatbot-api.jpg" class="card-img-top" alt="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/">
+                        <img src="/images/projects/udp-protocol.jpg" class="card-img-top" alt="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Tự làm Chatbot AI tích hợp vào Website bằng Fetch API">Tự làm Chatbot AI tích …</h5>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Lập trình UDP với Java: Nhanh nhưng không tin cậy?">Lập trình UDP với Java: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Trong bài viết này, mình sẽ hướng dẫn cách dùng JavaScript để &ldquo;nói chuyện&rdquo; với một Server AI thông qua giao thức HTTP (Fetch API).</p>
-<h3 id="1-fetch-api-là-gì">1. Fetch API là gì?</h3>
-<p><code>fetch()</code> là một hàm có sẵn trong các trình duyệt hiện đại, giúp thực hiện các yêu cầu mạng (Network Request) tương tự như cách chúng ta …</p></p>
+                        <p><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới lập trình mạng, <strong>TCP</strong> thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, <strong>tốc độ</strong> quan trọng hơn <strong>độ chính xác</strong>. Đó chính là lúc <strong>UDP (User Datagram Protocol)</strong> tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">December 19, 2025</span>
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/" class="float-end btn btn-outline-info btn-sm">Đọc tiếp</a>
+                    <span class="float-start">December 20, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/java-udp-protocol/" class="float-end btn btn-outline-info btn-sm">Read More</a>
                 </div>
             </div>
         </div>
@@ -621,6 +1302,18 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
     
 
     
+    <span class="px-1">
+        <a href="https://linkedin.com/in/thanhthien" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
 
     
 
@@ -641,13 +1334,13 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="https://ThienIT84.github.io/NetworkingPrograming/" title="Blog Lập Trình - Trần Thanh Thiện">
-                        <img alt="Footer logo" src="https://ThienIT84.github.io/NetworkingPrograming/fav.png"
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
                             height="40px" width="40px">
                     </a>
                 </div>
             
-            &copy; 2025  © 2025 Trần Thanh Thiện
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -697,7 +1390,7 @@ TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng? | Blog Lập 
 </script>
 
 
-    <script src="https://ThienIT84.github.io/NetworkingPrograming/js/search.js"></script>
+    <script src="/NetworkingPrograming/js/search.js"></script>
 
 
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaScript Căn Bản: Những bước chân đầu tiên on Blog Lập Trình - Trần Thanh Thiện</title>
-    <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</link>
-    <description>Recent content in JavaScript Căn Bản: Những bước chân đầu tiên on Blog Lập Trình - Trần Thanh Thiện</description>
+    <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</link>
+    <description>Recent content in JavaScript Căn Bản: Nền tảng của Web Development hiện đại on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>vi</language>
+    <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
