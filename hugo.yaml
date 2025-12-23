@@ -353,6 +353,18 @@ params:
         url: /NetworkingPrograming/images/certifications/JavaScriptEssentials1Update20251223-30-n74ckm.pdf
         image: /NetworkingPrograming/images/certifications/javascript-essentials-1.png
       
+      - title: JavaScript Essentials 2
+        content: |-
+          Advanced JavaScript programming course focusing on object-oriented programming, asynchronous JavaScript, and modern development patterns.
+          
+          **Advanced Skills:**
+          - Object-oriented programming in JavaScript
+          - Asynchronous programming (Promises, async/await)
+          - Advanced ES6+ features
+          - Error handling and debugging
+        url: /NetworkingPrograming/images/certifications/JavaScriptEssentials2Update20251223-33-z76lmv.pdf
+        image: /NetworkingPrograming/images/certifications/javascript-essentials-2.png
+      
       - title: Networking Basics
         content: |-
           Mastered fundamental networking concepts including network architecture, protocols, and security principles through Cisco Networking Academy.
