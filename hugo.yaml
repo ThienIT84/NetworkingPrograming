@@ -46,7 +46,7 @@ Menus:
 
     - identifier: blog
       name: Project Blog
-      url: "/NetworkingPrograming/blogs"
+      url: "/NetworkingPrograming/blogs/"
       weight: 3
     
     - identifier: certifications
