@@ -15,6 +15,7 @@ theme: hugo-profile
 # URL Configuration for GitHub Pages subdirectory
 canonifyURLs: false
 relativeURLs: false
+disablePathToLower: true
 
 outputs:
   home: ["HTML", "RSS", "JSON"]
