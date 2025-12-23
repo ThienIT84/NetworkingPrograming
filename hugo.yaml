@@ -37,7 +37,7 @@ Menus:
   main:
     - identifier: home
       name: Home
-      url: /NetworkingPrograming/
+      url: /
       weight: 1
     
     - identifier: about
@@ -47,7 +47,7 @@ Menus:
 
     - identifier: blog
       name: Project Blog
-      url: "/NetworkingPrograming/blogs/"
+      url: "/blogs/"
       weight: 3
     
     - identifier: certifications
