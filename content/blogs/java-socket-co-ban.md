@@ -3,7 +3,7 @@ title: "Java Socket: Cánh cửa vào thế giới Lập trình mạng"
 date: 2025-12-19T10:00:00+07:00
 draft: false
 description: "Tìm hiểu chi tiết về Socket trong Java, kiến trúc Client-Server, và cách thức hoạt động của giao thức TCP/IP trong lập trình mạng."
-image: "/images/projects/chat-app.jpg"
+image: "/NetworkingPrograming/images/projects/chat-app.jpg"
 tags: ["Java", "Network", "Socket", "TCP/IP"]
 categories: ["Lập trình mạng"]
 ---

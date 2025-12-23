@@ -3,7 +3,7 @@ title: "HTTP & Fetch API: Cầu nối giữa Client và Web Server"
 date: 2025-12-22T08:00:00+07:00
 draft: false
 description: "Tìm hiểu cách trình duyệt giao tiếp với Server qua giao thức HTTP và cách sử dụng Fetch API trong JavaScript."
-image: "/images/projects/http-fetch.jpg"
+image: "/NetworkingPrograming/images/projects/http-fetch.jpg"
 tags: ["HTTP", "Fetch API", "JavaScript", "Networking"]
 categories: ["Web Development"]
 ---

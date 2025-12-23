@@ -3,7 +3,7 @@ title: "Tự làm Chatbot AI tích hợp vào Website bằng Fetch API"
 date: 2025-12-19T15:00:00+07:00
 draft: false
 description: "Hướng dẫn chi tiết cách sử dụng JavaScript Fetch API để kết nối với các API AI (OpenAI, Gemini, Claude), xây dựng chatbot tương tác, và xử lý streaming responses."
-image: "/images/projects/chatbot-api.jpg"
+image: "/NetworkingPrograming/images/projects/chatbot-api.jpg"
 tags: ["JavaScript", "API", "Chatbot", "AI", "Fetch", "Async"]
 categories: ["Web Development"]
 ---

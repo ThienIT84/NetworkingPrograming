@@ -3,7 +3,7 @@ title: "DOM Manipulation: Thay đổi trang web theo ý muốn"
 date: 2025-12-19T10:00:00+07:00
 draft: false
 description: "Hướng dẫn chi tiết về DOM (Document Object Model), cách sử dụng JavaScript để truy xuất, thao tác, và tạo các phần tử HTML động, cùng với event handling và best practices."
-image: "/images/projects/js-dom.jpg"
+image: "/NetworkingPrograming/images/projects/js-dom.jpg"
 tags: ["JavaScript", "DOM", "Frontend", "Web Development"]
 categories: ["Web Development"]
 ---

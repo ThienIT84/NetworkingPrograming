@@ -3,7 +3,7 @@ title: "TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt"
 date: 2025-12-19T15:00:00+07:00
 draft: false
 description: "Hướng dẫn chi tiết về TensorFlow.js - thư viện Machine Learning mạnh mẽ cho JavaScript, cách training models, sử dụng pre-trained models, và deploy AI trực tiếp trên browser."
-image: "/images/projects/tfjs.jpg"
+image: "/NetworkingPrograming/images/projects/tfjs.jpg"
 tags: ["JavaScript", "AI", "Deep Learning", "TensorFlow", "Machine Learning"]
 categories: ["Trí tuệ nhân tạo"]
 ---

@@ -3,7 +3,7 @@ title: "Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?"
 date: 2025-12-21T09:30:00+07:00
 draft: false
 description: "Hướng dẫn cách mã hóa dữ liệu truyền tải qua Socket bằng SSL/TLS để tránh bị đánh cắp thông tin."
-image: "/images/projects/ssl-tls.jpg"
+image: "/NetworkingPrograming/images/projects/ssl-tls.jpg"
 tags: ["Java", "Security", "SSL", "TLS"]
 categories: ["Lập trình mạng"]
 ---

@@ -3,7 +3,7 @@ title: "JavaScript Căn Bản: Nền tảng của Web Development hiện đại"
 date: 2025-12-19T09:00:00+07:00
 draft: false
 description: "Hướng dẫn chi tiết về JavaScript từ cơ bản đến nâng cao: biến, kiểu dữ liệu, functions, objects, ES6+ features, và best practices cho lập trình viên hiện đại."
-image: "/images/projects/js-basic.jpg"
+image: "/NetworkingPrograming/images/projects/js-basic.jpg"
 tags: ["JavaScript", "Frontend", "Programming", "ES6", "Web Development"]
 categories: ["Web Development"]
 ---

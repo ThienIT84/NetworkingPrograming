@@ -3,7 +3,7 @@ title: "Lập trình UDP với Java: Nhanh nhưng không tin cậy?"
 date: 2025-12-20T10:00:00+07:00
 draft: false
 description: "Phân tích sâu về giao thức UDP, so sánh với TCP, và hướng dẫn chi tiết cách xây dựng ứng dụng truyền nhận Datagram trong Java với các ví dụ thực tế."
-image: "/images/projects/udp-protocol.jpg"
+image: "/NetworkingPrograming/images/projects/udp-protocol.jpg"
 tags: ["Java", "UDP", "Networking", "Socket", "Protocol"]
 categories: ["Lập trình mạng"]
 ---

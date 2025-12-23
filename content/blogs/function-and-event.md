@@ -3,7 +3,7 @@ title: "Hàm và Sự kiện: Cách JavaScript tương tác với người dùng
 date: 2025-12-19T14:00:00+07:00
 draft: false
 description: "Tìm hiểu sâu về Functions trong JavaScript, Event Handling, Event Bubbling/Capturing, và các design patterns để xây dựng ứng dụng web tương tác mạnh mẽ."
-image: "/images/projects/js-events.jpg"
+image: "/NetworkingPrograming/images/projects/js-events.jpg"
 tags: ["JavaScript", "Events", "Functions", "Event Handling"]
 categories: ["Web Development"]
 ---

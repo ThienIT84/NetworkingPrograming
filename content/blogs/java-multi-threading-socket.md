@@ -3,7 +3,7 @@ title: "Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng"
 date: 2025-12-19T14:00:00+07:00
 draft: false
 description: "Tìm hiểu chi tiết về Multi-threading trong Java, cách xây dựng Server có khả năng xử lý đồng thời nhiều Client, và các mô hình concurrency phổ biến."
-image: "/images/projects/multithread.png"
+image: "/NetworkingPrograming/images/projects/multithread.png"
 tags: ["Java", "Thread", "Socket", "Concurrency", "Performance"]
 categories: ["Lập trình mạng"]
 ---
