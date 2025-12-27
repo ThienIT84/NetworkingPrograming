@@ -68,10 +68,14 @@ languages:
           name: Blog
           url: "/blogs/"
           weight: 6
+        - identifier: cv
+          name: CV
+          url: "/cv.html"
+          weight: 7
         - identifier: contact
           name: Liên hệ
           url: "/#contact"
-          weight: 7
+          weight: 8
 
     # -----------------------------------------------------------------
     # VIETNAMESE CV CONTENT
@@ -130,8 +134,8 @@ languages:
         button:
           enable: true
           name: "📄 Tải CV"
-          url: "/NetworkingPrograming/cv.pdf"
-          download: true
+          url: "/NetworkingPrograming/cv.html"
+          download: false
           newPage: true
         socialLinks:
           fontAwesomeIcons:
@@ -443,10 +447,14 @@ languages:
           name: Blog
           url: "/blogs/"
           weight: 6
+        - identifier: cv
+          name: CV
+          url: "/cv.html"
+          weight: 7
         - identifier: contact
           name: Contact
           url: "/#contact"
-          weight: 7
+          weight: 8
 
     # -----------------------------------------------------------------
     # ENGLISH CV CONTENT (Existing)
@@ -505,8 +513,8 @@ languages:
         button:
           enable: true
           name: "📄 Download CV"
-          url: "/NetworkingPrograming/cv.pdf"
-          download: true
+          url: "/NetworkingPrograming/cv.html"
+          download: false
           newPage: true
         socialLinks:
           fontAwesomeIcons:

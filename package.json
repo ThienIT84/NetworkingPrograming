@@ -1,0 +1,22 @@
+{
+  "name": "networking-programing-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with Hugo - Generate CV PDF",
+  "scripts": {
+    "generate-pdf": "node generate-cv-pdf.js",
+    "dev": "hugo server",
+    "build": "hugo --cleanDestinationDir",
+    "pdf": "npm run generate-pdf"
+  },
+  "keywords": [
+    "hugo",
+    "portfolio",
+    "cv",
+    "pdf"
+  ],
+  "author": "Trần Thanh Thiện",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

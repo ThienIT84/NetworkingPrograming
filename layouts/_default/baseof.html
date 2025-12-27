@@ -12,6 +12,9 @@
     
     <!-- Custom Blog Post Styling -->
     <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/custom-blog.css">
+    
+    <!-- Tet Theme Styling -->
+    <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/tet-theme.css">
 
     <title>
         {{- block "title" . }} {{- end }}
@@ -40,6 +43,9 @@
     {{- end -}}
 
     {{- partial "scripts.html" . -}}
+    
+    <!-- Tet Theme Script -->
+    <script src="{{ .Site.Params.staticPath }}/js/tet-theme.js"></script>
 
     <!-- for search -->
     <section id="search-content" class="py-2">
