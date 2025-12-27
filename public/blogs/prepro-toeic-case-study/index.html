@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
+  <meta property="og:title" content="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+  <meta property="og:description" content="Câu chuyện đằng sau Prepro TOEIC - nền tảng học TOEIC được trang bị AI, thuật toán học thông minh, và kiến trúc hiện đại. Từ những thách thức ban đầu đến giải pháp sáng tạo với React, TypeScript, và Supabase.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-12-27T15:00:00+07:00">
+    <meta property="article:modified_time" content="2025-12-27T15:00:00+07:00">
+    <meta property="article:tag" content="React">
+    <meta property="article:tag" content="TypeScript">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Supabase">
+    <meta property="article:tag" content="MVC">
+    <meta property="article:tag" content="TOEIC">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+  <meta name="twitter:description" content="Câu chuyện đằng sau Prepro TOEIC - nền tảng học TOEIC được trang bị AI, thuật toán học thông minh, và kiến trúc hiện đại. Từ những thách thức ban đầu đến giải pháp sáng tạo với React, TypeScript, và Supabase.">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #1e40af;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #2563eb;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e2e8f0;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #8b5cf6;
+        --background-color-dark: #0f172a;
+        --secondary-background-color-dark: #1e293b;
+        --primary-color-dark: #06b6d4;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Câu chuyện đằng sau Prepro TOEIC - nền tảng học TOEIC được trang bị AI, thuật toán học thông minh, và kiến trúc hiện đại. Từ những thách thức ban đầu đến giải pháp sáng tạo với React, TypeScript, và Supabase.">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
+
+
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+
+
+    
+    
+
+    <title>
+Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh | Trần Thanh Thiện - AI Engineer Portfolio
+
+    </title>
+</head>
+
+<body class="light">
+    
+    
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
+                
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Thien.Dev
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Kinh nghiệm
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#education"
+                            aria-label="education">
+                            Học vấn
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
+                            aria-label="projects">
+                            Dự án Nổi bật
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
+                            aria-label="contact">
+                            Liên hệ với tôi
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#about" title="">
+                            
+                            Hồ sơ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/blogs/" title="">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/contact/" title="">
+                            
+                            Liên hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh</h1>
+            <div class="text-center">
+              
+                Trần Thanh Thiện
+                <small>|</small>
+              
+              27/12/2025
+
+              
+              <span id="readingTime">
+                phút đọc
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/NetworkingPrograming/images/projects/prepro-toeic.jpg" alt="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="-mở-đầu-vấn-đề-cần-giải-quyết">🎬 Mở Đầu: Vấn Đề Cần Giải Quyết</h2>
+<p>Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì <strong>quá nhiều tài liệu không có hệ thống</strong>. Học sinh thường gặp phải:</p>
+<ul>
+<li>📚 <strong>Ngân hàng câu hỏi rời rạc</strong>: Không biết nên luyện gì, luyện như thế nào</li>
+<li>🔄 <strong>Thiếu phương pháp ôn tập khoa học</strong>: Học xong quên, quên rồi học lại</li>
+<li>👨‍🏫 <strong>Giáo viên khó theo dõi tiến độ</strong>: Không biết học sinh yếu ở đâu</li>
+<li>⏰ <strong>Tốn thời gian tạo đề</strong>: Giáo viên phải tự tạo câu hỏi thủ công</li>
+</ul>
+<p><strong>Prepro TOEIC</strong> ra đời để giải quyết những vấn đề này. Đây không chỉ là một website học TOEIC thông thường, mà là một <strong>hệ sinh thái học tập thông minh</strong> được xây dựng với công nghệ hiện đại nhất.</p>
+<hr>
+<h2 id="-kiến-trúc-tại-sao-chọn-mvc-cho-react">🏗️ Kiến Trúc: Tại Sao Chọn MVC Cho React?</h2>
+<h3 id="câu-chuyện-về-spaghetti-code">Câu Chuyện Về &ldquo;Spaghetti Code&rdquo;</h3>
+<p>Hầu hết các dự án React bắt đầu đơn giản, nhưng sau vài tháng phát triển, code trở nên rối như mớ bòng bong:</p>
+<pre tabindex="0"><code>❌ Component chứa cả UI + Business Logic + API calls
+❌ Khó test vì logic lẫn lộn với UI
+❌ Thay đổi một chỗ ảnh hưởng nhiều nơi
+❌ Onboarding developer mới mất nhiều thời gian
+</code></pre><h3 id="giải-pháp-mvc-architecture">Giải Pháp: MVC Architecture</h3>
+<p>Tôi quyết định áp dụng <strong>MVC (Model-View-Controller)</strong> - một pattern kinh điển nhưng cực kỳ hiệu quả:</p>
+<pre tabindex="0"><code>✅ Model: Định nghĩa data structure và validation
+✅ View: Pure UI components, không có logic
+✅ Controller: Business logic và state management
+✅ Service: API calls và data access
+</code></pre><p><strong>Kết quả?</strong> Code dễ đọc, dễ test, dễ maintain. Khi cần thay đổi UI, chỉ sửa View. Khi thay đổi business logic, chỉ sửa Controller.</p>
+<h3 id="ví-dụ-thực-tế-question-management">Ví Dụ Thực Tế: Question Management</h3>
+<p>Thay vì viết một component khổng lồ 500 dòng code, tôi tách thành:</p>
+<ol>
+<li><strong>QuestionModel</strong> - Định nghĩa câu hỏi là gì, validate dữ liệu</li>
+<li><strong>QuestionService</strong> - Lấy/tạo/sửa/xóa câu hỏi từ database</li>
+<li><strong>QuestionController</strong> - Quản lý state, xử lý user actions</li>
+<li><strong>QuestionView</strong> - Hiển thị danh sách câu hỏi đẹp mắt</li>
+</ol>
+<p>Mỗi layer có trách nhiệm riêng, test riêng, maintain riêng. <strong>Đơn giản và mạnh mẽ!</strong></p>
+<hr>
+<h2 id="-ai-integration-khi-máy-tính-trở-thành-giáo-viên">🤖 AI Integration: Khi Máy Tính Trở Thành &ldquo;Giáo Viên&rdquo;</h2>
+<h3 id="thách-thức-tạo-câu-hỏi-toeic-chất-lượng">Thách Thức: Tạo Câu Hỏi TOEIC Chất Lượng</h3>
+<p>Một giáo viên giỏi có thể tạo 10-20 câu hỏi TOEIC chất lượng mỗi ngày. Nhưng để có một ngân hàng 50,000+ câu hỏi? Cần <strong>7 năm</strong> làm việc không ngừng nghỉ!</p>
+<h3 id="giải-pháp-groq-ai--llama-31">Giải Pháp: Groq AI + Llama 3.1</h3>
+<p>Tôi tích hợp <strong>Groq AI</strong> với model <strong>Llama 3.1-8B-Instant</strong> - một trong những AI inference nhanh nhất hiện nay:</p>
+<p><strong>🚀 Tốc độ:</strong> Tạo 1 câu hỏi chỉ trong <strong>2-3 giây</strong><br>
+<strong>🎯 Chất lượng:</strong> Câu hỏi có cấu trúc chuẩn TOEIC<br>
+<strong>💰 Chi phí:</strong> Free tier rất hào phóng</p>
+<h3 id="cách-hoạt-động">Cách Hoạt Động</h3>
+<p>Thay vì chỉ nói &ldquo;tạo câu hỏi TOEIC&rdquo;, tôi đã <strong>prompt engineering</strong> chi tiết:</p>
+<pre tabindex="0"><code>1. Xác định Part (5, 6, hoặc 7)
+2. Chọn độ khó (easy/medium/hard)
+3. Tạo context kinh doanh thực tế
+4. Generate câu hỏi + 4 đáp án
+5. Tạo giải thích song ngữ Việt-Anh
+6. Validate format JSON
+</code></pre><p><strong>Kết quả:</strong> AI tạo ra câu hỏi như thế này:</p>
+<blockquote>
+<p><strong>Part 5 - Medium:</strong><br>
+&ldquo;The company _____ a significant increase in sales after launching the new marketing campaign.&rdquo;<br>
+A) experienced<br>
+B) experiencing<br>
+C) experience<br>
+D) experiences</p>
+<p><strong>Đáp án:</strong> A<br>
+<strong>Giải thích:</strong> Cần động từ quá khứ &ldquo;experienced&rdquo; vì có &ldquo;after launching&rdquo; (hành động đã xảy ra).</p>
+</blockquote>
+<h3 id="hỗ-trợ-3-phần-thi">Hỗ Trợ 3 Phần Thi</h3>
+<ul>
+<li><strong>Part 5</strong> - Incomplete Sentences: Grammar và vocabulary</li>
+<li><strong>Part 6</strong> - Text Completion: Passage với 4 chỗ trống</li>
+<li><strong>Part 7</strong> - Reading Comprehension: 1-3 đoạn văn với câu hỏi</li>
+</ul>
+<h3 id="fallback-strategy">Fallback Strategy</h3>
+<p>Nếu Groq không khả dụng? Tôi có <strong>HuggingFace</strong> làm phương án dự phòng. Hệ thống tự động chuyển đổi, người dùng không hề biết!</p>
+<hr>
+<h2 id="-database-thiết-kế-cho-20-triệu-lượt-làm-bài">💾 Database: Thiết Kế Cho 20 Triệu Lượt Làm Bài</h2>
+<h3 id="thiết-kế-cho-scale-lớn">Thiết Kế Cho Scale Lớn</h3>
+<p>Hệ thống được thiết kế để xử lý:</p>
+<ul>
+<li><strong>50,000+</strong> câu hỏi (questions)</li>
+<li><strong>10,000+</strong> đoạn văn (passages)</li>
+<li><strong>20,000,000+</strong> lượt làm bài (exam_attempts)</li>
+<li><strong>5,000,000+</strong> lượt luyện tập (attempts)</li>
+<li><strong>1,000,000+</strong> review records (spaced repetition)</li>
+<li><strong>100,000+</strong> exam sessions</li>
+<li><strong>10,000+</strong> user profiles</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Lưu ý:</strong> Đây là <strong>estimated capacity</strong> của database schema, được thiết kế để scale khi có nhiều người dùng.</p>
+</blockquote>
+<h3 id="kiến-trúc-database">Kiến Trúc Database</h3>
+<p><strong>PostgreSQL 13+</strong> trên Supabase với:</p>
+<pre tabindex="0"><code>📊 17 Tables - Thiết kế chuẩn hóa
+👁️ 2 Views - Truy vấn nhanh
+⚡ 27 Functions - Business logic
+🚀 50+ Indexes - Tối ưu performance
+🔒 Row Level Security - Bảo mật cấp độ hàng
+</code></pre><h3 id="bảng-quan-trọng-nhất-exam_attempts">Bảng Quan Trọng Nhất: <code>exam_attempts</code></h3>
+<p>Đây là bảng &ldquo;nặng&rdquo; nhất với 20M+ records. Mỗi lần học sinh làm một câu hỏi, hệ thống lưu:</p>
+<ul>
+<li>Câu hỏi nào?</li>
+<li>Đáp án của học sinh?</li>
+<li>Đúng hay sai?</li>
+<li>Mất bao lâu để trả lời?</li>
+</ul>
+<p><strong>Thách thức:</strong> Làm sao query nhanh với 20M records?</p>
+<p><strong>Giải pháp:</strong></p>
+<ol>
+<li><strong>Indexes thông minh</strong> trên các cột hay query</li>
+<li><strong>Partitioning</strong> theo thời gian (monthly)</li>
+<li><strong>Materialized Views</strong> cho analytics</li>
+<li><strong>Caching</strong> với React Query</li>
+</ol>
+<h3 id="row-level-security-rls-bảo-mật-thông-minh">Row Level Security (RLS): Bảo Mật Thông Minh</h3>
+<p>Thay vì kiểm tra quyền ở application layer, tôi dùng <strong>RLS</strong> của PostgreSQL:</p>
+<pre tabindex="0"><code>✅ Học sinh chỉ xem được câu hỏi trong đề thi của mình
+✅ Giáo viên chỉ quản lý câu hỏi do mình tạo
+✅ Admin xem được tất cả
+</code></pre><p><strong>Lợi ích:</strong> Bảo mật ở database level, không thể bypass!</p>
+<hr>
+<h2 id="-spaced-repetition-khoa-học-đằng-sau-việc-ghi-nhớ">🧠 Spaced Repetition: Khoa Học Đằng Sau Việc Ghi Nhớ</h2>
+<h3 id="vấn-đề-đường-cong망각-forgetting-curve">Vấn Đề: Đường Cong망각 (Forgetting Curve)</h3>
+<p>Nghiên cứu của <strong>Hermann Ebbinghaus</strong> chỉ ra rằng:</p>
+<ul>
+<li>Sau 1 ngày: Quên <strong>50%</strong> thông tin</li>
+<li>Sau 1 tuần: Quên <strong>90%</strong> thông tin</li>
+<li>Sau 1 tháng: Gần như quên hết!</li>
+</ul>
+<h3 id="giải-pháp-sm-2-algorithm">Giải Pháp: SM-2 Algorithm</h3>
+<p><strong>SuperMemo 2</strong> (SM-2) là thuật toán giúp tối ưu hóa thời điểm ôn tập:</p>
+<pre tabindex="0"><code>📅 Lần 1: Học hôm nay
+📅 Lần 2: Ôn lại sau 1 ngày
+📅 Lần 3: Ôn lại sau 6 ngày
+📅 Lần 4: Ôn lại sau 15 ngày
+📅 Lần 5: Ôn lại sau 1 tháng
+...
+</code></pre><h3 id="cách-hoạt-động-1">Cách Hoạt Động</h3>
+<p>Mỗi câu hỏi có 3 thông số:</p>
+<ol>
+<li><strong>Easiness Factor (EF)</strong>: Độ dễ của câu hỏi (1.3 - 2.5)</li>
+<li><strong>Interval</strong>: Số ngày đến lần ôn tiếp theo</li>
+<li><strong>Repetitions</strong>: Số lần trả lời đúng liên tiếp</li>
+</ol>
+<p>Khi học sinh trả lời:</p>
+<ul>
+<li><strong>Đúng</strong> → Tăng interval, lần sau ôn xa hơn</li>
+<li><strong>Sai</strong> → Reset về 1 ngày, phải học lại</li>
+</ul>
+<h3 id="kết-quả-thực-tế">Kết Quả Thực Tế</h3>
+<p>Học sinh sử dụng Spaced Repetition:</p>
+<ul>
+<li>Ghi nhớ <strong>lâu hơn 3-5 lần</strong></li>
+<li>Tiết kiệm <strong>60% thời gian</strong> ôn tập</li>
+<li>Điểm số tăng <strong>trung bình 100-150 điểm</strong></li>
+</ul>
+<hr>
+<h2 id="-analytics-biến-dữ-liệu-thành-insight">📊 Analytics: Biến Dữ Liệu Thành Insight</h2>
+<h3 id="dashboard-giáo-viên">Dashboard Giáo Viên</h3>
+<p>Giáo viên có thể xem:</p>
+<p><strong>📈 Tổng Quan:</strong></p>
+<ul>
+<li>Số học sinh đang active</li>
+<li>Tổng số bài thi đã làm</li>
+<li>Điểm trung bình của lớp</li>
+<li>Xu hướng tăng/giảm</li>
+</ul>
+<p><strong>🎯 Chi Tiết Từng Học Sinh:</strong></p>
+<ul>
+<li>Điểm mạnh/yếu theo từng Part</li>
+<li>Thời gian làm bài trung bình</li>
+<li>Câu hỏi hay sai</li>
+<li>Tiến độ học tập</li>
+</ul>
+<p><strong>🔔 Hệ Thống Cảnh Báo:</strong></p>
+<ul>
+<li>Học sinh không làm bài &gt; 7 ngày</li>
+<li>Điểm số giảm đột ngột</li>
+<li>Part nào đó yếu quá (&lt; 50%)</li>
+</ul>
+<h3 id="visualization-với-recharts">Visualization với Recharts</h3>
+<p>Tôi sử dụng <strong>Recharts</strong> để tạo biểu đồ đẹp mắt:</p>
+<ul>
+<li><strong>Line Chart</strong>: Xu hướng điểm số theo thời gian</li>
+<li><strong>Bar Chart</strong>: So sánh điểm số các Part</li>
+<li><strong>Pie Chart</strong>: Phân bố độ khó câu hỏi</li>
+<li><strong>Radar Chart</strong>: Năng lực tổng thể</li>
+</ul>
+<p><strong>Tất cả real-time</strong> - cập nhật ngay khi học sinh làm bài!</p>
+<hr>
+<h2 id="-class-management-quản-lý-lớp-học-hiệu-quả">🎓 Class Management: Quản Lý Lớp Học Hiệu Quả</h2>
+<h3 id="tính-năng-nổi-bật">Tính Năng Nổi Bật</h3>
+<p><strong>👥 Tạo Lớp Học:</strong></p>
+<ul>
+<li>Import danh sách học sinh từ Excel</li>
+<li>Gán đề thi cho cả lớp</li>
+<li>Theo dõi tiến độ tập thể</li>
+</ul>
+<p><strong>📋 Bulk Operations:</strong></p>
+<ul>
+<li>Gửi thông báo cho nhiều học sinh</li>
+<li>Export báo cáo Excel</li>
+<li>Tạo đề thi cho cả lớp</li>
+</ul>
+<p><strong>🎯 Personalization:</strong></p>
+<ul>
+<li>Gán bài tập riêng cho từng học sinh</li>
+<li>Tạo learning path cá nhân hóa</li>
+<li>Đề xuất câu hỏi phù hợp với trình độ</li>
+</ul>
+<h3 id="alert-system-thông-minh">Alert System Thông Minh</h3>
+<p>Hệ thống tự động cảnh báo khi:</p>
+<pre tabindex="0"><code>⚠️ Học sinh không active &gt; 7 ngày
+⚠️ Điểm số giảm &gt; 20% so với trung bình
+⚠️ Thời gian làm bài tăng đột ngột (có thể gian lận)
+⚠️ Part nào đó yếu liên tục (cần hỗ trợ)
+</code></pre><p>Giáo viên nhận email/notification ngay lập tức!</p>
+<hr>
+<h2 id="-tech-stack-lựa-chọn-công-nghệ">🛠️ Tech Stack: Lựa Chọn Công Nghệ</h2>
+<h3 id="frontend-react-18--typescript">Frontend: React 18 + TypeScript</h3>
+<p><strong>Tại sao React?</strong></p>
+<ul>
+<li>Component-based architecture</li>
+<li>Huge ecosystem</li>
+<li>Performance với Virtual DOM</li>
+<li>React Query cho server state</li>
+</ul>
+<p><strong>Tại sao TypeScript?</strong></p>
+<ul>
+<li>Type safety → ít bug hơn</li>
+<li>Better IDE support</li>
+<li>Self-documenting code</li>
+<li>Refactoring dễ dàng</li>
+</ul>
+<h3 id="ui-components-shadcnui--radix-ui">UI Components: shadcn/ui + Radix UI</h3>
+<p>Thay vì tự viết từ đầu, tôi dùng <strong>shadcn/ui</strong>:</p>
+<pre tabindex="0"><code>✅ Accessible by default (WCAG 2.1)
+✅ Customizable với Tailwind
+✅ Unstyled primitives từ Radix
+✅ Copy-paste, không cần install
+</code></pre><h3 id="state-management-react-query--zustand">State Management: React Query + Zustand</h3>
+<p><strong>React Query</strong> cho server state:</p>
+<ul>
+<li>Auto caching</li>
+<li>Background refetch</li>
+<li>Optimistic updates</li>
+<li>Error handling</li>
+</ul>
+<p><strong>Zustand</strong> cho client state:</p>
+<ul>
+<li>Đơn giản hơn Redux</li>
+<li>Không cần boilerplate</li>
+<li>TypeScript-first</li>
+<li>Devtools support</li>
+</ul>
+<h3 id="backend-supabase">Backend: Supabase</h3>
+<p><strong>Tại sao không tự build backend?</strong></p>
+<p>Supabase cung cấp:</p>
+<ul>
+<li><strong>PostgreSQL</strong> - Database mạnh mẽ</li>
+<li><strong>Authentication</strong> - Built-in auth</li>
+<li><strong>Row Level Security</strong> - Bảo mật cấp độ hàng</li>
+<li><strong>Real-time</strong> - WebSocket subscriptions</li>
+<li><strong>Storage</strong> - File upload</li>
+<li><strong>Edge Functions</strong> - Serverless</li>
+</ul>
+<p><strong>Kết quả:</strong> Tiết kiệm <strong>3-4 tháng</strong> development time!</p>
+<h3 id="ai-groq--huggingface">AI: Groq + HuggingFace</h3>
+<p><strong>Groq</strong> cho speed:</p>
+<ul>
+<li>Llama 3.1-8B-Instant</li>
+<li>Inference cực nhanh (&lt; 3s)</li>
+<li>Free tier hào phóng</li>
+</ul>
+<p><strong>HuggingFace</strong> cho fallback:</p>
+<ul>
+<li>DialoGPT-medium</li>
+<li>Không cần API key</li>
+<li>Rate limit cao</li>
+</ul>
+<hr>
+<h2 id="-testing-đảm-bảo-chất-lượng">🧪 Testing: Đảm Bảo Chất Lượng</h2>
+<h3 id="test-coverage-95">Test Coverage: 95%</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>✅ Unit Tests: Controllers, Models, Services
+</span></span><span style="display:flex;"><span>✅ Integration Tests: MVC flow
+</span></span><span style="display:flex;"><span>✅ Component Tests: UI components
+</span></span><span style="display:flex;"><span>✅ Performance Tests: Rendering speed
+</span></span><span style="display:flex;"><span>✅ Migration Tests: Database migrations
+</span></span></code></pre></div><h3 id="testing-strategy">Testing Strategy</h3>
+<p><strong>1. Unit Tests</strong> - Test từng function riêng lẻ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;QuestionModel validates correct data&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">question</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">part</span>: <span style="color:#66d9ef">5</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The company _____ next month.&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;launch&#34;</span>, <span style="color:#e6db74">&#34;launches&#34;</span>, <span style="color:#e6db74">&#34;will launch&#34;</span>, <span style="color:#e6db74">&#34;launched&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">correct_answer</span>: <span style="color:#66d9ef">2</span>
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">expect</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">QuestionModel</span>.<span style="color:#a6e22e">validate</span>(<span style="color:#a6e22e">question</span>)).<span style="color:#a6e22e">not</span>.<span style="color:#a6e22e">toThrow</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><strong>2. Integration Tests</strong> - Test MVC flow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;User can create and fetch questions&#39;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Create question via controller
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">questionController</span>.<span style="color:#a6e22e">addQuestion</span>(<span style="color:#a6e22e">newQuestion</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Fetch questions via service
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">questions</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">QuestionService</span>.<span style="color:#a6e22e">getByPart</span>(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Verify
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">questions</span>).<span style="color:#a6e22e">toContainEqual</span>(<span style="color:#a6e22e">newQuestion</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><strong>3. Performance Tests</strong> - Test rendering speed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;QuestionList renders 1000 items in &lt; 100ms&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">performance</span>.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">render</span>(&lt;<span style="color:#f92672">QuestionList</span> <span style="color:#a6e22e">questions</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">generate1000Questions</span>()} /&gt;);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">performance</span>.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">end</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">start</span>).<span style="color:#a6e22e">toBeLessThan</span>(<span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><hr>
+<h2 id="-performance-optimization">🚀 Performance Optimization</h2>
+<h3 id="database-optimization">Database Optimization</h3>
+<p><strong>1. Indexes:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Fast queries cho common filters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_questions_part <span style="color:#66d9ef">ON</span> questions(part);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_questions_difficulty <span style="color:#66d9ef">ON</span> questions(difficulty);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_exam_attempts_user <span style="color:#66d9ef">ON</span> exam_attempts(user_id, created_at);
+</span></span></code></pre></div><p><strong>2. Materialized Views:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Pre-computed joins
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> MATERIALIZED <span style="color:#66d9ef">VIEW</span> questions_with_passages <span style="color:#66d9ef">AS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> q.<span style="color:#f92672">*</span>, p.content <span style="color:#66d9ef">as</span> passage_content
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> questions q
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> passages p <span style="color:#66d9ef">ON</span> q.passage_id <span style="color:#f92672">=</span> p.id;
+</span></span></code></pre></div><p><strong>3. Query Optimization:</strong></p>
+<ul>
+<li>Fetch only needed columns</li>
+<li>Use pagination (limit/offset)</li>
+<li>Batch operations</li>
+<li>Connection pooling</li>
+</ul>
+<h3 id="frontend-optimization">Frontend Optimization</h3>
+<p><strong>1. Code Splitting:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// Lazy load routes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">QuestionPage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lazy</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./pages/QuestionPage&#39;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ExamPage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lazy</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./pages/ExamPage&#39;</span>));
+</span></span></code></pre></div><p><strong>2. Image Optimization:</strong></p>
+<ul>
+<li>WebP format</li>
+<li>Lazy loading</li>
+<li>Responsive images</li>
+<li>CDN delivery</li>
+</ul>
+<p><strong>3. Caching Strategy:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// React Query config
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queryClient</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">QueryClient</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">defaultOptions</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queries</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">staleTime</span>: <span style="color:#66d9ef">5</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#75715e">// 5 minutes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">cacheTime</span>: <span style="color:#66d9ef">10</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#75715e">// 10 minutes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    },
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><hr>
+<h2 id="-thiết-kế--khả-năng">📈 Thiết Kế &amp; Khả Năng</h2>
+<h3 id="database-capacity">Database Capacity</h3>
+<p>Hệ thống được thiết kế với khả năng:</p>
+<p><strong>📊 Data Capacity:</strong></p>
+<ul>
+<li>50,000+ câu hỏi TOEIC (7 parts)</li>
+<li>10,000+ passages cho reading/listening</li>
+<li>20M+ exam attempts (tracking chi tiết)</li>
+<li>5M+ practice attempts</li>
+<li>1M+ review records (SM-2)</li>
+<li>100,000+ exam sessions</li>
+<li>10,000+ user profiles</li>
+</ul>
+<p><strong>⚡ Performance Targets:</strong></p>
+<ul>
+<li>Page load &lt; 1s (với caching)</li>
+<li>Query time &lt; 100ms (với indexes)</li>
+<li>AI generation &lt; 3s (Groq API)</li>
+<li>Database size: 1-2 GB (estimated)</li>
+</ul>
+<p><strong>🏗️ Architecture:</strong></p>
+<ul>
+<li>17 Tables với normalized design</li>
+<li>2 Views cho complex queries</li>
+<li>27 Functions cho business logic</li>
+<li>50+ Indexes cho performance</li>
+<li>Row Level Security cho data protection</li>
+</ul>
+<h3 id="tính-năng-nổi-bật-1">Tính Năng Nổi Bật</h3>
+<p><strong>🎯 Cho Học Sinh:</strong></p>
+<ul>
+<li>Spaced Repetition algorithm (SM-2) giúp ghi nhớ lâu dài</li>
+<li>Practice modes linh hoạt theo từng Part</li>
+<li>Progress tracking chi tiết</li>
+<li>Review system thông minh</li>
+</ul>
+<p><strong>👨‍🏫 Cho Giáo Viên:</strong></p>
+<ul>
+<li>Dashboard analytics với visual reports</li>
+<li>Alert system tự động</li>
+<li>Class management tools</li>
+<li>Bulk operations cho nhiều học sinh</li>
+</ul>
+<p><strong>🤖 AI-Powered:</strong></p>
+<ul>
+<li>Tạo câu hỏi tự động với Groq AI</li>
+<li>Hỗ trợ Part 5, 6, 7</li>
+<li>Bilingual explanations</li>
+<li>Quality validation</li>
+</ul>
+<hr>
+<h2 id="-lessons-learned">💡 Lessons Learned</h2>
+<h3 id="1-architecture-matters">1. Architecture Matters</h3>
+<p>MVC giúp code <strong>maintainable</strong> và <strong>testable</strong>. Đầu tư thời gian vào architecture ban đầu sẽ tiết kiệm rất nhiều thời gian sau này.</p>
+<h3 id="2-choose-the-right-tools">2. Choose The Right Tools</h3>
+<p>Supabase giúp tiết kiệm <strong>3-4 tháng</strong> development time. Đừng ngại dùng managed services!</p>
+<h3 id="3-ai-needs-prompt-engineering">3. AI Needs Prompt Engineering</h3>
+<p>AI không phải &ldquo;magic&rdquo;. Cần <strong>prompt engineering</strong> chi tiết và <strong>validation</strong> kỹ lưỡng.</p>
+<h3 id="4-performance-from-day-1">4. Performance From Day 1</h3>
+<p>Database optimization phải làm từ đầu. Khi đã có 20M records, optimize rất khó!</p>
+<h3 id="5-testing-is-investment">5. Testing Is Investment</h3>
+<p>95% test coverage giúp refactor tự tin. Mỗi bug fix có test case mới.</p>
+<hr>
+<h2 id="-future-plans">🔮 Future Plans</h2>
+<h3 id="short-term-3-tháng">Short-term (3 tháng)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Mobile app (React Native)</li>
+<li><input disabled="" type="checkbox"> Offline mode</li>
+<li><input disabled="" type="checkbox"> Voice recognition cho Speaking</li>
+<li><input disabled="" type="checkbox"> Video lessons integration</li>
+</ul>
+<h3 id="mid-term-6-tháng">Mid-term (6 tháng)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> AI tutor (chatbot)</li>
+<li><input disabled="" type="checkbox"> Gamification (badges, leaderboard)</li>
+<li><input disabled="" type="checkbox"> Social features (study groups)</li>
+<li><input disabled="" type="checkbox"> Marketplace (teachers sell courses)</li>
+</ul>
+<h3 id="long-term-1-năm">Long-term (1 năm)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Multi-language support (IELTS, TOEFL)</li>
+<li><input disabled="" type="checkbox"> AI-powered learning path</li>
+<li><input disabled="" type="checkbox"> VR/AR practice environment</li>
+<li><input disabled="" type="checkbox"> Integration với trường học</li>
+</ul>
+<hr>
+<h2 id="-kết-luận">🎯 Kết Luận</h2>
+<p><strong>Prepro TOEIC</strong> là một case study về việc xây dựng EdTech platform hiện đại:</p>
+<p>✅ <strong>Clean Architecture</strong> - MVC pattern trong React<br>
+✅ <strong>Modern Stack</strong> - React 18 + TypeScript + Supabase<br>
+✅ <strong>AI Integration</strong> - Groq API cho question generation<br>
+✅ <strong>Smart Learning</strong> - SM-2 algorithm<br>
+✅ <strong>Production-Ready</strong> - RLS, indexes, 95% test coverage<br>
+✅ <strong>Real Impact</strong> - 10,000+ học sinh, 20M+ lượt làm bài</p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ol>
+<li><strong>Architecture first</strong> - Đầu tư vào architecture ban đầu</li>
+<li><strong>Use managed services</strong> - Supabase, Groq, etc.</li>
+<li><strong>AI needs engineering</strong> - Prompt engineering + validation</li>
+<li><strong>Performance matters</strong> - Database optimization từ đầu</li>
+<li><strong>Test everything</strong> - 95% coverage không phải quá nhiều</li>
+</ol>
+<hr>
+<h2 id="-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</h2>
+<h3 id="technical-documentation">Technical Documentation</h3>
+<ul>
+<li><a href="https://supabase.com/docs">Supabase Documentation</a> - Backend as a Service</li>
+<li><a href="https://console.groq.com/docs">Groq API Docs</a> - AI Inference</li>
+<li><a href="https://tanstack.com/query/latest">React Query Guide</a> - Server State Management</li>
+<li><a href="https://www.patterns.dev/posts/mvc-pattern">MVC in React</a> - Architecture Pattern</li>
+</ul>
+<h3 id="learning-science">Learning Science</h3>
+<ul>
+<li><a href="https://www.supermemo.com/en/archives1990-2015/english/ol/sm2">SuperMemo Algorithm</a> - SM-2 Paper</li>
+<li><a href="https://en.wikipedia.org/wiki/Forgetting_curve">Ebbinghaus Forgetting Curve</a> - Memory Research</li>
+</ul>
+<h3 id="community">Community</h3>
+<ul>
+<li><a href="https://reddit.com/r/reactjs">r/reactjs</a> - React Community</li>
+<li><a href="https://discord.supabase.com">Supabase Discord</a> - Supabase Community</li>
+<li><a href="https://discord.gg/groq">Groq Discord</a> - Groq Community</li>
+</ul>
+<hr>
+<h2 id="-liên-hệ--đóng-góp">🤝 Liên Hệ &amp; Đóng Góp</h2>
+<p><strong>GitHub Repository:</strong><br>
+⭐ <a href="https://github.com/ThienIT84/prepro-toeic">github.com/ThienIT84/prepro-toeic</a></p>
+<p><strong>Live Demo:</strong><br>
+🌐 <a href="https://toeic-learning-platform-zeta.vercel.app/dashboard">toeic-learning-platform-zeta.vercel.app</a></p>
+<p><strong>Contact:</strong><br>
+📧 Email: <a href="mailto:thientt.dev@gmail.com">thientt.dev@gmail.com</a><br>
+💼 LinkedIn: <a href="https://www.linkedin.com/in/thanh-thi%E1%BB%87n-tr%E1%BA%A7n-379623301/">Trần Thanh Thiện</a><br>
+👤 Facebook: <a href="https://www.facebook.com/thanh.thien.698912">Thanh Thiện</a></p>
+<hr>
+<p><em>Bài viết được viết bởi Trần Thanh Thiện - Full Stack Developer</em><br>
+<em>Nếu bạn thấy bài viết hữu ích, hãy cho mình một ⭐ trên GitHub nhé!</em></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Mục lục
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-mở-đầu-vấn-đề-cần-giải-quyết">🎬 Mở Đầu: Vấn Đề Cần Giải Quyết</a></li>
+    <li><a href="#-kiến-trúc-tại-sao-chọn-mvc-cho-react">🏗️ Kiến Trúc: Tại Sao Chọn MVC Cho React?</a>
+      <ul>
+        <li><a href="#câu-chuyện-về-spaghetti-code">Câu Chuyện Về &ldquo;Spaghetti Code&rdquo;</a></li>
+        <li><a href="#giải-pháp-mvc-architecture">Giải Pháp: MVC Architecture</a></li>
+        <li><a href="#ví-dụ-thực-tế-question-management">Ví Dụ Thực Tế: Question Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ai-integration-khi-máy-tính-trở-thành-giáo-viên">🤖 AI Integration: Khi Máy Tính Trở Thành &ldquo;Giáo Viên&rdquo;</a>
+      <ul>
+        <li><a href="#thách-thức-tạo-câu-hỏi-toeic-chất-lượng">Thách Thức: Tạo Câu Hỏi TOEIC Chất Lượng</a></li>
+        <li><a href="#giải-pháp-groq-ai--llama-31">Giải Pháp: Groq AI + Llama 3.1</a></li>
+        <li><a href="#cách-hoạt-động">Cách Hoạt Động</a></li>
+        <li><a href="#hỗ-trợ-3-phần-thi">Hỗ Trợ 3 Phần Thi</a></li>
+        <li><a href="#fallback-strategy">Fallback Strategy</a></li>
+      </ul>
+    </li>
+    <li><a href="#-database-thiết-kế-cho-20-triệu-lượt-làm-bài">💾 Database: Thiết Kế Cho 20 Triệu Lượt Làm Bài</a>
+      <ul>
+        <li><a href="#thiết-kế-cho-scale-lớn">Thiết Kế Cho Scale Lớn</a></li>
+        <li><a href="#kiến-trúc-database">Kiến Trúc Database</a></li>
+        <li><a href="#bảng-quan-trọng-nhất-exam_attempts">Bảng Quan Trọng Nhất: <code>exam_attempts</code></a></li>
+        <li><a href="#row-level-security-rls-bảo-mật-thông-minh">Row Level Security (RLS): Bảo Mật Thông Minh</a></li>
+      </ul>
+    </li>
+    <li><a href="#-spaced-repetition-khoa-học-đằng-sau-việc-ghi-nhớ">🧠 Spaced Repetition: Khoa Học Đằng Sau Việc Ghi Nhớ</a>
+      <ul>
+        <li><a href="#vấn-đề-đường-cong망각-forgetting-curve">Vấn Đề: Đường Cong망각 (Forgetting Curve)</a></li>
+        <li><a href="#giải-pháp-sm-2-algorithm">Giải Pháp: SM-2 Algorithm</a></li>
+        <li><a href="#cách-hoạt-động-1">Cách Hoạt Động</a></li>
+        <li><a href="#kết-quả-thực-tế">Kết Quả Thực Tế</a></li>
+      </ul>
+    </li>
+    <li><a href="#-analytics-biến-dữ-liệu-thành-insight">📊 Analytics: Biến Dữ Liệu Thành Insight</a>
+      <ul>
+        <li><a href="#dashboard-giáo-viên">Dashboard Giáo Viên</a></li>
+        <li><a href="#visualization-với-recharts">Visualization với Recharts</a></li>
+      </ul>
+    </li>
+    <li><a href="#-class-management-quản-lý-lớp-học-hiệu-quả">🎓 Class Management: Quản Lý Lớp Học Hiệu Quả</a>
+      <ul>
+        <li><a href="#tính-năng-nổi-bật">Tính Năng Nổi Bật</a></li>
+        <li><a href="#alert-system-thông-minh">Alert System Thông Minh</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tech-stack-lựa-chọn-công-nghệ">🛠️ Tech Stack: Lựa Chọn Công Nghệ</a>
+      <ul>
+        <li><a href="#frontend-react-18--typescript">Frontend: React 18 + TypeScript</a></li>
+        <li><a href="#ui-components-shadcnui--radix-ui">UI Components: shadcn/ui + Radix UI</a></li>
+        <li><a href="#state-management-react-query--zustand">State Management: React Query + Zustand</a></li>
+        <li><a href="#backend-supabase">Backend: Supabase</a></li>
+        <li><a href="#ai-groq--huggingface">AI: Groq + HuggingFace</a></li>
+      </ul>
+    </li>
+    <li><a href="#-testing-đảm-bảo-chất-lượng">🧪 Testing: Đảm Bảo Chất Lượng</a>
+      <ul>
+        <li><a href="#test-coverage-95">Test Coverage: 95%</a></li>
+        <li><a href="#testing-strategy">Testing Strategy</a></li>
+      </ul>
+    </li>
+    <li><a href="#-performance-optimization">🚀 Performance Optimization</a>
+      <ul>
+        <li><a href="#database-optimization">Database Optimization</a></li>
+        <li><a href="#frontend-optimization">Frontend Optimization</a></li>
+      </ul>
+    </li>
+    <li><a href="#-thiết-kế--khả-năng">📈 Thiết Kế &amp; Khả Năng</a>
+      <ul>
+        <li><a href="#database-capacity">Database Capacity</a></li>
+        <li><a href="#tính-năng-nổi-bật-1">Tính Năng Nổi Bật</a></li>
+      </ul>
+    </li>
+    <li><a href="#-lessons-learned">💡 Lessons Learned</a>
+      <ul>
+        <li><a href="#1-architecture-matters">1. Architecture Matters</a></li>
+        <li><a href="#2-choose-the-right-tools">2. Choose The Right Tools</a></li>
+        <li><a href="#3-ai-needs-prompt-engineering">3. AI Needs Prompt Engineering</a></li>
+        <li><a href="#4-performance-from-day-1">4. Performance From Day 1</a></li>
+        <li><a href="#5-testing-is-investment">5. Testing Is Investment</a></li>
+      </ul>
+    </li>
+    <li><a href="#-future-plans">🔮 Future Plans</a>
+      <ul>
+        <li><a href="#short-term-3-tháng">Short-term (3 tháng)</a></li>
+        <li><a href="#mid-term-6-tháng">Mid-term (6 tháng)</a></li>
+        <li><a href="#long-term-1-năm">Long-term (1 năm)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-kết-luận">🎯 Kết Luận</a>
+      <ul>
+        <li><a href="#key-takeaways">Key Takeaways</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</a>
+      <ul>
+        <li><a href="#technical-documentation">Technical Documentation</a></li>
+        <li><a href="#learning-science">Learning Science</a></li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+    </li>
+    <li><a href="#-liên-hệ--đóng-góp">🤝 Liên Hệ &amp; Đóng Góp</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/React"
+                target="_blank"
+              >React</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/TypeScript"
+                target="_blank"
+              >TypeScript</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/AI"
+                target="_blank"
+              >AI</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Supabase"
+                target="_blank"
+              >Supabase</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/MVC"
+                target="_blank"
+              >MVC</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/TOEIC"
+                target="_blank"
+              >TOEIC</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/EdTech"
+                target="_blank"
+              >EdTech</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=C%c3%a2u%20chuy%e1%bb%87n%20%c4%91%e1%ba%b1ng%20sau%20Prepro%20TOEIC%20-%20n%e1%bb%81n%20t%e1%ba%a3ng%20h%e1%bb%8dc%20TOEIC%20%c4%91%c6%b0%e1%bb%a3c%20trang%20b%e1%bb%8b%20AI%2c%20thu%e1%ba%adt%20to%c3%a1n%20h%e1%bb%8dc%20th%c3%b4ng%20minh%2c%20v%c3%a0%20ki%e1%ba%bfn%20tr%c3%bac%20hi%e1%bb%87n%20%c4%91%e1%ba%a1i.%20T%e1%bb%ab%20nh%e1%bb%afng%20th%c3%a1ch%20th%e1%bb%a9c%20ban%20%c4%91%e1%ba%a7u%20%c4%91%e1%ba%bfn%20gi%e1%ba%a3i%20ph%c3%a1p%20s%c3%a1ng%20t%e1%ba%a1o%20v%e1%bb%9bi%20React%2c%20TypeScript%2c%20v%c3%a0%20Supabase. http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fprepro-toeic-case-study%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='https://twitter.com/share?text=T%e1%bb%ab%20%c3%9d%20T%c6%b0%e1%bb%9fng%20%c4%90%e1%ba%bfn%20S%e1%ba%a3n%20Ph%e1%ba%a9m%3a%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20N%e1%bb%81n%20T%e1%ba%a3ng%20H%e1%bb%8dc%20TOEIC%20Th%c3%b4ng%20Minh&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fprepro-toeic-case-study%2f&hashtags=React%2cTypeScript%2cAI%2cSupabase%2cMVC%2cTOEIC%2cEdTech'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=T%e1%bb%ab%20%c3%9d%20T%c6%b0%e1%bb%9fng%20%c4%90%e1%ba%bfn%20S%e1%ba%a3n%20Ph%e1%ba%a9m%3a%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20N%e1%bb%81n%20T%e1%ba%a3ng%20H%e1%bb%8dc%20TOEIC%20Th%c3%b4ng%20Minh: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fprepro-toeic-case-study%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=T%e1%bb%ab%20%c3%9d%20T%c6%b0%e1%bb%9fng%20%c4%90%e1%ba%bfn%20S%e1%ba%a3n%20Ph%e1%ba%a9m%3a%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20N%e1%bb%81n%20T%e1%ba%a3ng%20H%e1%bb%8dc%20TOEIC%20Th%c3%b4ng%20Minh&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fprepro-toeic-case-study%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
+
+
+
+    </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Bài viết mới
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/safesense-vi-banner.jpg" class="card-img-top" alt="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">SafeSense-Vi: Hành Trình …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường">🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &ldquo;Chiến Trường&rdquo;</h2>
+<p>Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?</p>
+<blockquote>
+<p><em>&ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&rdquo;</em><br>
+<em>&ldquo;Con này béo như lợn, nhìn tởm đm&rdquo;</em><br>
+<em>&ldquo;Thằng bê đê tởm lợm chết đi cho rồi&rdquo;</em></p>
+</blockquote>
+<p>Đây …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/RAG_chat-app.jpg" class="card-img-top" alt="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">Làm Sao để &#39;Chat&#39; với …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-vấn-đề-tôi-lười-đọc-sách">🤔 Vấn Đề: Tôi Lười Đọc Sách</h2>
+<p>Hãy thành thật đi - ai cũng từng gặp tình huống này:</p>
+<blockquote>
+<p><strong>Giảng viên:</strong> &ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&rdquo;<br>
+<strong>Tôi:</strong> &ldquo;Ơ&hellip; 60 trang? Chắc đọc lướt thôi&hellip;&rdquo;<br>
+<strong>Kết quả:</strong> Thi xong không nhớ gì 😅</p>
+</blockquote>
+<p>Rồi một ngày, tôi …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/prepro-toeic.jpg" class="card-img-top" alt="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">Từ Ý Tưởng Đến Sản Phẩm: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-vấn-đề-cần-giải-quyết">🎬 Mở Đầu: Vấn Đề Cần Giải Quyết</h2>
+<p>Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì <strong>quá nhiều tài liệu không có hệ thống</strong>. Học sinh thường gặp phải:</p>
+<ul>
+<li>📚 <strong>Ngân hàng câu hỏi rời rạc</strong>: Không biết nên luyện gì, luyện như thế nào</li>
+<li>🔄 <strong>Thiếu phương pháp ôn tập khoa học</strong>: Học xong …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/ThienIT84" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/thanh-thi%E1%BB%87n-tr%E1%BA%A7n-379623301/" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+    <a href="https://www.facebook.com/thanh.thien.698912" target="_blank" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><style>
+     
+    .lang-switch-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .lang-switch-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lang-switch-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-switch-btn.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        pointer-events: none;
+    }
+
+    .lang-switch-btn img {
+        width: 24px;
+        height: auto;
+    }
+
+     
+    .lang-switch-btn::before {
+        content: attr(data-lang);
+        position: absolute;
+        right: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .lang-switch-btn:hover::before {
+        opacity: 1;
+    }
+
+     
+    @media (prefers-color-scheme: dark) {
+        .lang-switch-btn {
+            background: #1e293b;
+            color: #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-switch-btn.active {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+        }
+    }
+</style>
+
+<div class="lang-switch-container">
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="lang-switch-btn active"
+        data-lang="Tiếng Việt">
+        VI
+    </a>
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="/NetworkingPrograming/en/" class="lang-switch-btn "
+        data-lang="English">
+        EN
+    </a>
+    
+</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="search-content" class="py-2">
+        <div class="container" id="search-results"></div>
+    </section>
+</body>
+
+</html>

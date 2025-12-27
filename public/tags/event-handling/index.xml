@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Handling on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/event-handling/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Event-Handling/</link>
     <description>Recent content in Event Handling on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/event-handling/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Event-Handling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hàm và Sự kiện: Cách JavaScript tương tác với người dùng</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/function-and-event/</link>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI/ML on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/categories/AI/ML/</link>
+    <description>Recent content in AI/ML on Trần Thanh Thiện - AI Engineer Portfolio</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 16:30:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/categories/AI/ML/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</guid>
+      <description>&lt;h2 id=&#34;-vấn-đề-tôi-lười-đọc-sách&#34;&gt;🤔 Vấn Đề: Tôi Lười Đọc Sách&lt;/h2&gt;&#xA;&lt;p&gt;Hãy thành thật đi - ai cũng từng gặp tình huống này:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Giảng viên:&lt;/strong&gt; &amp;ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Tôi:&lt;/strong&gt; &amp;ldquo;Ơ&amp;hellip; 60 trang? Chắc đọc lướt thôi&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Kết quả:&lt;/strong&gt; Thi xong không nhớ gì 😅&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Rồi một ngày, tôi nghĩ: &lt;strong&gt;&amp;ldquo;Sao không làm một con AI đọc hộ mình?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Không phải AI tóm tắt kiểu &amp;ldquo;copy-paste 3 câu đầu&amp;rdquo; - mà là AI &lt;strong&gt;thực sự hiểu&lt;/strong&gt; nội dung, có thể &lt;strong&gt;trả lời câu hỏi cụ thể&lt;/strong&gt;, và quan trọng nhất: &lt;strong&gt;trích dẫn nguồn&lt;/strong&gt; để tôi biết nó không bịa!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,12 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socket on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/socket/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Socket/</link>
     <description>Recent content in Socket on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 20 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <lastBuildDate>Sun, 21 Dec 2025 09:30:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Socket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình Mạng và Cách Triển khai trong Java</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</guid>
+      <description>&lt;p&gt;Trong các bài viết trước về lập trình Socket, chúng ta thường truyền dữ liệu dưới dạng văn bản thuần túy (plaintext). Điều này rất nguy hiểm vì bất kỳ ai &amp;ldquo;nghe lén&amp;rdquo; (sniffing) trên mạng đều có thể đọc được toàn bộ nội dung, chẳng hạn như tin nhắn chat, mật khẩu hay thông tin nhạy cảm.&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;5a5c46&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;9742a6&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;Để khắc phục, chúng ta sử dụng &lt;strong&gt;SSL/TLS&lt;/strong&gt; – giao thức mã hóa chuẩn được áp dụng rộng rãi (HTTPS chính là HTTP kết hợp TLS).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>
@@ -21,13 +28,6 @@
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
       <guid>http://localhost:1313/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Một Server chỉ có thể phục vụ một Client tại một thời điểm là hoàn toàn không khả thi trong thực tế. Hãy tưởng tượng Facebook, Zalo hay bất kỳ ứng dụng chat nào chỉ cho phép một người dùng đăng nhập tại một thời điểm - điều đó sẽ là thảm họa! Bài viết này sẽ giải thích chi tiết về &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng) - giải pháp cho phép Server xử lý hàng nghìn kết nối đồng thời.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Java Socket: Cánh cửa vào thế giới Lập trình mạng</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
-      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
-      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại số hóa hiện nay, hầu hết các ứng dụng đều cần khả năng giao tiếp qua mạng - từ các ứng dụng chat đơn giản đến các hệ thống phân tán phức tạp. &lt;strong&gt;Socket&lt;/strong&gt; chính là nền tảng cốt lõi cho phép các ứng dụng này hoạt động. Bài viết này sẽ đi sâu vào khái niệm Socket trong Java và cách thức triển khai mô hình Client-Server cơ bản.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

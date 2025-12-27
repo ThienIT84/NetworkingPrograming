@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Protocol on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/protocol/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Protocol/</link>
     <description>Recent content in Protocol on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Sat, 20 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/protocol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Protocol/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>

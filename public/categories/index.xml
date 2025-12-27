@@ -5,35 +5,70 @@
     <link>http://localhost:1313/NetworkingPrograming/categories/</link>
     <description>Recent content in Categories on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 22 Dec 2025 08:00:00 +0700</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 17:37:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/NetworkingPrograming/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Web Development</title>
-      <link>http://localhost:1313/NetworkingPrograming/categories/web-development/</link>
-      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/categories/web-development/</guid>
+      <title>About</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/About/</link>
+      <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/About/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Case Study</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/Case-Study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/Case-Study/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/Machine-Learning/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/Machine-Learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI/ML</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/AI/ML/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/AI/ML/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lập Trình Web</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-web/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-web/</guid>
       <description></description>
     </item>
     <item>
       <title>Lập Trình Mạng</title>
-      <link>http://localhost:1313/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
-      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/categories/l%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</guid>
+      <link>http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/NetworkingPrograming/categories/Web-Development/</link>
+      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/Web-Development/</guid>
       <description></description>
     </item>
     <item>
       <title>Góc Nhìn</title>
-      <link>http://localhost:1313/NetworkingPrograming/categories/g%C3%B3c-nh%C3%ACn/</link>
+      <link>http://localhost:1313/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/categories/g%C3%B3c-nh%C3%ACn/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/</guid>
       <description></description>
     </item>
     <item>
       <title>Trí Tuệ Nhân Tạo</title>
-      <link>http://localhost:1313/NetworkingPrograming/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
+      <link>http://localhost:1313/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/categories/tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</guid>
       <description></description>
     </item>
   </channel>

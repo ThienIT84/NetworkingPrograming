@@ -5,6 +5,28 @@
 (function () {
     'use strict';
 
+    // Current Language
+    const currentLang = document.documentElement.lang || 'vi';
+
+    const I18N = {
+        vi: {
+            refreshing: 'Đang làm mới...',
+            refresh: '🔄 Làm mới',
+            enabled: 'Đã bật ✓',
+            disabled: 'Đã tắt ✗',
+            unknown: 'không xác định'
+        },
+        en: {
+            refreshing: 'Refreshing...',
+            refresh: '🔄 Refresh Metrics',
+            enabled: 'Enabled ✓',
+            disabled: 'Disabled ✗',
+            unknown: 'unknown'
+        }
+    };
+
+    const STRINGS = I18N[currentLang] || I18N.en;
+
     // Wait for DOM to be ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initNetworkTools);
@@ -183,7 +205,7 @@
             // Connection type
             const connectionType = navigator.connection
                 ? navigator.connection.effectiveType
-                : 'unknown';
+                : STRINGS.unknown;
             updateElement('connection-type', connectionType.toUpperCase());
 
             // Transfer encoding (from headers or default)
@@ -191,7 +213,7 @@
 
             // HTTPS status
             const isSecure = window.location.protocol === 'https:';
-            updateElement('https-status', isSecure ? 'Enabled ✓' : 'Disabled ✗');
+            updateElement('https-status', isSecure ? STRINGS.enabled : STRINGS.disabled);
 
         } catch (error) {
             console.error('Error analyzing protocol:', error);
@@ -249,7 +271,7 @@
         // Show loading state
         const btn = document.getElementById('refresh-metrics');
         if (btn) {
-            btn.textContent = 'Refreshing...';
+            btn.textContent = STRINGS.refreshing;
             btn.disabled = true;
         }
 
@@ -260,15 +282,13 @@
             analyzeProtocol();
 
             if (btn) {
-                btn.textContent = '🔄 Refresh Metrics';
+                btn.textContent = STRINGS.refresh;
                 btn.disabled = false;
             }
         }, 500);
     }
 
-    // =====================================================
-    // EDUCATIONAL TOOLTIPS
-    // =====================================================
+    // Initialize tooltips (same as before)
     function initTooltips() {
         const tooltips = document.querySelectorAll('.metric-tooltip');
         tooltips.forEach(tooltip => {
@@ -293,7 +313,6 @@
         }
     }
 
-    // Initialize tooltips when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initTooltips);
     } else {

@@ -2,12 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/deep-learning/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/</link>
     <description>Recent content in Deep Learning on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 16:54:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
+      <description>&lt;h2 id=&#34;-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường&#34;&gt;🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &amp;ldquo;Chiến Trường&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Con này béo như lợn, nhìn tởm đm&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Thằng bê đê tởm lợm chết đi cho rồi&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Đây không phải là những trường hợp hiếm. Theo nghiên cứu của chúng tôi, &lt;strong&gt;cứ 3 bình luận trên mạng xã hội Việt Nam thì có 1 bình luận chứa ngôn từ độc hại&lt;/strong&gt;. Con số này đáng báo động!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
+  <meta property="og:title" content="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+  <meta property="og:description" content="Câu chuyện về việc xây dựng MindMapNote - hệ thống cho phép bạn &#39;chat&#39; với tài liệu PDF như đang chat với người thật. Từ ý tưởng đến thực tế, kể bằng ngôn ngữ con người, không phải robot!">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-12-27T16:30:00+07:00">
+    <meta property="article:modified_time" content="2025-12-27T16:30:00+07:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="RAG">
+    <meta property="article:tag" content="Chatbot">
+    <meta property="article:tag" content="Case Study">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+  <meta name="twitter:description" content="Câu chuyện về việc xây dựng MindMapNote - hệ thống cho phép bạn &#39;chat&#39; với tài liệu PDF như đang chat với người thật. Từ ý tưởng đến thực tế, kể bằng ngôn ngữ con người, không phải robot!">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #1e40af;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #2563eb;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e2e8f0;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #8b5cf6;
+        --background-color-dark: #0f172a;
+        --secondary-background-color-dark: #1e293b;
+        --primary-color-dark: #06b6d4;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Câu chuyện về việc xây dựng MindMapNote - hệ thống cho phép bạn &#39;chat&#39; với tài liệu PDF như đang chat với người thật. Từ ý tưởng đến thực tế, kể bằng ngôn ngữ con người, không phải robot!">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
+
+
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+
+
+    
+    
+
+    <title>
+Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System | Trần Thanh Thiện - AI Engineer Portfolio
+
+    </title>
+</head>
+
+<body class="light">
+    
+    
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
+                
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Thien.Dev
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Kinh nghiệm
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#education"
+                            aria-label="education">
+                            Học vấn
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
+                            aria-label="projects">
+                            Dự án Nổi bật
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
+                            aria-label="contact">
+                            Liên hệ với tôi
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#about" title="">
+                            
+                            Hồ sơ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/blogs/" title="">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/contact/" title="">
+                            
+                            Liên hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System</h1>
+            <div class="text-center">
+              
+                Trần Thanh Thiện
+                <small>|</small>
+              
+              27/12/2025
+
+              
+              <span id="readingTime">
+                phút đọc
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/NetworkingPrograming/images/projects/RAG_chat-app.jpg" alt="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="-vấn-đề-tôi-lười-đọc-sách">🤔 Vấn Đề: Tôi Lười Đọc Sách</h2>
+<p>Hãy thành thật đi - ai cũng từng gặp tình huống này:</p>
+<blockquote>
+<p><strong>Giảng viên:</strong> &ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&rdquo;<br>
+<strong>Tôi:</strong> &ldquo;Ơ&hellip; 60 trang? Chắc đọc lướt thôi&hellip;&rdquo;<br>
+<strong>Kết quả:</strong> Thi xong không nhớ gì 😅</p>
+</blockquote>
+<p>Rồi một ngày, tôi nghĩ: <strong>&ldquo;Sao không làm một con AI đọc hộ mình?&rdquo;</strong></p>
+<p>Không phải AI tóm tắt kiểu &ldquo;copy-paste 3 câu đầu&rdquo; - mà là AI <strong>thực sự hiểu</strong> nội dung, có thể <strong>trả lời câu hỏi cụ thể</strong>, và quan trọng nhất: <strong>trích dẫn nguồn</strong> để tôi biết nó không bịa!</p>
+<p>Và thế là <strong>MindMapNote</strong> ra đời.</p>
+<hr>
+<h2 id="-ý-tưởng-chatgpt-riêng-cho-tài-liệu">💡 Ý Tưởng: &ldquo;ChatGPT Riêng&rdquo; Cho Tài Liệu</h2>
+<p>Bạn biết ChatGPT không? Bạn hỏi gì nó cũng trả lời. Nhưng có 2 vấn đề:</p>
+<ol>
+<li><strong>Nó không biết tài liệu của bạn</strong> - Bạn upload PDF lên, nó không đọc được</li>
+<li><strong>Nó hay bịa</strong> - Hỏi về paper khoa học, nó trả lời nghe có vẻ đúng nhưng&hellip; sai bét!</li>
+</ol>
+<p><strong>Solution:</strong> Xây dựng một hệ thống:</p>
+<ul>
+<li>Upload PDF → AI đọc và &ldquo;ghi nhớ&rdquo;</li>
+<li>Hỏi câu hỏi → AI tìm trong tài liệu → Trả lời + Trích dẫn nguồn</li>
+</ul>
+<p>Nghe đơn giản nhỉ? Nhưng thực tế&hellip;</p>
+<hr>
+<h2 id="-thử-nghiệm-đầu-tiên-thất-bại-toàn-tập">😅 Thử Nghiệm Đầu Tiên: Thất Bại Toàn Tập</h2>
+<h3 id="attempt-1-cho-chatgpt-đọc-toàn-bộ-pdf">Attempt #1: &ldquo;Cho ChatGPT đọc toàn bộ PDF&rdquo;</h3>
+<p><strong>Ý tưởng:</strong> Copy toàn bộ nội dung PDF, paste vào ChatGPT.</p>
+<p><strong>Kết quả:</strong></p>
+<pre tabindex="0"><code>❌ Error: Maximum context length exceeded
+</code></pre><p><strong>Lý do:</strong> ChatGPT chỉ nhớ được ~4000 từ. PDF của tôi có 15,000 từ. Fail!</p>
+<h3 id="attempt-2-tóm-tắt-pdf-rồi-hỏi">Attempt #2: &ldquo;Tóm tắt PDF rồi hỏi&rdquo;</h3>
+<p><strong>Ý tưởng:</strong> Dùng AI tóm tắt PDF thành 1 trang, rồi hỏi dựa trên tóm tắt.</p>
+<p><strong>Kết quả:</strong> Mất hết chi tiết quan trọng. Hỏi về công thức toán → AI không biết vì đã bị tóm tắt mất.</p>
+<h3 id="attempt-3-google-mỗi-câu-hỏi">Attempt #3: &ldquo;Google mỗi câu hỏi&rdquo;</h3>
+<p><strong>Ý tưởng:</strong> Thôi đọc thủ công, Ctrl+F tìm từ khóa.</p>
+<p><strong>Kết quả:</strong> Mất 30 phút để tìm 1 câu trả lời. Không scale!</p>
+<hr>
+<h2 id="-giải-pháp-rag-retrieval-augmented-generation">🎯 Giải Pháp: RAG (Retrieval-Augmented Generation)</h2>
+<p>Sau 3 lần fail, tôi tìm ra <strong>RAG</strong> - một kỹ thuật AI thông minh:</p>
+<h3 id="cách-hoạt-động-giải-thích-cho-người-không-biết-code">Cách Hoạt Động (Giải Thích Cho Người Không Biết Code)</h3>
+<p>Hãy tưởng tượng bạn đang thi vấn đáp:</p>
+<p><strong>Cách thông thường (ChatGPT):</strong></p>
+<pre tabindex="0"><code>Bạn: &#34;Câu hỏi 1: TCP là gì?&#34;
+ChatGPT: *Nhớ lại kiến thức đã học* → Trả lời
+</code></pre><p>→ Vấn đề: Nếu không học, không trả lời được!</p>
+<p><strong>Cách RAG (Thông minh hơn):</strong></p>
+<pre tabindex="0"><code>Bạn: &#34;Câu hỏi 1: TCP là gì?&#34;
+AI: *Lật sách* → Tìm trang nói về TCP → Đọc → Trả lời
+</code></pre><p>→ Lợi ích: Luôn có nguồn tham khảo, không bịa!</p>
+<h3 id="quy-trình-3-bước">Quy Trình 3 Bước</h3>
+<p><strong>Bước 1: &ldquo;Ghi Nhớ&rdquo; Tài Liệu</strong></p>
+<ul>
+<li>Upload PDF</li>
+<li>AI chia nhỏ thành từng đoạn (chunks)</li>
+<li>Chuyển mỗi đoạn thành &ldquo;dấu vân tay số&rdquo; (vector embedding)</li>
+<li>Lưu vào database</li>
+</ul>
+<p><strong>Bước 2: &ldquo;Tìm Kiếm Thông Minh&rdquo;</strong></p>
+<ul>
+<li>Bạn hỏi: &ldquo;TCP handshake là gì?&rdquo;</li>
+<li>AI tìm 5 đoạn văn <strong>liên quan nhất</strong> trong tài liệu</li>
+<li>Không phải tìm từ khóa đơn thuần, mà tìm theo <strong>ý nghĩa</strong></li>
+</ul>
+<p><strong>Bước 3: &ldquo;Trả Lời Có Căn Cứ&rdquo;</strong></p>
+<ul>
+<li>AI đọc 5 đoạn văn đó</li>
+<li>Tổng hợp thành câu trả lời</li>
+<li>Kèm theo: &ldquo;Thông tin từ trang 15, đoạn 3&rdquo;</li>
+</ul>
+<hr>
+<h2 id="-xây-dựng-hệ-thống">🏗️ Xây Dựng Hệ Thống</h2>
+<h3 id="tech-stack-không-sợ-giải-thích-dễ-hiểu">Tech Stack (Không Sợ, Giải Thích Dễ Hiểu!)</h3>
+<p><strong>Frontend (Giao diện):</strong></p>
+<ul>
+<li>React - Để làm web đẹp</li>
+<li>TypeScript - Để code ít bug hơn</li>
+</ul>
+<p><strong>Backend (Bộ não):</strong></p>
+<ul>
+<li>Python + FastAPI - Xử lý logic</li>
+<li>Sentence Transformers - Chuyển text thành số</li>
+<li>pgvector - Database lưu &ldquo;dấu vân tay&rdquo; của text</li>
+</ul>
+<p><strong>AI Models:</strong></p>
+<ul>
+<li>Google Gemini - Trả lời câu hỏi (FREE!)</li>
+<li>Ollama - Chạy AI local (riêng tư, không tốn tiền)</li>
+</ul>
+<h3 id="kiến-trúc-hệ-thống-vẽ-bằng-emoji">Kiến Trúc Hệ Thống (Vẽ Bằng Emoji!)</h3>
+<pre tabindex="0"><code>📱 User Interface (React)
+    ↓ &#34;Hỏi: TCP là gì?&#34;
+    
+🧠 Backend (Python)
+    ↓ Tìm kiếm trong database
+    
+💾 Vector Database (Supabase)
+    ↓ Trả về 5 đoạn văn liên quan
+    
+🤖 AI (Gemini/Ollama)
+    ↓ Đọc + Tổng hợp
+    
+💬 Câu trả lời + Nguồn trích dẫn
+</code></pre><hr>
+<h2 id="-features-xịn-xò">🎨 Features &ldquo;Xịn Xò&rdquo;</h2>
+<h3 id="1-hybrid-search-tìm-cả-trong-lẫn-ngoài">1. Hybrid Search: Tìm Cả Trong Lẫn Ngoài</h3>
+<p>Đôi khi tài liệu của bạn không đủ thông tin. Ví dụ:</p>
+<ul>
+<li>Bạn hỏi: &ldquo;Tin tức AI mới nhất 2025?&rdquo;</li>
+<li>Tài liệu của bạn: Viết năm 2023</li>
+</ul>
+<p><strong>Solution:</strong> Tìm kiếm kết hợp:</p>
+<ul>
+<li><strong>Internal</strong>: Trong tài liệu của bạn</li>
+<li><strong>External</strong>: Google search real-time (qua Tavily API)</li>
+</ul>
+<p>Kết quả: Vừa có thông tin từ sách, vừa có tin tức mới nhất!</p>
+<h3 id="2-multi-llm-chọn-ai-theo-ý-thích">2. Multi-LLM: Chọn AI Theo Ý Thích</h3>
+<p>Giống như chọn nhà hàng ăn:</p>
+<ul>
+<li><strong>Gemini</strong> (Google): Miễn phí, nhanh, tốt cho sinh viên</li>
+<li><strong>GPT-4</strong> (OpenAI): Trả tiền, thông minh hơn, cho dân pro</li>
+<li><strong>Claude</strong> (Anthropic): Giỏi phân tích, cho researcher</li>
+<li><strong>Ollama</strong> (Local): Chạy trên máy, riêng tư 100%</li>
+</ul>
+<h3 id="3-source-citation-không-bao-giờ-bịa">3. Source Citation: Không Bao Giờ Bịa</h3>
+<p>Mỗi câu trả lời đều kèm:</p>
+<ul>
+<li>📄 Tên file PDF</li>
+<li>📖 Số trang</li>
+<li>📊 Độ chính xác (similarity score)</li>
+</ul>
+<p>Ví dụ:</p>
+<blockquote>
+<p><strong>Câu hỏi:</strong> &ldquo;TCP 3-way handshake là gì?&rdquo;<br>
+<strong>Trả lời:</strong> &ldquo;TCP 3-way handshake là quá trình thiết lập kết nối gồm 3 bước: SYN, SYN-ACK, ACK&hellip;&rdquo;<br>
+<strong>Nguồn:</strong> <code>networking-textbook.pdf</code>, trang 45, độ chính xác 92%</p>
+</blockquote>
+<hr>
+<h2 id="-những-lỗi-hài-hước-khi-làm">😂 Những Lỗi &ldquo;Hài Hước&rdquo; Khi Làm</h2>
+<h3 id="bug-1-ai-trả-lời-tiếng-trung">Bug #1: AI Trả Lời&hellip; Tiếng Trung</h3>
+<p><strong>Tình huống:</strong> Upload tài liệu tiếng Việt, hỏi tiếng Việt, AI trả lời tiếng Trung!</p>
+<p><strong>Nguyên nhân:</strong> Model embedding không hỗ trợ tiếng Việt tốt.</p>
+<p><strong>Fix:</strong> Đổi sang model <code>multilingual-mpnet</code> - Hỗ trợ 50+ ngôn ngữ, kể cả tiếng Việt!</p>
+<h3 id="bug-2-tìm-kiếm-quá-thông-minh">Bug #2: &ldquo;Tìm Kiếm Quá Thông Minh&rdquo;</h3>
+<p><strong>Tình huống:</strong></p>
+<ul>
+<li>Hỏi: &ldquo;TCP là gì?&rdquo;</li>
+<li>AI trả lời về&hellip; &ldquo;UDP&rdquo;</li>
+</ul>
+<p><strong>Nguyên nhân:</strong> Vector search tìm theo &ldquo;ý nghĩa&rdquo;, nên thấy TCP và UDP giống nhau (đều là giao thức mạng).</p>
+<p><strong>Fix:</strong> Tăng số lượng chunks từ 3 lên 5, để có nhiều context hơn.</p>
+<h3 id="bug-3-server-crash-vì-quá-nhanh">Bug #3: Server Crash Vì&hellip; Quá Nhanh</h3>
+<p><strong>Tình huống:</strong> Test với 100 requests cùng lúc → Server chết!</p>
+<p><strong>Nguyên nhân:</strong> Model embedding load 100 lần → Hết RAM.</p>
+<p><strong>Fix:</strong> Load model 1 lần duy nhất khi start server, reuse cho mọi requests.</p>
+<hr>
+<h2 id="-kết-quả-thực-tế">📊 Kết Quả Thực Tế</h2>
+<h3 id="performance">Performance</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Thao tác</th>
+          <th>Thời gian</th>
+          <th>Cảm nhận</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Upload PDF</td>
+          <td>15-20s</td>
+          <td>☕ Uống nước đợi</td>
+      </tr>
+      <tr>
+          <td>Tìm kiếm</td>
+          <td>80ms</td>
+          <td>⚡ Nhanh như chớp</td>
+      </tr>
+      <tr>
+          <td>Trả lời AI</td>
+          <td>2-3s</td>
+          <td>🚀 Chấp nhận được</td>
+      </tr>
+      <tr>
+          <td><strong>Tổng cộng</strong></td>
+          <td><strong>~3s</strong></td>
+          <td>😊 Hài lòng</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="so-sánh-với-cách-cũ">So Sánh Với Cách Cũ</h3>
+<p><strong>Trước khi có RAG:</strong></p>
+<ul>
+<li>Đọc 1 paper: 2-3 giờ</li>
+<li>Tìm 1 thông tin: 10-15 phút</li>
+<li>Nhớ được: 30% sau 1 tuần</li>
+</ul>
+<p><strong>Sau khi có RAG:</strong></p>
+<ul>
+<li>&ldquo;Đọc&rdquo; 1 paper: 20 giây (upload)</li>
+<li>Tìm 1 thông tin: 3 giây</li>
+<li>Nhớ được: 100% (vì AI nhớ hộ!)</li>
+</ul>
+<hr>
+<h2 id="-bài-học-rút-ra">🎓 Bài Học Rút Ra</h2>
+<h3 id="1-perfect-is-the-enemy-of-good">1. &ldquo;Perfect is the enemy of good&rdquo;</h3>
+<p>Ban đầu tôi muốn làm &ldquo;siêu phẩm&rdquo;:</p>
+<ul>
+<li>Support mọi file format (PDF, DOCX, PPT, &hellip;)</li>
+<li>AI siêu thông minh</li>
+<li>UI siêu đẹp</li>
+</ul>
+<p><strong>Kết quả:</strong> Mất 2 tuần mà chưa làm được gì!</p>
+<p><strong>Bài học:</strong> Làm MVP (Minimum Viable Product) trước:</p>
+<ul>
+<li>Chỉ support PDF</li>
+<li>Dùng AI free (Gemini)</li>
+<li>UI đơn giản</li>
+</ul>
+<p>Sau đó mới cải tiến dần!</p>
+<h3 id="2-user-feedback--your-assumptions">2. &ldquo;User feedback &gt; Your assumptions&rdquo;</h3>
+<p>Tôi nghĩ user sẽ thích:</p>
+<ul>
+<li>Nhiều options để customize</li>
+<li>Nhiều AI models để chọn</li>
+<li>Nhiều settings phức tạp</li>
+</ul>
+<p><strong>Thực tế:</strong> User chỉ cần:</p>
+<ul>
+<li>Upload PDF</li>
+<li>Hỏi câu hỏi</li>
+<li>Nhận câu trả lời</li>
+</ul>
+<p><strong>Bài học:</strong> Làm đơn giản, dễ dùng. Đừng over-engineer!</p>
+<h3 id="3-open-source-saves-time">3. &ldquo;Open source saves time&rdquo;</h3>
+<p>Thay vì tự code mọi thứ từ đầu:</p>
+<ul>
+<li>Dùng Supabase → Tiết kiệm 1 tháng làm backend</li>
+<li>Dùng LangChain → Tiết kiệm 2 tuần làm RAG pipeline</li>
+<li>Dùng shadcn/ui → Tiết kiệm 1 tuần làm UI</li>
+</ul>
+<p><strong>Bài học:</strong> Đừng ngại dùng thư viện/framework. Thời gian là vàng!</p>
+<hr>
+<h2 id="-tương-lai">🚀 Tương Lai</h2>
+<h3 id="những-gì-sẽ-làm-tiếp">Những Gì Sẽ Làm Tiếp</h3>
+<p><strong>Short-term (1-2 tháng):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Support DOCX, TXT files</li>
+<li><input disabled="" type="checkbox"> Conversation memory (nhớ câu hỏi trước)</li>
+<li><input disabled="" type="checkbox"> Export chat history to PDF</li>
+</ul>
+<p><strong>Mid-term (3-6 tháng):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Mobile app (React Native)</li>
+<li><input disabled="" type="checkbox"> Collaborative features (share docs với team)</li>
+<li><input disabled="" type="checkbox"> Analytics dashboard</li>
+</ul>
+<p><strong>Long-term (1 năm):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> AI tự động tóm tắt tài liệu</li>
+<li><input disabled="" type="checkbox"> Flashcards tự động từ PDF</li>
+<li><input disabled="" type="checkbox"> Integration với Notion, Google Drive</li>
+</ul>
+<hr>
+<h2 id="-kết-luận">💬 Kết Luận</h2>
+<p>Xây dựng RAG system không khó như tưởng tượng. Quan trọng là:</p>
+<ol>
+<li><strong>Hiểu vấn đề thực tế</strong> - Đừng làm tech vì tech</li>
+<li><strong>Start small</strong> - MVP trước, hoàn thiện sau</li>
+<li><strong>Leverage open source</strong> - Đứng trên vai người khổng lồ</li>
+<li><strong>Listen to users</strong> - Họ biết họ cần gì hơn bạn</li>
+</ol>
+<p>Và quan trọng nhất: <strong>Đừng sợ fail!</strong> Tôi đã fail 3 lần trước khi tìm ra RAG. Mỗi lần fail là một bài học.</p>
+<hr>
+<h2 id="-bonus-demo-thực-tế">🎁 Bonus: Demo Thực Tế</h2>
+<p>Muốn thử? Đây là flow thực tế:</p>
+<p><strong>1. Upload PDF</strong></p>
+<pre tabindex="0"><code>User: *Kéo thả file networking-textbook.pdf*
+System: ✅ Đã upload! Đang xử lý... (15s)
+System: ✅ Hoàn tất! Bạn có thể hỏi câu hỏi rồi.
+</code></pre><p><strong>2. Hỏi câu hỏi</strong></p>
+<pre tabindex="0"><code>User: &#34;TCP 3-way handshake hoạt động như thế nào?&#34;
+
+System: *Đang tìm kiếm...* (80ms)
+System: *Đang tạo câu trả lời...* (2s)
+
+AI: &#34;TCP 3-way handshake là quá trình thiết lập kết nối gồm 3 bước:
+
+1. **SYN**: Client gửi gói tin SYN đến Server
+2. **SYN-ACK**: Server phản hồi SYN-ACK
+3. **ACK**: Client gửi ACK xác nhận
+
+Sau 3 bước này, kết nối TCP được thiết lập.&#34;
+
+📚 Nguồn: networking-textbook.pdf, trang 45 (độ chính xác: 94%)
+</code></pre><p><strong>3. Hỏi tiếp</strong></p>
+<pre tabindex="0"><code>User: &#34;Tại sao cần 3 bước, không phải 2 bước?&#34;
+
+AI: &#34;Cần 3 bước để đảm bảo cả Client và Server đều:
+- Xác nhận được khả năng gửi dữ liệu
+- Xác nhận được khả năng nhận dữ liệu
+- Đồng bộ sequence numbers
+
+Nếu chỉ 2 bước, Server không biết Client có nhận được SYN-ACK không.&#34;
+
+📚 Nguồn: networking-textbook.pdf, trang 46 (độ chính xác: 91%)
+</code></pre><hr>
+<h2 id="-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</h2>
+<p><strong>Cho người mới bắt đầu:</strong></p>
+<ul>
+<li><a href="https://youtu.be/Sg-jLHRTufQ?si=JMNiKojbKqGkq0J3">RAG for Beginners</a> - Video giải thích dễ hiểu</li>
+<li><a href="https://python.langchain.com/">LangChain Crash Course</a> - Học RAG trong 1 giờ</li>
+</ul>
+<p><strong>Cho người muốn đi sâu:</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2005.11401">RAG Paper (Lewis et al., 2020)</a> - Paper gốc về RAG</li>
+<li><a href="https://github.com/pgvector/pgvector">pgvector Documentation</a> - Vector database</li>
+</ul>
+<p><strong>Community:</strong></p>
+<ul>
+<li><a href="https://congdongai.vn/">r/MachineLearning</a> - Hỏi đáp về AI</li>
+<li><a href="https://discord.gg/langchain">LangChain Discord</a> - Cộng đồng RAG</li>
+</ul>
+<hr>
+<p><em>Bài viết được viết bởi Trần Thanh Thiện - Một sinh viên lười đọc sách, nhưng thích làm AI đọc hộ 😄</em></p>
+<p><em>📧 Có câu hỏi? Comment bên dưới hoặc DM mình!</em><br>
+<em>⭐ Nếu thấy hay, cho mình một star trên GitHub nhé!</em></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Mục lục
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-vấn-đề-tôi-lười-đọc-sách">🤔 Vấn Đề: Tôi Lười Đọc Sách</a></li>
+    <li><a href="#-ý-tưởng-chatgpt-riêng-cho-tài-liệu">💡 Ý Tưởng: &ldquo;ChatGPT Riêng&rdquo; Cho Tài Liệu</a></li>
+    <li><a href="#-thử-nghiệm-đầu-tiên-thất-bại-toàn-tập">😅 Thử Nghiệm Đầu Tiên: Thất Bại Toàn Tập</a>
+      <ul>
+        <li><a href="#attempt-1-cho-chatgpt-đọc-toàn-bộ-pdf">Attempt #1: &ldquo;Cho ChatGPT đọc toàn bộ PDF&rdquo;</a></li>
+        <li><a href="#attempt-2-tóm-tắt-pdf-rồi-hỏi">Attempt #2: &ldquo;Tóm tắt PDF rồi hỏi&rdquo;</a></li>
+        <li><a href="#attempt-3-google-mỗi-câu-hỏi">Attempt #3: &ldquo;Google mỗi câu hỏi&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#-giải-pháp-rag-retrieval-augmented-generation">🎯 Giải Pháp: RAG (Retrieval-Augmented Generation)</a>
+      <ul>
+        <li><a href="#cách-hoạt-động-giải-thích-cho-người-không-biết-code">Cách Hoạt Động (Giải Thích Cho Người Không Biết Code)</a></li>
+        <li><a href="#quy-trình-3-bước">Quy Trình 3 Bước</a></li>
+      </ul>
+    </li>
+    <li><a href="#-xây-dựng-hệ-thống">🏗️ Xây Dựng Hệ Thống</a>
+      <ul>
+        <li><a href="#tech-stack-không-sợ-giải-thích-dễ-hiểu">Tech Stack (Không Sợ, Giải Thích Dễ Hiểu!)</a></li>
+        <li><a href="#kiến-trúc-hệ-thống-vẽ-bằng-emoji">Kiến Trúc Hệ Thống (Vẽ Bằng Emoji!)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-features-xịn-xò">🎨 Features &ldquo;Xịn Xò&rdquo;</a>
+      <ul>
+        <li><a href="#1-hybrid-search-tìm-cả-trong-lẫn-ngoài">1. Hybrid Search: Tìm Cả Trong Lẫn Ngoài</a></li>
+        <li><a href="#2-multi-llm-chọn-ai-theo-ý-thích">2. Multi-LLM: Chọn AI Theo Ý Thích</a></li>
+        <li><a href="#3-source-citation-không-bao-giờ-bịa">3. Source Citation: Không Bao Giờ Bịa</a></li>
+      </ul>
+    </li>
+    <li><a href="#-những-lỗi-hài-hước-khi-làm">😂 Những Lỗi &ldquo;Hài Hước&rdquo; Khi Làm</a>
+      <ul>
+        <li><a href="#bug-1-ai-trả-lời-tiếng-trung">Bug #1: AI Trả Lời&hellip; Tiếng Trung</a></li>
+        <li><a href="#bug-2-tìm-kiếm-quá-thông-minh">Bug #2: &ldquo;Tìm Kiếm Quá Thông Minh&rdquo;</a></li>
+        <li><a href="#bug-3-server-crash-vì-quá-nhanh">Bug #3: Server Crash Vì&hellip; Quá Nhanh</a></li>
+      </ul>
+    </li>
+    <li><a href="#-kết-quả-thực-tế">📊 Kết Quả Thực Tế</a>
+      <ul>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#so-sánh-với-cách-cũ">So Sánh Với Cách Cũ</a></li>
+      </ul>
+    </li>
+    <li><a href="#-bài-học-rút-ra">🎓 Bài Học Rút Ra</a>
+      <ul>
+        <li><a href="#1-perfect-is-the-enemy-of-good">1. &ldquo;Perfect is the enemy of good&rdquo;</a></li>
+        <li><a href="#2-user-feedback--your-assumptions">2. &ldquo;User feedback &gt; Your assumptions&rdquo;</a></li>
+        <li><a href="#3-open-source-saves-time">3. &ldquo;Open source saves time&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tương-lai">🚀 Tương Lai</a>
+      <ul>
+        <li><a href="#những-gì-sẽ-làm-tiếp">Những Gì Sẽ Làm Tiếp</a></li>
+      </ul>
+    </li>
+    <li><a href="#-kết-luận">💬 Kết Luận</a></li>
+    <li><a href="#-bonus-demo-thực-tế">🎁 Bonus: Demo Thực Tế</a></li>
+    <li><a href="#-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Python"
+                target="_blank"
+              >Python</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/AI"
+                target="_blank"
+              >AI</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/RAG"
+                target="_blank"
+              >RAG</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Chatbot"
+                target="_blank"
+              >Chatbot</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Case-Study"
+                target="_blank"
+              >Case Study</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=C%c3%a2u%20chuy%e1%bb%87n%20v%e1%bb%81%20vi%e1%bb%87c%20x%c3%a2y%20d%e1%bb%b1ng%20MindMapNote%20-%20h%e1%bb%87%20th%e1%bb%91ng%20cho%20ph%c3%a9p%20b%e1%ba%a1n%20%27chat%27%20v%e1%bb%9bi%20t%c3%a0i%20li%e1%bb%87u%20PDF%20nh%c6%b0%20%c4%91ang%20chat%20v%e1%bb%9bi%20ng%c6%b0%e1%bb%9di%20th%e1%ba%adt.%20T%e1%bb%ab%20%c3%bd%20t%c6%b0%e1%bb%9fng%20%c4%91%e1%ba%bfn%20th%e1%bb%b1c%20t%e1%ba%bf%2c%20k%e1%bb%83%20b%e1%ba%b1ng%20ng%c3%b4n%20ng%e1%bb%af%20con%20ng%c6%b0%e1%bb%9di%2c%20kh%c3%b4ng%20ph%e1%ba%a3i%20robot%21 http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2frag-system-case-study%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='https://twitter.com/share?text=L%c3%a0m%20Sao%20%c4%91%e1%bb%83%20%27Chat%27%20v%e1%bb%9bi%20PDF%3f%20-%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20RAG%20System&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2frag-system-case-study%2f&hashtags=Python%2cAI%2cRAG%2cChatbot%2cCase%20Study'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=L%c3%a0m%20Sao%20%c4%91%e1%bb%83%20%27Chat%27%20v%e1%bb%9bi%20PDF%3f%20-%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20RAG%20System: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2frag-system-case-study%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=L%c3%a0m%20Sao%20%c4%91%e1%bb%83%20%27Chat%27%20v%e1%bb%9bi%20PDF%3f%20-%20H%c3%a0nh%20Tr%c3%acnh%20X%c3%a2y%20D%e1%bb%b1ng%20RAG%20System&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2frag-system-case-study%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
+
+
+
+    </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Bài viết mới
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/safesense-vi-banner.jpg" class="card-img-top" alt="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">SafeSense-Vi: Hành Trình …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường">🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &ldquo;Chiến Trường&rdquo;</h2>
+<p>Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?</p>
+<blockquote>
+<p><em>&ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&rdquo;</em><br>
+<em>&ldquo;Con này béo như lợn, nhìn tởm đm&rdquo;</em><br>
+<em>&ldquo;Thằng bê đê tởm lợm chết đi cho rồi&rdquo;</em></p>
+</blockquote>
+<p>Đây …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/RAG_chat-app.jpg" class="card-img-top" alt="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">Làm Sao để &#39;Chat&#39; với …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-vấn-đề-tôi-lười-đọc-sách">🤔 Vấn Đề: Tôi Lười Đọc Sách</h2>
+<p>Hãy thành thật đi - ai cũng từng gặp tình huống này:</p>
+<blockquote>
+<p><strong>Giảng viên:</strong> &ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&rdquo;<br>
+<strong>Tôi:</strong> &ldquo;Ơ&hellip; 60 trang? Chắc đọc lướt thôi&hellip;&rdquo;<br>
+<strong>Kết quả:</strong> Thi xong không nhớ gì 😅</p>
+</blockquote>
+<p>Rồi một ngày, tôi …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/prepro-toeic.jpg" class="card-img-top" alt="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">Từ Ý Tưởng Đến Sản Phẩm: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-vấn-đề-cần-giải-quyết">🎬 Mở Đầu: Vấn Đề Cần Giải Quyết</h2>
+<p>Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì <strong>quá nhiều tài liệu không có hệ thống</strong>. Học sinh thường gặp phải:</p>
+<ul>
+<li>📚 <strong>Ngân hàng câu hỏi rời rạc</strong>: Không biết nên luyện gì, luyện như thế nào</li>
+<li>🔄 <strong>Thiếu phương pháp ôn tập khoa học</strong>: Học xong …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/ThienIT84" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/thanh-thi%E1%BB%87n-tr%E1%BA%A7n-379623301/" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+    <a href="https://www.facebook.com/thanh.thien.698912" target="_blank" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><style>
+     
+    .lang-switch-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .lang-switch-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lang-switch-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-switch-btn.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        pointer-events: none;
+    }
+
+    .lang-switch-btn img {
+        width: 24px;
+        height: auto;
+    }
+
+     
+    .lang-switch-btn::before {
+        content: attr(data-lang);
+        position: absolute;
+        right: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .lang-switch-btn:hover::before {
+        opacity: 1;
+    }
+
+     
+    @media (prefers-color-scheme: dark) {
+        .lang-switch-btn {
+            background: #1e293b;
+            color: #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-switch-btn.active {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+        }
+    }
+</style>
+
+<div class="lang-switch-container">
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="lang-switch-btn active"
+        data-lang="Tiếng Việt">
+        VI
+    </a>
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="/NetworkingPrograming/en/" class="lang-switch-btn "
+        data-lang="English">
+        EN
+    </a>
+    
+</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="search-content" class="py-2">
+        <div class="container" id="search-results"></div>
+    </section>
+</body>
+
+</html>

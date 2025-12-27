@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lập Trình Web on Trần Thanh Thiện - AI Engineer Portfolio</title>
+    <link>http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-web/</link>
+    <description>Recent content in Lập Trình Web on Trần Thanh Thiện - AI Engineer Portfolio</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 16:30:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/NetworkingPrograming/categories/L%E1%BA%ADp-tr%C3%ACnh-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</guid>
+      <description>&lt;h2 id=&#34;-vấn-đề-tôi-lười-đọc-sách&#34;&gt;🤔 Vấn Đề: Tôi Lười Đọc Sách&lt;/h2&gt;&#xA;&lt;p&gt;Hãy thành thật đi - ai cũng từng gặp tình huống này:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Giảng viên:&lt;/strong&gt; &amp;ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Tôi:&lt;/strong&gt; &amp;ldquo;Ơ&amp;hellip; 60 trang? Chắc đọc lướt thôi&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Kết quả:&lt;/strong&gt; Thi xong không nhớ gì 😅&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Rồi một ngày, tôi nghĩ: &lt;strong&gt;&amp;ldquo;Sao không làm một con AI đọc hộ mình?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Không phải AI tóm tắt kiểu &amp;ldquo;copy-paste 3 câu đầu&amp;rdquo; - mà là AI &lt;strong&gt;thực sự hiểu&lt;/strong&gt; nội dung, có thể &lt;strong&gt;trả lời câu hỏi cụ thể&lt;/strong&gt;, và quan trọng nhất: &lt;strong&gt;trích dẫn nguồn&lt;/strong&gt; để tôi biết nó không bịa!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</guid>
+      <description>&lt;h2 id=&#34;-mở-đầu-vấn-đề-cần-giải-quyết&#34;&gt;🎬 Mở Đầu: Vấn Đề Cần Giải Quyết&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì &lt;strong&gt;quá nhiều tài liệu không có hệ thống&lt;/strong&gt;. Học sinh thường gặp phải:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📚 &lt;strong&gt;Ngân hàng câu hỏi rời rạc&lt;/strong&gt;: Không biết nên luyện gì, luyện như thế nào&lt;/li&gt;&#xA;&lt;li&gt;🔄 &lt;strong&gt;Thiếu phương pháp ôn tập khoa học&lt;/strong&gt;: Học xong quên, quên rồi học lại&lt;/li&gt;&#xA;&lt;li&gt;👨‍🏫 &lt;strong&gt;Giáo viên khó theo dõi tiến độ&lt;/strong&gt;: Không biết học sinh yếu ở đâu&lt;/li&gt;&#xA;&lt;li&gt;⏰ &lt;strong&gt;Tốn thời gian tạo đề&lt;/strong&gt;: Giáo viên phải tự tạo câu hỏi thủ công&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prepro TOEIC&lt;/strong&gt; ra đời để giải quyết những vấn đề này. Đây không chỉ là một website học TOEIC thông thường, mà là một &lt;strong&gt;hệ sinh thái học tập thông minh&lt;/strong&gt; được xây dựng với công nghệ hiện đại nhất.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

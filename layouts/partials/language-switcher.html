@@ -1,0 +1,114 @@
+<style>
+    /* Floating Language Switcher */
+    .lang-switch-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .lang-switch-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lang-switch-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-switch-btn.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        pointer-events: none;
+    }
+
+    .lang-switch-btn img {
+        width: 24px;
+        height: auto;
+    }
+
+    /* Tooltip */
+    .lang-switch-btn::before {
+        content: attr(data-lang);
+        position: absolute;
+        right: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .lang-switch-btn:hover::before {
+        opacity: 1;
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        .lang-switch-btn {
+            background: #1e293b;
+            color: #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-switch-btn.active {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+        }
+    }
+</style>
+
+<div class="lang-switch-container">
+    {{ $currentPage := . }}
+    {{ range .Site.Languages }}
+    {{ $lang := .Lang }}
+    {{ $targetLink := "" }}
+
+    {{/* 1. Try to find the translated version of the current page */}}
+    {{ range $currentPage.AllTranslations }}
+    {{ if eq .Language.Lang $lang }}
+    {{ $targetLink = .RelPermalink }}
+    {{ end }}
+    {{ end }}
+
+    {{/* 2. Fallback: Find the Home page for this language if translation missing */}}
+    {{ if eq $targetLink "" }}
+    {{ range $.Site.Home.AllTranslations }}
+    {{ if eq .Language.Lang $lang }}
+    {{ $targetLink = .RelPermalink }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+
+    <a href="{{ $targetLink }}" class="lang-switch-btn {{ if eq $lang $.Site.Language.Lang }}active{{ end }}"
+        data-lang="{{ .LanguageName }}">
+        {{ $lang | upper }}
+    </a>
+    {{ end }}
+</div>

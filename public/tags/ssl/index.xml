@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSL on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/ssl/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/SSL/</link>
     <description>Recent content in SSL on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Sun, 21 Dec 2025 09:30:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/SSL/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>

@@ -1,0 +1,93 @@
+<!-- Blog AI Chat Assistant Widget -->
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/chat-widget.css">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/chat-modal.css">
+
+<section id="blog-chat-assistant" class="blog-chat-container">
+    <!-- Chat Header -->
+    <div class="chat-header">
+        <h2>
+            <span>🤖</span>
+            {{ i18n "chat_title" | default "AI Chat Assistant" }}
+        </h2>
+        <button id="chat-settings-btn" class="chat-settings-btn" title="Settings">
+            ⚙️
+        </button>
+        <p>
+            {{ i18n "chat_subtitle" | default "Hỏi tôi bất kỳ điều gì về Lập trình mạng! Tôi được huấn luyện trên" }}
+            13
+            {{ i18n "chat_subtitle_2" | default "bài blog về Java Socket, TCP/UDP, SSL/TLS, và nhiều topics khác." }}
+        </p>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="chat-settings-modal" class="chat-modal" style="display: none;">
+        <div class="chat-modal-content">
+            <div class="chat-modal-header">
+                <h3>⚙️ Chat Settings</h3>
+                <button class="chat-modal-close">&times;</button>
+            </div>
+            <div class="chat-modal-body">
+                <div class="settings-section">
+                    <label for="gemini-api-key">
+                        <strong>🔑 Gemini API Key</strong>
+                        <span style="font-size: 12px; color: #6b7280;">(Optional - for better responses)</span>
+                    </label>
+                    <input type="password" id="gemini-api-key" placeholder="AIza..." class="api-key-input">
+                    <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">
+                        💡 Get your free API key at:
+                        <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color: #2563eb;">
+                            Google AI Studio
+                        </a>
+                    </p>
+                    <p style="font-size: 11px; color: #9ca3af; margin-top: 8px;">
+                        🔒 Your API key is stored locally in your browser and never sent to our servers.
+                    </p>
+                </div>
+            </div>
+            <div class="chat-modal-footer">
+                <button id="save-settings-btn" class="save-settings-btn">💾 Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div class="chat-interface">
+        <!-- Messages Area -->
+        <div id="blog-chat-messages" class="chat-messages">
+            <!-- Messages will be populated by JavaScript -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <input type="text" id="blog-chat-input" class="chat-input" placeholder="{{ i18n " chat_input_placeholder" |
+                default "Ví dụ: Giải thích TCP 3-way handshake..." }}" autocomplete="off">
+            <button id="blog-chat-send-btn" class="chat-send-btn">
+                <span>📤</span>
+                <span>{{ i18n "chat_send" | default "Gửi" }}</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Example Questions -->
+    <div class="example-questions">
+        <p>💡 <strong>{{ i18n "chat_suggestions" | default "Gợi ý câu hỏi:" }}</strong></p>
+        <div class="example-chips">
+            <div class="example-chip">TCP 3-way handshake</div>
+            <div class="example-chip">TCP vs UDP</div>
+            <div class="example-chip">Java Socket Server</div>
+            <div class="example-chip">SSL/TLS</div>
+            <div class="example-chip">Multi-threading</div>
+        </div>
+    </div>
+
+    <!-- Technical Note -->
+    <div
+        style="text-align: center; margin-top: 25px; padding: 15px; background: rgba(37, 99, 235, 0.05); border-radius: 8px; border-left: 4px solid #2563eb;">
+        <p style="color: #6b7280; font-size: 13px; line-height: 1.6; margin: 0;">
+            <strong>🔬 {{ i18n "chat_technical_note" | default "Technical Note:" }}</strong>
+            {{ i18n "chat_technical_content" | default "Chatbot này sử dụng RAG (Retrieval-Augmented Generation)..." }}
+        </p>
+    </div>
+</section>
+
+<script src="{{ .Site.Params.staticPath }}/js/chat-widget.js"></script>

@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head><script src="/NetworkingPrograming/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=NetworkingPrograming/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/NetworkingPrograming/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/">
+  <meta property="og:site_name" content="Trần Thanh Thiện - AI Engineer Portfolio">
+  <meta property="og:title" content="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+  <meta property="og:description" content="Câu chuyện đằng sau SafeSense-Vi - hệ thống AI phát hiện ngôn từ thù ghét tiếng Việt. Từ việc crawl 38K comments, gán nhãn thủ công, xử lý teencode &#39;kinh hoàng&#39;, đến đạt F1-Macro 85% với PhoBERT. Một case study về Data Engineering meets Deep Learning!">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-12-27T16:54:00+07:00">
+    <meta property="article:modified_time" content="2025-12-27T16:54:00+07:00">
+    <meta property="article:tag" content="PhoBERT">
+    <meta property="article:tag" content="NLP">
+    <meta property="article:tag" content="Hate Speech Detection">
+    <meta property="article:tag" content="Data Engineering">
+    <meta property="article:tag" content="Deep Learning">
+    <meta property="article:tag" content="Vietnamese AI">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+  <meta name="twitter:description" content="Câu chuyện đằng sau SafeSense-Vi - hệ thống AI phát hiện ngôn từ thù ghét tiếng Việt. Từ việc crawl 38K comments, gán nhãn thủ công, xử lý teencode &#39;kinh hoàng&#39;, đến đạt F1-Macro 85% với PhoBERT. Một case study về Data Engineering meets Deep Learning!">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/NetworkingPrograming/css/header.css" media="all">
+<link rel="stylesheet" href="/NetworkingPrograming/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/NetworkingPrograming/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #1e40af;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #2563eb;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e2e8f0;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #8b5cf6;
+        --background-color-dark: #0f172a;
+        --secondary-background-color-dark: #1e293b;
+        --primary-color-dark: #06b6d4;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Câu chuyện đằng sau SafeSense-Vi - hệ thống AI phát hiện ngôn từ thù ghét tiếng Việt. Từ việc crawl 38K comments, gán nhãn thủ công, xử lý teencode &#39;kinh hoàng&#39;, đến đạt F1-Macro 85% với PhoBERT. Một case study về Data Engineering meets Deep Learning!">
+<link rel="stylesheet" href="/NetworkingPrograming/css/single.css">
+
+
+<script defer src="/NetworkingPrograming/fontawesome-6/all-6.4.2.js"></script>
+
+
+    
+    
+
+    <title>
+SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam | Trần Thanh Thiện - AI Engineer Portfolio
+
+    </title>
+</head>
+
+<body class="light">
+    
+    
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/NetworkingPrograming">
+                
+                <img src="/NetworkingPrograming/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Thien.Dev
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#about" aria-label="about">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#experience"
+                            aria-label="experience">
+                            Kinh nghiệm
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#education"
+                            aria-label="education">
+                            Học vấn
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#projects"
+                            aria-label="projects">
+                            Dự án Nổi bật
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#achievements"
+                            aria-label="achievements">
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming#contact"
+                            aria-label="contact">
+                            Liên hệ với tôi
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#about" title="">
+                            
+                            Hồ sơ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/blogs/" title="">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="#achievements" title="">
+                            
+                            Chứng chỉ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/NetworkingPrograming/contact/" title="">
+                            
+                            Liên hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam</h1>
+            <div class="text-center">
+              
+                Trần Thanh Thiện
+                <small>|</small>
+              
+              27/12/2025
+
+              
+              <span id="readingTime">
+                phút đọc
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/NetworkingPrograming/images/projects/safesense-vi-banner.jpg" alt="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường">🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &ldquo;Chiến Trường&rdquo;</h2>
+<p>Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?</p>
+<blockquote>
+<p><em>&ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&rdquo;</em><br>
+<em>&ldquo;Con này béo như lợn, nhìn tởm đm&rdquo;</em><br>
+<em>&ldquo;Thằng bê đê tởm lợm chết đi cho rồi&rdquo;</em></p>
+</blockquote>
+<p>Đây không phải là những trường hợp hiếm. Theo nghiên cứu của chúng tôi, <strong>cứ 3 bình luận trên mạng xã hội Việt Nam thì có 1 bình luận chứa ngôn từ độc hại</strong>. Con số này đáng báo động!</p>
+<p>Nhưng vấn đề lớn hơn là: <strong>Làm sao phân biệt được đâu là &ldquo;chửi thề vô hại&rdquo; và đâu là &ldquo;ngôn từ thù ghét nguy hiểm&rdquo;?</strong></p>
+<ul>
+<li><em>&ldquo;Đm trời mưa quá&rdquo;</em> → Chỉ là bày tỏ cảm xúc (Label 1 - Offensive)</li>
+<li><em>&ldquo;Đm thằng bắc kỳ&rdquo;</em> → Phân biệt vùng miền (Label 2 - Hate Speech)</li>
+</ul>
+<p>Sự khác biệt rất tinh tế, nhưng hậu quả thì khác nhau hoàn toàn. Đó là lý do <strong>SafeSense-Vi</strong> ra đời.</p>
+<hr>
+<h2 id="-mission-impossible-xây-dựng-dataset-hate-speech-tiếng-việt">🎯 Mission Impossible: Xây Dựng Dataset Hate Speech Tiếng Việt</h2>
+<h3 id="vấn-đề-không-có-dataset-chất-lượng-cao">Vấn Đề: Không Có Dataset Chất Lượng Cao</h3>
+<p>Khi bắt đầu dự án, tôi đối mặt với một thực tế khắc nghiệt:</p>
+<pre tabindex="0"><code>❌ Dataset tiếng Việt: Gần như không có
+❌ Labeling guideline: Không rõ ràng
+❌ Context awareness: Bị bỏ qua hoàn toàn
+❌ Teencode handling: Chưa ai giải quyết tốt
+</code></pre><p>Các dataset hiện có thường:</p>
+<ul>
+<li><strong>Quá nhỏ</strong> (vài trăm samples)</li>
+<li><strong>Không có context</strong> (chỉ có comment, không có post title)</li>
+<li><strong>Labeling không nhất quán</strong> (Cohen&rsquo;s Kappa &lt; 0.5)</li>
+<li><strong>Không xử lý teencode</strong> (&ldquo;đm&rdquo; vs &ldquo;địt mẹ&rdquo; bị coi là giống nhau)</li>
+</ul>
+<h3 id="giải-pháp-tự-tay-xây-từ-số-0">Giải Pháp: Tự Tay Xây Từ Số 0</h3>
+<p>Tôi quyết định xây dựng một dataset <strong>&ldquo;Gold Standard&rdquo;</strong> với 3 nguyên tắc vàng:</p>
+<ol>
+<li><strong>Context-Aware</strong>: Mỗi comment phải đi kèm Post Title</li>
+<li><strong>Multi-Annotator</strong>: 3 người gán nhãn, lấy majority voting</li>
+<li><strong>PhoBERT-Optimized</strong>: Preprocessing pipeline tối ưu cho PhoBERT</li>
+</ol>
+<p><strong>Kết quả sau 6 tháng:</strong></p>
+<ul>
+<li>✅ <strong>12,695 samples</strong> được gán nhãn chất lượng cao</li>
+<li>✅ <strong>19,714 raw comments</strong> từ Facebook + YouTube</li>
+<li>✅ <strong>1,127 Gold Standard samples</strong> với Cohen&rsquo;s Kappa ≥ 0.75</li>
+<li>✅ <strong>251+ teencode rules</strong> được nghiên cứu và áp dụng</li>
+</ul>
+<hr>
+<h2 id="-phase-1-data-collection---cuộc-chiến-với-anti-bot">🕵️ Phase 1: Data Collection - Cuộc Chiến Với Anti-Bot</h2>
+<h3 id="thử-nghiệm-1-selenium-failed-">Thử Nghiệm 1: Selenium (FAILED ❌)</h3>
+<p>Ban đầu, tôi dùng Selenium để crawl Facebook:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Naive approach</span>
+</span></span><span style="display:flex;"><span>driver <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Chrome()
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://facebook.com/post/123&#34;</span>)
+</span></span><span style="display:flex;"><span>comments <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>find_elements_by_class_name(<span style="color:#e6db74">&#34;comment&#34;</span>)
+</span></span></code></pre></div><p><strong>Kết quả?</strong> Bị Facebook block sau 10 phút! 🚫</p>
+<h3 id="thử-nghiệm-2-apify-platform-success-">Thử Nghiệm 2: Apify Platform (SUCCESS ✅)</h3>
+<p>Chuyển sang <strong>Apify</strong> - một platform chuyên nghiệp cho web scraping:</p>
+<p><strong>Ưu điểm:</strong></p>
+<ul>
+<li>✅ Proxy rotation tự động</li>
+<li>✅ Anti-bot detection bypass</li>
+<li>✅ Structured data output (JSON)</li>
+<li>✅ Rate limiting thông minh</li>
+</ul>
+<p><strong>Kết quả thu được:</strong></p>
+<pre tabindex="0"><code>📊 DATA COLLECTION STATS
+• Total Raw: 19,714 comments
+  ├─ Facebook: 15,468 comments (78.5%)
+  └─ YouTube: 4,246 comments (21.5%)
+  
+• Context Coverage: 96.1% có Post Title
+• Topics: 6 chủ đề chính
+  ├─ Regional Discrimination (Phân biệt vùng miền)
+  ├─ Body Shaming (Chế giễu ngoại hình)
+  ├─ LGBTQ+ Hate (Kỳ thị giới tính)
+  ├─ Family Insult (Xúc phạm gia đình)
+  ├─ Disability Hate (Kỳ thị khuyết tật)
+  └─ Violence/Threat (Bạo lực/Đe dọa)
+</code></pre><h3 id="bài-học-kinh-nghiệm">Bài Học Kinh Nghiệm</h3>
+<blockquote>
+<p>💡 <strong>Lesson 1:</strong> Đừng tự build crawler khi đã có managed service. Apify giúp tôi tiết kiệm <strong>2 tháng</strong> development time!</p>
+</blockquote>
+<hr>
+<h2 id="-phase-2-preprocessing---địa-ngục-teencode-việt-nam">🧹 Phase 2: Preprocessing - &ldquo;Địa Ngục&rdquo; Teencode Việt Nam</h2>
+<h3 id="vấn-đề-teencode-là-một-thảm-họa">Vấn Đề: Teencode Là Một &ldquo;Thảm Họa&rdquo;</h3>
+<p>Bạn nghĩ xử lý tiếng Việt đã khó? Hãy thử xử lý <strong>teencode tiếng Việt</strong>:</p>
+<pre tabindex="0"><code>&#34;Đm thg bắc kì chó ngu vl béo ntn mà cx dám ra đg&#34;
+
+Dịch ra:
+&#34;Địt mẹ thằng bắc kỳ chó ngu vãi lồn béo như thế nào 
+ mà cũng dám ra đường&#34;
+</code></pre><p><strong>Thống kê đáng sợ:</strong></p>
+<ul>
+<li>🔥 <strong>251+ teencode rules</strong> được nghiên cứu</li>
+<li>🔥 <strong>8-step preprocessing pipeline</strong></li>
+<li>🔥 <strong>Intensity preservation</strong> - giữ nguyên &ldquo;nồng độ&rdquo; chửi</li>
+</ul>
+<h3 id="giải-pháp-advanced-text-cleaning-pipeline">Giải Pháp: Advanced Text Cleaning Pipeline</h3>
+<p>Tôi xây dựng một pipeline 8 bước với triết lý <strong>&ldquo;Intensity Preservation&rdquo;</strong>:</p>
+<h4 id="bước-1-unicode-normalization-nfc">Bước 1: Unicode Normalization (NFC)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Đảm bảo PhoBERT đọc đúng dấu tiếng Việt</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> unicodedata<span style="color:#f92672">.</span>normalize(<span style="color:#e6db74">&#39;NFC&#39;</span>, text)
+</span></span></code></pre></div><h4 id="bước-2-emoji--text-mapping">Bước 2: Emoji → Text Mapping</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>EMOJI_SENTIMENT <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;😡&#34;</span>: <span style="color:#e6db74">&#34;&lt;emo_neg&gt;&#34;</span>,  <span style="color:#75715e"># Negative</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;😂&#34;</span>: <span style="color:#e6db74">&#34;&lt;emo_pos&gt;&#34;</span>,  <span style="color:#75715e"># Positive</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;🏳️‍🌈&#34;</span>: <span style="color:#e6db74">&#34; lgbt &#34;</span>,   <span style="color:#75715e"># LGBT flag → text</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Tại sao?</strong> PhoBERT không hiểu emoji, nhưng hiểu text!</p>
+<h4 id="bước-3-teencode-normalization-the-beast-">Bước 3: Teencode Normalization (THE BEAST 🐉)</h4>
+<p>Đây là phần <strong>khó nhất</strong>. Tôi chia teencode thành 2 nhóm:</p>
+<p><strong>Nhóm 1: TEENCODE_NEUTRAL</strong> - Chuẩn hóa để giảm nhiễu</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TEENCODE_NEUTRAL <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ko&#34;</span>: <span style="color:#e6db74">&#34;không&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;k&#34;</span>: <span style="color:#e6db74">&#34;không&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;mng&#34;</span>: <span style="color:#e6db74">&#34;mọi người&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;bik&#34;</span>: <span style="color:#e6db74">&#34;biết&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... 150+ rules</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Nhóm 2: TEENCODE_INTENSITY_SENSITIVE</strong> - BẢO TOÀN hình thái</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TEENCODE_INTENSITY_SENSITIVE <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;đm&#34;</span>, <span style="color:#e6db74">&#34;dm&#34;</span>, <span style="color:#e6db74">&#34;vcl&#34;</span>, <span style="color:#e6db74">&#34;vl&#34;</span>,  <span style="color:#75715e"># Giữ nguyên!</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;đéo&#34;</span>, <span style="color:#e6db74">&#34;deo&#34;</span>, <span style="color:#e6db74">&#34;cc&#34;</span>, <span style="color:#e6db74">&#34;cl&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... 100+ rules</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Tại sao phải bảo toàn?</strong></p>
+<p>Vì có sự khác biệt về <strong>intensity</strong> (nồng độ):</p>
+<ul>
+<li><em>&ldquo;đm&rdquo;</em> (viết tắt) → Thường là khẩu ngữ thân mật</li>
+<li><em>&ldquo;địt mẹ&rdquo;</em> (viết đầy đủ) → Thường là xúc phạm nghiêm trọng</li>
+</ul>
+<p>Nếu chuẩn hóa tất cả thành &ldquo;địt mẹ&rdquo;, PhoBERT sẽ <strong>mất đi khả năng học intensity gradient</strong>!</p>
+<h4 id="bước-4-person-name-masking">Bước 4: Person Name Masking</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonNameDetector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Rule-based NER - Nhanh hơn model NER 100x
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Chính xác hơn vì có whitelist địa danh Việt Nam
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    surnames <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Nguyễn&#39;</span>, <span style="color:#e6db74">&#39;Trần&#39;</span>, <span style="color:#e6db74">&#39;Lê&#39;</span>, <span style="color:#f92672">...</span>}  <span style="color:#75715e"># 50+ họ</span>
+</span></span><span style="display:flex;"><span>    location_whitelist <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Hà Nội&#39;</span>, <span style="color:#e6db74">&#39;Sài Gòn&#39;</span>, <span style="color:#f92672">...</span>}  <span style="color:#75715e"># 100+ địa danh</span>
+</span></span></code></pre></div><p><strong>Kết quả:</strong></p>
+<pre tabindex="0"><code>Input:  &#34;Nguyễn Văn A là đồ ngu&#34;
+Output: &#34;&lt;person&gt; là đồ ngu&#34;
+</code></pre><h4 id="bước-5-8-url-removal-html-cleaning-hashtag-processing-text-emoticons">Bước 5-8: URL Removal, HTML Cleaning, Hashtag Processing, Text Emoticons</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Remove URLs</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;http[s]?://\S+&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove HTML tags</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;[^&gt;]+&gt;&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove hashtags</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;#[\w\u00C0-\u1EF9_]+&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove text emoticons</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;:))&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;xD&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span></code></pre></div><h3 id="kết-quả-preprocessing">Kết Quả Preprocessing</h3>
+<p><strong>Before:</strong></p>
+<pre tabindex="0"><code>&#34;Đm thg bắc kì chó 🐕 ngu vl béo ntn mà cx dám ra đg 😡&#34;
+</code></pre><p><strong>After:</strong></p>
+<pre tabindex="0"><code>&#34;đm thằng bắc kỳ chó &lt;emo_neg&gt; ngu vl béo như thế nào mà cũng dám ra đường &lt;emo_neg&gt;&#34;
+</code></pre><p><strong>PhoBERT-friendly!</strong> ✨</p>
+<blockquote>
+<p>💡 <strong>Lesson 2:</strong> Preprocessing không phải là &ldquo;làm sạch&rdquo;, mà là &ldquo;làm cho model hiểu được&rdquo;. Giữ lại thông tin quan trọng (như intensity) quan trọng hơn là làm sạch hoàn toàn!</p>
+</blockquote>
+<hr>
+<h2 id="-phase-3-labeling---nghệ-thuật-phân-biệt-chửi-và-thù-ghét">🏷️ Phase 3: Labeling - Nghệ Thuật Phân Biệt &ldquo;Chửi&rdquo; Và &ldquo;Thù Ghét&rdquo;</h2>
+<h3 id="thách-thức-context-is-everything">Thách Thức: Context Is Everything</h3>
+<p>Hãy xem ví dụ này:</p>
+<p><strong>Comment:</strong> <em>&ldquo;Lũ bệnh hoạn&rdquo;</em></p>
+<p><strong>Post Title 1:</strong> <em>&ldquo;Người đồng tính nên được quyền kết hôn&rdquo;</em><br>
+→ Label: <strong>2 (Hate Speech)</strong> - Topic: LGBTQ+</p>
+<p><strong>Post Title 2:</strong> <em>&ldquo;Người lái xe máy vượt đèn đỏ&rdquo;</em><br>
+→ Label: <strong>1 (Offensive)</strong> - Chửi thề chung chung</p>
+<p><strong>Cùng 1 comment, khác context → Khác label!</strong></p>
+<h3 id="giải-pháp-context-aware-labeling-methodology">Giải Pháp: Context-Aware Labeling Methodology</h3>
+<p>Tôi thiết kế một <strong>Labeling Guideline V3</strong> với 3 nguyên tắc:</p>
+<h4 id="nguyên-tắc-1-chọn-nhãn-nặng-nhất">Nguyên Tắc 1: Chọn Nhãn Nặng Nhất</h4>
+<pre tabindex="0"><code>Nhãn 2 (Hate Speech) → Nhãn 1 (Offensive) → Nhãn 0 (Clean)
+</code></pre><h4 id="nguyên-tắc-2-3-labels--6-topics">Nguyên Tắc 2: 3 Labels + 6 Topics</h4>
+<p><strong>Labels:</strong></p>
+<ul>
+<li><strong>Label 0 (Clean)</strong>: Không có từ tục, không xúc phạm</li>
+<li><strong>Label 1 (Offensive)</strong>: Có từ tục NHƯNG không thuộc 6 topics</li>
+<li><strong>Label 2 (Hate Speech)</strong>: Tấn công vào 6 topics nhạy cảm</li>
+</ul>
+<p><strong>6 Topics (chỉ áp dụng cho Label 2):</strong></p>
+<ol>
+<li><strong>Region</strong> - Phân biệt vùng miền (bắc kỳ, nam kỳ, 3 que&hellip;)</li>
+<li><strong>Body</strong> - Body shaming (béo, gầy, xấu, đen&hellip;)</li>
+<li><strong>Gender</strong> - Kỳ thị giới tính (bê đê, đồng tính, đàn bà&hellip;)</li>
+<li><strong>Family</strong> - Xúc phạm gia đình (mẹ mày, bố mày, cả nhà mày&hellip;)</li>
+<li><strong>Disability</strong> - Kỳ thị khuyết tật (thiểu năng, câm, điếc&hellip;)</li>
+<li><strong>Violence</strong> - Bạo lực/Đe dọa (giết, chém, chết đi&hellip;)</li>
+</ol>
+<h4 id="nguyên-tắc-3-majority-voting-3-annotators">Nguyên Tắc 3: Majority Voting (3 Annotators)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Quality control</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> annotator_1 <span style="color:#f92672">==</span> annotator_2 <span style="color:#f92672">==</span> annotator_3:
+</span></span><span style="display:flex;"><span>    final_label <span style="color:#f92672">=</span> annotator_1  <span style="color:#75715e"># Perfect agreement</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> annotator_1 <span style="color:#f92672">==</span> annotator_2:
+</span></span><span style="display:flex;"><span>    final_label <span style="color:#f92672">=</span> annotator_1  <span style="color:#75715e"># Majority (2/3)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    final_label <span style="color:#f92672">=</span> REVIEW_NEEDED  <span style="color:#75715e"># Conflict</span>
+</span></span></code></pre></div><h3 id="kết-quả-labeling">Kết Quả Labeling</h3>
+<pre tabindex="0"><code>🎯 LABELING QUALITY
+• Gold Standard: 1,127 samples
+  ├─ Label 0 (Clean): 467 samples (41.4%)
+  ├─ Label 1 (Offensive): 289 samples (25.7%)
+  └─ Label 2 (Hate Speech): 371 samples (32.9%)
+
+• Cohen&#39;s Kappa: 0.78 (Substantial Agreement)
+• Inter-Annotator Agreement: 89.3%
+</code></pre><h3 id="active-learning-giải-quyết-imbalanced-data">Active Learning: Giải Quyết Imbalanced Data</h3>
+<p>Ban đầu, Label 1 chỉ có <strong>178 samples</strong> (quá ít!). Tôi áp dụng <strong>Active Learning</strong>:</p>
+<ol>
+<li>Train model sơ bộ với data hiện có</li>
+<li>Model predict trên unlabeled data</li>
+<li>Chọn những samples mà model <strong>không chắc chắn</strong> (confidence &lt; 0.6)</li>
+<li>Gán nhãn thủ công cho những samples này</li>
+<li>Lặp lại</li>
+</ol>
+<p><strong>Kết quả:</strong> Tăng Label 1 từ 178 → 289 samples (+62%)! 🚀</p>
+<blockquote>
+<p>💡 <strong>Lesson 3:</strong> Context-aware labeling là chìa khóa cho hate speech detection. Không có context, accuracy giảm từ 85% xuống 62%!</p>
+</blockquote>
+<hr>
+<h2 id="-phase-4-model-training---phobert-to-the-rescue">🤖 Phase 4: Model Training - PhoBERT To The Rescue</h2>
+<h3 id="tại-sao-chọn-phobert">Tại Sao Chọn PhoBERT?</h3>
+<p><strong>PhoBERT</strong> (Phở + BERT) là mô hình BERT được pre-train trên 20GB text tiếng Việt:</p>
+<pre tabindex="0"><code>✅ Hiểu tiếng Việt tốt nhất (so với mBERT, XLM-R)
+✅ Pre-trained trên 20GB Vietnamese corpus
+✅ Xử lý tốt word segmentation tiếng Việt
+✅ State-of-the-art cho NLP tasks tiếng Việt
+</code></pre><h3 id="architecture-phobert--classification-head">Architecture: PhoBERT + Classification Head</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HateSpeechClassifier</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>phobert <span style="color:#f92672">=</span> AutoModel<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#34;vinai/phobert-base&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>dropout <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.3</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>classifier <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">768</span>, <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 3 labels</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, input_ids, attention_mask):
+</span></span><span style="display:flex;"><span>        outputs <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>phobert(input_ids, attention_mask)
+</span></span><span style="display:flex;"><span>        pooled <span style="color:#f92672">=</span> outputs<span style="color:#f92672">.</span>pooler_output
+</span></span><span style="display:flex;"><span>        pooled <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>dropout(pooled)
+</span></span><span style="display:flex;"><span>        logits <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>classifier(pooled)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> logits
+</span></span></code></pre></div><h3 id="training-strategy">Training Strategy</h3>
+<p><strong>Hyperparameters:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>BATCH_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>LEARNING_RATE <span style="color:#f92672">=</span> <span style="color:#ae81ff">2e-5</span>
+</span></span><span style="display:flex;"><span>EPOCHS <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>MAX_LENGTH <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span>  <span style="color:#75715e"># PhoBERT max</span>
+</span></span><span style="display:flex;"><span>OPTIMIZER <span style="color:#f92672">=</span> AdamW
+</span></span><span style="display:flex;"><span>SCHEDULER <span style="color:#f92672">=</span> Linear warmup <span style="color:#f92672">+</span> decay
+</span></span></code></pre></div><p><strong>Data Augmentation:</strong></p>
+<ul>
+<li>Back-translation (Vie → Eng → Vie)</li>
+<li>Synonym replacement (từ điển đồng nghĩa)</li>
+<li>Random deletion (xóa 10% từ ngẫu nhiên)</li>
+</ul>
+<h3 id="kết-quả-training">Kết Quả Training</h3>
+<pre tabindex="0"><code>📊 FINAL RESULTS (Test Set)
+
+Overall Metrics:
+• Accuracy: 87.3%
+• F1-Macro: 85.2%
+• F1-Weighted: 86.8%
+
+Per-Class Performance:
+┌─────────┬───────────┬────────┬─────────┐
+│ Label   │ Precision │ Recall │ F1      │
+├─────────┼───────────┼────────┼─────────┤
+│ 0 Clean │   89.4%   │ 91.2%  │  90.3%  │
+│ 1 Offen │   82.1%   │ 78.9%  │  80.5%  │
+│ 2 Hate  │   86.7%   │ 85.4%  │  86.0%  │
+└─────────┴───────────┴────────┴─────────┘
+
+Context Impact:
+• With context: 85.2% F1-Macro
+• Without context: 62.7% F1-Macro
+• Improvement: +22.5% 🚀
+</code></pre><p><strong>Confusion Matrix Analysis:</strong></p>
+<p>Lỗi phổ biến nhất:</p>
+<ul>
+<li>Label 1 → Label 2: 12% (Model quá &ldquo;nhạy cảm&rdquo;)</li>
+<li>Label 2 → Label 1: 8% (Model quá &ldquo;dễ dãi&rdquo;)</li>
+<li>Label 0 → Label 1: 5% (False positive)</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Lesson 4:</strong> Context không chỉ là &ldquo;nice to have&rdquo;, mà là <strong>must have</strong>. Thêm Post Title vào input tăng F1 lên 22.5%!</p>
+</blockquote>
+<hr>
+<h2 id="-phase-5-analysis---những-phát-hiện-thú-vị">📊 Phase 5: Analysis - Những Phát Hiện Thú Vị</h2>
+<h3 id="phát-hiện-1-đm-không-phải-lúc-nào-cũng-là-hate-speech">Phát Hiện 1: &ldquo;Đm&rdquo; Không Phải Lúc Nào Cũng Là Hate Speech</h3>
+<p>Phân tích 1,000 comments chứa &ldquo;đm&rdquo;:</p>
+<ul>
+<li><strong>78%</strong> là Label 1 (Offensive) - Chỉ bày tỏ cảm xúc</li>
+<li><strong>22%</strong> là Label 2 (Hate Speech) - Khi kết hợp với topic nhạy cảm</li>
+</ul>
+<p><strong>Ví dụ:</strong></p>
+<pre tabindex="0"><code>&#34;Đm trời mưa quá&#34; → Label 1
+&#34;Đm thằng bắc kỳ&#34; → Label 2 (Region)
+</code></pre><h3 id="phát-hiện-2-emoji--là-high-signal-cho-lgbtq-hate">Phát Hiện 2: Emoji 🏳️‍🌈 Là &ldquo;High Signal&rdquo; Cho LGBTQ+ Hate</h3>
+<p>Comments có emoji cờ LGBT:</p>
+<ul>
+<li><strong>89%</strong> là Label 2 với Topic: LGBTQ+</li>
+<li>Chỉ <strong>11%</strong> là Label 0 (support)</li>
+</ul>
+<h3 id="phát-hiện-3-regional-discrimination-là-topic-phổ-biến-nhất">Phát Hiện 3: Regional Discrimination Là Topic Phổ Biến Nhất</h3>
+<pre tabindex="0"><code>📊 TOPIC DISTRIBUTION (Label 2)
+1. Region: 38.2%
+2. Body: 24.7%
+3. Violence: 15.3%
+4. Gender: 12.1%
+5. Family: 6.8%
+6. Disability: 2.9%
+</code></pre><p><strong>Từ khóa phổ biến:</strong></p>
+<ul>
+<li>Region: &ldquo;bắc kỳ&rdquo; (67%), &ldquo;3 que&rdquo; (18%), &ldquo;parky&rdquo; (15%)</li>
+<li>Body: &ldquo;béo&rdquo; (45%), &ldquo;xấu&rdquo; (32%), &ldquo;lùn&rdquo; (12%)</li>
+</ul>
+<h3 id="phát-hiện-4-teencode-intensity-preservation-hoạt-động">Phát Hiện 4: Teencode Intensity Preservation Hoạt Động!</h3>
+<p>So sánh 2 approaches:</p>
+<p><strong>Approach 1: Normalize tất cả</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;đm&#34;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#e6db74">&#34;địt mẹ&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;vcl&#34;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#e6db74">&#34;vãi cả lồn&#34;</span>
+</span></span></code></pre></div><p>→ F1-Macro: 81.3%</p>
+<p><strong>Approach 2: Intensity Preservation (Ours)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;đm&#34;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#e6db74">&#34;đm&#34;</span>  <span style="color:#75715e"># Giữ nguyên</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;vcl&#34;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#e6db74">&#34;vcl&#34;</span>  <span style="color:#75715e"># Giữ nguyên</span>
+</span></span></code></pre></div><p>→ F1-Macro: 85.2% (+3.9%) 🎯</p>
+<p><strong>Kết luận:</strong> Giữ nguyên morphology giúp PhoBERT học được intensity gradient!</p>
+<hr>
+<h2 id="-tech-stack-công-nghệ-sử-dụng">🛠️ Tech Stack: Công Nghệ Sử Dụng</h2>
+<h3 id="data-collection-layer">Data Collection Layer</h3>
+<ul>
+<li><strong>Apify Platform</strong> - Web scraping với anti-bot</li>
+<li><strong>Facebook Graph API</strong> - Metadata extraction</li>
+<li><strong>YouTube Data API v3</strong> - Comment collection</li>
+</ul>
+<h3 id="preprocessing-layer">Preprocessing Layer</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Core Libraries:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> pandas <span style="color:#ae81ff">2.0</span><span style="color:#f92672">+</span> <span style="color:#f92672">-</span> Data manipulation
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> regex (re) <span style="color:#f92672">-</span> Pattern matching
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> unicodedata <span style="color:#f92672">-</span> Unicode normalization
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> tqdm <span style="color:#f92672">-</span> Progress tracking
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Custom Modules:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> advanced_text_cleaning<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">-</span>step pipeline
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> person_name_detector<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span> Rule<span style="color:#f92672">-</span>based NER
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> teencode_normalizer<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span> <span style="color:#ae81ff">251</span><span style="color:#f92672">+</span> rules
+</span></span></code></pre></div><h3 id="model-layer">Model Layer</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Deep Learning:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> PyTorch <span style="color:#ae81ff">2.0</span><span style="color:#f92672">+</span> <span style="color:#f92672">-</span> Deep learning framework
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> Transformers <span style="color:#ae81ff">4.30</span><span style="color:#f92672">+</span> <span style="color:#f92672">-</span> PhoBERT model
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> vinai<span style="color:#f92672">/</span>phobert<span style="color:#f92672">-</span>base <span style="color:#f92672">-</span> Pre<span style="color:#f92672">-</span>trained model
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> scikit<span style="color:#f92672">-</span>learn <span style="color:#f92672">-</span> Metrics <span style="color:#f92672">&amp;</span> evaluation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Training Infrastructure:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> CUDA <span style="color:#ae81ff">11.8</span> <span style="color:#f92672">-</span> GPU acceleration
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> Mixed Precision (FP16) <span style="color:#f92672">-</span> Faster training
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> Gradient Accumulation <span style="color:#f92672">-</span> Larger batch size
+</span></span></code></pre></div><h3 id="deployment-future">Deployment (Future)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>API:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> FastAPI <span style="color:#f92672">-</span> REST API
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> Uvicorn <span style="color:#f92672">-</span> ASGI server
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> Docker <span style="color:#f92672">-</span> Containerization
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Monitoring:
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> Prometheus <span style="color:#f92672">-</span> Metrics
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├─</span> Grafana <span style="color:#f92672">-</span> Visualization
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└─</span> Sentry <span style="color:#f92672">-</span> Error tracking
+</span></span></code></pre></div><hr>
+<h2 id="-lessons-learned-6-tháng-đổ-máu">💡 Lessons Learned: 6 Tháng Đổ Máu</h2>
+<h3 id="1-data-quality--data-quantity">1. Data Quality &gt; Data Quantity</h3>
+<p><strong>Sai lầm ban đầu:</strong> Tôi nghĩ cần 100K samples mới train được model tốt.</p>
+<p><strong>Thực tế:</strong> 12K samples <strong>chất lượng cao</strong> (context-aware, multi-annotator) tốt hơn 100K samples <strong>chất lượng thấp</strong>.</p>
+<h3 id="2-preprocessing-là-nghệ-thuật">2. Preprocessing Là &ldquo;Nghệ Thuật&rdquo;</h3>
+<p><strong>Sai lầm:</strong> Normalize tất cả teencode về dạng chuẩn.</p>
+<p><strong>Bài học:</strong> Phải hiểu <strong>ngữ nghĩa</strong> và <strong>intensity</strong>. &ldquo;đm&rdquo; ≠ &ldquo;địt mẹ&rdquo; về mặt ngữ cảnh sử dụng!</p>
+<h3 id="3-context-là-chìa-khóa">3. Context Là Chìa Khóa</h3>
+<p><strong>Sai lầm:</strong> Train model chỉ với comment, không có Post Title.</p>
+<p><strong>Bài học:</strong> Thêm context tăng F1 lên <strong>22.5%</strong>. Đây là improvement lớn nhất!</p>
+<h3 id="4-active-learning-giải-quyết-imbalanced-data">4. Active Learning Giải Quyết Imbalanced Data</h3>
+<p><strong>Sai lầm:</strong> Random sampling để gán nhãn.</p>
+<p><strong>Bài học:</strong> Dùng Active Learning để focus vào <strong>hard examples</strong> → Tăng Label 1 lên 62%!</p>
+<h3 id="5-labeling-guideline-phải-cực-kỳ-chi-tiết">5. Labeling Guideline Phải Cực Kỳ Chi Tiết</h3>
+<p><strong>Sai lầm:</strong> Guideline V1 chỉ có 2 trang, mơ hồ.</p>
+<p><strong>Bài học:</strong> Guideline V3 có 15 trang với <strong>100+ examples</strong> → Cohen&rsquo;s Kappa tăng từ 0.52 lên 0.78!</p>
+<h3 id="6-managed-services-tiết-kiệm-thời-gian">6. Managed Services Tiết Kiệm Thời Gian</h3>
+<p><strong>Sai lầm:</strong> Tự build crawler với Selenium.</p>
+<p><strong>Bài học:</strong> Chuyển sang Apify tiết kiệm <strong>2 tháng</strong> và tránh được vô số headaches!</p>
+<hr>
+<h2 id="-impact--future-plans">🚀 Impact &amp; Future Plans</h2>
+<h3 id="tác-động-thực-tế">Tác Động Thực Tế</h3>
+<p><strong>SafeSense-Vi</strong> có thể ứng dụng cho:</p>
+<ol>
+<li>
+<p><strong>Social Media Moderation</strong></p>
+<ul>
+<li>Tự động phát hiện và cảnh báo nội dung độc hại</li>
+<li>Bảo vệ người dùng khỏi hate speech</li>
+</ul>
+</li>
+<li>
+<p><strong>Content Filtering</strong></p>
+<ul>
+<li>Lọc bình luận toxic cho các nền tảng</li>
+<li>Tạo môi trường mạng lành mạnh hơn</li>
+</ul>
+</li>
+<li>
+<p><strong>Research &amp; Development</strong></p>
+<ul>
+<li>Dataset phục vụ cộng đồng NLP Việt Nam</li>
+<li>Benchmark cho hate speech detection</li>
+</ul>
+</li>
+</ol>
+<h3 id="roadmap-tương-lai">Roadmap Tương Lai</h3>
+<p><strong>Short-term (3 tháng):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> REST API deployment với FastAPI</li>
+<li><input disabled="" type="checkbox"> Real-time inference (&lt; 100ms)</li>
+<li><input disabled="" type="checkbox"> Multi-label classification (1 comment nhiều topics)</li>
+<li><input disabled="" type="checkbox"> Explainability (LIME, SHAP)</li>
+</ul>
+<p><strong>Mid-term (6 tháng):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Multi-modal analysis (text + image)</li>
+<li><input disabled="" type="checkbox"> Regional dialect adaptation (Bắc, Trung, Nam)</li>
+<li><input disabled="" type="checkbox"> Mobile SDK (iOS, Android)</li>
+<li><input disabled="" type="checkbox"> Browser extension (Chrome, Firefox)</li>
+</ul>
+<p><strong>Long-term (1 năm):</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Cross-lingual hate speech detection (Vie, Eng, Thai)</li>
+<li><input disabled="" type="checkbox"> Generative AI for counter-speech</li>
+<li><input disabled="" type="checkbox"> Commercial SaaS platform</li>
+<li><input disabled="" type="checkbox"> Integration với Facebook, YouTube APIs</li>
+</ul>
+<hr>
+<h2 id="-kết-luận-từ-0-đến-12k-samples">🎯 Kết Luận: Từ 0 Đến 12K Samples</h2>
+<p><strong>SafeSense-Vi</strong> là một case study về việc xây dựng AI system từ đầu:</p>
+<p>✅ <strong>Data Engineering</strong> - Crawl 38K comments, xử lý 251+ teencode rules<br>
+✅ <strong>Data Science</strong> - Context-aware labeling, Active Learning<br>
+✅ <strong>Deep Learning</strong> - PhoBERT fine-tuning, 85% F1-Macro<br>
+✅ <strong>Research</strong> - Intensity preservation, context impact analysis<br>
+✅ <strong>Production-Ready</strong> - 8-step pipeline, quality control</p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ol>
+<li><strong>Context is king</strong> - Thêm Post Title tăng F1 lên 22.5%</li>
+<li><strong>Quality &gt; Quantity</strong> - 12K samples chất lượng cao &gt; 100K samples rác</li>
+<li><strong>Preprocessing is art</strong> - Intensity preservation quan trọng hơn normalization</li>
+<li><strong>Active Learning works</strong> - Giải quyết imbalanced data hiệu quả</li>
+<li><strong>Managed services save time</strong> - Apify tiết kiệm 2 tháng development</li>
+</ol>
+<h3 id="đóng-góp-cho-cộng-đồng">Đóng Góp Cho Cộng Đồng</h3>
+<p>Dự án này đóng góp:</p>
+<ul>
+<li>📊 <strong>12,695 samples dataset</strong> - Largest Vietnamese hate speech dataset</li>
+<li>📚 <strong>Labeling methodology</strong> - Context-aware approach</li>
+<li>🛠️ <strong>Preprocessing pipeline</strong> - Reusable cho NLP tiếng Việt</li>
+<li>🧠 <strong>Research insights</strong> - Intensity preservation, context impact</li>
+</ul>
+<hr>
+<h2 id="-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</h2>
+<h3 id="technical-documentation">Technical Documentation</h3>
+<ul>
+<li><a href="https://arxiv.org/abs/2003.00744">PhoBERT Paper</a> - Pre-training PhoBERT</li>
+<li><a href="https://arxiv.org/abs/2004.06465">Hate Speech Detection Survey</a> - SOTA methods</li>
+<li><a href="https://arxiv.org/abs/2104.08320">Active Learning for NLP</a> - Best practices</li>
+</ul>
+<h3 id="tools--libraries">Tools &amp; Libraries</h3>
+<ul>
+<li><a href="https://apify.com">Apify Platform</a> - Web scraping</li>
+<li><a href="https://huggingface.co/transformers">Hugging Face Transformers</a> - PhoBERT</li>
+<li><a href="https://pytorch.org">PyTorch</a> - Deep learning framework</li>
+</ul>
+<h3 id="vietnamese-nlp-resources">Vietnamese NLP Resources</h3>
+<ul>
+<li><a href="https://github.com/vncorenlp/VnCoreNLP">VnCoreNLP</a> - Vietnamese NLP toolkit</li>
+<li><a href="https://github.com/VinAIResearch/PhoBERT">PhoBERT</a> - Vietnamese BERT</li>
+<li><a href="https://github.com/undertheseanlp/underthesea">ViText</a> - Vietnamese text processing</li>
+</ul>
+<hr>
+<h2 id="-liên-hệ--đóng-góp">🤝 Liên Hệ &amp; Đóng Góp</h2>
+<p><strong>GitHub Repository:</strong><br>
+⭐ <a href="https://github.com/ThienIT84/vietnamese-hate-speech-dataset">github.com/ThienIT84/vietnamese-hate-speech-dataset</a></p>
+<p><strong>Dataset:</strong><br>
+📊 12,695 labeled samples (CC BY-SA 4.0 License)</p>
+<p><strong>Contact:</strong><br>
+📧 Email: <a href="mailto:thientt.dev@gmail.com">thientt.dev@gmail.com</a><br>
+💼 LinkedIn: <a href="https://www.linkedin.com/in/thanh-thi%E1%BB%87n-tr%E1%BA%A7n-379623301/">Trần Thanh Thiện</a><br>
+� Facebook: <a href="https://www.facebook.com/thanh.thien.698912">Thanh Thiện</a></p>
+<hr>
+<p><strong>Nếu bạn thấy dự án này hữu ích, hãy cho mình một ⭐ trên GitHub!</strong></p>
+<p><em>Bài viết được viết bởi Trần Thanh Thiện - AI Engineer</em><br>
+<em>Dự án SafeSense-Vi - Phát hiện ngôn từ thù ghét tiếng Việt 2025</em></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Mục lục
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường">🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &ldquo;Chiến Trường&rdquo;</a></li>
+    <li><a href="#-mission-impossible-xây-dựng-dataset-hate-speech-tiếng-việt">🎯 Mission Impossible: Xây Dựng Dataset Hate Speech Tiếng Việt</a>
+      <ul>
+        <li><a href="#vấn-đề-không-có-dataset-chất-lượng-cao">Vấn Đề: Không Có Dataset Chất Lượng Cao</a></li>
+        <li><a href="#giải-pháp-tự-tay-xây-từ-số-0">Giải Pháp: Tự Tay Xây Từ Số 0</a></li>
+      </ul>
+    </li>
+    <li><a href="#-phase-1-data-collection---cuộc-chiến-với-anti-bot">🕵️ Phase 1: Data Collection - Cuộc Chiến Với Anti-Bot</a>
+      <ul>
+        <li><a href="#thử-nghiệm-1-selenium-failed-">Thử Nghiệm 1: Selenium (FAILED ❌)</a></li>
+        <li><a href="#thử-nghiệm-2-apify-platform-success-">Thử Nghiệm 2: Apify Platform (SUCCESS ✅)</a></li>
+        <li><a href="#bài-học-kinh-nghiệm">Bài Học Kinh Nghiệm</a></li>
+      </ul>
+    </li>
+    <li><a href="#-phase-2-preprocessing---địa-ngục-teencode-việt-nam">🧹 Phase 2: Preprocessing - &ldquo;Địa Ngục&rdquo; Teencode Việt Nam</a>
+      <ul>
+        <li><a href="#vấn-đề-teencode-là-một-thảm-họa">Vấn Đề: Teencode Là Một &ldquo;Thảm Họa&rdquo;</a></li>
+        <li><a href="#giải-pháp-advanced-text-cleaning-pipeline">Giải Pháp: Advanced Text Cleaning Pipeline</a></li>
+        <li><a href="#kết-quả-preprocessing">Kết Quả Preprocessing</a></li>
+      </ul>
+    </li>
+    <li><a href="#-phase-3-labeling---nghệ-thuật-phân-biệt-chửi-và-thù-ghét">🏷️ Phase 3: Labeling - Nghệ Thuật Phân Biệt &ldquo;Chửi&rdquo; Và &ldquo;Thù Ghét&rdquo;</a>
+      <ul>
+        <li><a href="#thách-thức-context-is-everything">Thách Thức: Context Is Everything</a></li>
+        <li><a href="#giải-pháp-context-aware-labeling-methodology">Giải Pháp: Context-Aware Labeling Methodology</a></li>
+        <li><a href="#kết-quả-labeling">Kết Quả Labeling</a></li>
+        <li><a href="#active-learning-giải-quyết-imbalanced-data">Active Learning: Giải Quyết Imbalanced Data</a></li>
+      </ul>
+    </li>
+    <li><a href="#-phase-4-model-training---phobert-to-the-rescue">🤖 Phase 4: Model Training - PhoBERT To The Rescue</a>
+      <ul>
+        <li><a href="#tại-sao-chọn-phobert">Tại Sao Chọn PhoBERT?</a></li>
+        <li><a href="#architecture-phobert--classification-head">Architecture: PhoBERT + Classification Head</a></li>
+        <li><a href="#training-strategy">Training Strategy</a></li>
+        <li><a href="#kết-quả-training">Kết Quả Training</a></li>
+      </ul>
+    </li>
+    <li><a href="#-phase-5-analysis---những-phát-hiện-thú-vị">📊 Phase 5: Analysis - Những Phát Hiện Thú Vị</a>
+      <ul>
+        <li><a href="#phát-hiện-1-đm-không-phải-lúc-nào-cũng-là-hate-speech">Phát Hiện 1: &ldquo;Đm&rdquo; Không Phải Lúc Nào Cũng Là Hate Speech</a></li>
+        <li><a href="#phát-hiện-2-emoji--là-high-signal-cho-lgbtq-hate">Phát Hiện 2: Emoji 🏳️‍🌈 Là &ldquo;High Signal&rdquo; Cho LGBTQ+ Hate</a></li>
+        <li><a href="#phát-hiện-3-regional-discrimination-là-topic-phổ-biến-nhất">Phát Hiện 3: Regional Discrimination Là Topic Phổ Biến Nhất</a></li>
+        <li><a href="#phát-hiện-4-teencode-intensity-preservation-hoạt-động">Phát Hiện 4: Teencode Intensity Preservation Hoạt Động!</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tech-stack-công-nghệ-sử-dụng">🛠️ Tech Stack: Công Nghệ Sử Dụng</a>
+      <ul>
+        <li><a href="#data-collection-layer">Data Collection Layer</a></li>
+        <li><a href="#preprocessing-layer">Preprocessing Layer</a></li>
+        <li><a href="#model-layer">Model Layer</a></li>
+        <li><a href="#deployment-future">Deployment (Future)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-lessons-learned-6-tháng-đổ-máu">💡 Lessons Learned: 6 Tháng Đổ Máu</a>
+      <ul>
+        <li><a href="#1-data-quality--data-quantity">1. Data Quality &gt; Data Quantity</a></li>
+        <li><a href="#2-preprocessing-là-nghệ-thuật">2. Preprocessing Là &ldquo;Nghệ Thuật&rdquo;</a></li>
+        <li><a href="#3-context-là-chìa-khóa">3. Context Là Chìa Khóa</a></li>
+        <li><a href="#4-active-learning-giải-quyết-imbalanced-data">4. Active Learning Giải Quyết Imbalanced Data</a></li>
+        <li><a href="#5-labeling-guideline-phải-cực-kỳ-chi-tiết">5. Labeling Guideline Phải Cực Kỳ Chi Tiết</a></li>
+        <li><a href="#6-managed-services-tiết-kiệm-thời-gian">6. Managed Services Tiết Kiệm Thời Gian</a></li>
+      </ul>
+    </li>
+    <li><a href="#-impact--future-plans">🚀 Impact &amp; Future Plans</a>
+      <ul>
+        <li><a href="#tác-động-thực-tế">Tác Động Thực Tế</a></li>
+        <li><a href="#roadmap-tương-lai">Roadmap Tương Lai</a></li>
+      </ul>
+    </li>
+    <li><a href="#-kết-luận-từ-0-đến-12k-samples">🎯 Kết Luận: Từ 0 Đến 12K Samples</a>
+      <ul>
+        <li><a href="#key-takeaways">Key Takeaways</a></li>
+        <li><a href="#đóng-góp-cho-cộng-đồng">Đóng Góp Cho Cộng Đồng</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tài-liệu-tham-khảo">📚 Tài Liệu Tham Khảo</a>
+      <ul>
+        <li><a href="#technical-documentation">Technical Documentation</a></li>
+        <li><a href="#tools--libraries">Tools &amp; Libraries</a></li>
+        <li><a href="#vietnamese-nlp-resources">Vietnamese NLP Resources</a></li>
+      </ul>
+    </li>
+    <li><a href="#-liên-hệ--đóng-góp">🤝 Liên Hệ &amp; Đóng Góp</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/PhoBERT"
+                target="_blank"
+              >PhoBERT</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/NLP"
+                target="_blank"
+              >NLP</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Hate-Speech-Detection"
+                target="_blank"
+              >Hate Speech Detection</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Data-Engineering"
+                target="_blank"
+              >Data Engineering</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Deep-Learning"
+                target="_blank"
+              >Deep Learning</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/NetworkingPrograming/tags/Vietnamese-AI"
+                target="_blank"
+              >Vietnamese AI</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text=C%c3%a2u%20chuy%e1%bb%87n%20%c4%91%e1%ba%b1ng%20sau%20SafeSense-Vi%20-%20h%e1%bb%87%20th%e1%bb%91ng%20AI%20ph%c3%a1t%20hi%e1%bb%87n%20ng%c3%b4n%20t%e1%bb%ab%20th%c3%b9%20gh%c3%a9t%20ti%e1%ba%bfng%20Vi%e1%bb%87t.%20T%e1%bb%ab%20vi%e1%bb%87c%20crawl%2038K%20comments%2c%20g%c3%a1n%20nh%c3%a3n%20th%e1%bb%a7%20c%c3%b4ng%2c%20x%e1%bb%ad%20l%c3%bd%20teencode%20%27kinh%20ho%c3%a0ng%27%2c%20%c4%91%e1%ba%bfn%20%c4%91%e1%ba%a1t%20F1-Macro%2085%25%20v%e1%bb%9bi%20PhoBERT.%20M%e1%bb%99t%20case%20study%20v%e1%bb%81%20Data%20Engineering%20meets%20Deep%20Learning%21 http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fsafesense-vi-case-study%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='https://twitter.com/share?text=SafeSense-Vi%3a%20H%c3%a0nh%20Tr%c3%acnh%206%20Th%c3%a1ng%20S%c4%83n%20L%c3%b9ng%2038K%20Comments%20%c4%90%e1%bb%99c%20H%e1%ba%a1i%20Tr%c3%aan%20M%e1%ba%a1ng%20X%c3%a3%20H%e1%bb%99i%20Vi%e1%bb%87t%20Nam&url=http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fsafesense-vi-case-study%2f&hashtags=PhoBERT%2cNLP%2cHate%20Speech%20Detection%2cData%20Engineering%2cDeep%20Learning%2cVietnamese%20AI'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=SafeSense-Vi%3a%20H%c3%a0nh%20Tr%c3%acnh%206%20Th%c3%a1ng%20S%c4%83n%20L%c3%b9ng%2038K%20Comments%20%c4%90%e1%bb%99c%20H%e1%ba%a1i%20Tr%c3%aan%20M%e1%ba%a1ng%20X%c3%a3%20H%e1%bb%99i%20Vi%e1%bb%87t%20Nam: http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fsafesense-vi-case-study%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=SafeSense-Vi%3a%20H%c3%a0nh%20Tr%c3%acnh%206%20Th%c3%a1ng%20S%c4%83n%20L%c3%b9ng%2038K%20Comments%20%c4%90%e1%bb%99c%20H%e1%ba%a1i%20Tr%c3%aan%20M%e1%ba%a1ng%20X%c3%a3%20H%e1%bb%99i%20Vi%e1%bb%87t%20Nam&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fNetworkingPrograming%2fblogs%2fsafesense-vi-case-study%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/NetworkingPrograming/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/NetworkingPrograming/js/readingTime.js"></script>
+
+
+
+    </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Bài viết mới
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/safesense-vi-banner.jpg" class="card-img-top" alt="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam">SafeSense-Vi: Hành Trình …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường">🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &ldquo;Chiến Trường&rdquo;</h2>
+<p>Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?</p>
+<blockquote>
+<p><em>&ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&rdquo;</em><br>
+<em>&ldquo;Con này béo như lợn, nhìn tởm đm&rdquo;</em><br>
+<em>&ldquo;Thằng bê đê tởm lợm chết đi cho rồi&rdquo;</em></p>
+</blockquote>
+<p>Đây …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/RAG_chat-app.jpg" class="card-img-top" alt="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System">Làm Sao để &#39;Chat&#39; với …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-vấn-đề-tôi-lười-đọc-sách">🤔 Vấn Đề: Tôi Lười Đọc Sách</h2>
+<p>Hãy thành thật đi - ai cũng từng gặp tình huống này:</p>
+<blockquote>
+<p><strong>Giảng viên:</strong> &ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&rdquo;<br>
+<strong>Tôi:</strong> &ldquo;Ơ&hellip; 60 trang? Chắc đọc lướt thôi&hellip;&rdquo;<br>
+<strong>Kết quả:</strong> Thi xong không nhớ gì 😅</p>
+</blockquote>
+<p>Rồi một ngày, tôi …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/rag-system-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/">
+                        <img src="/NetworkingPrograming/images/projects/prepro-toeic.jpg" class="card-img-top" alt="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh">Từ Ý Tưởng Đến Sản Phẩm: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><h2 id="-mở-đầu-vấn-đề-cần-giải-quyết">🎬 Mở Đầu: Vấn Đề Cần Giải Quyết</h2>
+<p>Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì <strong>quá nhiều tài liệu không có hệ thống</strong>. Học sinh thường gặp phải:</p>
+<ul>
+<li>📚 <strong>Ngân hàng câu hỏi rời rạc</strong>: Không biết nên luyện gì, luyện như thế nào</li>
+<li>🔄 <strong>Thiếu phương pháp ôn tập khoa học</strong>: Học xong …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 27, 2025</span>
+                    <a href="/NetworkingPrograming/blogs/prepro-toeic-case-study/" class="float-end btn btn-outline-info btn-sm">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/ThienIT84" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/thanh-thi%E1%BB%87n-tr%E1%BA%A7n-379623301/" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+    <a href="https://www.facebook.com/thanh.thien.698912" target="_blank" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/NetworkingPrograming/" title="Trần Thanh Thiện - AI Engineer Portfolio">
+                        <img alt="Footer logo" src="/NetworkingPrograming/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  © 2025 Trần Thanh Thiện. All rights reserved.
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><style>
+     
+    .lang-switch-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .lang-switch-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lang-switch-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-switch-btn.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        pointer-events: none;
+    }
+
+    .lang-switch-btn img {
+        width: 24px;
+        height: auto;
+    }
+
+     
+    .lang-switch-btn::before {
+        content: attr(data-lang);
+        position: absolute;
+        right: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .lang-switch-btn:hover::before {
+        opacity: 1;
+    }
+
+     
+    @media (prefers-color-scheme: dark) {
+        .lang-switch-btn {
+            background: #1e293b;
+            color: #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-switch-btn.active {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+        }
+    }
+</style>
+
+<div class="lang-switch-container">
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+    <a href="/NetworkingPrograming/blogs/safesense-vi-case-study/" class="lang-switch-btn active"
+        data-lang="Tiếng Việt">
+        VI
+    </a>
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="/NetworkingPrograming/en/" class="lang-switch-btn "
+        data-lang="English">
+        EN
+    </a>
+    
+</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="search-content" class="py-2">
+        <div class="container" id="search-results"></div>
+    </section>
+</body>
+
+</html>

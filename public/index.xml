@@ -5,9 +5,44 @@
     <link>http://localhost:1313/NetworkingPrograming/</link>
     <description>Recent content on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 22 Dec 2025 08:00:00 +0700</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 17:37:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/NetworkingPrograming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Liên hệ</title>
+      <link>http://localhost:1313/NetworkingPrograming/contact/</link>
+      <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/contact/</guid>
+      <description>&lt;h2 id=&#34;-liên-hệ-với-tôi&#34;&gt;📧 Liên hệ với tôi&lt;/h2&gt;&#xA;&lt;p&gt;Tôi luôn sẵn sàng kết nối và thảo luận về các chủ đề sau:&lt;/p&gt;&#xA;&lt;h3 id=&#34;-aimachine-learning-projects&#34;&gt;🤖 AI/Machine Learning Projects&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;RAG Systems &amp;amp; Vector Databases&lt;/li&gt;&#xA;&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;&#xA;&lt;li&gt;Computer Vision&lt;/li&gt;&#xA;&lt;li&gt;Deep Learning Applications&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-lập-trình-mạng&#34;&gt;🌐 Lập trình Mạng&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Socket Programming (Java, Python)&lt;/li&gt;&#xA;&lt;li&gt;TCP/UDP Protocols&lt;/li&gt;&#xA;&lt;li&gt;Network Security&lt;/li&gt;&#xA;&lt;li&gt;Multi-threading Applications&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-cơ-hội-thực-tậplàm-việc&#34;&gt;💼 Cơ hội Thực tập/Làm việc&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI Engineer positions&lt;/li&gt;&#xA;&lt;li&gt;Backend Developer roles&lt;/li&gt;&#xA;&lt;li&gt;Full-stack Development&lt;/li&gt;&#xA;&lt;li&gt;Research &amp;amp; Development&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-chia-sẻ-kiến-thức&#34;&gt;📚 Chia sẻ Kiến thức&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technical Writing &amp;amp; Blogging&lt;/li&gt;&#xA;&lt;li&gt;Open Source Contributions&lt;/li&gt;&#xA;&lt;li&gt;Mentoring &amp;amp; Teaching&lt;/li&gt;&#xA;&lt;li&gt;Community Building&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-thông-tin-liên-hệ&#34;&gt;📬 Thông tin liên hệ&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:thientt.dev@gmail.com&#34;&gt;thientt.dev@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
+      <description>&lt;h2 id=&#34;-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường&#34;&gt;🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &amp;ldquo;Chiến Trường&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Con này béo như lợn, nhìn tởm đm&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Thằng bê đê tởm lợm chết đi cho rồi&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Đây không phải là những trường hợp hiếm. Theo nghiên cứu của chúng tôi, &lt;strong&gt;cứ 3 bình luận trên mạng xã hội Việt Nam thì có 1 bình luận chứa ngôn từ độc hại&lt;/strong&gt;. Con số này đáng báo động!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</guid>
+      <description>&lt;h2 id=&#34;-vấn-đề-tôi-lười-đọc-sách&#34;&gt;🤔 Vấn Đề: Tôi Lười Đọc Sách&lt;/h2&gt;&#xA;&lt;p&gt;Hãy thành thật đi - ai cũng từng gặp tình huống này:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Giảng viên:&lt;/strong&gt; &amp;ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Tôi:&lt;/strong&gt; &amp;ldquo;Ơ&amp;hellip; 60 trang? Chắc đọc lướt thôi&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Kết quả:&lt;/strong&gt; Thi xong không nhớ gì 😅&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Rồi một ngày, tôi nghĩ: &lt;strong&gt;&amp;ldquo;Sao không làm một con AI đọc hộ mình?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Không phải AI tóm tắt kiểu &amp;ldquo;copy-paste 3 câu đầu&amp;rdquo; - mà là AI &lt;strong&gt;thực sự hiểu&lt;/strong&gt; nội dung, có thể &lt;strong&gt;trả lời câu hỏi cụ thể&lt;/strong&gt;, và quan trọng nhất: &lt;strong&gt;trích dẫn nguồn&lt;/strong&gt; để tôi biết nó không bịa!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</guid>
+      <description>&lt;h2 id=&#34;-mở-đầu-vấn-đề-cần-giải-quyết&#34;&gt;🎬 Mở Đầu: Vấn Đề Cần Giải Quyết&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì &lt;strong&gt;quá nhiều tài liệu không có hệ thống&lt;/strong&gt;. Học sinh thường gặp phải:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📚 &lt;strong&gt;Ngân hàng câu hỏi rời rạc&lt;/strong&gt;: Không biết nên luyện gì, luyện như thế nào&lt;/li&gt;&#xA;&lt;li&gt;🔄 &lt;strong&gt;Thiếu phương pháp ôn tập khoa học&lt;/strong&gt;: Học xong quên, quên rồi học lại&lt;/li&gt;&#xA;&lt;li&gt;👨‍🏫 &lt;strong&gt;Giáo viên khó theo dõi tiến độ&lt;/strong&gt;: Không biết học sinh yếu ở đâu&lt;/li&gt;&#xA;&lt;li&gt;⏰ &lt;strong&gt;Tốn thời gian tạo đề&lt;/strong&gt;: Giáo viên phải tự tạo câu hỏi thủ công&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prepro TOEIC&lt;/strong&gt; ra đời để giải quyết những vấn đề này. Đây không chỉ là một website học TOEIC thông thường, mà là một &lt;strong&gt;hệ sinh thái học tập thông minh&lt;/strong&gt; được xây dựng với công nghệ hiện đại nhất.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Socket: Từ Zero đến Hero - Xây dựng Chat App đầu tiên trong 30 phút</title>
+      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
+      <description>&lt;h2 id=&#34;-tại-sao-bài-này-khác-biệt&#34;&gt;🎯 Tại sao bài này khác biệt?&lt;/h2&gt;&#xA;&lt;p&gt;Năm 2024, khi mọi người đang nói về Cloud, Microservices, Kubernetes&amp;hellip; thì tại sao chúng ta lại quay về học &lt;strong&gt;Socket&lt;/strong&gt; - một công nghệ &amp;ldquo;cổ lỗ sĩ&amp;rdquo; từ thập niên 80?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Câu trả lời:&lt;/strong&gt; Bởi vì &lt;strong&gt;mọi thứ bạn dùng hàng ngày đều chạy trên Socket&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;WhatsApp gửi tin nhắn? → Socket&lt;/li&gt;&#xA;&lt;li&gt;Netflix stream phim? → Socket (WebSocket)&lt;/li&gt;&#xA;&lt;li&gt;Game online? → Socket&lt;/li&gt;&#xA;&lt;li&gt;API call từ app mobile? → Socket (HTTP over TCP)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Nếu không hiểu Socket, bạn chỉ đang &amp;ldquo;copy-paste code&amp;rdquo; mà không biết &lt;strong&gt;tại sao&lt;/strong&gt; nó hoạt động. Bài viết này sẽ thay đổi điều đó.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</link>
@@ -16,11 +51,11 @@
       <description>&lt;p&gt;Nếu Socket là nền tảng để truyền dữ liệu thô, thì &lt;strong&gt;HTTP (Hypertext Transfer Protocol)&lt;/strong&gt; là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-http-hoạt-động-như-thế-nào&#34;&gt;1. HTTP hoạt động như thế nào?&lt;/h3&gt;&#xA;&lt;p&gt;HTTP hoạt động theo mô hình &lt;strong&gt;Request - Response&lt;/strong&gt; (Yêu cầu - Phản hồi). Khi bạn nhập một URL, trình duyệt gửi một bản tin yêu cầu đến Server, và Server trả về dữ liệu (thường là HTML, JSON hoặc ảnh).&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình mạng?</title>
+      <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình Mạng và Cách Triển khai trong Java</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>
       <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
       <guid>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</guid>
-      <description>&lt;p&gt;Trong các bài trước, chúng ta truyền dữ liệu qua Socket bằng văn bản thuần túy (Plaintext). Nếu có ai đó &amp;ldquo;nghe lén&amp;rdquo; trên mạng (Sniffing), họ sẽ thấy hết toàn bộ tin nhắn chat của bạn. Để giải quyết vấn đề này, chúng ta cần &lt;strong&gt;SSL/TLS&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-ssltls-là-gì&#34;&gt;1. SSL/TLS là gì?&lt;/h3&gt;&#xA;&lt;p&gt;SSL (Secure Sockets Layer) và phiên bản mới hơn là TLS (Transport Layer Security) là các giao thức giúp mã hóa đường truyền giữa Client và Server.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Trong các bài viết trước về lập trình Socket, chúng ta thường truyền dữ liệu dưới dạng văn bản thuần túy (plaintext). Điều này rất nguy hiểm vì bất kỳ ai &amp;ldquo;nghe lén&amp;rdquo; (sniffing) trên mạng đều có thể đọc được toàn bộ nội dung, chẳng hạn như tin nhắn chat, mật khẩu hay thông tin nhạy cảm.&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;5a5c46&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;9742a6&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;Để khắc phục, chúng ta sử dụng &lt;strong&gt;SSL/TLS&lt;/strong&gt; – giao thức mã hóa chuẩn được áp dụng rộng rãi (HTTPS chính là HTTP kết hợp TLS).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
@@ -77,13 +112,6 @@
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
       <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; là cầu nối quan trọng nhất giữa JavaScript và HTML. Nó cho phép JavaScript &amp;ldquo;nhìn thấy&amp;rdquo; và &amp;ldquo;thao tác&amp;rdquo; với mọi phần tử trên trang web - từ việc thay đổi nội dung text, thêm/xóa elements, đến tạo hiệu ứng animation phức tạp. Nếu HTML là &amp;ldquo;bộ xương&amp;rdquo;, CSS là &amp;ldquo;da thịt&amp;rdquo;, thì JavaScript thông qua DOM chính là &amp;ldquo;hệ thần kinh&amp;rdquo; giúp trang web sống động và tương tác.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Java Socket: Cánh cửa vào thế giới Lập trình mạng</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
-      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
-      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại số hóa hiện nay, hầu hết các ứng dụng đều cần khả năng giao tiếp qua mạng - từ các ứng dụng chat đơn giản đến các hệ thống phân tán phức tạp. &lt;strong&gt;Socket&lt;/strong&gt; chính là nền tảng cốt lõi cho phép các ứng dụng này hoạt động. Bài viết này sẽ đi sâu vào khái niệm Socket trong Java và cách thức triển khai mô hình Client-Server cơ bản.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại</title>

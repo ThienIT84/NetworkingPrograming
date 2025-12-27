@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/programming/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Programming/</link>
     <description>Recent content in Programming on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 09:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</link>

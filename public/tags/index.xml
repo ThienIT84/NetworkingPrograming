@@ -5,252 +5,378 @@
     <link>http://localhost:1313/NetworkingPrograming/tags/</link>
     <description>Recent content in Tags on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 22 Dec 2025 08:00:00 +0700</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sat, 27 Dec 2025 17:37:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/NetworkingPrograming/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fetch API</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/fetch-api/</link>
-      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/fetch-api/</guid>
+      <title>AI Engineer</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/AI-Engineer/</link>
+      <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/AI-Engineer/</guid>
       <description></description>
     </item>
     <item>
-      <title>HTTP</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/http/</link>
-      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/http/</guid>
+      <title>Collaboration</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Collaboration/</link>
+      <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Collaboration/</guid>
       <description></description>
     </item>
     <item>
-      <title>JavaScript</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/javascript/</link>
-      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/javascript/</guid>
+      <title>Contact</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Contact/</link>
+      <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Contact/</guid>
       <description></description>
     </item>
     <item>
-      <title>Networking</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/networking/</link>
-      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/networking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Java</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/java/</link>
-      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/java/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/security/</link>
-      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSL</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/ssl/</link>
-      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/ssl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>TLS</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/tls/</link>
-      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/tls/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Protocol</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/protocol/</link>
-      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/protocol/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Socket</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/socket/</link>
-      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/socket/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>UDP</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/udp/</link>
-      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/udp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/ai/</link>
-      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Career</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/career/</link>
-      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/career/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Machine Learning</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/machine-learning/</link>
-      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/python/</link>
-      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>API</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/api/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Async</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/async/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/async/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Chatbot</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/chatbot/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/chatbot/</guid>
+      <title>Data Engineering</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Data-Engineering/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Data-Engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/deep-learning/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/deep-learning/</guid>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/</guid>
       <description></description>
     </item>
     <item>
-      <title>Fetch</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/fetch/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/fetch/</guid>
+      <title>Hate Speech Detection</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Hate-Speech-Detection/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Hate-Speech-Detection/</guid>
       <description></description>
     </item>
     <item>
-      <title>TensorFlow</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/tensorflow/</link>
-      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/tensorflow/</guid>
+      <title>NLP</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/NLP/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/NLP/</guid>
       <description></description>
     </item>
     <item>
-      <title>Concurrency</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/concurrency/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/concurrency/</guid>
+      <title>PhoBERT</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/PhoBERT/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/PhoBERT/</guid>
       <description></description>
     </item>
     <item>
-      <title>Event Handling</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/event-handling/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/event-handling/</guid>
+      <title>Vietnamese AI</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Vietnamese-AI/</link>
+      <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Vietnamese-AI/</guid>
       <description></description>
     </item>
     <item>
-      <title>Events</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/events/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/events/</guid>
+      <title>AI</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/AI/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/AI/</guid>
       <description></description>
     </item>
     <item>
-      <title>Functions</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/functions/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/functions/</guid>
+      <title>Case Study</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Case-Study/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Case-Study/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chatbot</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Chatbot/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Chatbot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Python/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/RAG/</link>
+      <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/RAG/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EdTech</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/EdTech/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/EdTech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MVC</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/MVC/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/MVC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/React/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/React/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Supabase</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Supabase/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Supabase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TOEIC</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/TOEIC/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/TOEIC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/TypeScript/</link>
+      <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/TypeScript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Java/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Java/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/network/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/network/</guid>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Network/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Network/</guid>
       <description></description>
     </item>
     <item>
-      <title>Performance</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/performance/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/performance/</guid>
+      <title>Socket Programming</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Socket-Programming/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Socket-Programming/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/tcp/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/tcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Thread</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/thread/</link>
-      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/thread/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DOM</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/dom/</link>
-      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/dom/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frontend</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/frontend/</link>
-      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/frontend/</guid>
+      <link>http://localhost:1313/NetworkingPrograming/tags/TCP/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/TCP/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP/IP</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/tcp/ip/</link>
+      <link>http://localhost:1313/NetworkingPrograming/tags/TCP/IP/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/TCP/IP/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Tutorial/</link>
+      <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fetch API</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Fetch-API/</link>
+      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Fetch-API/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTP</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/HTTP/</link>
+      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/HTTP/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/JavaScript/</link>
+      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/JavaScript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Networking/</link>
+      <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lập Trình Mạng</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/L%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/L%E1%BA%ADp-tr%C3%ACnh-m%E1%BA%A1ng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Security/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Socket/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL/TLS</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/SSL/TLS/</link>
+      <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/SSL/TLS/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Protocol</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Protocol/</link>
+      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Protocol/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UDP</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/UDP/</link>
+      <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/UDP/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Career/</link>
+      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Career/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Machine-Learning/</link>
+      <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Machine-Learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/API/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/API/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Async/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fetch</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Fetch/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Fetch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TensorFlow</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/TensorFlow/</link>
+      <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/TensorFlow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrency</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Concurrency/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event Handling</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Event-Handling/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Event-Handling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Events</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Events/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Events/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functions</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Functions/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Functions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Performance/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thread</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Thread/</link>
+      <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Thread/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DOM</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/DOM/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/tcp/ip/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/DOM/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Frontend/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Development</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/web-development/</link>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Web-Development/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/web-development/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Web-Development/</guid>
       <description></description>
     </item>
     <item>
       <title>ES6</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/es6/</link>
+      <link>http://localhost:1313/NetworkingPrograming/tags/ES6/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/es6/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/ES6/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/NetworkingPrograming/tags/programming/</link>
+      <link>http://localhost:1313/NetworkingPrograming/tags/Programming/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/tags/programming/</guid>
+      <guid>http://localhost:1313/NetworkingPrograming/tags/Programming/</guid>
       <description></description>
     </item>
   </channel>

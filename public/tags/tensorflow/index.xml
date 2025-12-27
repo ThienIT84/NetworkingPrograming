@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TensorFlow on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/tensorflow/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/TensorFlow/</link>
     <description>Recent content in TensorFlow on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/TensorFlow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>

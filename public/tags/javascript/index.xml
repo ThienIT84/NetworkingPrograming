@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/javascript/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/JavaScript/</link>
     <description>Recent content in JavaScript on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Mon, 22 Dec 2025 08:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/JavaScript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</link>

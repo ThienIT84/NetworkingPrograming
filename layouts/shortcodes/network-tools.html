@@ -5,8 +5,9 @@
     <div class="network-tools-container">
         <!-- Section Header -->
         <div class="section-header">
-            <h2>Network Performance Metrics</h2>
-            <p>Real-time networking diagnostics demonstrating protocol knowledge</p>
+            <h2>{{ i18n "tools_title" | default "Network Performance Metrics" }}</h2>
+            <p>{{ i18n "tools_subtitle" | default "Real-time networking diagnostics demonstrating protocol knowledge" }}
+            </p>
         </div>
 
         <!-- Performance Metrics Grid -->
@@ -14,74 +15,74 @@
             <!-- DNS Lookup -->
             <div class="metric-card">
                 <span class="metric-icon">🌐</span>
-                <div class="metric-label">DNS Lookup</div>
+                <div class="metric-label">{{ i18n "tools_dns" | default "DNS Lookup" }}</div>
                 <div class="metric-value">
                     <span id="dns-time" class="metric-loading">...</span>
                     <small style="font-size: 1rem; font-weight: normal;"> ms</small>
                 </div>
                 <div class="metric-description">
-                    Time to resolve domain name to IP address (Application Layer - Layer 7)
+                    {{ i18n "tools_dns_desc" }}
                 </div>
             </div>
 
             <!-- TCP Connection -->
             <div class="metric-card">
                 <span class="metric-icon">🔌</span>
-                <div class="metric-label">TCP Connection</div>
+                <div class="metric-label">{{ i18n "tools_tcp" | default "TCP Connection" }}</div>
                 <div class="metric-value">
                     <span id="tcp-time" class="metric-loading">...</span>
                     <small style="font-size: 1rem; font-weight: normal;"> ms</small>
                 </div>
                 <div class="metric-description">
-                    3-way handshake time (SYN → SYN-ACK → ACK) - Transport Layer (Layer 4)
+                    {{ i18n "tools_tcp_desc" }}
                 </div>
             </div>
 
             <!-- TLS Handshake -->
             <div class="metric-card">
                 <span class="metric-icon">🔒</span>
-                <div class="metric-label">TLS Handshake</div>
+                <div class="metric-label">{{ i18n "tools_tls" | default "TLS Handshake" }}</div>
                 <div class="metric-value">
                     <span id="tls-time" class="metric-loading">...</span>
                     <small style="font-size: 1rem; font-weight: normal;"> ms</small>
                 </div>
                 <div class="metric-description">
-                    SSL/TLS secure connection establishment time - Presentation Layer (Layer 6)
+                    {{ i18n "tools_tls_desc" }}
                 </div>
             </div>
 
             <!-- Total Load Time -->
             <div class="metric-card">
                 <span class="metric-icon">⚡</span>
-                <div class="metric-label">Total Load Time</div>
+                <div class="metric-label">{{ i18n "tools_load" | default "Total Load Time" }}</div>
                 <div class="metric-value">
                     <span id="total-time" class="metric-loading">...</span>
                     <small style="font-size: 1rem; font-weight: normal;"> s</small>
                 </div>
                 <div class="metric-description">
-                    Complete page load time from request to render
+                    {{ i18n "tools_load_desc" }}
                 </div>
             </div>
         </div>
 
         <!-- Protocol Information -->
         <div class="protocol-info">
-            <h3>📊 Protocol Analysis</h3>
+            <h3>📊 {{ i18n "tools_protocol_analysis" | default "Protocol Analysis" }}</h3>
             <div class="protocol-details">
                 <div class="protocol-item">
-                    <div class="protocol-item-label">Protocol Version</div>
+                    <div class="protocol-item-label">{{ i18n "tools_protocol_version" }}</div>
                     <div class="protocol-item-value" id="protocol-version">HTTP/2</div>
                 </div>
                 <div class="protocol-item">
-                    <div class="protocol-item-label">Connection Type</div>
+                    <div class="protocol-item-label">{{ i18n "tools_connection_type" }}</div>
                     <div class="protocol-item-value" id="connection-type">4G</div>
                 </div>
                 <div class="protocol-item">
-                    <div class="protocol-item-label">Transfer Encoding</div>
+                    <div class="protocol-item-label">{{ i18n "tools_transfer_encoding" }}</div>
                     <div class="protocol-item-value" id="transfer-encoding">gzip</div>
                 </div>
                 <div class="protocol-item">
-                    <div class="protocol-item-label">HTTPS Status</div>
+                    <div class="protocol-item-label">{{ i18n "tools_https_status" }}</div>
                     <div class="protocol-item-value" id="https-status">Enabled ✓</div>
                 </div>
             </div>
@@ -90,8 +91,8 @@
         <!-- HTTP Headers Inspector -->
         <div class="headers-panel">
             <div class="panel-header">
-                <h3 class="panel-title">📋 HTTP Headers Inspector</h3>
-                <button id="refresh-metrics" class="refresh-btn">🔄 Refresh Metrics</button>
+                <h3 class="panel-title">📋 {{ i18n "tools_headers_inspector" }}</h3>
+                <button id="refresh-metrics" class="refresh-btn">🔄 {{ i18n "tools_refresh" }}</button>
             </div>
             <div id="headers-list" class="headers-list">
                 <!-- Headers will be populated by JavaScript -->
@@ -106,14 +107,7 @@
         <div
             style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(37, 99, 235, 0.1); border-radius: 12px;">
             <p style="color: #6c757d; font-size: 0.95rem; line-height: 1.8;">
-                <strong>💡 Educational Note:</strong> These metrics are measured using the browser's
-                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_API" target="_blank"
-                    style="color: #2563eb; text-decoration: none; font-weight: 600;">
-                    Performance API
-                </a>
-                and demonstrate real-world networking concepts including DNS resolution, TCP connection establishment,
-                TLS encryption, and HTTP protocol analysis. This showcases practical understanding of the OSI model
-                and network programming principles.
+                <strong>💡 {{ i18n "tools_educational_note" }}</strong> {{ i18n "tools_educational_content" }}
             </p>
         </div>
     </div>

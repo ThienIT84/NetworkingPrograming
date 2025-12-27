@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Async on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/async/</link>
+    <link>http://localhost:1313/NetworkingPrograming/tags/Async/</link>
     <description>Recent content in Async on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/async/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Async/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
       <link>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
