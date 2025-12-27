@@ -9,6 +9,9 @@
     {{ if .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
     {{ end }}
+    
+    <!-- Custom Blog Post Styling -->
+    <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/custom-blog.css">
 
     <title>
         {{- block "title" . }} {{- end }}

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DOM on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/DOM/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/DOM/</link>
     <description>Recent content in DOM on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/DOM/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/DOM/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; là cầu nối quan trọng nhất giữa JavaScript và HTML. Nó cho phép JavaScript &amp;ldquo;nhìn thấy&amp;rdquo; và &amp;ldquo;thao tác&amp;rdquo; với mọi phần tử trên trang web - từ việc thay đổi nội dung text, thêm/xóa elements, đến tạo hiệu ứng animation phức tạp. Nếu HTML là &amp;ldquo;bộ xương&amp;rdquo;, CSS là &amp;ldquo;da thịt&amp;rdquo;, thì JavaScript thông qua DOM chính là &amp;ldquo;hệ thần kinh&amp;rdquo; giúp trang web sống động và tương tác.&lt;/p&gt;</description>
     </item>
   </channel>

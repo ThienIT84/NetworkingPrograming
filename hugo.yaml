@@ -44,26 +44,34 @@ languages:
     # -----------------------------------------------------------------
     menu:
       main:
-        - identifier: home
-          name: Trang chủ
-          url: /
-          weight: 1
         - identifier: about
-          name: Hồ sơ
-          url: "#about"
+          name: Giới thiệu
+          url: "/#about"
+          weight: 1
+        - identifier: experience
+          name: Kinh nghiệm
+          url: "/#experience"
           weight: 2
+        - identifier: education
+          name: Học vấn
+          url: "/#education"
+          weight: 3
+        - identifier: projects
+          name: Dự án Nổi bật
+          url: "/#projects"
+          weight: 4
+        - identifier: certifications
+          name: Chứng chỉ
+          url: "/#achievements"
+          weight: 5
         - identifier: blog
           name: Blog
           url: "/blogs/"
-          weight: 3
-        - identifier: certifications
-          name: Chứng chỉ
-          url: "#achievements"
-          weight: 4
+          weight: 6
         - identifier: contact
           name: Liên hệ
-          url: "/contact/"
-          weight: 5
+          url: "/#contact"
+          weight: 7
 
     # -----------------------------------------------------------------
     # VIETNAMESE CV CONTENT
@@ -91,12 +99,12 @@ languages:
           showOnScrollUp: true
         enableSeparator: false
         menus:
-          disableAbout: false
-          disableExperience: false
-          disableEducation: false
-          disableProjects: false
-          disableAchievements: false
-          disableContact: false
+          disableAbout: true
+          disableExperience: true
+          disableEducation: true
+          disableProjects: true
+          disableAchievements: true
+          disableContact: true
       
       color:
         primaryColor: "#2563eb"
@@ -114,7 +122,7 @@ languages:
         intro: "Xin chào, tôi là"
         title: "Trần Thanh Thiện"
         subtitle: "AI Engineer | Sinh viên năm 4 HUTECH"
-        content: "Đam mê xây dựng các hệ thống AI thực tế - từ RAG Systems với vector embeddings, Hate Speech Detection với PhoBERT, đến EdTech platforms với AI question generation. Chuyên sâu về NLP, Deep Learning và ứng dụng AI vào giải quyết vấn đề thực tiễn."
+        content: "Đam mê xây dựng các hệ thống AI thực tế và ứng dụng công nghệ để giải quyết vấn đề thực tiễn. Với kinh nghiệm phát triển RAG Systems sử dụng vector embeddings và pgvector cho semantic search, tôi đã xây dựng MindMapNote - một chatbot thông minh có khả năng trả lời câu hỏi từ tài liệu PDF với độ chính xác cao. Trong lĩnh vực NLP, tôi nghiên cứu và triển khai SafeSense-Vi - hệ thống phát hiện ngôn từ thù ghét tiếng Việt với PhoBERT, đạt F1-Macro 85% trên dataset 12K+ samples được gán nhãn thủ công. Ngoài ra, tôi cũng phát triển Prepro TOEIC - nền tảng EdTech tích hợp AI question generation với Groq API và thuật toán Spaced Repetition để tối ưu hóa quá trình học tập. Chuyên sâu về Deep Learning, Natural Language Processing, và Vector Databases, tôi luôn tìm kiếm cơ hội để áp dụng AI vào các bài toán có giá trị thực tế, từ giáo dục đến an toàn mạng xã hội."
         image: /NetworkingPrograming/images/me.png
         roundImage: true
         bottomImage:
@@ -209,20 +217,19 @@ languages:
             content: |-
               **Chuyên ngành:** Machine Learning & Trí tuệ Nhân tạo
               
-              **Các môn học liên quan:**
-              - Deep Learning & Mạng Nơ-ron
-              - Xử lý Ngôn ngữ Tự nhiên (NLP)
-              - Thị giác Máy tính
-              - Cơ bản về Machine Learning
-              - Lập trình Mạng (Dự án hiện tại)
-              - Cấu trúc Dữ liệu & Giải thuật
-              - Hệ quản trị Cơ sở dữ liệu
-              - Kỹ nghệ Phần mềm
+              **🎓 Các môn học chính:**
               
-              **Thành tích học tập:**
-              - Danh sách khen thưởng của Khoa (3 học kỳ)
-              - Top 10% trong các môn ML/AI
-              - Thành viên tích cực của CLB Nghiên cứu AI
+              **AI & Machine Learning:**
+              - Deep Learning & Neural Networks
+              - Natural Language Processing (NLP)
+              - Computer Vision
+              - Machine Learning Fundamentals
+              
+              **Software Engineering:**
+              - Data Structures & Algorithms
+              - Database Management Systems
+              - Software Engineering
+              - Network Programming
             featuredLink:
               enable: false
 
@@ -234,13 +241,13 @@ languages:
             content: |-
               Hệ thống AI phát hiện hate speech tiếng Việt với PhoBERT, đạt F1-Macro 85%.
               
-              **Highlights:**
+              Highlights:
               - Dataset 12,695 samples được gán nhãn thủ công
               - Xử lý 251+ teencode rules với intensity preservation
               - Context-aware labeling methodology
               - Active Learning để giải quyết imbalanced data
               
-              **Tech Stack:** Python, PyTorch, PhoBERT, Transformers, Apify
+              Tech Stack: Python, PyTorch, PhoBERT, Transformers, Apify
             image: /NetworkingPrograming/images/projects/safesense-vi-banner.jpg
             featured:
               name: Chi tiết
@@ -259,13 +266,13 @@ languages:
             content: |-
               Hệ thống RAG cho phép "chat" với tài liệu PDF sử dụng vector embeddings.
               
-              **Core Features:**
+              Core Features:
               - Semantic search với pgvector (cosine similarity)
               - Hybrid retrieval (Internal docs + Web search)
               - Multi-LLM support (Gemini, GPT-4, Ollama)
               - Context-aware responses với source citation
               
-              **Tech Stack:** Python, FastAPI, Supabase, pgvector, LangChain
+              Tech Stack: Python, FastAPI, Supabase, pgvector, LangChain
             image: /NetworkingPrograming/images/projects/RAG_chat-app.jpg
             featured:
               name: Chi tiết
@@ -284,13 +291,13 @@ languages:
             content: |-
               Platform học TOEIC với AI question generation và Spaced Repetition algorithm.
               
-              **Key Features:**
+              Key Features:
               - AI tạo câu hỏi tự động với Groq (Llama 3.1-8B)
               - Spaced Repetition (SM-2) để tối ưu ghi nhớ
               - MVC architecture với 95% test coverage
               - Real-time analytics cho giáo viên
               
-              **Tech Stack:** React, TypeScript, Supabase, Groq AI, Zustand
+              Tech Stack: React, TypeScript, Supabase, Groq AI, Zustand
             image: /NetworkingPrograming/images/projects/prepro-toeic.jpg
             featured:
               name: Xem chi tiết
@@ -412,22 +419,34 @@ languages:
     # -----------------------------------------------------------------
     menu:
       main:
-        - identifier: home
-          name: Home
-          url: /
-          weight: 1
         - identifier: about
-          name: Resume
-          url: "#about"
+          name: About Me
+          url: "/#about"
+          weight: 1
+        - identifier: experience
+          name: Experience
+          url: "/#experience"
           weight: 2
-        - identifier: blog
-          name: Project Blog
-          url: "/blogs/"
+        - identifier: education
+          name: Education
+          url: "/#education"
           weight: 3
+        - identifier: projects
+          name: Projects
+          url: "/#projects"
+          weight: 4
         - identifier: certifications
           name: Certifications
-          url: "#achievements"
-          weight: 4
+          url: "/#achievements"
+          weight: 5
+        - identifier: blog
+          name: Blog
+          url: "/blogs/"
+          weight: 6
+        - identifier: contact
+          name: Contact
+          url: "/#contact"
+          weight: 7
 
     # -----------------------------------------------------------------
     # ENGLISH CV CONTENT (Existing)
@@ -455,12 +474,12 @@ languages:
           showOnScrollUp: true
         enableSeparator: false
         menus:
-          disableAbout: false
-          disableExperience: false
-          disableEducation: false
-          disableProjects: false
-          disableAchievements: false
-          disableContact: false
+          disableAbout: true
+          disableExperience: true
+          disableEducation: true
+          disableProjects: true
+          disableAchievements: true
+          disableContact: true
       
       color:
         primaryColor: "#2563eb"
@@ -478,7 +497,7 @@ languages:
         intro: "Hello, I'm"
         title: "Trần Thanh Thiện"
         subtitle: "AI Engineer Intern | 4th Year Student at HUTECH"
-        content: "Passionate about Machine Learning, Deep Learning, and building intelligent systems. Specialized in Network Programming with hands-on experience in Java Socket and TCP/UDP protocols."
+        content: "Passionate about building practical AI systems and applying technology to solve real-world problems. With experience in developing RAG Systems using vector embeddings and pgvector for semantic search, I built MindMapNote - an intelligent chatbot capable of answering questions from PDF documents with high accuracy. In the NLP field, I researched and deployed SafeSense-Vi - a Vietnamese hate speech detection system with PhoBERT, achieving 85% F1-Macro score on a manually labeled dataset of 12K+ samples. Additionally, I developed Prepro TOEIC - an EdTech platform integrating AI question generation with Groq API and Spaced Repetition algorithm to optimize the learning process. Specializing in Deep Learning, Natural Language Processing, and Vector Databases, I constantly seek opportunities to apply AI to valuable real-world problems, from education to social media safety."
         image: /NetworkingPrograming/images/me.png
         roundImage: true
         bottomImage:
@@ -503,21 +522,27 @@ languages:
         title: "About Me"
         image: "/NetworkingPrograming/images/me.png"
         content: |-
-          A dedicated 4th-year IT student at HUTECH University, specializing in Machine Learning and Artificial Intelligence with a solid GPA of 3.65/4.0. I possess a strong foundation in Deep Learning, NLP, and Computer Vision. Beyond AI, I am passionate about Network Programming, having hands-on experience in building secure, scalable applications using Java Sockets and TCP/UDP protocols.
+          A 4th-year IT student at HUTECH University, specializing in Machine Learning and Artificial Intelligence with a GPA of 3.65/4.0. I have practical experience in building production-ready AI systems:
           
-          This portfolio showcases my journey in both AI research and practical software engineering, demonstrating my ability to bridge theoretical knowledge with real-world applications.
+          - **SafeSense-Vi**: Hate Speech Detection with PhoBERT, achieving 85% F1-Macro score on 12K+ samples
+          - **MindMapNote**: RAG System with pgvector, supporting semantic search and hybrid retrieval
+          - **Prepro TOEIC**: EdTech platform with AI question generation (Groq) and Spaced Repetition
+          
+          This portfolio showcases my journey from AI research to practical applications solving real-world problems.
         
         skills:
           enable: true
           title: "Technical Skills"
           items:
-            - "**Programming Languages:** Python, Java, JavaScript, C++"
-            - "**AI/ML Frameworks:** PyTorch, TensorFlow, Keras, scikit-learn"
-            - "**Deep Learning:** Neural Networks, CNN, RNN, Transformers"
-            - "**NLP & Computer Vision:** NLTK, spaCy, OpenCV, Hugging Face"
-            - "**Network Programming:** Java Socket, TCP/UDP, SSL/TLS, Multi-threading"
-            - "**Web Development:** HTML/CSS, JavaScript, Hugo, React basics"
-            - "**Tools & Technologies:** Git, Docker, Linux, Jupyter, VS Code"
+            - "**Programming Languages:** Python, TypeScript, JavaScript, SQL"
+            - "**AI/ML Frameworks:** PyTorch, TensorFlow, Transformers (Hugging Face), LangChain"
+            - "**Deep Learning:** PhoBERT, BERT, Neural Networks, Fine-tuning LLMs"
+            - "**NLP:** Hate Speech Detection, Text Classification, Embeddings, Tokenization"
+            - "**Vector Databases:** Supabase pgvector, Semantic Search, RAG Systems"
+            - "**Backend Development:** FastAPI, Supabase, PostgreSQL, REST APIs"
+            - "**Frontend:** React, TypeScript, Zustand, React Query, TailwindCSS"
+            - "**AI Tools:** Groq API, Ollama, Apify, Sentence Transformers"
+            - "**DevOps:** Git, Docker, Vercel, GitHub Actions, Testing (95% coverage)"
             - "**Databases:** MySQL, MongoDB basics"
 
       experience:
@@ -567,20 +592,19 @@ languages:
             content: |-
               **Major:** Machine Learning & Artificial Intelligence
               
-              **Relevant Coursework:**
+              **🎓 Core Coursework:**
+              
+              **AI & Machine Learning:**
               - Deep Learning & Neural Networks
-              - Natural Language Processing
+              - Natural Language Processing (NLP)
               - Computer Vision
               - Machine Learning Fundamentals
-              - Network Programming (Current Project)
+              
+              **Software Engineering:**
               - Data Structures & Algorithms
               - Database Management Systems
               - Software Engineering
-              
-              **Academic Achievements:**
-              - Dean's List (3 semesters)
-              - Top 10% in ML/AI courses
-              - Active member of AI Research Club
+              - Network Programming
             featuredLink:
               enable: false
 
@@ -588,104 +612,80 @@ languages:
         enable: true
         title: "Featured Projects"
         items:
-          - title: Multi-threaded Chat Application (Java Socket)
+          - title: SafeSense-Vi - Vietnamese Hate Speech Detection
             content: |-
-              A robust LAN chat application built with Java Socket programming, demonstrating advanced network programming concepts.
+              AI system for detecting hate speech in Vietnamese using PhoBERT, achieving 85% F1-Macro score.
               
-              **Technical Highlights:**
-              - Implemented TCP/IP protocol for reliable message delivery
-              - Multi-threaded server handling concurrent client connections
-              - Custom protocol design for message formatting
-              - Java Swing GUI for user-friendly interface
-              - Error handling and connection management
+              Highlights:
+              - Dataset of 12,695 manually labeled samples
+              - Processed 251+ teencode rules with intensity preservation
+              - Context-aware labeling methodology
+              - Active Learning to handle imbalanced data
               
-              **Technologies:** Java, Socket Programming, Multi-threading, TCP/IP, Swing
-            image: /NetworkingPrograming/images/projects/chat-app.jpg
+              Tech Stack: Python, PyTorch, PhoBERT, Transformers, Apify
+            image: /NetworkingPrograming/images/projects/safesense-vi-banner.jpg
             featured:
-              name: View on GitHub
-              link: https://github.com/ThienIT84/network-chat-app
+              name: View Details
+              link: /NetworkingPrograming/blogs/safesense-vi-case-study/
             badges:
-              - "Java"
-              - "Socket Programming"
-              - "TCP/IP"
-              - "Multi-threading"
-              - "Network Security"
-            links:
-              - icon: fab fa-github
-                url: https://github.com/ThienIT84/network-chat-app
-          
-          - title: Vietnamese Sentiment Analysis (NLP)
-            content: |-
-              Deep learning model for analyzing sentiment in Vietnamese text using transformer architecture.
-              
-              **Key Features:**
-              - Fine-tuned PhoBERT for Vietnamese language
-              - Achieved 92% accuracy on test dataset
-              - Web interface for real-time prediction
-              - Deployed using FastAPI and Docker
-              
-              **Technologies:** Python, PyTorch, Transformers, FastAPI, Docker
-            image: /NetworkingPrograming/images/projects/chatbot-api.jpg
-            featured:
-              name: Live Demo
-              link: "#"
-            badges:
-              - "Python"
-              - "PyTorch"
+              - "PhoBERT"
               - "NLP"
-              - "Transformers"
-              - "FastAPI"
-            links:
-              - icon: fab fa-github
-                url: https://github.com/ThienIT84/vietnamese-sentiment
-          
-          - title: Object Detection System (Computer Vision)
-            content: |-
-              Real-time object detection system using YOLO architecture for security applications.
-              
-              **Implementation:**
-              - YOLOv8 model training on custom dataset
-              - Real-time video stream processing
-              - Alert system for detected objects
-              - Performance optimization for edge devices
-              
-              **Technologies:** Python, PyTorch, OpenCV, YOLO, TensorFlow Lite
-            image: /NetworkingPrograming/images/projects/java-vs-python.jpg
-            featured:
-              name: Documentation
-              link: "#"
-            badges:
-              - "Computer Vision"
-              - "YOLO"
-              - "OpenCV"
+              - "Hate Speech Detection"
               - "Deep Learning"
+              - "Data Engineering"
             links:
               - icon: fab fa-github
-                url: https://github.com/ThienIT84/object-detection
+                url: https://github.com/ThienIT84/vietnamese-hate-speech-dataset
           
-          - title: Portfolio Website with Hugo
+          - title: MindMapNote - RAG System for PDF Documents
             content: |-
-              Professional portfolio website built with Hugo static site generator and deployed on GitHub Pages.
+              RAG system that enables "chatting" with PDF documents using vector embeddings.
               
-              **Features:**
-              - Responsive design with hugo-profile theme
-              - Blog system for project documentation
-              - Automated deployment with GitHub Actions
-              - SEO optimized and fast loading
+              Core Features:
+              - Semantic search with pgvector (cosine similarity)
+              - Hybrid retrieval (Internal docs + Web search)
+              - Multi-LLM support (Gemini, GPT-4, Ollama)
+              - Context-aware responses with source citation
               
-              **Technologies:** Hugo, Markdown, GitHub Pages, GitHub Actions
-            image: /NetworkingPrograming/images/projects/blog.jpg
+              Tech Stack: Python, FastAPI, Supabase, pgvector, LangChain
+            image: /NetworkingPrograming/images/projects/RAG_chat-app.jpg
             featured:
-              name: Visit Website
-              link: https://ThienIT84.github.io/NetworkingPrograming/
+              name: View Details
+              link: /NetworkingPrograming/blogs/rag-system-case-study/
             badges:
-              - "Hugo"
-              - "Markdown"
-              - "GitHub Pages"
-              - "CI/CD"
+              - "RAG"
+              - "Vector Database"
+              - "FastAPI"
+              - "pgvector"
+              - "AI Chatbot"
             links:
               - icon: fab fa-github
-                url: https://github.com/ThienIT84/NetworkingPrograming
+                url: https://github.com/ThienIT84/DACN_MindMapNote
+          
+          - title: Prepro TOEIC - AI-Powered TOEIC Learning Platform
+            content: |-
+              TOEIC learning platform with AI question generation and Spaced Repetition algorithm.
+              
+              Key Features:
+              - AI automatic question generation with Groq (Llama 3.1-8B)
+              - Spaced Repetition (SM-2) to optimize memorization
+              - MVC architecture with 95% test coverage
+              - Real-time analytics for teachers
+              
+              Tech Stack: React, TypeScript, Supabase, Groq AI, Zustand
+            image: /NetworkingPrograming/images/projects/prepro-toeic.jpg
+            featured:
+              name: View Details
+              link: /NetworkingPrograming/blogs/prepro-toeic-case-study/
+            badges:
+              - "React"
+              - "TypeScript"
+              - "AI"
+              - "MVC"
+              - "EdTech"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/ThienIT84/prepro-toeic
 
       achievements:
         enable: true
@@ -730,9 +730,23 @@ languages:
       contact:
         enable: true
         title: "Get In Touch"
-        content: "Feel free to reach out if you'd like to discuss AI/ML projects, network programming, or potential collaboration opportunities!"
+        content: |-
+          I'm always open to connecting and discussing:
+          
+          🤖 **AI/Machine Learning Projects** - RAG, NLP, Computer Vision
+          
+          🌐 **Network Programming** - Socket Programming, TCP/UDP, Network Security
+          
+          💼 **Internship/Job Opportunities** - AI Engineer, Backend Developer
+          
+          📚 **Knowledge Sharing** - Technical Writing, Open Source
+          
+          Feel free to reach out via email or connect with me on LinkedIn/GitHub!
+        email:
+          title: "📧 Email"
+          content: thientt.dev@gmail.com
         btnName: Send Email
-        btnLink: mailto:Thientran805954@gmail.com
+        btnLink: mailto:thientt.dev@gmail.com
         formspree:
           enable: false
 

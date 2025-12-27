@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/NetworkingPrograming/en/categories/</loc>
+    <loc>https://ThienIT84.github.io/NetworkingPrograming/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/NetworkingPrograming/categories/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/NetworkingPrograming/en/categories/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/NetworkingPrograming/en/tags/</loc>
+    <loc>https://ThienIT84.github.io/NetworkingPrograming/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/NetworkingPrograming/tags/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/NetworkingPrograming/en/tags/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/en/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/NetworkingPrograming/en/</loc>
+    <loc>https://ThienIT84.github.io/NetworkingPrograming/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/NetworkingPrograming/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/NetworkingPrograming/en/"
+                href="https://ThienIT84.github.io/NetworkingPrograming/en/"
                 />
   </url>
 </urlset>

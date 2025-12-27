@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trí Tuệ Nhân Tạo on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/</link>
     <description>Recent content in Trí Tuệ Nhân Tạo on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/categories/Tr%C3%AD-tu%E1%BB%87-nh%C3%A2n-t%E1%BA%A1o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại AI bùng nổ, việc chạy các mô hình Machine Learning không còn giới hạn ở Python và server nữa. &lt;strong&gt;TensorFlow.js&lt;/strong&gt; đã mở ra kỷ nguyên mới: &lt;strong&gt;AI chạy ngay trên trình duyệt web&lt;/strong&gt;, không cần backend, không cần cài đặt gì cả. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản đến việc xây dựng ứng dụng AI thực tế với TensorFlow.js.&lt;/p&gt;</description>
     </item>
   </channel>

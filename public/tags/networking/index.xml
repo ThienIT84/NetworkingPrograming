@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Networking/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Networking/</link>
     <description>Recent content in Networking on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 22 Dec 2025 08:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Networking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/http-fetch-api/</link>
       <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/http-fetch-api/</guid>
       <description>&lt;p&gt;Nếu Socket là nền tảng để truyền dữ liệu thô, thì &lt;strong&gt;HTTP (Hypertext Transfer Protocol)&lt;/strong&gt; là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-http-hoạt-động-như-thế-nào&#34;&gt;1. HTTP hoạt động như thế nào?&lt;/h3&gt;&#xA;&lt;p&gt;HTTP hoạt động theo mô hình &lt;strong&gt;Request - Response&lt;/strong&gt; (Yêu cầu - Phản hồi). Khi bạn nhập một URL, trình duyệt gửi một bản tin yêu cầu đến Server, và Server trả về dữ liệu (thường là HTML, JSON hoặc ảnh).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</link>
       <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thế giới lập trình mạng, &lt;strong&gt;TCP&lt;/strong&gt; thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, &lt;strong&gt;tốc độ&lt;/strong&gt; quan trọng hơn &lt;strong&gt;độ chính xác&lt;/strong&gt;. Đó chính là lúc &lt;strong&gt;UDP (User Datagram Protocol)&lt;/strong&gt; tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế hoạt động của UDP và cách triển khai trong Java.&lt;/p&gt;</description>
     </item>
   </channel>

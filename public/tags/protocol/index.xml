@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Protocol on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Protocol/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Protocol/</link>
     <description>Recent content in Protocol on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 20 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Protocol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Protocol/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</link>
       <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thế giới lập trình mạng, &lt;strong&gt;TCP&lt;/strong&gt; thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, &lt;strong&gt;tốc độ&lt;/strong&gt; quan trọng hơn &lt;strong&gt;độ chính xác&lt;/strong&gt;. Đó chính là lúc &lt;strong&gt;UDP (User Datagram Protocol)&lt;/strong&gt; tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế hoạt động của UDP và cách triển khai trong Java.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong lập trình mạng, việc lựa chọn giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; là một quyết định kiến trúc quan trọng, ảnh hưởng trực tiếp đến hiệu năng, độ tin cậy và trải nghiệm người dùng của ứng dụng. Giống như việc chọn phương tiện vận chuyển - đôi khi bạn cần dịch vụ chuyển phát nhanh đảm bảo (TCP), đôi khi bạn chỉ cần gửi thư thường nhanh chóng (UDP). Bài viết này sẽ phân tích sâu sắc cả hai giao thức để giúp bạn đưa ra quyết định đúng đắn.&lt;/p&gt;</description>
     </item>
   </channel>

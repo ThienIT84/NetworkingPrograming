@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ES6 on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/ES6/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/ES6/</link>
     <description>Recent content in ES6 on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 09:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/ES6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/ES6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; là ngôn ngữ lập trình phổ biến nhất thế giới (theo Stack Overflow Survey), và là ngôn ngữ duy nhất chạy native trên mọi trình duyệt web. Nếu Java là &amp;ldquo;xương sống&amp;rdquo; của hệ thống backend thì JavaScript chính là &amp;ldquo;linh hồn&amp;rdquo; giúp trang web sống động và tương tác. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản nhất đến các tính năng hiện đại của JavaScript.&lt;/p&gt;</description>
     </item>
   </channel>

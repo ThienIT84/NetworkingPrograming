@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Tutorial/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Tutorial/</link>
     <description>Recent content in Tutorial on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 27 Dec 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java Socket: Từ Zero đến Hero - Xây dựng Chat App đầu tiên trong 30 phút</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</link>
       <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
       <description>&lt;h2 id=&#34;-tại-sao-bài-này-khác-biệt&#34;&gt;🎯 Tại sao bài này khác biệt?&lt;/h2&gt;&#xA;&lt;p&gt;Năm 2024, khi mọi người đang nói về Cloud, Microservices, Kubernetes&amp;hellip; thì tại sao chúng ta lại quay về học &lt;strong&gt;Socket&lt;/strong&gt; - một công nghệ &amp;ldquo;cổ lỗ sĩ&amp;rdquo; từ thập niên 80?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Câu trả lời:&lt;/strong&gt; Bởi vì &lt;strong&gt;mọi thứ bạn dùng hàng ngày đều chạy trên Socket&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;WhatsApp gửi tin nhắn? → Socket&lt;/li&gt;&#xA;&lt;li&gt;Netflix stream phim? → Socket (WebSocket)&lt;/li&gt;&#xA;&lt;li&gt;Game online? → Socket&lt;/li&gt;&#xA;&lt;li&gt;API call từ app mobile? → Socket (HTTP over TCP)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Nếu không hiểu Socket, bạn chỉ đang &amp;ldquo;copy-paste code&amp;rdquo; mà không biết &lt;strong&gt;tại sao&lt;/strong&gt; nó hoạt động. Bài viết này sẽ thay đổi điều đó.&lt;/p&gt;</description>
     </item>
   </channel>

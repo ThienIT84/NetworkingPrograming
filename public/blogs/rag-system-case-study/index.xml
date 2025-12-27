@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/rag-system-case-study/</link>
     <description>Recent content in Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/blogs/rag-system-case-study/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

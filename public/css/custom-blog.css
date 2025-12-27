@@ -1,0 +1,307 @@
+/* ============================================
+   CUSTOM BLOG POST STYLING
+   Fix dark background with dark text issue
+   ============================================ */
+
+/* Blog Post Content - Light Mode */
+body.light #content article {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+body.light #content article h1,
+body.light #content article h2,
+body.light #content article h3,
+body.light #content article h4,
+body.light #content article h5,
+body.light #content article h6 {
+    color: #111827;
+}
+
+body.light #content article p,
+body.light #content article li,
+body.light #content article span {
+    color: #374151;
+}
+
+body.light #content article a {
+    color: #2563eb;
+}
+
+body.light #content article a:hover {
+    color: #1e40af;
+}
+
+/* Blog Post Content - Dark Mode */
+body.dark #content article {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark #content article h1,
+body.dark #content article h2,
+body.dark #content article h3,
+body.dark #content article h4,
+body.dark #content article h5,
+body.dark #content article h6 {
+    color: #f1f5f9;
+}
+
+body.dark #content article p,
+body.dark #content article li,
+body.dark #content article span {
+    color: #cbd5e1;
+}
+
+body.dark #content article a {
+    color: #60a5fa;
+}
+
+body.dark #content article a:hover {
+    color: #93c5fd;
+}
+
+/* Blockquote Styling */
+body.light #content article blockquote {
+    background-color: #f3f4f6;
+    border-left: 4px solid #2563eb;
+    color: #374151;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+body.dark #content article blockquote {
+    background-color: #334155;
+    border-left: 4px solid #60a5fa;
+    color: #cbd5e1;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Code Block Styling */
+body.light #content article pre {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+body.dark #content article pre {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+body.light #content article code {
+    background-color: #f3f4f6;
+    color: #dc2626;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+body.dark #content article code {
+    background-color: #334155;
+    color: #fca5a5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+body.light #content article pre code {
+    background-color: transparent;
+    color: #e2e8f0;
+    padding: 0;
+}
+
+body.dark #content article pre code {
+    background-color: transparent;
+    color: #e2e8f0;
+    padding: 0;
+}
+
+/* Table Styling */
+body.light #content article table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    background-color: #ffffff;
+}
+
+body.light #content article table th {
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #d1d5db;
+}
+
+body.light #content article table td {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+body.dark #content article table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    background-color: #1e293b;
+}
+
+body.dark #content article table th {
+    background-color: #334155;
+    color: #f1f5f9;
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #475569;
+}
+
+body.dark #content article table td {
+    padding: 0.75rem;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+}
+
+/* Image Styling */
+#content article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* List Styling */
+body.light #content article ul,
+body.light #content article ol {
+    color: #374151;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+body.dark #content article ul,
+body.dark #content article ol {
+    color: #cbd5e1;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Horizontal Rule */
+body.light #content article hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+body.dark #content article hr {
+    border: none;
+    border-top: 2px solid #475569;
+    margin: 2rem 0;
+}
+
+/* Blog Post Header/Title */
+body.light #content .post-title,
+body.light #content h1.title {
+    color: #111827 !important;
+}
+
+body.dark #content .post-title,
+body.dark #content h1.title {
+    color: #f1f5f9 !important;
+}
+
+/* Blog Post Meta (date, author, reading time) */
+body.light #content .post-meta,
+body.light #content .meta {
+    color: #6b7280 !important;
+}
+
+body.dark #content .post-meta,
+body.dark #content .meta {
+    color: #94a3b8 !important;
+}
+
+/* Sidebar (Table of Contents, Tags) */
+body.light #content aside,
+body.light #content .sidebar {
+    background-color: #f9fafb;
+    color: #374151;
+}
+
+body.dark #content aside,
+body.dark #content .sidebar {
+    background-color: #0f172a;
+    color: #cbd5e1;
+}
+
+body.light #content aside h2,
+body.light #content aside h3,
+body.light #content .sidebar h2,
+body.light #content .sidebar h3 {
+    color: #111827;
+}
+
+body.dark #content aside h2,
+body.dark #content aside h3,
+body.dark #content .sidebar h2,
+body.dark #content .sidebar h3 {
+    color: #f1f5f9;
+}
+
+body.light #content aside a,
+body.light #content .sidebar a {
+    color: #2563eb;
+}
+
+body.dark #content aside a,
+body.dark #content .sidebar a {
+    color: #60a5fa;
+}
+
+/* Tags */
+body.light .tag,
+body.light .badge {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+body.dark .tag,
+body.dark .badge {
+    background-color: #312e81;
+    color: #c7d2fe;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* Ensure good contrast for all text elements */
+body.light #content {
+    background-color: #ffffff;
+}
+
+body.dark #content {
+    background-color: #0f172a;
+}
+
+/* Fix for any remaining dark text on dark background */
+body.dark #content * {
+    border-color: #475569;
+}
+
+body.light #content * {
+    border-color: #d1d5db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body.light #content article,
+    body.dark #content article {
+        padding: 1rem;
+    }
+}

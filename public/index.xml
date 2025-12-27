@@ -2,122 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/</link>
     <description>Recent content on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 27 Dec 2025 17:37:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Liên hệ</title>
-      <link>http://localhost:1313/NetworkingPrograming/contact/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/contact/</link>
       <pubDate>Sat, 27 Dec 2025 17:37:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/contact/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/contact/</guid>
       <description>&lt;h2 id=&#34;-liên-hệ-với-tôi&#34;&gt;📧 Liên hệ với tôi&lt;/h2&gt;&#xA;&lt;p&gt;Tôi luôn sẵn sàng kết nối và thảo luận về các chủ đề sau:&lt;/p&gt;&#xA;&lt;h3 id=&#34;-aimachine-learning-projects&#34;&gt;🤖 AI/Machine Learning Projects&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;RAG Systems &amp;amp; Vector Databases&lt;/li&gt;&#xA;&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;&#xA;&lt;li&gt;Computer Vision&lt;/li&gt;&#xA;&lt;li&gt;Deep Learning Applications&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-lập-trình-mạng&#34;&gt;🌐 Lập trình Mạng&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Socket Programming (Java, Python)&lt;/li&gt;&#xA;&lt;li&gt;TCP/UDP Protocols&lt;/li&gt;&#xA;&lt;li&gt;Network Security&lt;/li&gt;&#xA;&lt;li&gt;Multi-threading Applications&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-cơ-hội-thực-tậplàm-việc&#34;&gt;💼 Cơ hội Thực tập/Làm việc&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI Engineer positions&lt;/li&gt;&#xA;&lt;li&gt;Backend Developer roles&lt;/li&gt;&#xA;&lt;li&gt;Full-stack Development&lt;/li&gt;&#xA;&lt;li&gt;Research &amp;amp; Development&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-chia-sẻ-kiến-thức&#34;&gt;📚 Chia sẻ Kiến thức&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technical Writing &amp;amp; Blogging&lt;/li&gt;&#xA;&lt;li&gt;Open Source Contributions&lt;/li&gt;&#xA;&lt;li&gt;Mentoring &amp;amp; Teaching&lt;/li&gt;&#xA;&lt;li&gt;Community Building&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-thông-tin-liên-hệ&#34;&gt;📬 Thông tin liên hệ&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:thientt.dev@gmail.com&#34;&gt;thientt.dev@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
       <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
       <description>&lt;h2 id=&#34;-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường&#34;&gt;🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &amp;ldquo;Chiến Trường&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Con này béo như lợn, nhìn tởm đm&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Thằng bê đê tởm lợm chết đi cho rồi&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Đây không phải là những trường hợp hiếm. Theo nghiên cứu của chúng tôi, &lt;strong&gt;cứ 3 bình luận trên mạng xã hội Việt Nam thì có 1 bình luận chứa ngôn từ độc hại&lt;/strong&gt;. Con số này đáng báo động!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Làm Sao để &#39;Chat&#39; với PDF? - Hành Trình Xây Dựng RAG System</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/rag-system-case-study/</link>
       <pubDate>Sat, 27 Dec 2025 16:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/rag-system-case-study/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/rag-system-case-study/</guid>
       <description>&lt;h2 id=&#34;-vấn-đề-tôi-lười-đọc-sách&#34;&gt;🤔 Vấn Đề: Tôi Lười Đọc Sách&lt;/h2&gt;&#xA;&lt;p&gt;Hãy thành thật đi - ai cũng từng gặp tình huống này:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Giảng viên:&lt;/strong&gt; &amp;ldquo;Bài tập tuần này: Đọc 3 paper về Machine Learning, mỗi paper 20 trang.&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Tôi:&lt;/strong&gt; &amp;ldquo;Ơ&amp;hellip; 60 trang? Chắc đọc lướt thôi&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;&lt;strong&gt;Kết quả:&lt;/strong&gt; Thi xong không nhớ gì 😅&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Rồi một ngày, tôi nghĩ: &lt;strong&gt;&amp;ldquo;Sao không làm một con AI đọc hộ mình?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Không phải AI tóm tắt kiểu &amp;ldquo;copy-paste 3 câu đầu&amp;rdquo; - mà là AI &lt;strong&gt;thực sự hiểu&lt;/strong&gt; nội dung, có thể &lt;strong&gt;trả lời câu hỏi cụ thể&lt;/strong&gt;, và quan trọng nhất: &lt;strong&gt;trích dẫn nguồn&lt;/strong&gt; để tôi biết nó không bịa!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Từ Ý Tưởng Đến Sản Phẩm: Hành Trình Xây Dựng Nền Tảng Học TOEIC Thông Minh</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/prepro-toeic-case-study/</link>
       <pubDate>Sat, 27 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/prepro-toeic-case-study/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/prepro-toeic-case-study/</guid>
       <description>&lt;h2 id=&#34;-mở-đầu-vấn-đề-cần-giải-quyết&#34;&gt;🎬 Mở Đầu: Vấn Đề Cần Giải Quyết&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi tại sao học TOEIC lại khó? Không phải vì thiếu tài liệu, mà vì &lt;strong&gt;quá nhiều tài liệu không có hệ thống&lt;/strong&gt;. Học sinh thường gặp phải:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📚 &lt;strong&gt;Ngân hàng câu hỏi rời rạc&lt;/strong&gt;: Không biết nên luyện gì, luyện như thế nào&lt;/li&gt;&#xA;&lt;li&gt;🔄 &lt;strong&gt;Thiếu phương pháp ôn tập khoa học&lt;/strong&gt;: Học xong quên, quên rồi học lại&lt;/li&gt;&#xA;&lt;li&gt;👨‍🏫 &lt;strong&gt;Giáo viên khó theo dõi tiến độ&lt;/strong&gt;: Không biết học sinh yếu ở đâu&lt;/li&gt;&#xA;&lt;li&gt;⏰ &lt;strong&gt;Tốn thời gian tạo đề&lt;/strong&gt;: Giáo viên phải tự tạo câu hỏi thủ công&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prepro TOEIC&lt;/strong&gt; ra đời để giải quyết những vấn đề này. Đây không chỉ là một website học TOEIC thông thường, mà là một &lt;strong&gt;hệ sinh thái học tập thông minh&lt;/strong&gt; được xây dựng với công nghệ hiện đại nhất.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java Socket: Từ Zero đến Hero - Xây dựng Chat App đầu tiên trong 30 phút</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</link>
       <pubDate>Sat, 27 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-socket-co-ban/</guid>
       <description>&lt;h2 id=&#34;-tại-sao-bài-này-khác-biệt&#34;&gt;🎯 Tại sao bài này khác biệt?&lt;/h2&gt;&#xA;&lt;p&gt;Năm 2024, khi mọi người đang nói về Cloud, Microservices, Kubernetes&amp;hellip; thì tại sao chúng ta lại quay về học &lt;strong&gt;Socket&lt;/strong&gt; - một công nghệ &amp;ldquo;cổ lỗ sĩ&amp;rdquo; từ thập niên 80?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Câu trả lời:&lt;/strong&gt; Bởi vì &lt;strong&gt;mọi thứ bạn dùng hàng ngày đều chạy trên Socket&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;WhatsApp gửi tin nhắn? → Socket&lt;/li&gt;&#xA;&lt;li&gt;Netflix stream phim? → Socket (WebSocket)&lt;/li&gt;&#xA;&lt;li&gt;Game online? → Socket&lt;/li&gt;&#xA;&lt;li&gt;API call từ app mobile? → Socket (HTTP over TCP)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Nếu không hiểu Socket, bạn chỉ đang &amp;ldquo;copy-paste code&amp;rdquo; mà không biết &lt;strong&gt;tại sao&lt;/strong&gt; nó hoạt động. Bài viết này sẽ thay đổi điều đó.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTTP &amp; Fetch API: Cầu nối giữa Client và Web Server</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/http-fetch-api/</link>
       <pubDate>Mon, 22 Dec 2025 08:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/http-fetch-api/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/http-fetch-api/</guid>
       <description>&lt;p&gt;Nếu Socket là nền tảng để truyền dữ liệu thô, thì &lt;strong&gt;HTTP (Hypertext Transfer Protocol)&lt;/strong&gt; là ngôn ngữ chung mà mọi trình duyệt web sử dụng để giao tiếp với các máy chủ trên toàn thế giới.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-http-hoạt-động-như-thế-nào&#34;&gt;1. HTTP hoạt động như thế nào?&lt;/h3&gt;&#xA;&lt;p&gt;HTTP hoạt động theo mô hình &lt;strong&gt;Request - Response&lt;/strong&gt; (Yêu cầu - Phản hồi). Khi bạn nhập một URL, trình duyệt gửi một bản tin yêu cầu đến Server, và Server trả về dữ liệu (thường là HTML, JSON hoặc ảnh).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình Mạng và Cách Triển khai trong Java</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-ssl-tls/</link>
       <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-ssl-tls/</guid>
       <description>&lt;p&gt;Trong các bài viết trước về lập trình Socket, chúng ta thường truyền dữ liệu dưới dạng văn bản thuần túy (plaintext). Điều này rất nguy hiểm vì bất kỳ ai &amp;ldquo;nghe lén&amp;rdquo; (sniffing) trên mạng đều có thể đọc được toàn bộ nội dung, chẳng hạn như tin nhắn chat, mật khẩu hay thông tin nhạy cảm.&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;5a5c46&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;9742a6&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;Để khắc phục, chúng ta sử dụng &lt;strong&gt;SSL/TLS&lt;/strong&gt; – giao thức mã hóa chuẩn được áp dụng rộng rãi (HTTPS chính là HTTP kết hợp TLS).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lập trình UDP với Java: Nhanh nhưng không tin cậy?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</link>
       <pubDate>Sat, 20 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-udp-protocol/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-udp-protocol/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thế giới lập trình mạng, &lt;strong&gt;TCP&lt;/strong&gt; thường được ưu tiên nhờ tính tin cậy cao. Tuy nhiên, không phải ứng dụng nào cũng cần sự đảm bảo tuyệt đối về dữ liệu. Đôi khi, &lt;strong&gt;tốc độ&lt;/strong&gt; quan trọng hơn &lt;strong&gt;độ chính xác&lt;/strong&gt;. Đó chính là lúc &lt;strong&gt;UDP (User Datagram Protocol)&lt;/strong&gt; tỏa sáng. Bài viết này sẽ đi sâu vào cơ chế hoạt động của UDP và cách triển khai trong Java.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java vs Python: Lập trình viên AI có cần biết Java?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI bùng nổ, câu hỏi &amp;ldquo;Nên học Java hay Python?&amp;rdquo; trở nên phức tạp hơn bao giờ hết. Python đang thống trị trong nghiên cứu AI với TensorFlow, PyTorch, nhưng Java vẫn là trụ cột của các hệ thống enterprise lớn. Vậy một lập trình viên AI có thực sự cần biết Java? Bài viết này sẽ phân tích chi tiết để giúp bạn đưa ra quyết định đúng đắn cho sự nghiệp của mình.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại AI bùng nổ, việc chạy các mô hình Machine Learning không còn giới hạn ở Python và server nữa. &lt;strong&gt;TensorFlow.js&lt;/strong&gt; đã mở ra kỷ nguyên mới: &lt;strong&gt;AI chạy ngay trên trình duyệt web&lt;/strong&gt;, không cần backend, không cần cài đặt gì cả. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản đến việc xây dựng ứng dụng AI thực tế với TensorFlow.js.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tự làm Chatbot AI tích hợp vào Website bằng Fetch API</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tich-hop-api-ai-javascript/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI, việc tích hợp chatbot thông minh vào website không còn là điều xa vời. Với &lt;strong&gt;Fetch API&lt;/strong&gt; - một công cụ mạnh mẽ có sẵn trong JavaScript hiện đại, bạn có thể dễ dàng kết nối với các Large Language Models (LLM) như GPT, Gemini, Claude để tạo ra trải nghiệm tương tác ấn tượng. Bài viết này sẽ hướng dẫn bạn từ cơ bản đến nâng cao về cách xây dựng chatbot AI.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hàm và Sự kiện: Cách JavaScript tương tác với người dùng</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/function-and-event/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/function-and-event/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Tương tác với người dùng là linh hồn của mọi ứng dụng web. Khi người dùng click vào nút, gõ phím, scroll trang, hoặc di chuyển chuột - tất cả đều là &lt;strong&gt;Events&lt;/strong&gt; (sự kiện). &lt;strong&gt;Functions&lt;/strong&gt; (hàm) là công cụ để xử lý các events này. Bài viết này sẽ đi sâu vào cách viết functions hiệu quả và xử lý events một cách chuyên nghiệp.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-functions-trong-javascript&#34;&gt;1. Functions trong JavaScript&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-function-declaration&#34;&gt;1.1. Function Declaration&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Function Declaration&lt;/strong&gt; là cách truyền thống để định nghĩa hàm:&lt;/p&gt;</description>
     </item>
     <item>
       <title>TCP và UDP: Chọn &#39;ngựa&#39; nào cho ứng dụng mạng?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tcp-vs-udp/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong lập trình mạng, việc lựa chọn giữa &lt;strong&gt;TCP&lt;/strong&gt; và &lt;strong&gt;UDP&lt;/strong&gt; là một quyết định kiến trúc quan trọng, ảnh hưởng trực tiếp đến hiệu năng, độ tin cậy và trải nghiệm người dùng của ứng dụng. Giống như việc chọn phương tiện vận chuyển - đôi khi bạn cần dịch vụ chuyển phát nhanh đảm bảo (TCP), đôi khi bạn chỉ cần gửi thư thường nhanh chóng (UDP). Bài viết này sẽ phân tích sâu sắc cả hai giao thức để giúp bạn đưa ra quyết định đúng đắn.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xử lý đa luồng: Để Server phục vụ hàng ngàn khách hàng</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-multi-threading-socket/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Một Server chỉ có thể phục vụ một Client tại một thời điểm là hoàn toàn không khả thi trong thực tế. Hãy tưởng tượng Facebook, Zalo hay bất kỳ ứng dụng chat nào chỉ cho phép một người dùng đăng nhập tại một thời điểm - điều đó sẽ là thảm họa! Bài viết này sẽ giải thích chi tiết về &lt;strong&gt;Multi-threading&lt;/strong&gt; (Đa luồng) - giải pháp cho phép Server xử lý hàng nghìn kết nối đồng thời.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DOM Manipulation: Thay đổi trang web theo ý muốn</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</link>
       <pubDate>Fri, 19 Dec 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-dom-manipulation/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; là cầu nối quan trọng nhất giữa JavaScript và HTML. Nó cho phép JavaScript &amp;ldquo;nhìn thấy&amp;rdquo; và &amp;ldquo;thao tác&amp;rdquo; với mọi phần tử trên trang web - từ việc thay đổi nội dung text, thêm/xóa elements, đến tạo hiệu ứng animation phức tạp. Nếu HTML là &amp;ldquo;bộ xương&amp;rdquo;, CSS là &amp;ldquo;da thịt&amp;rdquo;, thì JavaScript thông qua DOM chính là &amp;ldquo;hệ thần kinh&amp;rdquo; giúp trang web sống động và tương tác.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JavaScript Căn Bản: Nền tảng của Web Development hiện đại</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</link>
       <pubDate>Fri, 19 Dec 2025 09:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/javascript-co-ban/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/javascript-co-ban/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; là ngôn ngữ lập trình phổ biến nhất thế giới (theo Stack Overflow Survey), và là ngôn ngữ duy nhất chạy native trên mọi trình duyệt web. Nếu Java là &amp;ldquo;xương sống&amp;rdquo; của hệ thống backend thì JavaScript chính là &amp;ldquo;linh hồn&amp;rdquo; giúp trang web sống động và tương tác. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản nhất đến các tính năng hiện đại của JavaScript.&lt;/p&gt;</description>
     </item>
   </channel>

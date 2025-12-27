@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Handling on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Event-Handling/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Event-Handling/</link>
     <description>Recent content in Event Handling on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 14:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Event-Handling/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Event-Handling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hàm và Sự kiện: Cách JavaScript tương tác với người dùng</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/function-and-event/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</link>
       <pubDate>Fri, 19 Dec 2025 14:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/function-and-event/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/function-and-event/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Tương tác với người dùng là linh hồn của mọi ứng dụng web. Khi người dùng click vào nút, gõ phím, scroll trang, hoặc di chuyển chuột - tất cả đều là &lt;strong&gt;Events&lt;/strong&gt; (sự kiện). &lt;strong&gt;Functions&lt;/strong&gt; (hàm) là công cụ để xử lý các events này. Bài viết này sẽ đi sâu vào cách viết functions hiệu quả và xử lý events một cách chuyên nghiệp.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-functions-trong-javascript&#34;&gt;1. Functions trong JavaScript&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-function-declaration&#34;&gt;1.1. Function Declaration&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Function Declaration&lt;/strong&gt; là cách truyền thống để định nghĩa hàm:&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Góc Nhìn on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/</link>
     <description>Recent content in Góc Nhìn on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 19 Dec 2025 15:30:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/categories/G%C3%B3c-nh%C3%ACn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java vs Python: Lập trình viên AI có cần biết Java?</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</link>
       <pubDate>Fri, 19 Dec 2025 15:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-vs-python-ai/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong kỷ nguyên AI bùng nổ, câu hỏi &amp;ldquo;Nên học Java hay Python?&amp;rdquo; trở nên phức tạp hơn bao giờ hết. Python đang thống trị trong nghiên cứu AI với TensorFlow, PyTorch, nhưng Java vẫn là trụ cột của các hệ thống enterprise lớn. Vậy một lập trình viên AI có thực sự cần biết Java? Bài viết này sẽ phân tích chi tiết để giúp bạn đưa ra quyết định đúng đắn cho sự nghiệp của mình.&lt;/p&gt;</description>
     </item>
   </channel>

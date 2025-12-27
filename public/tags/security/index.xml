@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Security/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Security/</link>
     <description>Recent content in Security on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sun, 21 Dec 2025 09:30:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bảo mật Socket: Tại sao cần SSL/TLS trong Lập trình Mạng và Cách Triển khai trong Java</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-ssl-tls/</link>
       <pubDate>Sun, 21 Dec 2025 09:30:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/java-ssl-tls/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/java-ssl-tls/</guid>
       <description>&lt;p&gt;Trong các bài viết trước về lập trình Socket, chúng ta thường truyền dữ liệu dưới dạng văn bản thuần túy (plaintext). Điều này rất nguy hiểm vì bất kỳ ai &amp;ldquo;nghe lén&amp;rdquo; (sniffing) trên mạng đều có thể đọc được toàn bộ nội dung, chẳng hạn như tin nhắn chat, mật khẩu hay thông tin nhạy cảm.&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;5a5c46&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;grok-card data-id=&#34;9742a6&#34; data-type=&#34;image_card&#34;  data-arg-size=&#34;LARGE&#34; &gt;&lt;/grok-card&gt;&lt;/p&gt;&#xA;&lt;p&gt;Để khắc phục, chúng ta sử dụng &lt;strong&gt;SSL/TLS&lt;/strong&gt; – giao thức mã hóa chuẩn được áp dụng rộng rãi (HTTPS chính là HTTP kết hợp TLS).&lt;/p&gt;</description>
     </item>
   </channel>

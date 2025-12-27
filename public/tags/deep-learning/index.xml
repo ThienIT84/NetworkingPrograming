@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Trần Thanh Thiện - AI Engineer Portfolio</title>
-    <link>http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/</link>
+    <link>https://ThienIT84.github.io/NetworkingPrograming/tags/Deep-Learning/</link>
     <description>Recent content in Deep Learning on Trần Thanh Thiện - AI Engineer Portfolio</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 27 Dec 2025 16:54:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/NetworkingPrograming/tags/Deep-Learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ThienIT84.github.io/NetworkingPrograming/tags/Deep-Learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SafeSense-Vi: Hành Trình 6 Tháng Săn Lùng 38K Comments Độc Hại Trên Mạng Xã Hội Việt Nam</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/safesense-vi-case-study/</link>
       <pubDate>Sat, 27 Dec 2025 16:54:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/safesense-vi-case-study/</guid>
       <description>&lt;h2 id=&#34;-mở-đầu-khi-internet-việt-nam-trở-thành-chiến-trường&#34;&gt;🎬 Mở Đầu: Khi Internet Việt Nam Trở Thành &amp;ldquo;Chiến Trường&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ lướt Facebook hay YouTube và thấy những bình luận kiểu này không?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Bắc kỳ chó toàn lũ lừa đảo vcl&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Con này béo như lợn, nhìn tởm đm&amp;rdquo;&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;&amp;ldquo;Thằng bê đê tởm lợm chết đi cho rồi&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Đây không phải là những trường hợp hiếm. Theo nghiên cứu của chúng tôi, &lt;strong&gt;cứ 3 bình luận trên mạng xã hội Việt Nam thì có 1 bình luận chứa ngôn từ độc hại&lt;/strong&gt;. Con số này đáng báo động!&lt;/p&gt;</description>
     </item>
     <item>
       <title>TensorFlow.js: Mang sức mạnh Deep Learning lên trình duyệt</title>
-      <link>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
+      <link>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</link>
       <pubDate>Fri, 19 Dec 2025 15:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
+      <guid>https://ThienIT84.github.io/NetworkingPrograming/blogs/tensorflow-js-deep-learning/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Trong thời đại AI bùng nổ, việc chạy các mô hình Machine Learning không còn giới hạn ở Python và server nữa. &lt;strong&gt;TensorFlow.js&lt;/strong&gt; đã mở ra kỷ nguyên mới: &lt;strong&gt;AI chạy ngay trên trình duyệt web&lt;/strong&gt;, không cần backend, không cần cài đặt gì cả. Bài viết này sẽ đưa bạn từ những khái niệm cơ bản đến việc xây dựng ứng dụng AI thực tế với TensorFlow.js.&lt;/p&gt;</description>
     </item>
   </channel>
